@@ -12,7 +12,10 @@ measurements, supervised by spatially and temporally aligned VIIRS observations.
 fine-scale fire localization, global/full-year validation, or main-app integration.
 
 The detailed next-model specification is
-[Native-resolution MODIS tile model plan](docs/NATIVE_RESOLUTION_MODEL_PLAN.md).
+[Native-resolution MODIS tile model plan](../fire-harmonization-research-fullres/PLAN.md).
+All native-resolution contents and future training scripts belong in the separate
+project-root `fire-harmonization-research-fullres/` folder. A desktop RTX 5070
+12 GB review is available there; earlier coarse-grid artifacts remain here.
 
 ## 1. Project goal and decisions
 
@@ -437,6 +440,6 @@ be measured, and higher-resolution independent observations are needed to justif
 claims beyond the VIIRS observation reference.
 
 Proceed through the acquisition, matching, native tiling, model, validation and
-acceptance gates in the [full native-resolution plan](docs/NATIVE_RESOLUTION_MODEL_PLAN.md).
+acceptance gates in the [full native-resolution plan](../fire-harmonization-research-fullres/PLAN.md).
 The present request documents that work; it does not claim a native tile model
 has already been trained or authorize integration with the main application.

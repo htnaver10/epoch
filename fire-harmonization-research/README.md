@@ -8,9 +8,11 @@ app data is read-only input. All generated files, models and dependencies stay h
 
 - [Comprehensive research summary](RESEARCH_SUMMARY.md): completed experiments,
   measured results, saved artifacts, access failures, limitations and current status.
-- [Full native-resolution tile-model plan](docs/NATIVE_RESOLUTION_MODEL_PLAN.md):
+- [Full native-resolution tile-model plan](../fire-harmonization-research-fullres/PLAN.md):
   actual MODIS imagery at native band resolutions, aligned VIIRS supervision,
   multiresolution spatial modeling, location uncertainty and acceptance gates.
+- [Full-resolution folder and RTX 5070 review](../fire-harmonization-research-fullres/README.md):
+  all native-resolution contents and scripts now belong in that separate folder.
 - [Experiment 04: larger model actually trained](experiment-04/README.md):
   200-tree NumPy boosting, all 14 local overlap summers, separate temporal and
   geographic evaluation, saved models and six figure families.

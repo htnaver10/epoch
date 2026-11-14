@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "user_hardware": "desktop RTX 5070 12 GB",
+  "fullres_root": "fire-harmonization-research-fullres",
+  "broken_local_links": [],
+  "old_files_compared": 383,
+  "intentional_legacy_navigation_updates": [
+    "fire-harmonization-research/RESEARCH_SUMMARY.md",
+    "fire-harmonization-research/README.md",
+    "fire-harmonization-research/docs/NATIVE_RESOLUTION_MODEL_PLAN.md"
+  ],
+  "unchanged_main_application_files": 171,
+  "unchanged_model_artifacts": 19,
+  "old_experiment_source_results_figures_changed": false,
+  "python_tools_syntax_valid": true,
+  "worksheet_unit_tests_passed": 7,
+  "memory_estimates_are": "analytical components, not RTX measurements",
+  "gpu_preflight_on_review_host": "pytorch_not_installed",
+  "rtx5070_profile_run": false,
+  "native_model_trained": false
+}
