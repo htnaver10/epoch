@@ -1,0 +1,21 @@
+EPOCH
+
+Quickest: the built site is in ready-to-run/. It has to be served, not double-clicked
+(browsers will not load it from a file:// address). From this folder:
+
+    cd ready-to-run
+    python3 -m http.server 8080        (or: npx serve -l 8080)
+
+then open http://localhost:8080/ for the burning activity calendar and
+http://localhost:8080/?mode=scenarios for the response scenarios.
+
+From source (needs Node 20 or newer):
+
+    cd frontend
+    npm install
+    npm run dev
+
+Needs an internet connection for the web font (IBM Plex; it falls back to the system font
+offline) and for the optional satellite image
+layer; everything else is bundled. Works best in a desktop Chrome, Edge or Firefox window
+about 1440 px wide or more. See README.md for what it does and where the data comes from.

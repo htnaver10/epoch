@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+docs/CLAUDE_REVIEW_BRIEF.md
+
+# Raw multi-year downloads (reproducible with backend/download_seasons.py)
+data/seasons/

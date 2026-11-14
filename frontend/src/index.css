@@ -1,0 +1,75 @@
+/* Design tokens and element defaults. Component styles live in App.css.
+
+   Everything is sized in rem, and the root size follows the viewport: the console is read
+   from the back of a room as often as from a laptop. --scale is the presenter's own
+   multiplier on top (the + and - keys). */
+:root {
+  --bg: #030507;
+  --panel: #05080c;
+  --panel-2: #09131c;
+  --line: #17212b;
+  --line-2: #2b4156;
+  --text: #dbe4ee;
+  --soft: #aebccb;
+  --muted: #8a9cae;
+  --faint: #647a90;
+  --accent: #6fd3ff; /* steel blue: selection and action */
+  --warn: #ffb224; /* amber: caution only */
+  --ink: #05080c; /* text on the accent */
+  --hot: #ff4d3a;
+  --good: #3ddc97;
+  --modis: #e9eef4;
+  --viirs: #b794ff;
+  --link: #7cc7ff;
+  /* the interface face: a plain scientific sans with tabular figures, so columns still align */
+  --mono: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --code: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", var(--mono);
+  /* four text roles and two tracking values, used everywhere */
+  --fs-label: 0.85rem;
+  --fs-small: 0.94rem;
+  --fs-body: 1.08rem;
+  --fs-lead: 1.22rem;
+  --track: 0.06em;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: calc(clamp(13px, min(0.9vw, 1.5vh), 22px) * var(--scale, 1));
+  font-family: var(--mono);
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: dark;
+  accent-color: var(--accent);
+  caret-color: var(--accent);
+  font-synthesis: none;
+  font-variant-numeric: tabular-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-2) transparent;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; background: var(--bg); overflow: hidden; font-size: var(--fs-body); }
+h1, h2, h3, h4, p, figure, dl, dd, ul { margin: 0; }
+a { color: inherit; }
+button, select, input { font: inherit; color: inherit; border-radius: 0; }
+button { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+button:disabled { opacity: 0.35; cursor: not-allowed; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+::selection { background: var(--accent); color: var(--ink); }
+kbd {
+  display: inline-block;
+  min-width: 1.5rem;
+  padding: 0 0.4rem;
+  border: 1px solid var(--line-2);
+  background: var(--panel-2);
+  font: 500 var(--fs-label) / 1.7 var(--code);
+  text-align: center;
+  color: var(--soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
