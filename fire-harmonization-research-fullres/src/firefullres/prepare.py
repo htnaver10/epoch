@@ -3,12 +3,28 @@ from __future__ import annotations
 from collections import Counter
 import hashlib
 import json
+import re
 import numpy as np
 
 from .core import (ROOT, SCHEMA, path, relative, sha256, read_jsonl, write_jsonl, write_json,
                    write_npz, time_bound_seconds, utc, validate_arrays)
 from .geometry import inverse_geolocation, reference_targets, geographic_queries, wrap_lon
 from .native import check_bundle_sources, read_modis_grid, h5_field, native_patch, forest_at
+
+
+def check_land_cover_metadata(bundle, required):
+    files=bundle.get('land_cover') or []
+    if required and not files:raise ValueError('Forest-only mode requires prior MCD12Q1 files')
+    if not files:return
+    year=bundle.get('land_cover_year');available=bundle.get('land_cover_available_utc')
+    if not isinstance(year,int) or not isinstance(available,str):
+        raise ValueError('Land-cover year and verified availability timestamp are required whenever used as input')
+    acquisition=utc(bundle['modis_start_utc'])
+    if year>=acquisition.year or utc(available)>acquisition:
+        raise ValueError('Land-cover context leaks future information')
+    for filename in files:
+        m=re.match(r'MCD12Q1\.A(\d{4})\d{3}\..*\.061\.',path(filename).name)
+        if not m or int(m.group(1))!=year:raise ValueError('Land-cover filename collection/year disagree with declared context')
 
 
 def query_crop(vlat,vlon,lat,lon,max_side):
@@ -39,10 +55,7 @@ def prepare(bundles, output_manifest, tile_size=96, stride=64, halo=16, max_quer
             raise ValueError('Invalid split for preparation mode')
         check_bundle_sources(b,supervised=not inference)
         if not inference and time_bound_seconds(b)>900:raise ValueError('Pair interval worst-case time gap exceeds 15 minutes')
-        if forest_only:
-            if not b.get('land_cover') or int(b['land_cover_year'])>=utc(b['modis_start_utc']).year:
-                raise ValueError('Forest-only mode requires prior-year MCD12Q1 and explicit land_cover_year')
-            if utc(b['land_cover_available_utc'])>utc(b['modis_start_utc']):raise ValueError('Land-cover availability leaks future information')
+        check_land_cover_metadata(b,forest_only)
         sources=[b[k] for k in ['modis_1km','modis_geo','modis_fire','modis_500m','modis_250m','viirs_fire','viirs_geo'] if b.get(k)]
         for p in [*sources,*b.get('land_cover',[])]:
             source_checksums[relative(p)]=sha256(p)

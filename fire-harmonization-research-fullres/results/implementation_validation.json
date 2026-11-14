@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "unit_tests": {
+    "run": 24,
+    "passed": 20,
+    "skipped": 4,
+    "skip_reason": "PyTorch not installed"
+  },
+  "source_syntax_valid": true,
+  "synthetic_data_prepared_audited_normalized": true,
+  "guards": [
+    {
+      "command": [
+        "audit",
+        "--manifest",
+        "data/manifests/software_smoke.jsonl",
+        "--output",
+        "results/unwanted_real_audit.json"
+      ],
+      "exit_code": 2,
+      "output": "audit: Synthetic data require --allow-synthetic; never report smoke results as NASA performance"
+    },
+    {
+      "command": [
+        "train",
+        "--manifest",
+        "data/manifests/software_smoke.jsonl",
+        "--stats",
+        "data/manifests/software_smoke_stats.json",
+        "--config",
+        "configs/smoke_cpu.json",
+        "--run",
+        "should_not_train",
+        "--allow-synthetic"
+      ],
+      "exit_code": 2,
+      "output": "train: PyTorch is not installed. Follow RUNNING.md to create the CUDA/CPU full-resolution environment."
+    }
+  ],
+  "broken_documentation_links": [],
+  "existing_project_and_coarse_research_files_checked": 383,
+  "changed_existing_files": [],
+  "native_NASA_files_ingested": false,
+  "torch_model_execution_tested": false,
+  "RTX5070_profile_tested": false,
+  "limitations": [
+    "PyTorch integration tests are present but skipped here",
+    "Native HDF4/HDF5 readers require real files and scientific QA",
+    "No native NASA model was trained"
+  ],
+  "entrypoint": "fire-harmonization-research-fullres/run.py",
+  "instructions": "fire-harmonization-research-fullres/RUNNING.md",
+  "synthetic_alignment_preview_created": true
+}

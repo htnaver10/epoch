@@ -94,6 +94,8 @@ def validate_tiles(manifest, allow_synthetic=False, check_hashes=True, inspect_a
             raise ValueError('Synthetic data require --allow-synthetic; never report smoke results as NASA performance')
         if not r.get('event_group') or not r.get('region_id'):
             raise ValueError('Reviewed event_group and region_id are required')
+        if not r.get('source_ids') or any(not isinstance(s,str) or not s for s in r['source_ids']):
+            raise ValueError('Every tile must retain nonempty source identifiers')
         if r['tile_id'] in seen:
             raise ValueError('Duplicate tile_id')
         seen.add(r['tile_id'])
@@ -131,8 +133,12 @@ def validate_arrays(z):
     if z['query_lat'].dtype != np.float64 or z['query_lon'].dtype != np.float64:
         raise ValueError('Stored geographic coordinates must be float64')
     for key in ('target','native_target'):
-        if np.any((z[key]<0)|(z[key]>1)):
+        if not np.isfinite(z[key]).all() or np.any((z[key]<0)|(z[key]>1)):
             raise ValueError('Reference targets must be in [0,1]')
+    if not np.isin(z['target'],[0.,1.]).all():
+        raise ValueError('This schema requires binary native VIIRS query labels, not footprint-overlap fractions')
+    known=z['weight']>0
+    if np.any(np.abs(z['query_grid'][known])>1):raise ValueError('Known labels lie outside native MODIS input support')
     for key in ('weight','native_weight'):
         if np.any(z[key]<0) or not np.isfinite(z[key]).all():
             raise ValueError('Invalid exposure weights')

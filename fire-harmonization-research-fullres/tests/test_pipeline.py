@@ -15,9 +15,22 @@ from firefullres.geometry import inverse_geolocation,reference_targets
 from firefullres.native import calibrated_values
 from firefullres.metrics import BinaryMetrics
 from firefullres.demo import make_demo
+from firefullres.prepare import check_land_cover_metadata
 
 
 class GeometryTests(unittest.TestCase):
+    def test_forest_context_cannot_leak_future_even_in_all_land_mode(self):
+        bundle={'land_cover':['data/raw/MCD12Q1/MCD12Q1.A2022001.h12v02.061.2023001000000.hdf'],
+                'land_cover_year':2022,'land_cover_available_utc':'2023-06-01T00:00:00Z','modis_start_utc':'2023-07-01T00:00:00Z'}
+        check_land_cover_metadata(bundle,False)
+        bundle['land_cover_available_utc']='2024-01-01T00:00:00Z'
+        with self.assertRaisesRegex(ValueError,'future'):check_land_cover_metadata(bundle,False)
+
+    def test_forest_context_year_matches_file_and_is_required_for_forest_mode(self):
+        with self.assertRaisesRegex(ValueError,'requires'):check_land_cover_metadata({},True)
+        bundle={'land_cover':['data/raw/MCD12Q1/MCD12Q1.A2021001.h12v02.061.2023001000000.hdf'],
+                'land_cover_year':2022,'land_cover_available_utc':'2023-06-01T00:00:00Z','modis_start_utc':'2023-07-01T00:00:00Z'}
+        with self.assertRaisesRegex(ValueError,'disagree'):check_land_cover_metadata(bundle,False)
     def test_inverse_recovers_fractional_coordinates_without_future_or_label_inputs(self):
         y,x=np.indices((16,20));lat=50+.01*y+.0001*x;lon=-120+.02*x+.0002*y
         qr=np.array([[3.25,7.5]]);qc=np.array([[4.75,9.25]])
@@ -85,6 +98,13 @@ class DatasetTests(unittest.TestCase):
         self.assertEqual(len(a['training_groups']),4)
     def test_path_guard(self):
         with self.assertRaises(ValueError):core.path('../../backend/accidental.json',True)
+    def test_nonfinite_auxiliary_or_wrong_target_semantics_fail_audit(self):
+        row=core.read_jsonl('manifest.jsonl')[0]
+        with np.load(core.path(row['tile'])) as z:arrays={k:z[k] for k in z.files}
+        arrays['native_target'][0,0]=np.nan
+        with self.assertRaisesRegex(ValueError,'targets'):core.validate_arrays(arrays)
+        arrays['native_target'][0,0]=0;arrays['target'][0,0]=.5
+        with self.assertRaisesRegex(ValueError,'binary'):core.validate_arrays(arrays)
     def test_utc_intervals_conservatively_bound_acquisitions(self):
         b={'modis_start_utc':'2023-01-01T00:00:00Z','modis_end_utc':'2023-01-01T00:05:00Z',
            'viirs_start_utc':'2023-01-01T00:04:00Z','viirs_end_utc':'2023-01-01T00:10:00Z'}

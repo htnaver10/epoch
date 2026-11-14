@@ -6,3 +6,7 @@ data/raw/
 data/tiles/
 data/cache/
 models/checkpoints/
+models/**/*.pt
+models/**/*.partial
+results/**/*.npz
+*.partial
