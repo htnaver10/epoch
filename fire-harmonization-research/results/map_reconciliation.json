@@ -1,0 +1,7 @@
+{
+  "observed_modis_weighted": 18544.39781550124,
+  "estimated_viirs_weighted": 24476.972113718213,
+  "observed_viirs_weighted": 26087.651440189282,
+  "matched_days": 91,
+  "static_cells": 31
+}

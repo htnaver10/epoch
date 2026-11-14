@@ -1,0 +1,13 @@
+test_box_sum_has_no_spatial_or_temporal_wrap (test_kernel.KernelTests.test_box_sum_has_no_spatial_or_temporal_wrap) ... ok
+test_edge_denominators_are_observable_cells (test_kernel.KernelTests.test_edge_denominators_are_observable_cells) ... ok
+test_exact_fraction_lookup (test_kernel.KernelTests.test_exact_fraction_lookup) ... ok
+test_fit_rejects_unreachable_activity (test_kernel.KernelTests.test_fit_rejects_unreachable_activity) ... ok
+test_moment_fit_recovers_known_parameter (test_kernel.KernelTests.test_moment_fit_recovers_known_parameter) ... ok
+test_output_guard (test_kernel.KernelTests.test_output_guard) ... ok
+test_response_is_zero_at_no_signal_and_bounded_monotone (test_kernel.KernelTests.test_response_is_zero_at_no_signal_and_bounded_monotone) ... ok
+test_unseen_region_uses_pooled_response (test_kernel.KernelTests.test_unseen_region_uses_pooled_response) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.016s
+
+OK

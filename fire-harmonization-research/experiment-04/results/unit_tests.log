@@ -1,0 +1,16 @@
+Trees 1/1; training logloss 0.693147
+Trees 10/10; training logloss 0.384832
+Trees 3/3; training logloss 0.677542
+test_feature_pack_roundtrip_and_future_invariance (test_larger_model.LargerModelTests.test_feature_pack_roundtrip_and_future_invariance) ... ok
+test_geographic_predictions_exclude_static_cells_and_reconcile (test_larger_model.LargerModelTests.test_geographic_predictions_exclude_static_cells_and_reconcile) ... ok
+test_newton_split_reduces_loss_and_predict_matches_training_updates (test_larger_model.LargerModelTests.test_newton_split_reduces_loss_and_predict_matches_training_updates) ... ok
+test_prior6_uses_neither_current_future_nor_invalid (test_larger_model.LargerModelTests.test_prior6_uses_neither_current_future_nor_invalid) ... ok
+test_recorded_occupancy_metrics_handle_probability_ties (test_larger_model.LargerModelTests.test_recorded_occupancy_metrics_handle_probability_ties) ... ok
+test_saved_model_roundtrip_and_zero_support (test_larger_model.LargerModelTests.test_saved_model_roundtrip_and_zero_support) ... ok
+test_spatial_sum_no_wrap_and_preserves_large_counts (test_larger_model.LargerModelTests.test_spatial_sum_no_wrap_and_preserves_large_counts) ... ok
+test_sufficient_statistics_preserve_binary_loss_and_gradients (test_larger_model.LargerModelTests.test_sufficient_statistics_preserve_binary_loss_and_gradients) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.049s
+
+OK

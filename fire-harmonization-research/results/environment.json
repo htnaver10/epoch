@@ -1,0 +1,8 @@
+{
+  "python": "3.14.7",
+  "numpy": "2.4.4",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "lightgbm": "not installed",
+  "scipy": "not installed",
+  "execution": "Isolated venv with read-only system NumPy; no app dependencies changed"
+}

@@ -1,0 +1,8 @@
+{
+  "approved_for_app_integration": false,
+  "weekly_mae_beats_power_law": false,
+  "worst_season_error_not_worse_than_power_law": false,
+  "rolling_mae_beats_power_law": false,
+  "peak_bins_match_reference": true,
+  "reason": "Improved spatial transfer and peak timing versus the first model, but power-law calendar error remains lower; research-only scope persists."
+}

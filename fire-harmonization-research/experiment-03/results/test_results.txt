@@ -1,0 +1,12 @@
+test_duplicate_month_blocks_ingestion_and_never_claims_training (test_archive_tools.MonthlyArchiveTests.test_duplicate_month_blocks_ingestion_and_never_claims_training) ... ok
+test_modis_retains_counts_and_provenance (test_archive_tools.MonthlyArchiveTests.test_modis_retains_counts_and_provenance) ... ok
+test_plan_has_all_months_and_is_not_a_download (test_archive_tools.MonthlyArchiveTests.test_plan_has_all_months_and_is_not_a_download) ... ok
+test_rejects_collection_silent_fallback (test_archive_tools.MonthlyArchiveTests.test_rejects_collection_silent_fallback) ... ok
+test_rejects_truncated_gzip (test_archive_tools.MonthlyArchiveTests.test_rejects_truncated_gzip) ... ok
+test_rejects_wrong_month_bad_time_and_nonfinite (test_archive_tools.MonthlyArchiveTests.test_rejects_wrong_month_bad_time_and_nonfinite) ... ok
+test_viirs_collection_aliases_and_csv_extra_fields (test_archive_tools.MonthlyArchiveTests.test_viirs_collection_aliases_and_csv_extra_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.020s
+
+OK

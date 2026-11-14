@@ -1,0 +1,13 @@
+{
+  "figures": 5,
+  "formats": [
+    "PNG",
+    "SVG"
+  ],
+  "app_unchanged": true,
+  "weekly_wins": {
+    "versus_uncorrected": 37,
+    "versus_power_law": 17
+  },
+  "evaluation": "/Users/darrien/Downloads/epoch3/fire-harmonization-research/results/EVALUATION.md"
+}

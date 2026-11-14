@@ -1,0 +1,7 @@
+{
+  "checked_at_utc": "2026-11-14T05:54:28.204966+00:00",
+  "public_docs_reviewed": "2026-11-14",
+  "authenticated": false,
+  "status": "not_run",
+  "reason": "No FIRMS_MAP_KEY configured; no authenticated request was attempted."
+}

@@ -1,0 +1,19 @@
+Training-only static sources excluded: 31
+Building weighted samples for numpy_daily_occupancy
+Scoring numpy_daily_occupancy: validation 2020
+Scoring numpy_daily_occupancy: validation 2021
+Scoring numpy_daily_occupancy: validation 2022
+Scoring numpy_daily_occupancy: test 2023
+Scoring numpy_daily_occupancy: test 2024
+Scoring numpy_daily_occupancy: test 2025
+Building weighted samples for numpy_weekly_activity
+Scoring numpy_weekly_activity: validation 2020
+Scoring numpy_weekly_activity: validation 2021
+Scoring numpy_weekly_activity: validation 2022
+Scoring numpy_weekly_activity: test 2023
+Scoring numpy_weekly_activity: test 2024
+Scoring numpy_weekly_activity: test 2025
+Scoring numpy_daily_east_holdout: spatial_test 2023
+Scoring numpy_daily_east_holdout: spatial_test 2024
+Scoring numpy_daily_east_holdout: spatial_test 2025
+Completed numpy experiments; main app unchanged: True

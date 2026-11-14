@@ -1,0 +1,36 @@
+{
+  "checked_utc": "2026-11-14T19:31:05.846732+00:00",
+  "hosts": {
+    "fuoco.geog.umd.edu": {
+      "dns": "failed",
+      "error": "[Errno 8] nodename nor servname provided, or not known"
+    },
+    "firms.modaps.eosdis.nasa.gov": {
+      "dns": "failed",
+      "error": "[Errno 8] nodename nor servname provided, or not known"
+    },
+    "ladsweb.modaps.eosdis.nasa.gov": {
+      "dns": "failed",
+      "error": "[Errno 8] nodename nor servname provided, or not known"
+    }
+  },
+  "sftp_probe": {
+    "command": [
+      "sftp",
+      "-oBatchMode=yes",
+      "-oConnectTimeout=10",
+      "fire@fuoco.geog.umd.edu"
+    ],
+    "exit_code": 255,
+    "output": "ssh: Could not resolve hostname fuoco.geog.umd.edu: nodename nor servname provided, or not known\nConnection closed"
+  },
+  "probe_scope": "Noninteractive transport probe; does not authenticate with public password or establish file availability.",
+  "remote_inventory_verified": false,
+  "new_nasa_files_downloaded": 0,
+  "larger_data_training_status": "not_run_pending_acquisition",
+  "sources": [
+    "https://firms.modaps.eosdis.nasa.gov/download/",
+    "https://lpdaac.usgs.gov/documents/1005/MOD14_User_Guide_V61.pdf",
+    "https://ladsweb.modaps.eosdis.nasa.gov/archive/Document%20Archive/Science%20Data%20Product%20Documentation/VIIRS_C2_AF-375m_User_Guide_1.2.pdf"
+  ]
+}

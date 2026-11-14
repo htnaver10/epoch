@@ -1,0 +1,84 @@
+{
+  "fixed_split": {
+    "constant_ratio": {
+      "phase": "test",
+      "model": "constant_ratio",
+      "region": "canada_rectangle",
+      "weekly_mae": 210.45848892695756,
+      "weekly_rmse": 276.03805220823216,
+      "aggregate_bias": 0.1578992980648356,
+      "median_season_abs_relative_error": 0.15402072716199505,
+      "worst_season_abs_relative_error": 0.23609999121832556,
+      "weeks": 42
+    },
+    "kernel_occupancy": {
+      "phase": "test",
+      "model": "kernel_occupancy",
+      "region": "canada_rectangle",
+      "weekly_mae": 119.31569698664862,
+      "weekly_rmse": 171.15679521382773,
+      "aggregate_bias": 0.045775190633478215,
+      "median_season_abs_relative_error": 0.04664461849284445,
+      "worst_season_abs_relative_error": 0.17595699377912588,
+      "weeks": 42
+    },
+    "numpy_daily_occupancy": {
+      "phase": "test",
+      "model": "numpy_daily_occupancy",
+      "region": "canada_rectangle",
+      "weekly_mae": 118.37404517759495,
+      "weekly_rmse": 161.35756758839062,
+      "aggregate_bias": -0.011448227342314895,
+      "median_season_abs_relative_error": 0.06174106282291613,
+      "worst_season_abs_relative_error": 0.0766618300772041,
+      "weeks": 42
+    },
+    "power_law": {
+      "phase": "test",
+      "model": "power_law",
+      "region": "canada_rectangle",
+      "weekly_mae": 109.37819704151988,
+      "weekly_rmse": 156.59176374038006,
+      "aggregate_bias": 0.04780273159480793,
+      "median_season_abs_relative_error": 0.06360580231194946,
+      "worst_season_abs_relative_error": 0.15072176220564856,
+      "weeks": 42
+    },
+    "uncorrected_modis": {
+      "phase": "test",
+      "model": "uncorrected_modis",
+      "region": "canada_rectangle",
+      "weekly_mae": 348.77460559274397,
+      "weekly_rmse": 427.0404959523167,
+      "aggregate_bias": -0.2674718078026899,
+      "median_season_abs_relative_error": 0.26992552941433196,
+      "worst_season_abs_relative_error": 0.2891503530696251,
+      "weeks": 42
+    }
+  },
+  "peak_bins": [
+    {
+      "year": 2023,
+      "reference": 9,
+      "before": 9,
+      "after": 9,
+      "power": 9
+    },
+    {
+      "year": 2024,
+      "reference": 10,
+      "before": 10,
+      "after": 10,
+      "power": 10
+    },
+    {
+      "year": 2025,
+      "reference": 8,
+      "before": 8,
+      "after": 8,
+      "power": 8
+    }
+  ],
+  "weekly_wins_vs_modis": 36,
+  "weekly_wins_vs_power": 20
+}

@@ -1,0 +1,280 @@
+{
+  "years": [
+    {
+      "year": 2003,
+      "modis_detections": 32039,
+      "viirs_detections": 0,
+      "modis_download_days": 92,
+      "viirs_download_days": 0,
+      "modis_occupied_cell_days": 4124,
+      "viirs_occupied_cell_days": 0,
+      "complete_overlap": false
+    },
+    {
+      "year": 2004,
+      "modis_detections": 62055,
+      "viirs_detections": 0,
+      "modis_download_days": 92,
+      "viirs_download_days": 0,
+      "modis_occupied_cell_days": 7365,
+      "viirs_occupied_cell_days": 0,
+      "complete_overlap": false
+    },
+    {
+      "year": 2005,
+      "modis_detections": 15480,
+      "viirs_detections": 0,
+      "modis_download_days": 92,
+      "viirs_download_days": 0,
+      "modis_occupied_cell_days": 2316,
+      "viirs_occupied_cell_days": 0,
+      "complete_overlap": false
+    },
+    {
+      "year": 2006,
+      "modis_detections": 21250,
+      "viirs_detections": 0,
+      "modis_download_days": 92,
+      "viirs_download_days": 0,
+      "modis_occupied_cell_days": 3002,
+      "viirs_occupied_cell_days": 0,
+      "complete_overlap": false
+    },
+    {
+      "year": 2007,
+      "modis_detections": 19908,
+      "viirs_detections": 0,
+      "modis_download_days": 92,
+      "viirs_download_days": 0,
+      "modis_occupied_cell_days": 2521,
+      "viirs_occupied_cell_days": 0,
+      "complete_overlap": false
+    },
+    {
+      "year": 2008,
+      "modis_detections": 19368,
+      "viirs_detections": 0,
+      "modis_download_days": 92,
+      "viirs_download_days": 0,
+      "modis_occupied_cell_days": 2796,
+      "viirs_occupied_cell_days": 0,
+      "complete_overlap": false
+    },
+    {
+      "year": 2009,
+      "modis_detections": 16840,
+      "viirs_detections": 0,
+      "modis_download_days": 92,
+      "viirs_download_days": 0,
+      "modis_occupied_cell_days": 2276,
+      "viirs_occupied_cell_days": 0,
+      "complete_overlap": false
+    },
+    {
+      "year": 2010,
+      "modis_detections": 38642,
+      "viirs_detections": 0,
+      "modis_download_days": 92,
+      "viirs_download_days": 0,
+      "modis_occupied_cell_days": 4932,
+      "viirs_occupied_cell_days": 0,
+      "complete_overlap": false
+    },
+    {
+      "year": 2011,
+      "modis_detections": 21982,
+      "viirs_detections": 0,
+      "modis_download_days": 92,
+      "viirs_download_days": 0,
+      "modis_occupied_cell_days": 2574,
+      "viirs_occupied_cell_days": 0,
+      "complete_overlap": false
+    },
+    {
+      "year": 2012,
+      "modis_detections": 26410,
+      "viirs_detections": 133556,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 3815,
+      "viirs_occupied_cell_days": 6504,
+      "complete_overlap": true
+    },
+    {
+      "year": 2013,
+      "modis_detections": 55450,
+      "viirs_detections": 296895,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 5906,
+      "viirs_occupied_cell_days": 9785,
+      "complete_overlap": true
+    },
+    {
+      "year": 2014,
+      "modis_detections": 67264,
+      "viirs_detections": 475886,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 7627,
+      "viirs_occupied_cell_days": 12613,
+      "complete_overlap": true
+    },
+    {
+      "year": 2015,
+      "modis_detections": 52115,
+      "viirs_detections": 253355,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 5358,
+      "viirs_occupied_cell_days": 8587,
+      "complete_overlap": true
+    },
+    {
+      "year": 2016,
+      "modis_detections": 8729,
+      "viirs_detections": 44445,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 1780,
+      "viirs_occupied_cell_days": 3625,
+      "complete_overlap": true
+    },
+    {
+      "year": 2017,
+      "modis_detections": 70857,
+      "viirs_detections": 365872,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 6731,
+      "viirs_occupied_cell_days": 10990,
+      "complete_overlap": true
+    },
+    {
+      "year": 2018,
+      "modis_detections": 44688,
+      "viirs_detections": 243685,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 4417,
+      "viirs_occupied_cell_days": 7278,
+      "complete_overlap": true
+    },
+    {
+      "year": 2019,
+      "modis_detections": 19160,
+      "viirs_detections": 97683,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 2224,
+      "viirs_occupied_cell_days": 4104,
+      "complete_overlap": true
+    },
+    {
+      "year": 2020,
+      "modis_detections": 1905,
+      "viirs_detections": 8835,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 783,
+      "viirs_occupied_cell_days": 2108,
+      "complete_overlap": true
+    },
+    {
+      "year": 2021,
+      "modis_detections": 75906,
+      "viirs_detections": 370250,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 7193,
+      "viirs_occupied_cell_days": 10703,
+      "complete_overlap": true
+    },
+    {
+      "year": 2022,
+      "modis_detections": 23344,
+      "viirs_detections": 106128,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 3605,
+      "viirs_occupied_cell_days": 5470,
+      "complete_overlap": true
+    },
+    {
+      "year": 2023,
+      "modis_detections": 205885,
+      "viirs_detections": 1123524,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 18100,
+      "viirs_occupied_cell_days": 25666,
+      "complete_overlap": true
+    },
+    {
+      "year": 2024,
+      "modis_detections": 126708,
+      "viirs_detections": 627247,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 9855,
+      "viirs_occupied_cell_days": 12197,
+      "complete_overlap": true
+    },
+    {
+      "year": 2025,
+      "modis_detections": 112864,
+      "viirs_detections": 694175,
+      "modis_download_days": 92,
+      "viirs_download_days": 92,
+      "modis_occupied_cell_days": 11222,
+      "viirs_occupied_cell_days": 15253,
+      "complete_overlap": true
+    },
+    {
+      "year": 2026,
+      "modis_detections": 67156,
+      "viirs_detections": 239782,
+      "modis_download_days": 92,
+      "viirs_download_days": 61,
+      "modis_occupied_cell_days": 8419,
+      "viirs_occupied_cell_days": 6972,
+      "complete_overlap": false
+    }
+  ],
+  "complete_overlap_years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "retained_fields": [
+    "date",
+    "latitude",
+    "longitude",
+    "modis_count",
+    "viirs_count"
+  ],
+  "missing_fields": [
+    "FRP",
+    "brightness",
+    "confidence",
+    "acquisition_time",
+    "satellite_within_MODIS",
+    "nighttime_count",
+    "scan",
+    "track",
+    "clear_sky_coverage"
+  ],
+  "coverage_caveat": "Downloaded-day metadata does not establish clear-sky observations or complete satellite swath coverage.",
+  "gap_policy": "Exclude existing metadata's suspected-gap dates from BOTH sensors, never impute labels. These flags are heuristic and need upstream verification."
+}

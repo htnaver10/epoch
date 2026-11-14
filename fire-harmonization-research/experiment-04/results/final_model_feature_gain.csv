@@ -1,0 +1,11 @@
+feature,split_count,total_training_gain
+current_count,528,11582759.69566912
+occupied_3x3_neighbors,394,392668.7710046879
+occupied_5x5_outer_ring,341,9643.795651711698
+occupied_9x9_outer_ring,569,45313.161758591894
+count_5x5,749,94389.37328215454
+prior6_count,665,885947.6541400317
+prior6_occupied_days,352,41513.67459931544
+prior6_3x3_occupied_cell_days,683,134312.34839178078
+prior_available_days,474,9915.559180565666
+season_phase,364,4845.282380159523

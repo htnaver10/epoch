@@ -1,0 +1,114 @@
+{
+  "selection_fit_8years": {
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "full_grid_cell_days": 18818784,
+    "weighted_cell_days": 18719201.21359526,
+    "distinct_patterns": 57172,
+    "supported_patterns": 57163,
+    "supported_weighted_cell_days": 1533701.5945119695,
+    "recorded_positive_weight": 62861.52380489872,
+    "unsupported_positive_share": 0.14264818822941122,
+    "background_sampling": false
+  },
+  "benchmark_fit_11years": {
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "full_grid_cell_days": 25875828,
+    "weighted_cell_days": 25738901.66869326,
+    "distinct_patterns": 68302,
+    "supported_patterns": 68293,
+    "supported_weighted_cell_days": 2028996.8251956198,
+    "recorded_positive_weight": 81217.14325676578,
+    "unsupported_positive_share": 0.14163337541661636,
+    "background_sampling": false
+  },
+  "final_fit_14years": {
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "full_grid_cell_days": 32728320,
+    "weighted_cell_days": 32555132.545386005,
+    "distinct_patterns": 122511,
+    "supported_patterns": 122498,
+    "supported_weighted_cell_days": 2979022.3767226697,
+    "recorded_positive_weight": 135294.03216068278,
+    "unsupported_positive_share": 0.10560354365317927,
+    "background_sampling": false
+  },
+  "cold_selection_8years": {
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "full_grid_cell_days": 11282144,
+    "weighted_cell_days": 11220760.226532709,
+    "distinct_patterns": 54565,
+    "supported_patterns": 54556,
+    "supported_weighted_cell_days": 1353615.6420877622,
+    "recorded_positive_weight": 58068.1497845346,
+    "unsupported_positive_share": 0.14505151696697402,
+    "background_sampling": false
+  },
+  "cold_benchmark_11years": {
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "full_grid_cell_days": 15512948,
+    "weighted_cell_days": 15428545.311482584,
+    "distinct_patterns": 65753,
+    "supported_patterns": 65744,
+    "supported_weighted_cell_days": 1799086.9357873998,
+    "recorded_positive_weight": 75588.77118800262,
+    "unsupported_positive_share": 0.14244369835039006,
+    "background_sampling": false
+  }
+}

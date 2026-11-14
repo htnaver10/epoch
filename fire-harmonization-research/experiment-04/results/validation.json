@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "prediction_rows_checked": 2352,
+  "metric_groups_checked": 56,
+  "independent_full_grid_binary_metrics": true,
+  "full_grid_probability_totals_reconciled": true,
+  "figure_data_matches_predictions": true,
+  "map_reconciled": true,
+  "frozen_protocol_and_training_code_unchanged": true,
+  "final_training_years": 14,
+  "final_trees": 200,
+  "figure_sizes": {
+    "01_summer_before_after": [
+      2224,
+      1133
+    ],
+    "02_weekly_before_after": [
+      2224,
+      1769
+    ],
+    "03_calendar_before_after": [
+      2223,
+      1587
+    ],
+    "04_spatial_before_after_2023": [
+      2764,
+      1042
+    ],
+    "05_regional_errors": [
+      2224,
+      1187
+    ],
+    "06_training_selection": [
+      2044,
+      1096
+    ]
+  },
+  "isolation": {
+    "main_files_checked": 183,
+    "main_unchanged": true,
+    "prior_research_files_checked": 127,
+    "prior_research_unchanged": true
+  }
+}

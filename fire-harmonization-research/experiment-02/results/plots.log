@@ -1,0 +1,27 @@
+{
+  "figures": 6,
+  "peak_bins": [
+    {
+      "year": 2023,
+      "reference": 9,
+      "before": 9,
+      "after": 9,
+      "power": 9
+    },
+    {
+      "year": 2024,
+      "reference": 10,
+      "before": 10,
+      "after": 10,
+      "power": 10
+    },
+    {
+      "year": 2025,
+      "reference": 8,
+      "before": 8,
+      "after": 8,
+      "power": 8
+    }
+  ],
+  "app_unchanged": true
+}

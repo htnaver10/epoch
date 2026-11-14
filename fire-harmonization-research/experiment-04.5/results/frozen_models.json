@@ -1,0 +1,62 @@
+{
+  "boosted_14year": {
+    "path": "/Users/darrien/Downloads/epoch3/fire-harmonization-research/experiment-04/models/boosted_14year_final.json",
+    "sha256": "77c4b69fb02db628ed2eb85c80d40b6a73f25761e2859e2a06dd9fe81571f314",
+    "training_years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "trees": 200,
+    "test_year": 2026,
+    "test_year_outside_training": true
+  },
+  "boosted_11year": {
+    "path": "/Users/darrien/Downloads/epoch3/fire-harmonization-research/experiment-04/models/boosted_11year_benchmark.json",
+    "sha256": "e6775aa957d8bd7fb1cb2cca2b3a5e965e1d89e9920a70e8199886103ce95686",
+    "training_years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "trees": 200,
+    "test_year": 2026,
+    "test_year_outside_training": true
+  },
+  "boosted_8year": {
+    "path": "/Users/darrien/Downloads/epoch3/fire-harmonization-research/experiment-04/models/boosted_8year_selected.json",
+    "sha256": "e9ce26d3124c3b367fede0df04f2ccaf65f3d91889e9dac2ec44bda3cda061ad",
+    "training_years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "trees": 200,
+    "test_year": 2026,
+    "test_year_outside_training": true
+  }
+}

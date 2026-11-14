@@ -1,0 +1,73 @@
+Loaded temporal 2012
+Loaded temporal 2013
+Loaded temporal 2014
+Loaded temporal 2015
+Loaded temporal 2016
+Loaded temporal 2017
+Loaded temporal 2018
+Loaded temporal 2019
+Selection training {'years': [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019], 'full_grid_cell_days': 18818784, 'weighted_cell_days': 18719201.21359526, 'distinct_patterns': 57172, 'supported_patterns': 57163, 'supported_weighted_cell_days': 1533701.5945119695, 'recorded_positive_weight': 62861.52380489872, 'unsupported_positive_share': 0.14264818822941122, 'background_sampling': False}
+Trees 25/200; training logloss 0.067127
+Loaded temporal 2020
+Loaded temporal 2021
+Loaded temporal 2022
+Checkpoint {'trees': 25, 'validation_score': 0.2658747934009492, 'training_logloss': 0.06712730088841781}
+Trees 50/200; training logloss 0.058198
+Checkpoint {'trees': 50, 'validation_score': 0.19139582310081016, 'training_logloss': 0.05819836222275312}
+Trees 75/200; training logloss 0.057368
+Checkpoint {'trees': 75, 'validation_score': 0.18691043644090014, 'training_logloss': 0.05736844937119673}
+Trees 100/200; training logloss 0.057182
+Checkpoint {'trees': 100, 'validation_score': 0.1865002577873882, 'training_logloss': 0.057181964842786454}
+Trees 125/200; training logloss 0.057081
+Trees 150/200; training logloss 0.057012
+Checkpoint {'trees': 150, 'validation_score': 0.18666146331994554, 'training_logloss': 0.05701161556036535}
+Trees 175/200; training logloss 0.056951
+Trees 200/200; training logloss 0.056891
+Checkpoint {'trees': 200, 'validation_score': 0.18626979636603375, 'training_logloss': 0.056891112617040385}
+Loaded temporal 2023
+Loaded temporal 2024
+Loaded temporal 2025
+Benchmark training {'years': [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022], 'full_grid_cell_days': 25875828, 'weighted_cell_days': 25738901.66869326, 'distinct_patterns': 68302, 'supported_patterns': 68293, 'supported_weighted_cell_days': 2028996.8251956198, 'recorded_positive_weight': 81217.14325676578, 'unsupported_positive_share': 0.14163337541661636, 'background_sampling': False}
+Trees 25/200; training logloss 0.065910
+Trees 50/200; training logloss 0.057203
+Trees 75/200; training logloss 0.056427
+Trees 100/200; training logloss 0.056266
+Trees 125/200; training logloss 0.056160
+Trees 150/200; training logloss 0.056087
+Trees 175/200; training logloss 0.056034
+Trees 200/200; training logloss 0.055992
+Final expanded training {'years': [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], 'full_grid_cell_days': 32728320, 'weighted_cell_days': 32555132.545386005, 'distinct_patterns': 122511, 'supported_patterns': 122498, 'supported_weighted_cell_days': 2979022.3767226697, 'recorded_positive_weight': 135294.03216068278, 'unsupported_positive_share': 0.10560354365317927, 'background_sampling': False}
+Trees 25/200; training logloss 0.071036
+Trees 50/200; training logloss 0.061367
+Trees 75/200; training logloss 0.060465
+Trees 100/200; training logloss 0.060236
+Trees 125/200; training logloss 0.060114
+Trees 150/200; training logloss 0.060035
+Trees 175/200; training logloss 0.059981
+Trees 200/200; training logloss 0.059940
+Loaded cold_east 2012
+Loaded cold_east 2013
+Loaded cold_east 2014
+Loaded cold_east 2015
+Loaded cold_east 2016
+Loaded cold_east 2017
+Loaded cold_east 2018
+Loaded cold_east 2019
+Trees 25/200; training logloss 0.069508
+Loaded cold_east 2020
+Loaded cold_east 2021
+Loaded cold_east 2022
+Trees 50/200; training logloss 0.060423
+Trees 75/200; training logloss 0.059576
+Trees 100/200; training logloss 0.059374
+Trees 125/200; training logloss 0.059260
+Trees 150/200; training logloss 0.059180
+Trees 175/200; training logloss 0.059109
+Trees 200/200; training logloss 0.059054
+Trees 25/75; training logloss 0.068439
+Trees 50/75; training logloss 0.059575
+Trees 75/75; training logloss 0.058771
+Loaded cold_east 2023
+Loaded cold_east 2024
+Loaded cold_east 2025
+Larger model training completed; all prior files unchanged.

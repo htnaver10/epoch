@@ -1,0 +1,25 @@
+{
+  "radius": 4,
+  "beta": 0.75,
+  "pooling": 1.0,
+  "validation_score": 0.15589208582155428,
+  "model": {
+    "radius": 4,
+    "beta": 0.75,
+    "pooled_alpha": 0.7934856044767331,
+    "regional_alpha": {
+      "west": 0.7842970744452769,
+      "central": 0.809868743558549
+    },
+    "training_years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  }
+}

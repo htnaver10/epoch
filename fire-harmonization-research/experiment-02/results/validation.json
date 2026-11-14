@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "prediction_rows_checked": 3192,
+  "chronological_outer_folds": 6,
+  "figures_checked": 6,
+  "previous_artifacts_unchanged": 22,
+  "main_app_files_unchanged": 183,
+  "checks": [
+    "metric recomputation",
+    "season/week reconciliation",
+    "kernel region additivity",
+    "same original matched observations",
+    "validation-only parameter selection",
+    "chronological inner/outer splits",
+    "map-to-saved-total reconciliation",
+    "PNG integrity and SVG parsing",
+    "frozen protocol/implementation hashes",
+    "input and prior artifact integrity",
+    "main app isolation"
+  ]
+}

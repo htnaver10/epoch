@@ -1,0 +1,22 @@
+{
+  "model": {
+    "brier": 0.0007172108274562837,
+    "logloss": 0.005316955552089205,
+    "precision_at_0_5": 0.8655173266086773,
+    "recall_at_0_5": 0.6718112521784282,
+    "f1_at_0_5": 0.7564606382714287,
+    "roc_auc": 0.972615990413387,
+    "average_precision": 0.7964873971065128
+  },
+  "raw_modis": {
+    "brier": 0.0009370518586239126,
+    "logloss": 0.025891704964943276,
+    "precision_at_0_5": 0.8453444710059557,
+    "recall_at_0_5": 0.6508457700324529,
+    "f1_at_0_5": 0.7354530969172708,
+    "roc_auc": 0.8253034978388823,
+    "average_precision": 0.5508876285328113
+  },
+  "cell_days": 2572800,
+  "scope": "area-weighted recorded VIIRS occupancy, not ground-truth fire"
+}

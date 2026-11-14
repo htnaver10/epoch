@@ -1,0 +1,10 @@
+{
+  "test_year": 2026,
+  "primary_days": 51,
+  "sensitivity_days": 59,
+  "primary_mae_reduction_vs_raw": 0.6377153710907488,
+  "sensitivity_mae_reduction_vs_raw": 0.11674114228606924,
+  "clean_complete_holdout": false,
+  "boosted_model_retrained": false,
+  "primary_f1": 0.7413630785853553
+}

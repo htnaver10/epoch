@@ -1,0 +1,53 @@
+{
+  "numpy_daily_occupancy": {
+    "training_rows": 251968,
+    "validation_rows": 88989,
+    "weighted_training_target_mean": 0.0031034901618980123,
+    "validation": {
+      "brier_sum": 8196.81126527567,
+      "logloss_sum": 49446.329871991125,
+      "cell_days": 7057044,
+      "clipped_predictions": 0,
+      "predictions": 7057044,
+      "brier": 0.0011615077453499894,
+      "logloss": 0.007006663111635853
+    },
+    "test": {
+      "brier_sum": 19671.97182594296,
+      "logloss_sum": 101548.11375078841,
+      "cell_days": 6852492,
+      "clipped_predictions": 0,
+      "predictions": 6852492,
+      "brier": 0.0028707763286615964,
+      "logloss": 0.014819151011163299
+    }
+  },
+  "numpy_weekly_activity": {
+    "training_rows": 56782,
+    "validation_rows": 19408,
+    "weighted_training_target_mean": 0.020332939995004823,
+    "validation": {
+      "brier_sum": 0.0,
+      "logloss_sum": 0.0,
+      "cell_days": 0,
+      "clipped_predictions": 316,
+      "predictions": 1073898
+    },
+    "test": {
+      "brier_sum": 0.0,
+      "logloss_sum": 0.0,
+      "cell_days": 0,
+      "clipped_predictions": 1261,
+      "predictions": 1073898
+    }
+  },
+  "numpy_daily_east_holdout": {
+    "brier_sum": 1907.2121094979905,
+    "logloss_sum": 15243.871899709859,
+    "cell_days": 2572800,
+    "clipped_predictions": 0,
+    "predictions": 2572800,
+    "brier": 0.0007412982390772662,
+    "logloss": 0.005925012398830014
+  }
+}

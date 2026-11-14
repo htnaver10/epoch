@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "test_year": 2026,
+  "every_test_year_outside_training": true,
+  "frozen_models_unchanged": 3,
+  "prediction_rows_checked": 432,
+  "metric_groups_checked": 48,
+  "binary_metric_rows_checked": 8,
+  "grid_to_table_totals_reconciled": true,
+  "scenario_inputs_identical": true,
+  "future_modis_invariance_asserted_in_run": true,
+  "main_files_unchanged": 183,
+  "prior_research_files_unchanged": 182
+}

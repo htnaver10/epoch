@@ -1,0 +1,15 @@
+{
+  "candidate_window": [
+    "2026-06-01",
+    "2026-07-31"
+  ],
+  "window_dates_inferred_not_request_verified": true,
+  "days_by_scenario": {
+    "paired_active_dates": 51,
+    "metadata_window": 59
+  },
+  "primary_population_conditioned_on_both_sensors_globally_active": true,
+  "clear_sky_exposure_available": false,
+  "august_scored": false,
+  "inference_uses_modis_only_coverage_flags": true
+}

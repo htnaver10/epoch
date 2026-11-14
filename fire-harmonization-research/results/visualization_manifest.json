@@ -1,0 +1,66 @@
+{
+  "matplotlib": "3.11.2",
+  "years": [
+    2023,
+    2024,
+    2025
+  ],
+  "model_retrained": false,
+  "model_engine": "NumPy weighted logistic regression",
+  "sources": {
+    "results/numpy_weekly_predictions.csv": "63bbce24e23dea2117f199cfa129c548a75c0c0bd1b21b010f570659093b62a9",
+    "results/numpy_seasonal_predictions.csv": "d4f29c98a5a6cf488c810104173d3684005748848e64f90e90facd718ab8689d",
+    "results/numpy_metrics.json": "bc6c604bd34cf5e8072ee5abd1533a3fe058679340bb1eccae4db5d247a62611",
+    "models/numpy_daily_occupancy.json": "ef7a74be1f62d1782a8ec87bc48d0010e6585055d26e67397be7b27626fa1256"
+  },
+  "figures": [
+    {
+      "stem": "01_summer_before_after",
+      "caption": "Matched-summer totals: observed MODIS, daily ML estimate, power-law estimate and observed VIIRS."
+    },
+    {
+      "stem": "02_weekly_before_after",
+      "caption": "Weekly profiles normalized by matched days; common y-axis across all held-out years."
+    },
+    {
+      "stem": "03_calendar_before_after",
+      "caption": "Before/after/reference calendars on one common color scale, with exact per-day values."
+    },
+    {
+      "stem": "04_spatial_before_after_2023",
+      "caption": "2023 MODIS, ML-estimated VIIRS-equivalent activity, and observed VIIRS on the same 0.25-degree grid."
+    },
+    {
+      "stem": "05_regional_errors",
+      "caption": "Regional MAE exposes eastern failure even before the cold-geographic stress test."
+    }
+  ],
+  "map_model_outputs_reconciled_to_saved_results": true,
+  "observation_source_hashes": {
+    "frontend/public/data/seasons/2003.json": "f4d8470279b607dbdcb2571c6395f96e1a27a40e7133a6e7f90c5419d04f7712",
+    "frontend/public/data/seasons/2004.json": "2270a0f95c4ac271c9dff6479afb2ead1dbdcaf08380477c9e435c64ab00fc97",
+    "frontend/public/data/seasons/2005.json": "53878069b589e0ea36011da34e1560259f66ffb67bd2913792511a006253fa3f",
+    "frontend/public/data/seasons/2006.json": "d478879c30b296aeb53da359f82102731204af3adf46d6b1a24acb7ede90aa55",
+    "frontend/public/data/seasons/2007.json": "e6cca5adbe7712f17b9542fb90ddcd2822f7d53dc08a335a8a6be3f2f49a5b14",
+    "frontend/public/data/seasons/2008.json": "492b7147d6188df2bd1ea8b3c8db877a09799f4a2ae182150e9f511b868e70d0",
+    "frontend/public/data/seasons/2009.json": "f5e9f3f83fab5bef8a118338d3931398d6ba15070f5baba36e58e73916315ade",
+    "frontend/public/data/seasons/2010.json": "c3fde2e6fda585d985aa42177b71dd406e4b8f113ea08e8999b370d1192801f7",
+    "frontend/public/data/seasons/2011.json": "f4071b1954daf66209a357605755f44cafd6753b0808d281f2d52afb57ad5ad3",
+    "frontend/public/data/seasons/2012.json": "b15e431299f7ccd7512ecb6fbb9d911a73543f9c6cead70b17a4de21506ef342",
+    "frontend/public/data/seasons/2013.json": "cfc49d17626fe6e7c6d04c17b796c2195032a38faf3080607b543ede45651bcf",
+    "frontend/public/data/seasons/2014.json": "7e875e358a2a1692e8a6e7feb9d26eb8d2d2bfb92f22ce68c96081fdac92c458",
+    "frontend/public/data/seasons/2015.json": "2febd742bcee8878296f5cb6a235fcb8e3c1f3804ccedc39b1085517f8c09719",
+    "frontend/public/data/seasons/2016.json": "5ab48526dabc63ceaadab31fc586adae87e37a861ca79265cd8e93f0dc8466dd",
+    "frontend/public/data/seasons/2017.json": "f25b1f9b3cbed81d517f0de634e530b58007cd461228824f841c482b6b9f3e8a",
+    "frontend/public/data/seasons/2018.json": "64c71b5047e080ed4387b1b443c69f27eb589c2e7c5f0a4167b192c47ef080b1",
+    "frontend/public/data/seasons/2019.json": "f4bfbae0c3c1d7daa65235d2fc6eba856d3dfbd269bfd164cebd29aba53bc2a7",
+    "frontend/public/data/seasons/2020.json": "822953f64d906d4b2897a376542c67bc2602ad8056b595dd233e6f349fa81eeb",
+    "frontend/public/data/seasons/2021.json": "437637444f020330e437d4383528b34e318d2450a7b4e33c46167d118e6ac99a",
+    "frontend/public/data/seasons/2022.json": "c44411f79b684dc908e5611e904edfeea54d62358876d420cec1870c778cb2bb",
+    "frontend/public/data/seasons/2023.json": "f86e809e2db7c971cc8b03a479256bcffeb8040d20509dbf16c493382f333839",
+    "frontend/public/data/seasons/2024.json": "204996aa87f2507d716fd9d174c12c959926d0b20e6ecdb2d17d12c453952e64",
+    "frontend/public/data/seasons/2025.json": "ec1ad4f2e74895852ce6405ce8c64a34a6ec91acf3da4705f3caf134967e216d",
+    "frontend/public/data/seasons/2026.json": "f4fcad46540d5d4b3fc7ad75834ed6d1fd5067057dfe97281233780e40b68351",
+    "frontend/public/data/seasons.json": "94a5734c147cf22c132aa61c4dddc228db59fac86264f44e0dcfb73356cdedb9"
+  }
+}

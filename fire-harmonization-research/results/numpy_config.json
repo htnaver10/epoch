@@ -1,0 +1,53 @@
+{
+  "direction": "MODIS -> VIIRS Suomi NPP reference",
+  "engine": "numpy",
+  "train_years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+  ],
+  "validation_years": [
+    2020,
+    2021,
+    2022
+  ],
+  "test_years": [
+    2023,
+    2024,
+    2025
+  ],
+  "seed": 42,
+  "background_inclusion_probability": 0.01,
+  "training_static_cells": 31,
+  "features": [
+    "modis_log_detections",
+    "modis_occupied_days",
+    "modis_log_max_daily_detections",
+    "modis_neighbors_log_detections",
+    "modis_neighbors_occupied_cell_days",
+    "modis_previous_6_log_detections",
+    "modis_previous_6_occupied_days",
+    "previous_valid_days",
+    "window_valid_days",
+    "latitude",
+    "longitude",
+    "day_of_year_sin",
+    "day_of_year_cos"
+  ],
+  "target_daily": "Recorded VIIRS grid-cell occupancy (0/1)",
+  "target_weekly": "Recorded VIIRS occupied days (0..valid window days)",
+  "metric_units": "cos(latitude)/cos(60N) weighted occupied cell-days",
+  "full_grid_evaluation": true,
+  "true_fire_ground_truth": false,
+  "daily_model_is_forecast": false,
+  "test_set_used_for_tuning": false,
+  "platform": "VIIRS_SNPP_SP",
+  "scope": "50-70N, 140-60W, June-August",
+  "python": "3.14.7",
+  "numpy": "2.4.4"
+}

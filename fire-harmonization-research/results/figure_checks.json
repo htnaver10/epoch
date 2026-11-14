@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "exports_checked": 10,
+  "source_hashes_unchanged": true,
+  "map_reconciliation_passed": true,
+  "checks": [
+    {
+      "file": "visualizations/01_summer_before_after.png",
+      "bytes": 173471,
+      "sha256": "710355e988dea6402cd7e2a56fd268833849926c2850a5f3a85ce232f5750a3d",
+      "size": [
+        2224,
+        1216
+      ]
+    },
+    {
+      "file": "visualizations/01_summer_before_after.svg",
+      "bytes": 16740,
+      "sha256": "02532eee10a7941c891b44ecf2239d96f88921e77dd205a9d573e00eb27cb08e"
+    },
+    {
+      "file": "visualizations/02_weekly_before_after.png",
+      "bytes": 414940,
+      "sha256": "d5daea0c2c214019d7ce20d80ce584ea421d63413404bf8bbf1f4511e240cee3",
+      "size": [
+        2224,
+        1887
+      ]
+    },
+    {
+      "file": "visualizations/02_weekly_before_after.svg",
+      "bytes": 52696,
+      "sha256": "febad1cea115f4e98b1c69b5e49b72c27ceef522b1827cd1afb311d3c179dfe4"
+    },
+    {
+      "file": "visualizations/03_calendar_before_after.png",
+      "bytes": 303385,
+      "sha256": "efc6403275c09e10f680314694926cb46e11c27a7581a3eb6f5780c7f2e886a2",
+      "size": [
+        2223,
+        1733
+      ]
+    },
+    {
+      "file": "visualizations/03_calendar_before_after.svg",
+      "bytes": 74393,
+      "sha256": "3204220f66fc1dfefe7f29aaade745a97164f2c7fd3e8e098f4ec71c12d753a4"
+    },
+    {
+      "file": "visualizations/04_spatial_before_after_2023.png",
+      "bytes": 237504,
+      "sha256": "9aac8ef9d39f972b3c6f5452b669c6640525bdce9f94670ead6a19f1e9202353",
+      "size": [
+        2764,
+        1101
+      ]
+    },
+    {
+      "file": "visualizations/04_spatial_before_after_2023.svg",
+      "bytes": 83015,
+      "sha256": "712a4726d1c67f3ba69a92bb2637e6390088ace6fc7913a97044d3d3eae21694"
+    },
+    {
+      "file": "visualizations/05_regional_errors.png",
+      "bytes": 166152,
+      "sha256": "976fed46698afb3dc782e8163bdcd5e0b3fd96fdce924c40afbf3eeadf022d80",
+      "size": [
+        2224,
+        1216
+      ]
+    },
+    {
+      "file": "visualizations/05_regional_errors.svg",
+      "bytes": 21750,
+      "sha256": "1c60acb43063b0d0123edcb49dfe132ca1207631e4ed5f00678779f04b0ae7fc"
+    }
+  ]
+}

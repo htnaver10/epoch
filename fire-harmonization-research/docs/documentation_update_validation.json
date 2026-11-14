@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "documentation_files_checked": [
+    "README.md",
+    "RESEARCH_SUMMARY.md",
+    "docs/NATIVE_RESOLUTION_MODEL_PLAN.md"
+  ],
+  "broken_local_links": [],
+  "prior_artifacts_checked": 157,
+  "prior_artifacts_changed": [],
+  "main_app_files_checked": 183,
+  "main_app_unchanged": true,
+  "larger_model_mae_figures_checked": true,
+  "tree_and_leaf_count_checked": true,
+  "archive_detection_totals_and_final_exposure_checked": true,
+  "figure_family_count_checked": 17,
+  "scope": "Documentation update only. Historical experiment checks remain historical; no training rerun or app integration."
+}

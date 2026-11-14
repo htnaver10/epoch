@@ -1,0 +1,33 @@
+{
+  "figures": [
+    {
+      "stem": "01_summer_before_after",
+      "caption": "Matched-summer totals: observed MODIS, daily ML estimate, power-law estimate and observed VIIRS."
+    },
+    {
+      "stem": "02_weekly_before_after",
+      "caption": "Weekly profiles normalized by matched days; common y-axis across all held-out years."
+    },
+    {
+      "stem": "03_calendar_before_after",
+      "caption": "Before/after/reference calendars on one common color scale, with exact per-day values."
+    },
+    {
+      "stem": "04_spatial_before_after_2023",
+      "caption": "2023 MODIS, kernel-response estimate, and observed VIIRS on a shared coarse grid."
+    },
+    {
+      "stem": "05_regional_errors",
+      "caption": "Regional error before and after kernel-response calibration, compared with the power law."
+    },
+    {
+      "stem": "06_rolling_backtests",
+      "caption": "Rolling-origin weekly error across 2020\u20132025 with matched-history baselines."
+    }
+  ],
+  "source_hashes": {
+    "results/weekly_predictions.csv": "08f4542c79a40fffe260c43bd045dcf74d39490d42087c94148739e2df991c7b",
+    "results/metrics.json": "56f17bb037f0cd75cdb7fbbc0b67153026003116488d2ad98e89896fbd1bfeaf",
+    "models/fixed_selected.json": "8aeaec77a8b27d387cae850a1dc52cdff1e20df16dab8cda5f71bce9d022a297"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "figures_reviewed": 6,
+  "formats": [
+    "PNG",
+    "SVG"
+  ],
+  "png_reviewed_by_assistant": true,
+  "titles_legends_and_axes_legible": true,
+  "shared_color_scales_for_before_after": true,
+  "no_clipped_labels_observed": true,
+  "final_14year_model_not_shown_as_holdout": true
+}

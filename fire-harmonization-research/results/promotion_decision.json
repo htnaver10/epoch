@@ -1,0 +1,9 @@
+{
+  "approved_for_app_integration": false,
+  "daily_weekly_error_beats_power_law": false,
+  "daily_worst_season_error_not_worse_than_power_law": true,
+  "daily_geographic_error_beats_ratio": false,
+  "lightgbm_executed": false,
+  "authenticated_nasa_verified": false,
+  "reason": "Daily model misses weekly-error gate and geographic transfer gate; planned LightGBM remains untested. User authorized research only."
+}

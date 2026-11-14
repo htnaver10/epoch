@@ -1,0 +1,18 @@
+test_api_probe_accepts_header_only_and_real_rows (test_experiment.ExperimentTests.test_api_probe_accepts_header_only_and_real_rows) ... ok
+test_api_probe_rejects_non_csv_or_incomplete_schema (test_experiment.ExperimentTests.test_api_probe_rejects_non_csv_or_incomplete_schema) ... ok
+test_features_use_modis_and_past_context_only (test_experiment.ExperimentTests.test_features_use_modis_and_past_context_only) ... ok
+test_flagged_date_is_excluded_from_feature_window (test_experiment.ExperimentTests.test_flagged_date_is_excluded_from_feature_window) ... ok
+test_logistic_model_learns_and_returns_expected_occupancy (test_experiment.ExperimentTests.test_logistic_model_learns_and_returns_expected_occupancy) ... ok
+test_neighbors_do_not_wrap_across_grid_boundary (test_experiment.ExperimentTests.test_neighbors_do_not_wrap_across_grid_boundary) ... ok
+test_output_cannot_escape_research (test_experiment.ExperimentTests.test_output_cannot_escape_research) ... ok
+test_oversampling_retains_positive_and_modis_only_cases_with_correct_weights (test_experiment.ExperimentTests.test_oversampling_retains_positive_and_modis_only_cases_with_correct_weights) ... ok
+test_partial_2026_overlap_rejected (test_experiment.ExperimentTests.test_partial_2026_overlap_rejected) ... ok
+test_poisson_fit_supports_zeros_and_nonnegative_predictions (test_experiment.ExperimentTests.test_poisson_fit_supports_zeros_and_nonnegative_predictions) ... ok
+test_reference_direction_is_modis_to_viirs (test_experiment.ExperimentTests.test_reference_direction_is_modis_to_viirs) ... ok
+test_static_mask_reads_only_supplied_training_years (test_experiment.ExperimentTests.test_static_mask_reads_only_supplied_training_years) ... ok
+test_weighted_logistic_fit_preserves_population_prevalence (test_experiment.ExperimentTests.test_weighted_logistic_fit_preserves_population_prevalence) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.099s
+
+OK

@@ -1,0 +1,26 @@
+[
+  {
+    "stem": "01_summer_before_after",
+    "caption": "Matched-summer totals for the eleven-year benchmark fit."
+  },
+  {
+    "stem": "02_weekly_before_after",
+    "caption": "Weekly activity includes eight-year and eleven-year boosted models on the same dates."
+  },
+  {
+    "stem": "03_calendar_before_after",
+    "caption": "Before, after and reference calendars on a shared linear scale."
+  },
+  {
+    "stem": "04_spatial_before_after_2023",
+    "caption": "Shared-scale coarse maps reconcile exactly to the saved seasonal predictions."
+  },
+  {
+    "stem": "05_regional_errors",
+    "caption": "Regional temporal errors and a separately trained eastern transfer test."
+  },
+  {
+    "stem": "06_training_selection",
+    "caption": "Validation checkpoint selection and supported-cell training loss."
+  }
+]

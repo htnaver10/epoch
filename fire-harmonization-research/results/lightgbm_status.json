@@ -1,0 +1,6 @@
+{
+  "status": "blocked",
+  "reason": "No module named 'lightgbm'",
+  "installation_attempt": "PyPI DNS resolution failed; no sandbox escalation attempted.",
+  "numpy_results_are_lightgbm_results": false
+}

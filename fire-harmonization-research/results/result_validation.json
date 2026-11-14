@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "weekly_prediction_rows_checked": 1848,
+  "metric_groups_recomputed": 44,
+  "source_files_hash_checked": 25,
+  "checks": [
+    "nonoverlapping chronological splits",
+    "unique saved prediction keys",
+    "finite nonnegative predictions",
+    "full held-out-year membership",
+    "independent weekly MAE recalculation",
+    "season/week total reconciliation",
+    "source file integrity",
+    "main app isolation"
+  ]
+}

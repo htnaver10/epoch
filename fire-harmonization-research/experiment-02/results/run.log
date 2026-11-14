@@ -1,0 +1,8 @@
+Frozen fixed-split selection: {'radius': 2, 'beta': 0.75, 'pooling': 1.0, 'validation_score': 0.2082270773427366}
+Rolling fold: 2020 inner train (2012, 2013, 2014, 2015, 2016, 2017) selection (2018, 2019)
+Rolling fold: 2021 inner train (2012, 2013, 2014, 2015, 2016, 2017, 2018) selection (2019, 2020)
+Rolling fold: 2022 inner train (2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019) selection (2020, 2021)
+Rolling fold: 2023 inner train (2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020) selection (2021, 2022)
+Rolling fold: 2024 inner train (2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021) selection (2022, 2023)
+Rolling fold: 2025 inner train (2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022) selection (2023, 2024)
+Experiment 02 completed; main app and previous experiment artifacts unchanged.

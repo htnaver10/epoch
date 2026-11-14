@@ -1,0 +1,3 @@
+# Optional planned engine. NumPy-only experiments run without LightGBM.
+numpy>=2.3
+lightgbm>=4.6

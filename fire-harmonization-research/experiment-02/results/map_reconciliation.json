@@ -1,0 +1,9 @@
+{
+  "year": 2023,
+  "matched_days": 91,
+  "predicted_weighted_cell_days": 25678.08050523956,
+  "observed_weighted_cell_days": 26087.651440189282,
+  "saved_total_match": true,
+  "radius_cells": 2,
+  "native_resolution_reconstructed": false
+}

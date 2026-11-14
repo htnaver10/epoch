@@ -1,0 +1,107 @@
+{
+  "weekly_comparisons": 42,
+  "weekly_wins": {
+    "versus_uncorrected": 37,
+    "versus_power_law": 17
+  },
+  "year_breakdown": [
+    {
+      "year": 2023,
+      "matched_days": 91,
+      "reference_peak_week": 9,
+      "before_peak_week": 9,
+      "after_peak_week": 6,
+      "power_peak_week": 9,
+      "uncorrected_modis_weekly_mae": 538.8038303348601,
+      "numpy_daily_occupancy_weekly_mae": 149.1390487905947,
+      "power_law_weekly_mae": 106.94762905754999
+    },
+    {
+      "year": 2024,
+      "matched_days": 88,
+      "reference_peak_week": 10,
+      "before_peak_week": 10,
+      "after_peak_week": 10,
+      "power_peak_week": 10,
+      "uncorrected_modis_weekly_mae": 203.36452037108276,
+      "numpy_daily_occupancy_weekly_mae": 123.1384170855739,
+      "power_law_weekly_mae": 144.80156739861457
+    },
+    {
+      "year": 2025,
+      "matched_days": 89,
+      "reference_peak_week": 8,
+      "before_peak_week": 8,
+      "after_peak_week": 9,
+      "power_peak_week": 8,
+      "uncorrected_modis_weekly_mae": 304.15546607228873,
+      "numpy_daily_occupancy_weekly_mae": 82.84466965661613,
+      "power_law_weekly_mae": 76.38539466839484
+    }
+  ],
+  "region_breakdown": [
+    {
+      "phase": "validation",
+      "region": "west",
+      "before_weekly_mae": 75.31134164877493,
+      "after_weekly_mae": 57.6125472678273,
+      "power_weekly_mae": 33.47639243650227,
+      "after_vs_before_error_reduction": 0.2350083532369992,
+      "after_vs_power_error_change": 0.7209903180907642,
+      "after_aggregate_bias": 0.19338191735803464
+    },
+    {
+      "phase": "validation",
+      "region": "central",
+      "before_weekly_mae": 70.49809714993981,
+      "after_weekly_mae": 32.796700194476486,
+      "power_weekly_mae": 27.518563965582498,
+      "after_vs_before_error_reduction": 0.5347860223131642,
+      "after_vs_power_error_change": 0.19180274942745412,
+      "after_aggregate_bias": -0.05554877289955645
+    },
+    {
+      "phase": "validation",
+      "region": "east",
+      "before_weekly_mae": 4.620953137361744,
+      "after_weekly_mae": 35.78870481012914,
+      "power_weekly_mae": 4.062287753003993,
+      "after_vs_before_error_reduction": -6.744875082321674,
+      "after_vs_power_error_change": 7.809987619331988,
+      "after_aggregate_bias": 2.573124507923445
+    },
+    {
+      "phase": "test",
+      "region": "west",
+      "before_weekly_mae": 210.80792986875977,
+      "after_weekly_mae": 76.10513399237058,
+      "power_weekly_mae": 77.81803733331606,
+      "after_vs_before_error_reduction": 0.6389835333056472,
+      "after_vs_power_error_change": -0.02201164922225729,
+      "after_aggregate_bias": -0.02651093831244172
+    },
+    {
+      "phase": "test",
+      "region": "central",
+      "before_weekly_mae": 108.11597354033661,
+      "after_weekly_mae": 48.98250788724224,
+      "power_weekly_mae": 54.17578967792432,
+      "after_vs_before_error_reduction": 0.5469447641890999,
+      "after_vs_power_error_change": -0.09585982634597845,
+      "after_aggregate_bias": -0.047638923574137286
+    },
+    {
+      "phase": "test",
+      "region": "east",
+      "before_weekly_mae": 32.98718918407907,
+      "after_weekly_mae": 34.62233963423493,
+      "power_weekly_mae": 16.96130847908154,
+      "after_vs_before_error_reduction": -0.04956925675089208,
+      "after_vs_power_error_change": 1.0412540504722747,
+      "after_aggregate_bias": 0.20194249395323444
+    }
+  ],
+  "peak_definition": "Highest mean daily activity within a calendar bin; partial-bin estimates are not full-week observations.",
+  "promotion_supported": false,
+  "interpretation": "Improved pooled MODIS/VIIRS agreement; not a proven universal improvement over simple calibration. East weakness already appears in validation."
+}

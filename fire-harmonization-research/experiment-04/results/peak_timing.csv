@@ -1,0 +1,13 @@
+year,model,reference_peak_week,predicted_peak_week,peak_bin_start_error_days,reference_peak_bin_start,predicted_peak_bin_start
+2023,uncorrected_modis,9,9,0,2023-08-03,2023-08-03
+2023,boosted_8year,9,9,0,2023-08-03,2023-08-03
+2023,boosted_11year,9,9,0,2023-08-03,2023-08-03
+2023,power_law,9,9,0,2023-08-03,2023-08-03
+2024,uncorrected_modis,10,10,0,2024-08-10,2024-08-10
+2024,boosted_8year,10,10,0,2024-08-10,2024-08-10
+2024,boosted_11year,10,10,0,2024-08-10,2024-08-10
+2024,power_law,10,10,0,2024-08-10,2024-08-10
+2025,uncorrected_modis,8,8,0,2025-07-27,2025-07-27
+2025,boosted_8year,8,9,7,2025-07-27,2025-08-03
+2025,boosted_11year,8,9,7,2025-07-27,2025-08-03
+2025,power_law,8,8,0,2025-07-27,2025-07-27

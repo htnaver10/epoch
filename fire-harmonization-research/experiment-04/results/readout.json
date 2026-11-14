@@ -1,0 +1,15 @@
+{
+  "selected_trees": 200,
+  "final_leaves": 5319,
+  "benchmark_mae_reduction_vs_raw": 0.7109116763186782,
+  "benchmark_mae_change_vs_power": -0.018218746480298198,
+  "benchmark_mae_change_from_8_to_11_years": 0.06334863336427543,
+  "weekly_wins": {
+    "uncorrected_modis": 38,
+    "power_law": 21,
+    "boosted_8year": 14
+  },
+  "benchmark_peak_bin_matches": 2,
+  "final_model_evaluated_on_fresh_holdout": false,
+  "promotion_supported": false
+}
