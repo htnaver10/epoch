@@ -30,5 +30,6 @@ def make_demo(output='data/manifests/demo.jsonl'):
             rows.append({'schema':SCHEMA,'dataset_kind':'synthetic_smoke_only','tile_id':f'demo_{split}_{i}',
                          'tile':tile,'sha256':sha256(tile),'split':split,'event_group':f'demo_event_{split}_{i}',
                          'region_id':f'demo_region_{split}','source_ids':[f'synthetic_{split}_{i}'],'forest_only':False})
+            rows[-1].update(native_shape=[size,size],query_shape=list(target.shape))
     write_jsonl(output,rows)
     return {'manifest':output,'tiles':len(rows),'warning':'Synthetic software smoke test only. No NASA observations or fire-accuracy evidence.'}

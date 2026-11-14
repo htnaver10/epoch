@@ -115,6 +115,7 @@ def prepare(bundles, output_manifest, tile_size=96, stride=64, halo=16, max_quer
                 rows.append({'schema':SCHEMA,'dataset_kind':'nasa_native','tile_id':identifier,'tile':dest,'sha256':sha256(dest),
                     'split':b['split'],'event_group':b['event_group'],'region_id':b['region_id'],
                     'source_ids':[relative(p) for p in sources], 'source_window':[r,c,tile_size,tile_size],
+                    'native_shape':[tile_size,tile_size],'query_shape':list(target.shape),
                     'valid_queries':float(weight.sum()),'positive_queries':float((target*weight).sum()),
                     'forest_only':forest_only,'modis_start_utc':b['modis_start_utc'],
                     'interval_time_bound_seconds':None if inference else time_bound_seconds(b),

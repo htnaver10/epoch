@@ -1,0 +1,43 @@
+test_buckets_keep_every_tile_exactly_once_and_separate_native_shapes (test_loading.SamplingTests.test_buckets_keep_every_tile_exactly_once_and_separate_native_shapes) ... ok
+test_epoch_shuffle_is_reproducible_including_direct_resume (test_loading.SamplingTests.test_epoch_shuffle_is_reproducible_including_direct_resume) ... ok
+test_invalid_or_empty_sampler (test_loading.SamplingTests.test_invalid_or_empty_sampler) ... ok
+test_archive_members_materialized_once_and_values_preserved (test_loading.TileLoadingTests.test_archive_members_materialized_once_and_values_preserved) ... ok
+test_cache_is_bounded_reused_and_evicted (test_loading.TileLoadingTests.test_cache_is_bounded_reused_and_evicted) ... ok
+test_hash_tampering_is_rejected_even_on_cache_hit (test_loading.TileLoadingTests.test_hash_tampering_is_rejected_even_on_cache_hit) ... ok
+test_old_manifests_need_only_headers_and_shape_claims_are_checked (test_loading.TileLoadingTests.test_old_manifests_need_only_headers_and_shape_claims_are_checked) ... ok
+test_adam_lower_bound (test_memory_worksheet.WorksheetTests.test_adam_lower_bound) ... ok
+test_attention_components_show_quadratic_cost (test_memory_worksheet.WorksheetTests.test_attention_components_show_quadratic_cost) ... ok
+test_coordinate_rounding_exposes_low_precision_error (test_memory_worksheet.WorksheetTests.test_coordinate_rounding_exposes_low_precision_error) ... ok
+test_input_payload_matches_plan_arithmetic (test_memory_worksheet.WorksheetTests.test_input_payload_matches_plan_arithmetic) ... ok
+test_known_bfloat16_rounding (test_memory_worksheet.WorksheetTests.test_known_bfloat16_rounding) ... ok
+test_output_guard (test_memory_worksheet.WorksheetTests.test_output_guard) ... ok
+test_report_is_not_a_gpu_profile (test_memory_worksheet.WorksheetTests.test_report_is_not_a_gpu_profile) ... ok
+test_nonfinite_auxiliary_or_wrong_target_semantics_fail_audit (test_pipeline.DatasetTests.test_nonfinite_auxiliary_or_wrong_target_semantics_fail_audit) ... ok
+test_path_guard (test_pipeline.DatasetTests.test_path_guard) ... ok
+test_source_and_event_leakage_is_rejected (test_pipeline.DatasetTests.test_source_and_event_leakage_is_rejected) ... ok
+test_statistics_use_training_only_and_preserve_precision (test_pipeline.DatasetTests.test_statistics_use_training_only_and_preserve_precision) ... ok
+test_synthetic_default_rejection_and_hash_tampering (test_pipeline.DatasetTests.test_synthetic_default_rejection_and_hash_tampering) ... ok
+test_utc_intervals_conservatively_bound_acquisitions (test_pipeline.DatasetTests.test_utc_intervals_conservatively_bound_acquisitions) ... ok
+test_forest_context_cannot_leak_future_even_in_all_land_mode (test_pipeline.GeometryTests.test_forest_context_cannot_leak_future_even_in_all_land_mode) ... ok
+test_forest_context_year_matches_file_and_is_required_for_forest_mode (test_pipeline.GeometryTests.test_forest_context_year_matches_file_and_is_required_for_forest_mode) ... ok
+test_inverse_recovers_fractional_coordinates_without_future_or_label_inputs (test_pipeline.GeometryTests.test_inverse_recovers_fractional_coordinates_without_future_or_label_inputs) ... ok
+test_labels_exclude_cloud_low_confidence_bowtie_and_halo (test_pipeline.GeometryTests.test_labels_exclude_cloud_low_confidence_bowtie_and_halo) ... ok
+test_modis_scaled_integer_calibration_preserves_invalid_mask (test_pipeline.GeometryTests.test_modis_scaled_integer_calibration_preserves_invalid_mask) ... ok
+test_unknown_coordinates_and_extrapolation_have_no_support (test_pipeline.GeometryTests.test_unknown_coordinates_and_extrapolation_have_no_support) ... ok
+test_weighted_losses_ranking_and_unknown_mask (test_pipeline.MetricTests.test_weighted_losses_ranking_and_unknown_mask) ... ok
+test_accumulation_uses_total_exposure_not_mean_of_means (test_torch_pipeline.TorchPipelineTests.test_accumulation_uses_total_exposure_not_mean_of_means) ... skipped 'PyTorch not installed on this review host'
+test_channels_last_preserves_model_outputs_and_query_layout (test_torch_pipeline.TorchPipelineTests.test_channels_last_preserves_model_outputs_and_query_layout) ... skipped 'PyTorch not installed on this review host'
+test_compile_wrapper_leaves_canonical_checkpoint_keys (test_torch_pipeline.TorchPipelineTests.test_compile_wrapper_leaves_canonical_checkpoint_keys) ... skipped 'PyTorch not installed on this review host'
+test_cuda_bf16_native_step_with_prefetch_and_fused_optimizer (test_torch_pipeline.TorchPipelineTests.test_cuda_bf16_native_step_with_prefetch_and_fused_optimizer) ... skipped 'PyTorch not installed on this review host'
+test_cuda_prefetch_fused_step_matches_synchronous_step (test_torch_pipeline.TorchPipelineTests.test_cuda_prefetch_fused_step_matches_synchronous_step) ... skipped 'PyTorch not installed on this review host'
+test_model_native_shapes_masked_loss_and_backward (test_torch_pipeline.TorchPipelineTests.test_model_native_shapes_masked_loss_and_backward) ... skipped 'PyTorch not installed on this review host'
+test_nonfinite_guard_rejects_update_before_optimizer (test_torch_pipeline.TorchPipelineTests.test_nonfinite_guard_rejects_update_before_optimizer) ... skipped 'PyTorch not installed on this review host'
+test_persistent_workers_keep_epoch_coverage_and_resume_order (test_torch_pipeline.TorchPipelineTests.test_persistent_workers_keep_epoch_coverage_and_resume_order) ... skipped 'PyTorch not installed on this review host'
+test_query_padding_does_not_change_unpadded_predictions (test_torch_pipeline.TorchPipelineTests.test_query_padding_does_not_change_unpadded_predictions) ... skipped 'PyTorch not installed on this review host'
+test_shared_training_step_matches_one_large_batch (test_torch_pipeline.TorchPipelineTests.test_shared_training_step_matches_one_large_batch) ... skipped 'PyTorch not installed on this review host'
+test_train_resume_evaluate_and_infer_roundtrip (test_torch_pipeline.TorchPipelineTests.test_train_resume_evaluate_and_infer_roundtrip) ... skipped 'PyTorch not installed on this review host'
+
+----------------------------------------------------------------------
+Ran 38 tests in 1.450s
+
+OK (skipped=11)

@@ -1,0 +1,24 @@
+{
+  "scope": "warm-cache NumPy loading/normalization of one tile; excludes hashing warmup, Torch, workers, CUDA and NASA-reader validation",
+  "manifest_sha256": "404019805436f2e23c5aeff7b9ed0b8dd5154f8c239c48e9f97e7a8d551a448f",
+  "tile_id": "demo_train_0",
+  "dataset_kind": "synthetic_smoke_only",
+  "native_shape": [
+    32,
+    32
+  ],
+  "query_shape": [
+    64,
+    64
+  ],
+  "iterations": 30,
+  "arrays_bitwise_equal": true,
+  "before_member_reads": 51,
+  "after_member_reads": 11,
+  "median_seconds": {
+    "before": 0.006050479132682085,
+    "after": 0.0019022704800590873
+  },
+  "local_loader_speed_ratio": 3.1806618438899124,
+  "not_claimed": "end-to-end training speedup, RTX utilization, real NASA I/O throughput or fire accuracy"
+}

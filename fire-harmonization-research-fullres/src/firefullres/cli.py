@@ -34,9 +34,12 @@ def main(argv=None):
         a=sub.add_parser(name);a.add_argument('--manifest',required=True);a.add_argument('--checkpoint',required=True)
         a.add_argument('--output',required=True);a.add_argument('--split',choices=['validation','test'] if name=='evaluate' else ['train','validation','test','inference'],default='test' if name=='evaluate' else 'inference')
         a.add_argument('--device',choices=['auto','cpu','cuda'],default='auto');a.add_argument('--allow-synthetic',action='store_true')
-    a=sub.add_parser('profile',help='Actual CUDA forward/backward profile of the implemented model')
+    a=sub.add_parser('profile',help='End-to-end accumulated training profile, optionally with CPU/CUDA trace')
     for key in ('manifest','stats','config','output'):a.add_argument('--'+key,required=True)
     a.add_argument('--steps',type=int,default=10);a.add_argument('--allow-synthetic',action='store_true')
+    a.add_argument('--warmup-steps',type=int,default=3);a.add_argument('--trace')
+    a.add_argument('--worst-case',action='store_true',help='Start with largest query buckets; not an exhaustive fit guarantee')
+    a.add_argument('--device',choices=['auto','cpu','cuda'])
     args=parser.parse_args(argv)
     try:
         command=args.command
@@ -66,7 +69,8 @@ def main(argv=None):
         else:
             from . import engine
             if command=='train':result=engine.train(args.manifest,args.stats,args.config,args.run,args.allow_synthetic,args.resume,args.device,args.epochs)
-            elif command=='profile':result=engine.profile(args.manifest,args.stats,args.config,args.output,args.steps,args.allow_synthetic)
+            elif command=='profile':result=engine.profile(args.manifest,args.stats,args.config,args.output,args.steps,args.allow_synthetic,
+                args.warmup_steps,args.trace,args.worst_case,args.device)
             else:result=engine.predict(args.manifest,args.checkpoint,args.output,args.split,args.device,args.allow_synthetic,command=='evaluate')
         print(json.dumps(result,indent=2,allow_nan=False))
     except (ValueError,RuntimeError,ImportError,OSError,KeyError) as error:

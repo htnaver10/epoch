@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "unit_tests": {
+    "run": 38,
+    "passed": 27,
+    "skipped": 11,
+    "skip_reason": "PyTorch unavailable; CUDA tests also need an actual GPU"
+  },
+  "source_syntax_valid": true,
+  "source_files_checked": 22,
+  "broken_documentation_links": [],
+  "protected_tracked_files_checked": 386,
+  "changed_protected_files": [],
+  "numpy_io_benchmark": "results/optimization_tile_io.json",
+  "torch_execution_tested": false,
+  "RTX5070_profile_tested": false,
+  "native_NASA_training_tested": false,
+  "limitations": [
+    "PyTorch/CUDA tests could not run on this Mac; PyTorch is missing and package-host DNS fails",
+    "Larger-batch, channels-last, fused optimizer, compilation and stream options need target-hardware validation",
+    "Synthetic warm-cache I/O timing is not training speedup evidence"
+  ],
+  "profile_CLI_help_verified": true,
+  "diff_whitespace_check_passed": true
+}

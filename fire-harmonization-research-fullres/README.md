@@ -8,8 +8,10 @@ experiments. The main application is unchanged.
 
 - [Full native-resolution model plan](PLAN.md).
 - **[Installation and complete run instructions](RUNNING.md).**
+- [GPU optimizations, justification and measurement procedure](GPU_OPTIMIZATION.md).
 - [Executable CLI](run.py) and [source package](src/firefullres/).
 - [RTX training configuration](configs/train_rtx5070.json) and [CPU smoke configuration](configs/smoke_cpu.json).
+- [Larger-batch RTX throughput candidate](configs/train_rtx5070_throughput.json), requiring hardware profiling.
 - [Complete plan evaluation for the desktop RTX 5070 12 GB](RTX_5070_REVIEW.md).
 - [Proposed initial configuration](configs/rtx5070_proposed.json): a design profile,
   not a validated trainer configuration.

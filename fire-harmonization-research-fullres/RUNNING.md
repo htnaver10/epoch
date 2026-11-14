@@ -262,17 +262,33 @@ and optimizer state remain FP32. Geometry sampling, weighted reductions and stor
 coordinates retain FP32/FP64. No full-resolution global attention, dense global
 transport loss or simultaneous VIIRS image teacher is used.
 
+The trainer now uses single-read verified tiles, persistent workers, prefetched
+accumulation windows, shape bucketing, channels-last BF16 and automatic CUDA
+optimizer selection. Optional bounded CPU caching, CUDA copy prefetch and model
+compilation are available. See [GPU_OPTIMIZATION.md](GPU_OPTIMIZATION.md) for the
+reasoning, switches, RAM/VRAM costs and a larger-batch candidate configuration.
+
 Profile real tiles on the RTX machine:
 
 ```sh
 python fire-harmonization-research-fullres/run.py profile --manifest data/manifests/native_v1.jsonl --stats data/manifests/native_v1_stats.json --config configs/train_rtx5070.json --steps 20 --output results/native_v1_rtx5070_profile.json
 ```
 
-The profile includes the implemented model, backward pass and optimizer states
-after warm-up. It reports memory for those sampled tiles; stress the largest
-query shapes as well. Its timing excludes loader wait and performs an optimizer
-step per microbatch, so it is not an exact accumulated-training throughput claim.
-Use epoch wall time for actual end-to-end throughput.
+The profile runs the same accumulated, exposure-normalized optimizer update as
+training. `--steps` counts update windows, not microbatches. Its throughput includes
+loader wait, transfers, guards, backward and optimizer work after warm-up. It
+reports actual tile/update counts, query padding and memory for sampled tiles.
+Add `--worst-case` to start with largest query buckets, and optionally `--trace
+results/rtx_trace.json` for a separate short CPU/CUDA diagnostic capture. Tracing
+adds overhead; compare untraced runs for throughput. Memory fit must be checked
+across the real largest shapes; a short profile cannot guarantee all-data fit.
+Epoch logs also record validation/checkpoint and full epoch time.
+
+After the baseline works, profile `configs/train_rtx5070_throughput.json` in a
+separate process/output. It proposes microbatch 4, accumulation 4 and more CPU
+prefetch/cache; its 12 GB fit/speed have not been measured here. Compare 1×16,
+2×8, 4×4 and 8×2 before choosing a long-run recipe. Bucket tails are smaller
+effective batches, normalized by actual exposure; no tile is dropped/duplicated.
 
 Train a short first run, then a longer version under a new name:
 
@@ -301,6 +317,11 @@ and learning configuration; model/precision/optimizer changes require a new run.
 Progress within an unfinished epoch is not restored. CUDA sampling backward can
 be nondeterministic; matching seeds/checkpoints do not guarantee bitwise-identical
 cross-device training.
+
+Training format 2 records the new deterministic window order. Older checkpoint
+formats remain loadable for inference but require a new training run rather
+than an inexact resume. Compiled execution saves the canonical model's keys;
+compilation/layout/cache settings and batch order are frozen with the run config.
 
 If memory is tight, try activation checkpointing or narrower branches in a new
 config/run. Smaller native crop fallback: tile size 64, halo 16, stride 32,
