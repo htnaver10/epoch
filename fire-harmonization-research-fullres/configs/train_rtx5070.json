@@ -1,0 +1,17 @@
+{
+  "device": "cuda",
+  "precision": "bfloat16",
+  "model": {"base": 32, "branch": 8, "activation_checkpointing": false},
+  "seed": 42,
+  "epochs": 30,
+  "microbatch": 1,
+  "accumulation_steps": 16,
+  "workers": 2,
+  "prefetch_factor": 2,
+  "pin_memory": true,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "native_loss_weight": 0.2,
+  "gradient_clip": 1.0,
+  "threshold": 0.5
+}

@@ -1,0 +1,2 @@
+# Install the correct CUDA-enabled PyTorch wheel separately; see RUNNING.md.
+numpy>=2.1

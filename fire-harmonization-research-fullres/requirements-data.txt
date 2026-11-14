@@ -1,0 +1,6 @@
+# Native MODIS additionally requires a GDAL build with HDF4/HDF4Image drivers.
+# Install GDAL using the documented data environment, not a blind pip install.
+numpy>=2.1
+h5py>=3.11
+pyproj>=3.6
+earthaccess>=0.14

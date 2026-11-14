@@ -1,0 +1,17 @@
+{
+  "device": "cpu",
+  "precision": "float32",
+  "model": {"base": 8, "branch": 4, "activation_checkpointing": false},
+  "seed": 42,
+  "epochs": 2,
+  "microbatch": 1,
+  "accumulation_steps": 2,
+  "workers": 0,
+  "prefetch_factor": 2,
+  "pin_memory": false,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "native_loss_weight": 0.2,
+  "gradient_clip": 1.0,
+  "threshold": 0.5
+}

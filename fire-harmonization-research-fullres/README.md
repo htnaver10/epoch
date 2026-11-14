@@ -7,6 +7,9 @@ The existing `../fire-harmonization-research/` folder retains the coarse-grid
 experiments. The main application is unchanged.
 
 - [Full native-resolution model plan](PLAN.md).
+- **[Installation and complete run instructions](RUNNING.md).**
+- [Executable CLI](run.py) and [source package](src/firefullres/).
+- [RTX training configuration](configs/train_rtx5070.json) and [CPU smoke configuration](configs/smoke_cpu.json).
 - [Complete plan evaluation for the desktop RTX 5070 12 GB](RTX_5070_REVIEW.md).
 - [Proposed initial configuration](configs/rtx5070_proposed.json): a design profile,
   not a validated trainer configuration.
@@ -16,17 +19,40 @@ experiments. The main application is unchanged.
 
 ## Current status
 
-The user confirmed a **desktop RTX 5070 with 12 GB VRAM**. OS, CPU, system RAM,
-storage and driver remain unspecified. The review host is macOS/ARM with no
-PyTorch installation or attached RTX 5070, so no GPU training/profile is claimed.
-Native NASA acquisition, the full image model and its trainer are not implemented.
+The user confirmed a **desktop RTX 5070 with 12 GB VRAM**. The first pipeline is
+now implemented: NASA inventory/download, reviewed pairing, native readers and
+tiling, a multiresolution CNN, training/checkpoint resume, profiling, evaluation,
+inference and alignment previews. All paths stay in this folder. It implements
+the current-acquisition baseline; optional temporal/teacher/uncertainty extensions
+remain future work.
 
-The recommended first image model is a compact current-acquisition convolutional
+This review host has NumPy but no PyTorch/native-reader stack or attached RTX GPU,
+and package/download hosts fail DNS. NumPy pipeline checks run here; neural
+execution tests are explicitly skipped until PyTorch is installed. Native readers
+require actual-file calibration/alignment QA. No real native model has been
+trained and no RTX memory/speed or fire-localization result is claimed.
+
+The implemented first image model is a compact current-acquisition convolutional
 student, with native MODIS thermal and optional 250/500 m context, trained using
 aligned VIIRS masks. Start with microbatch 1, then profile 2; use effective batch
 16 through correctly weighted accumulation if stable. Use mixed-precision neural
 operations with FP32/FP64 geometry and numerically sensitive calculations. Add
 temporal branches and any VIIRS image teacher only after the baseline is valid.
+
+## Start the pipeline
+
+See [RUNNING.md](RUNNING.md) for setup, software smoke tests and real NASA data.
+
+```sh
+python fire-harmonization-research-fullres/run.py --help
+python -m unittest discover -s fire-harmonization-research-fullres/tests -v
+```
+
+After preparing and auditing the dataset on the configured RTX host:
+
+```sh
+python fire-harmonization-research-fullres/run.py train --manifest data/manifests/native_v1.jsonl --stats data/manifests/native_v1_stats.json --config configs/train_rtx5070.json --run native_v1
+```
 
 ## Run the review tools
 
@@ -56,7 +82,7 @@ fire-harmonization-research-fullres/
   PLAN.md, RTX_5070_REVIEW.md, README.md
   configs/                  proposed and eventually locked run configurations
   tools/                    environment checks and planning utilities
-  src/                      future acquisition, pairing, tiling, model, train, infer, evaluate
+  src/firefullres/           acquisition, pairing, tiling, model, train, infer, evaluate
   tests/                    unit and real-data integration checks
   data/                     raw granules, manifests, pairs, tiles, masks, splits, caches
   models/                   checkpoints, calibration and model cards
@@ -66,8 +92,8 @@ fire-harmonization-research-fullres/
   .venv/                    optional isolated full-resolution environment
 ```
 
-Only existing tools/documents/results are present now; the tree also identifies
-future locations. Raw granules and caches should be ignored by Git. An approved
+The implementation and software tests are present; native source files and trained
+checkpoints are not bundled. Raw granules and caches are ignored by Git. An approved
 external drive may mount at a data location under this folder and must be
 manifested explicitly. Do not redirect full-resolution writes into the legacy
 research folder or the main app.

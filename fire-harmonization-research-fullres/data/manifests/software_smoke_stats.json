@@ -1,0 +1,93 @@
+{
+  "schema": "modis_native_viirs_queries_v1",
+  "manifest_sha256": "404019805436f2e23c5aeff7b9ed0b8dd5154f8c239c48e9f97e7a8d551a448f",
+  "training_tiles": 4,
+  "fit_partition": "train",
+  "channels": {
+    "thermal": {
+      "mean": [
+        0.3513125193421729,
+        0.36381208542297827,
+        0.37344660349481273,
+        0.38204071998916334,
+        0.38987314461701317,
+        0.3973370981402695
+      ],
+      "scale": [
+        0.0668501200293657,
+        0.11180982191350927,
+        0.14889196453402667,
+        0.17997009025064684,
+        0.20721191529738597,
+        0.23096334245724115
+      ],
+      "valid_pixels": [
+        4096.0,
+        4096.0,
+        4096.0,
+        4096.0,
+        4096.0,
+        4096.0
+      ]
+    },
+    "reflective_500": {
+      "mean": [
+        0.42439087078673765,
+        0.4489075766523456,
+        0.473794249821367,
+        0.4983711055392632,
+        0.5227564995457215
+      ],
+      "scale": [
+        0.11227867321739192,
+        0.21771652154175447,
+        0.32544139973450925,
+        0.43309897939705233,
+        0.5410341428458225
+      ],
+      "valid_pixels": [
+        16384.0,
+        16384.0,
+        16384.0,
+        16384.0,
+        16384.0
+      ]
+    },
+    "reflective_250": {
+      "mean": [
+        0.4245306596340015,
+        0.4490918601618432
+      ],
+      "scale": [
+        0.11203151887414899,
+        0.21813249937642298
+      ],
+      "valid_pixels": [
+        65536.0,
+        65536.0
+      ]
+    }
+  },
+  "thermal_transform": "signed_log1p_radiance",
+  "training_groups": [
+    "demo_event_train_0",
+    "demo_event_train_1",
+    "demo_event_train_2",
+    "demo_event_train_3"
+  ],
+  "training_sources": [
+    "synthetic_train_0",
+    "synthetic_train_1",
+    "synthetic_train_2",
+    "synthetic_train_3"
+  ],
+  "training_tile_ids": [
+    "demo_train_0",
+    "demo_train_1",
+    "demo_train_2",
+    "demo_train_3"
+  ],
+  "dataset_kinds": [
+    "synthetic_smoke_only"
+  ]
+}

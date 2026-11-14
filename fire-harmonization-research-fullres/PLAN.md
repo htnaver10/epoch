@@ -4,6 +4,12 @@
 been trained.** This plan follows the user's latest objective: a nuanced spatial
 model that takes actual MODIS tiles at native band resolution and learns from
 VIIRS data. It replaces coarse counts as the next experiment's primary input.
+
+**Implementation update:** the initial current-image pipeline, native readers,
+CNN, trainer/resume, evaluator and inference scripts now exist. Follow
+[RUNNING.md](RUNNING.md). Their native-data science checks and RTX execution
+remain pending; optional temporal, image-teacher and uncertainty extensions are
+still proposed. No real native-resolution model has been trained.
 The [legacy research summary](../fire-harmonization-research/RESEARCH_SUMMARY.md)
 records the earlier coarse-grid experiments. The latest partial-2026 diagnostic
 is [Experiment 04.5](../fire-harmonization-research/experiment-04.5/results/REPORT.md).

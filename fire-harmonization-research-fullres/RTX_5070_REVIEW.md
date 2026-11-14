@@ -5,6 +5,12 @@ validity, data engineering, and practical training on the user-confirmed desktop
 RTX 5070 with 12 GB VRAM. OS, CPU, RAM, storage and driver are not yet specified.
 This review does not benchmark that GPU or claim a trained native-image model.
 
+Implementation added after this review: see [RUNNING.md](RUNNING.md) for the
+initial native-data/CNN/training pipeline. The scientific and GPU readiness
+conditions below remain unproven until actual native files and the RTX host are
+tested. This review's earlier implementation-status statements describe its
+original assessment, not the absence of the newly added scripts.
+
 ## Decision
 
 **A compact first model is a reasonable experiment on this card.** The earlier
