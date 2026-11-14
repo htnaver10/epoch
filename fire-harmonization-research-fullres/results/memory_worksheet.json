@@ -1,0 +1,77 @@
+{
+  "kind": "analytical_component_arithmetic_not_gpu_profile",
+  "memory_estimates_exclude": [
+    "saved backward activations",
+    "convolution workspaces",
+    "autocast caches",
+    "allocator overhead",
+    "CUDA context",
+    "display/other applications",
+    "framework temporaries"
+  ],
+  "input_payload": {
+    "current_tile_mib": 2.5078125,
+    "two_extra_thermal_frames_mib": 0.421875,
+    "with_two_extra_frames_mib": 2.9296875,
+    "100000_tiles_with_history_gib": 286.102294921875
+  },
+  "fp32_adam_weights_gradients_two_moments_mib": {
+    "2000000": 30.517578125,
+    "5000000": 76.2939453125,
+    "10000000": 152.587890625
+  },
+  "one_384_square_64channel_feature_mib": {
+    "batch1_bf16": 18.0,
+    "batch2_bf16": 36.0,
+    "batch1_fp32": 36.0
+  },
+  "materialized_attention_scores_only_gib": {
+    "256sq_queries_96sq_keys_8heads_bf16_batch1": 9.0,
+    "256sq_queries_384sq_keys_8heads_bf16_batch1": 144.0,
+    "256sq_self_attention_1head_fp32_batch1": 16.0
+  },
+  "dense_256sq_by_256sq_float32_distance_or_transport_matrix_gib": 16.0,
+  "coordinate_cast_example": {
+    "original_latitude": 60.11,
+    "original_longitude": -120.24,
+    "rounding": [
+      {
+        "dtype": "float64",
+        "latitude": 60.11,
+        "longitude": -120.24,
+        "ground_displacement_m": 0.0
+      },
+      {
+        "dtype": "float32",
+        "latitude": 60.11000061035156,
+        "longitude": -120.23999786376953,
+        "ground_displacement_m": 0.13644955390125743
+      },
+      {
+        "dtype": "float16",
+        "latitude": 60.125,
+        "longitude": -120.25,
+        "ground_displacement_m": 1757.5247174367541
+      },
+      {
+        "dtype": "bfloat16",
+        "latitude": 60.0,
+        "longitude": -120.0,
+        "ground_displacement_m": 18084.87472587705
+      }
+    ],
+    "interpretation": "quantization displacement only, not satellite geolocation accuracy"
+  },
+  "absolute_temperature_300K_spacing_K": {
+    "float16": 0.25,
+    "bfloat16": 2.0,
+    "interpretation": "representable spacing at 300K; compute contrasts/normalization in FP32 before AMP"
+  },
+  "hypothetical_time_hours_100k_tiles_30epochs": {
+    "5": 166.66666666666666,
+    "20": 41.666666666666664,
+    "50": 16.666666666666668
+  },
+  "throughput_values_are": "hypothetical processed tiles per second; no GPU speed claim",
+  "no_native_model_trained": true
+}

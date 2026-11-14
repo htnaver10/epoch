@@ -1,0 +1,8 @@
+.venv/
+.cache/
+__pycache__/
+*.pyc
+data/raw/
+data/tiles/
+data/cache/
+models/checkpoints/

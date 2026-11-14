@@ -1,0 +1,10 @@
+{
+  "kind": "tiny_synthetic_cuda_compatibility_smoke_test_not_native_model_profile",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "os": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "native_model_trained": false,
+  "full_model_memory_measured": false,
+  "status": "pytorch_not_installed",
+  "reason": "No module named 'torch'"
+}

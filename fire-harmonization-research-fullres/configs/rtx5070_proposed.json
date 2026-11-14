@@ -1,0 +1,62 @@
+{
+  "status": "proposal_only_not_implemented_trained_or_gpu_profiled",
+  "scope_root": "fire-harmonization-research-fullres",
+  "hardware": {
+    "confirmed_gpu": "desktop NVIDIA GeForce RTX 5070",
+    "nominal_vram_gb": 12,
+    "compute_capability_expected": [12, 0],
+    "os_system_ram_cpu_storage_driver": "not_provided"
+  },
+  "architecture": {
+    "family": "compact_multiresolution_convolutional_student",
+    "target_parameter_range_millions": [2, 5],
+    "native_thermal_tile": [96, 96],
+    "native_500m_tile": [192, 192],
+    "native_250m_tile": [384, 384],
+    "fallback_native_thermal_tile": [64, 64],
+    "fallback_changes": "geographic extent; retain native pixel resolution",
+    "thermal_halo_samples_per_side": 16,
+    "suggested_branch_base_channels": 16,
+    "suggested_core_channels": [32, 64, 128, 256],
+    "normalization": "group_norm",
+    "fine_query_spacing_m": 375,
+    "fine_query_shape": "derived from actual geographic overlap; masked/padded shape buckets",
+    "nominal_96km_query_example": [256, 256],
+    "decoder": "local_coordinate_sampling_and_shared_head",
+    "materialized_full_resolution_global_attention": false,
+    "unrestricted_full_grid_transport_loss": false,
+    "initial_temporal_context_frames": 0,
+    "initial_viirs_image_teacher": false
+  },
+  "training_proposal": {
+    "first_microbatch": 1,
+    "next_microbatch_to_profile": 2,
+    "target_effective_batch_tiles": 16,
+    "accumulation_rule": "normalize each objective by total valid weighted exposure across actual accumulation window",
+    "network_autocast": "bfloat16 after numerical parity check",
+    "float16_fallback": "requires gradient scaling and parity check",
+    "parameter_optimizer_storage": "float32",
+    "coordinate_transform_dtype": "float64 in preprocessing",
+    "local_geometry_grid_distance_dtype": "float32 or higher; autocast disabled",
+    "thermal_difference_normalization_dtype": "float32 before autocast",
+    "masked_loss_reduction_dtype": "float32",
+    "initial_loss": "masked BCE with logits plus a clearly defined native auxiliary target",
+    "activation_checkpointing": "profile before enabling; use non-reentrant implementation where supported",
+    "initial_compilation": "eager",
+    "soft_peak_reserved_budget_fraction_of_total_vram": 0.78,
+    "budget_is": "planning headroom target, not a measured fit guarantee",
+    "loader_workers_initial": 2,
+    "loader_prefetch_factor_initial": 2,
+    "pin_memory_after_measurement": true,
+    "profile_after_optimizer_state_initialization": true,
+    "profile_full_forward_backward_all_losses_and_optimizer_step": true
+  },
+  "scientific_prerequisites": [
+    "real calibrated MODIS L1B and geolocation bundles",
+    "matched VIIRS mask/QA and trustworthy label coverage",
+    "measured temporal/geographic registration error",
+    "one explicit target definition and units",
+    "event/region/time splits with context and temporal buffers",
+    "independent coordinate-aware detection/localization evaluation"
+  ]
+}
