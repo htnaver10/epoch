@@ -1,0 +1,27 @@
+{
+  "fit_split": "validation",
+  "test_used_for_fit": false,
+  "benchmark_previously_examined": true,
+  "features_sha256": "921474f86e93f032fa6b3805741b990120e31056e8305c38b98e19a5241bef0e",
+  "model_sha256": {
+    "mlp": "35535575bd95e385a17bc462c14e1e9ea6fdd534d673db762a3acb9ff67c7759",
+    "tree": "cdb236f52aed7c5d61ae1508c8b73d31df5c8ea9bbc70a175ca0cb9d17cacc50"
+  },
+  "policies": {
+    "mlp": {
+      "raw_logit_cutoff": -2.1093749999999996,
+      "logit_offset": 0.6074640663458695,
+      "false_positive_budget": 2013.0,
+      "validation_average_precision": 0.42420405113736015
+    },
+    "tree": {
+      "raw_logit_cutoff": -1.3261188465674927,
+      "logit_offset": -0.38493048464662083,
+      "false_positive_budget": 2013.0,
+      "validation_average_precision": 0.37397279862181393
+    }
+  },
+  "selected_model": "mlp",
+  "selection_rule": "highest exact validation average precision",
+  "policy": "conservative raw-logit cutoff at MODIS validation false-positive exposure"
+}

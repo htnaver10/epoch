@@ -12,5 +12,10 @@
   "teacher_latest_epoch_seconds": 11.37,
   "student_best_validation_logloss": 0.004161697638032692,
   "student_latest_validation_ap": 0.24521703188165558,
-  "student_latest_epoch_seconds": 19.13
+  "student_latest_epoch_seconds": 19.13,
+  "teacher_training_complete": true,
+  "student_training_complete": true,
+  "evaluation_complete": true,
+  "completion_verification_passed": true,
+  "summary": "results/teacher_student_v1/TRAINING_SUMMARY.md"
 }

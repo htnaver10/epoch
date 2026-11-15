@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "local_files_checksum_verified": 1218,
+  "network_data_downloads": false,
+  "physical_copies": true,
+  "feature_count": 96,
+  "counts": {
+    "train": 10371908,
+    "validation": 1896310,
+    "test": 585464
+  },
+  "positive_counts": {
+    "train": 1913.0,
+    "validation": 1757.0,
+    "test": 95.0
+  },
+  "model_selected_on_validation": "mlp",
+  "new_blind_test": false,
+  "mlp_export_strict_reload": true,
+  "mlp_export_weights_match_selected": true,
+  "label_free_inference_passed": [
+    "mlp",
+    "tree"
+  ],
+  "software_lock_matches": true,
+  "copied_baseline_sha_matches": true
+}

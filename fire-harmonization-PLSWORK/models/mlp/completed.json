@@ -1,0 +1,9 @@
+{
+  "epochs_completed": 16,
+  "selected_epoch": 8,
+  "best_validation_average_precision": 0.42420405113736015,
+  "receipt_sha256": "921474f86e93f032fa6b3805741b990120e31056e8305c38b98e19a5241bef0e",
+  "inference_sha256": "35535575bd95e385a17bc462c14e1e9ea6fdd534d673db762a3acb9ff67c7759",
+  "standalone_export_reload_passed": true,
+  "early_stopping": true
+}

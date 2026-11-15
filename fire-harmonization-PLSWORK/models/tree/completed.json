@@ -1,0 +1,9 @@
+{
+  "selected_iteration": 169,
+  "trained_iterations": 199,
+  "best_validation_average_precision": 0.37397279862181304,
+  "receipt_sha256": "921474f86e93f032fa6b3805741b990120e31056e8305c38b98e19a5241bef0e",
+  "model_sha256": "cdb236f52aed7c5d61ae1508c8b73d31df5c8ea9bbc70a175ca0cb9d17cacc50",
+  "native_reload_passed": true,
+  "lightgbm": "4.7.0"
+}

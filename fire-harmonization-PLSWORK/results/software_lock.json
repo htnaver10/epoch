@@ -1,0 +1,27 @@
+{
+  "sources": {
+    "src/firefullres/__init__.py": "6f6913edb314f0838488ea671e6bfe40a1ea2eadcc0eb40138161fdfac255c74",
+    "src/firefullres/calibration.py": "6f174605e5f08380864e07240f93574331a8954e536720008781dad36db1274d",
+    "src/firefullres/core.py": "16d8a3c1adc5888f593e6b448b823707aa9dccd9ed6efde7d5946a24b95ac9b2",
+    "src/firefullres/engine.py": "57e2822305b8dc0388d3c02b8c64ba0f179123bc83a6b5152703926994c6c9d0",
+    "src/firefullres/loading.py": "ece923c773984a902131a8c246ab6b8b935b74c7556168580758cae177b8e5db",
+    "src/firefullres/metrics.py": "825dfc0a9d200ac86539af124569f66775e85fc961cccb41bbddca65b988fc83",
+    "src/firefullres/network.py": "0c1d8c0bed58181eb5f582c2b2466b9dd7cdbabd6baca3f8d976816923255c9f",
+    "src/firefullres/runtime.py": "c4453ae308c80c1e27439c06d8458b8a3627932ebdb94799cbd5259c7ec75025",
+    "src/firepls/__init__.py": "6cc3df2740d6350c8216c5ce96bcf84ed1f5c3b1ebea4d69c63e701f2b00fab4",
+    "src/firepls/common.py": "5a4351b322dce044eb1e721d8b0837c984025f39f88bee1252e7c14a11807924",
+    "src/firepls/evaluation.py": "1650641a897519474b9a46c18f91a0fb33ba68f36678afa67382ebe5f6fb7f44",
+    "src/firepls/features.py": "f5eb684172f546f8d3867bed4dd3613678cd04e6c5a4983a7c4dcaf34934ace8",
+    "src/firepls/inference.py": "2334f5e1a91c58b245eabe949c8ccd8eb8e7a48fbef711b179ba8253c71dff25",
+    "src/firepls/mlp.py": "c7101277ce32568ef9fc093d2097b7675d94a688d5a06a37942fe6f9a493239a",
+    "src/firepls/prepare.py": "827b5af25a9e9f3e4f36cb0f64a716c151c50a33132da3e86b556686be597702",
+    "src/firepls/tree.py": "10c2c50eafb41f03bfcb93d0424b66c7d4d5c543ba3b0e362a2eafe737141523",
+    "tools/bootstrap_copy.py": "5f40779091a8cadc8b35b80e3995fd1276201cdc7a5379b89eaad5550fbca827",
+    "tools/plot_results.py": "3c6750d69222e5eb6670d791d397420dbd7a3552bf8cb48744200a53d1b939ca",
+    "tools/verify_completion.py": "3b4c05a477620e72197cd5a078c66e55e9ed30ac990f99210dc3a969e99adbe5",
+    "run.py": "4c80ca1a5b363b2c45bbae23abccddffb3e03079e8519532f210ddb040b8bd2a"
+  },
+  "config_sha256": "fae089934467f7055500f09d6bdcc48bd0e3ee042882c896b7278402c054f039",
+  "copy_receipt_sha256": "18a87bf2728190bf021842a75edac8e51a37d0b7d65269862f0982854769ca02",
+  "feature_receipt_sha256": "921474f86e93f032fa6b3805741b990120e31056e8305c38b98e19a5241bef0e"
+}

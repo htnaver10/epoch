@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.partial
+.cache/
+data/raw/
+data/tiles/
+data/features/
+models/**/*.pt
+models/**/*.txt
+results/**/*.npz
+results/**/*.npy

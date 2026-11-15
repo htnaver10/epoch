@@ -4,6 +4,8 @@
 launched with `run-teacher-student.cmd`. The teacher uses separate VIIRS thermal
 imagery; the student retains MODIS-only inference. Soft targets are restricted
 to training tiles and the previous benchmark is explicitly treated as reused.
+The completed [teacher/student comparison](results/teacher_student_v1/TRAINING_SUMMARY.md)
+records the first run's lack of improvement over the supervised ML checkpoint.
 
 **Completed supervised run:** [30-epoch results and charts](results/substantial_round_v3/TRAINING_SUMMARY.md).
 The [expanded acquisition workflow](SUBSTANTIAL_ROUND.md) remains available with

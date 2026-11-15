@@ -1,0 +1,4 @@
+# Already available in the existing GPU environment; nothing installed by launchers.
+numpy==2.1.3
+torch==2.11.0
+matplotlib==3.11.2

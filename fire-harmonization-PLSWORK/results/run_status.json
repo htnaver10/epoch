@@ -1,0 +1,21 @@
+{
+  "stage": "complete",
+  "physical_copy_verified_files": 1218,
+  "new_satellite_downloads": 0,
+  "feature_count": 96,
+  "selected_model": "mlp",
+  "mlp_epochs_completed": 16,
+  "mlp_selected_epoch": 8,
+  "tree_selected_iteration": 169,
+  "unique_tests_covered_across_environments": 13,
+  "evaluation_complete": true,
+  "standalone_inference_verified": [
+    "mlp",
+    "tree"
+  ],
+  "torch": "2.11.0+cu128",
+  "numpy": "2.1.3",
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "summary": "results/TRAINING_SUMMARY.md",
+  "updated_utc": "2026-11-15T05:27:42.728232+00:00"
+}

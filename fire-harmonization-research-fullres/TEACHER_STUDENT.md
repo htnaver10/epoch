@@ -4,6 +4,10 @@ This experiment adds a VIIRS thermal-image teacher to the existing MODIS student
 It preserves the completed supervised experiment, its source code and artifacts.
 The current experiment is `teacher_student_v1`.
 
+**Completed:** 30 teacher epochs and 30 student epochs, with a verified MODIS-only
+student export. This first run did not outperform the previous supervised ML
+checkpoint. Read the [results and charts](results/teacher_student_v1/TRAINING_SUMMARY.md).
+
 Run from the full-resolution research folder:
 
 ```powershell
