@@ -1,0 +1,10 @@
+{
+  "device": "cuda", "precision": "bfloat16", "seed": 42,
+  "model": {"base": 16}, "epochs": 30, "microbatch": 1,
+  "accumulation_steps": 16, "workers": 2, "prefetch_factor": 1,
+  "persistent_workers": true, "pin_memory": true, "tile_cache_mib": 128,
+  "query_bucket_size": 64, "memory_format": "channels_last",
+  "cudnn_benchmark": false, "optimizer_impl": "auto", "cuda_prefetch": false,
+  "learning_rate": 0.0003, "weight_decay": 0.0001,
+  "gradient_clip": 1.0, "threshold": 0.5
+}

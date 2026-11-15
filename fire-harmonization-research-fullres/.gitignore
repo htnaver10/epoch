@@ -6,6 +6,7 @@ __pycache__/
 data/raw/
 data/tiles/
 data/cache/
+data/teacher_cache/
 models/checkpoints/
 models/**/*.pt
 models/**/*.partial

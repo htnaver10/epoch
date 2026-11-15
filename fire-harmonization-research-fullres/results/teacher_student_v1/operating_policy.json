@@ -1,0 +1,10 @@
+{
+  "student_checkpoint_sha256": "74d093642b7c3a5573a37afc046f7fb55b4bef89a2c09ca8440d3c0e2bdb3828",
+  "manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+  "logit_offset": 0.849722379593004,
+  "raw_logit_cutoff": -3.7187499999999996,
+  "validation_modis_false_positive_budget": 2013.0,
+  "fit_split": "validation",
+  "test_used_for_fit": false,
+  "benchmark_previously_examined": true
+}

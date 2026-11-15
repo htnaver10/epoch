@@ -1,0 +1,45 @@
+{
+  "kind": "viirs_thermal_teacher_v1",
+  "config": {
+    "persistent_workers": true,
+    "worker_start_method": "spawn",
+    "tile_cache_mib": 128,
+    "query_bucket_size": 64,
+    "memory_format": "channels_last",
+    "cudnn_benchmark": false,
+    "optimizer_impl": "auto",
+    "cuda_prefetch": false,
+    "compile_mode": null,
+    "compile_dynamic": false,
+    "initialize_output_prior": false,
+    "device": "cuda",
+    "precision": "bfloat16",
+    "seed": 42,
+    "model": {
+      "base": 16
+    },
+    "epochs": 30,
+    "microbatch": 1,
+    "accumulation_steps": 16,
+    "workers": 2,
+    "prefetch_factor": 1,
+    "pin_memory": true,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "threshold": 0.5
+  },
+  "paired_manifest_sha256": "7e075cd4cf61e69bd3397da876644a36e22601507a040bf129af9c9142a8865a",
+  "parameters": 488145,
+  "runtime": {
+    "device": "cuda",
+    "torch": "2.11.0+cu128",
+    "cuda_build": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "memory_format": "channels_last",
+    "compile_mode": null,
+    "optimizer_impl": "fused",
+    "cuda_prefetch_active": false
+  },
+  "no_fire_mask_input": true
+}

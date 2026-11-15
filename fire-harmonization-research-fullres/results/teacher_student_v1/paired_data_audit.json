@@ -1,0 +1,37 @@
+{
+  "ready_for_teacher_training": true,
+  "parent_manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+  "paired_manifest_sha256": "7e075cd4cf61e69bd3397da876644a36e22601507a040bf129af9c9142a8865a",
+  "counts": {
+    "train": {
+      "tiles": 844,
+      "hard_known_weight": 10371908.0,
+      "teacher_known_weight": 10371908.0,
+      "teacher_positive_weight": 1913.0
+    },
+    "validation": {
+      "tiles": 172,
+      "hard_known_weight": 1896310.0,
+      "teacher_known_weight": 1896310.0,
+      "teacher_positive_weight": 1757.0
+    },
+    "test": {
+      "tiles": 84,
+      "hard_known_weight": 585464.0,
+      "teacher_known_weight": 585464.0,
+      "teacher_positive_weight": 95.0
+    }
+  },
+  "bands": [
+    "I04",
+    "I05"
+  ],
+  "teacher_input_channels": [
+    "log1p_I04_radiance",
+    "log1p_I05_radiance",
+    "I04_valid",
+    "I05_valid"
+  ],
+  "teacher_target": "existing confident VIIRS reference labels; no fire mask in inputs",
+  "parent_partitions_and_tiles_preserved": true
+}

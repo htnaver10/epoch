@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "query_shape": [
+    720,
+    592
+  ],
+  "parameters": 488145,
+  "seconds": 0.38357130001531914,
+  "actual_data": true,
+  "updates": 2,
+  "peak_allocated_bytes": 743366144,
+  "peak_reserved_bytes": 903872512,
+  "reserved_fraction_of_device": 0.07050223642172523
+}

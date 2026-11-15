@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "software_tests_passed": 81,
+  "native_environment_calibration_tests_passed": 4,
+  "teacher_epochs_completed": 30,
+  "student_epochs_completed": 30,
+  "teacher_selected_epoch": 26,
+  "student_selected_epoch": 23,
+  "training_only_soft_target_tiles": 844,
+  "soft_target_checksums_verified": true,
+  "teacher_unchanged_after_student_training": true,
+  "student_configuration_and_normalizers_match_supervised_baseline": true,
+  "baseline_checkpoint_and_legacy_source_hashes_unchanged": true,
+  "training_software_lock_matches": true,
+  "student_export_matches_selected_checkpoint": true,
+  "student_export_requires_viirs": false,
+  "optimizer_updates": {
+    "teacher": 2280,
+    "student": 2280
+  },
+  "peak_reserved_gib": {
+    "teacher": 0.853515625,
+    "student": 3.283203125
+  },
+  "fit_seconds": {
+    "teacher": 361.6717643000302,
+    "student": 572.2137517999508
+  },
+  "checked_utc": "2026-11-15T04:56:54.318761+00:00"
+}

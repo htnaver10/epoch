@@ -1,0 +1,47 @@
+{
+  "sources": {
+    "src/firefullres/__init__.py": "6f6913edb314f0838488ea671e6bfe40a1ea2eadcc0eb40138161fdfac255c74",
+    "src/firefullres/acquisition.py": "a288c0905044589eb7782e33c14f4f085f7bc52a528333c00bea48710fc578e0",
+    "src/firefullres/calibration.py": "6f174605e5f08380864e07240f93574331a8954e536720008781dad36db1274d",
+    "src/firefullres/campaign.py": "871c1859a35f279010a4006df5897a2116bc84e5292b7053cfea3efa985276cb",
+    "src/firefullres/cli.py": "8da38b42fd3566103e9f47e6f3a154ffdd3d295a39eb70fbd7d3745aacc7362b",
+    "src/firefullres/core.py": "16d8a3c1adc5888f593e6b448b823707aa9dccd9ed6efde7d5946a24b95ac9b2",
+    "src/firefullres/demo.py": "66c6c9f3c655f21f76ff60acc220e3bbcddca9db65d3e7bd8591add7e236d9f8",
+    "src/firefullres/engine.py": "57e2822305b8dc0388d3c02b8c64ba0f179123bc83a6b5152703926994c6c9d0",
+    "src/firefullres/geometry.py": "f3f57a6dc085c4a766652f356753e4dcbdb71440cc329816dec729220f9bb36c",
+    "src/firefullres/loading.py": "ece923c773984a902131a8c246ab6b8b935b74c7556168580758cae177b8e5db",
+    "src/firefullres/metrics.py": "825dfc0a9d200ac86539af124569f66775e85fc961cccb41bbddca65b988fc83",
+    "src/firefullres/native.py": "e85598cc266bc0d7848d9d2fb82ea707b900432a0ba82518980b353ad131bfce",
+    "src/firefullres/network.py": "0c1d8c0bed58181eb5f582c2b2466b9dd7cdbabd6baca3f8d976816923255c9f",
+    "src/firefullres/prepare.py": "25278ace21d7a14462b652bacc14dab0f7e44f1f6cfeef95ca679f9575638f36",
+    "src/firefullres/preview.py": "0da22f8a2522215233f52e3777d8d72ee9ae24af84dfb71703532dfab978a751",
+    "src/firefullres/runtime.py": "c4453ae308c80c1e27439c06d8458b8a3627932ebdb94799cbd5259c7ec75025",
+    "src/firefullres/distill/__init__.py": "abdc13c47da0947a5362ff3094a4de5492436c6968acdc64f2fe6a4bf843770f",
+    "src/firefullres/distill/acquisition.py": "43ffde1cca7d4af8f06ea5516688ebba7048f321c8d4c48c31d455f711665141",
+    "src/firefullres/distill/data.py": "8c8ba48d25092ae8c8507c29dee9da40fe1730f9a6a09a512a033825aadd7a1c",
+    "src/firefullres/distill/evaluation.py": "3cae75a330c2bc5fc986e232f8330e57b4af54c8424c2b6ac73afe114888a2a0",
+    "src/firefullres/distill/history.py": "922f29f3ff65ea9795d58470b33972ac46a5a7229a26069a0a0b29171b6a8bb5",
+    "src/firefullres/distill/models.py": "db1ad1784ee1356a715fef65111bd727c8b70bebf2f852aef42243553c47bde5",
+    "src/firefullres/distill/pipeline.py": "1ee459d65f232ece033b756b834f5b71f52539d9892f76dafa39f29958a72012",
+    "src/firefullres/distill/student.py": "b3bac5ecd99cf3893ce32c5684d5122baee247156dba3a02177a19634e0fae99",
+    "src/firefullres/distill/teacher.py": "ce2936f424c2b976983e2751ef13aca50d668b11ca6d4596acdc84404219c88b",
+    "tools/run_teacher_student.py": "79d34ebd39dc6adc2d47527c4ee77417f0001d94b53c05abe684b7f63527245e",
+    "tools/teacher_student_stage.py": "5a482051d8d0be6b8610f676627a16a994d923ebd96568151dcc3a95a4b47386",
+    "tools/evaluate_substantial_round.py": "6756cb58861edb59fe82b9d8fc70d8bef85536ec4ccbdb4a9a07c6a968c61a73",
+    "tools/download_real_data.py": "754bd292a5d6ae2b898221796e9ae01c98012feb0ac2850d9faad34db2832910"
+  },
+  "teacher_config_sha256": "6585bf81ad5b6f12665b78c490f93034b4df743d6494f4bccb3017d89680fa87",
+  "student_config_sha256": "d451332b0dfc85b8387d5c86ce719b6aaf0059b95a1ba305c36b56c3f836b517",
+  "parent_manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+  "student_statistics_sha256": "4c82dda73af5bcc8e4de210246caad2fafcb490d3149b078543d3e2922f3e724",
+  "baseline_checkpoint_sha256": "9bf781a9239779aad4c78521dc73d25e8d0b90423ea0c5b22d0547e9dc8080bf",
+  "data_versions": {
+    "numpy": "2.5.4",
+    "h5py": "3.16.0",
+    "earthaccess": "0.19.0"
+  },
+  "training_versions": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.1.3"
+  }
+}

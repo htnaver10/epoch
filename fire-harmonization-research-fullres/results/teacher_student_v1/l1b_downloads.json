@@ -1,0 +1,189 @@
+{
+  "G2128150246-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2021192.1954.002.2021193042840.nc",
+    "start_utc": "2021-07-11T19:54:00+00:00",
+    "granule_id": "G2128150246-LAADS",
+    "filename": "VNP02IMG.A2021192.1954.002.2022266062107.nc",
+    "estimated_bytes": 288936411,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2021192.1954.002.2022266062107.nc",
+    "sha256": "a04123b98c69ed92917789eba75cc561097ed19922395fe5b8faefc3d01c72b8",
+    "bytes": 288936411,
+    "charged_bytes": 288936411
+  },
+  "G2128150360-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2021192.2130.002.2021193043208.nc",
+    "start_utc": "2021-07-11T21:30:00+00:00",
+    "granule_id": "G2128150360-LAADS",
+    "filename": "VNP02IMG.A2021192.2130.002.2022266062232.nc",
+    "estimated_bytes": 290842165,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2021192.2130.002.2022266062232.nc",
+    "sha256": "7589bc6e4501e0b24a98ef111f6ab82a5e9a06d8fd6ddd29cb012d40daf571ab",
+    "bytes": 290842165,
+    "charged_bytes": 290842165
+  },
+  "G2128159529-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2021195.1048.002.2021195173756.nc",
+    "start_utc": "2021-07-14T10:48:00+00:00",
+    "granule_id": "G2128159529-LAADS",
+    "filename": "VNP02IMG.A2021195.1048.002.2022266080311.nc",
+    "estimated_bytes": 91194462,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2021195.1048.002.2022266080311.nc",
+    "sha256": "1031e53b21953bdee4636ab0550627d268fe6b1c1b8cd2cb450fda75988534d7",
+    "bytes": 91194462,
+    "charged_bytes": 91194462
+  },
+  "G2128169323-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2021198.0948.002.2021198163524.nc",
+    "start_utc": "2021-07-17T09:48:00+00:00",
+    "granule_id": "G2128169323-LAADS",
+    "filename": "VNP02IMG.A2021198.0948.002.2022266093606.nc",
+    "estimated_bytes": 118947907,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2021198.0948.002.2022266093606.nc",
+    "sha256": "50331d4f82af60e2cca43e8df8e3dd569a9f5e46323ca6f77e6ef46f86c2b48f",
+    "bytes": 118947907,
+    "charged_bytes": 118947907
+  },
+  "G2128205675-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2021208.1954.002.2021209055043.nc",
+    "start_utc": "2021-07-27T19:54:00+00:00",
+    "granule_id": "G2128205675-LAADS",
+    "filename": "VNP02IMG.A2021208.1954.002.2022266154004.nc",
+    "estimated_bytes": 291955292,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2021208.1954.002.2022266154004.nc",
+    "sha256": "472edb0855c2d84401248152133f42f67f72a8d8f6e27b2566b4fadc5ae3b4f2",
+    "bytes": 291955292,
+    "charged_bytes": 291955292
+  },
+  "G2128214850-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2021211.1048.002.2021211185756.nc",
+    "start_utc": "2021-07-30T10:48:00+00:00",
+    "granule_id": "G2128214850-LAADS",
+    "filename": "VNP02IMG.A2021211.1048.002.2022266172437.nc",
+    "estimated_bytes": 95094926,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2021211.1048.002.2022266172437.nc",
+    "sha256": "8af8b0c828889281af990f80175b37f03655b73f2be2915f24d0421d868e176a",
+    "bytes": 95094926,
+    "charged_bytes": 95094926
+  },
+  "G2128224950-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2021214.0948.002.2021214164304.nc",
+    "start_utc": "2021-08-02T09:48:00+00:00",
+    "granule_id": "G2128224950-LAADS",
+    "filename": "VNP02IMG.A2021214.0948.002.2022266190727.nc",
+    "estimated_bytes": 110520492,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2021214.0948.002.2022266190727.nc",
+    "sha256": "db84db5178b3dcb2e20166996a160611d9eb1dc45706bdb2915454ad5179fd73",
+    "bytes": 110520492,
+    "charged_bytes": 110520492
+  },
+  "G2326796051-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2022187.1048.002.2022187174746.nc",
+    "start_utc": "2022-07-06T10:48:00+00:00",
+    "granule_id": "G2326796051-LAADS",
+    "filename": "VNP02IMG.A2022187.1048.002.2022271112723.nc",
+    "estimated_bytes": 205903023,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2022187.1048.002.2022271112723.nc",
+    "sha256": "1ad9ac32da417411bc39d84c6e2e20a9ddeb46a13ef4eb02250e3d05513afead",
+    "bytes": 205903023,
+    "charged_bytes": 205903023
+  },
+  "G2335053003-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2022189.2006.002.2022190051226.nc",
+    "start_utc": "2022-07-08T20:06:00+00:00",
+    "granule_id": "G2335053003-LAADS",
+    "filename": "VNP02IMG.A2022189.2006.002.2022271120415.nc",
+    "estimated_bytes": 291042473,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2022189.2006.002.2022271120415.nc",
+    "sha256": "4eae10ffb25cbf6123c2e2b514c0b10e0ee4804f7f4a6d279b312a5939251412",
+    "bytes": 291042473,
+    "charged_bytes": 291042473
+  },
+  "G2346439856-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2022195.1000.002.2022195175430.nc",
+    "start_utc": "2022-07-14T10:00:00+00:00",
+    "granule_id": "G2346439856-LAADS",
+    "filename": "VNP02IMG.A2022195.1000.002.2022271133647.nc",
+    "estimated_bytes": 134416946,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2022195.1000.002.2022271133647.nc",
+    "sha256": "0c80f39dd23411bbe0b17018505e8cbb800c155e281d245894c73ace2a016c2e",
+    "bytes": 134416946,
+    "charged_bytes": 134416946
+  },
+  "G2350947888-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2022197.1918.002.2022198022333.nc",
+    "start_utc": "2022-07-16T19:18:00+00:00",
+    "granule_id": "G2350947888-LAADS",
+    "filename": "VNP02IMG.A2022197.1918.002.2022271141540.nc",
+    "estimated_bytes": 285046030,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2022197.1918.002.2022271141540.nc",
+    "sha256": "80f8aecc3678f59ec3b45a7bb75a28a093e3cce84f3d9da866f159a60d41f592",
+    "bytes": 285046030,
+    "charged_bytes": 285046030
+  },
+  "G2359353904-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2022203.1048.002.2022203174216.nc",
+    "start_utc": "2022-07-22T10:48:00+00:00",
+    "granule_id": "G2359353904-LAADS",
+    "filename": "VNP02IMG.A2022203.1048.002.2022271154754.nc",
+    "estimated_bytes": 198357132,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2022203.1048.002.2022271154754.nc",
+    "sha256": "c11f52023bed517a42ed419e8cf3b1d9ea25a39ad3cbf1ad93f50ba95410f926",
+    "bytes": 198357132,
+    "charged_bytes": 198357132
+  },
+  "G2704390978-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc",
+    "start_utc": "2023-06-05T17:54:00+00:00",
+    "granule_id": "G2704390978-LAADS",
+    "filename": "VNP02IMG.A2023156.1754.002.2023157024932.nc",
+    "estimated_bytes": 294783602,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2023156.1754.002.2023157024932.nc",
+    "sha256": "705d380691dd88bdc44109f09370708fa202c302b66596ff32c4601127e983a3",
+    "bytes": 294783602,
+    "charged_bytes": 294783602
+  },
+  "G2704390987-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc",
+    "start_utc": "2023-06-05T18:00:00+00:00",
+    "granule_id": "G2704390987-LAADS",
+    "filename": "VNP02IMG.A2023156.1800.002.2023157024851.nc",
+    "estimated_bytes": 284426070,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2023156.1800.002.2023157024851.nc",
+    "sha256": "778881193ae160c00b064c3731caea382bfac260a80344ad25118ba8872d09f1",
+    "bytes": 284426070,
+    "charged_bytes": 284426070
+  },
+  "G3080812018-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc",
+    "start_utc": "2024-06-05T18:36:00+00:00",
+    "granule_id": "G3080812018-LAADS",
+    "filename": "VNP02IMG.A2024157.1836.002.2024158034135.nc",
+    "estimated_bytes": 287807928,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2024157.1836.002.2024158034135.nc",
+    "sha256": "f97ae472e4d4152887aca357b077756fab199805a92b09e3a4c92e651c2b384a",
+    "bytes": 287807928,
+    "charged_bytes": 287807928
+  },
+  "G3083643085-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc",
+    "start_utc": "2024-06-08T17:36:00+00:00",
+    "granule_id": "G3083643085-LAADS",
+    "filename": "VNP02IMG.A2024160.1736.002.2024161004933.nc",
+    "estimated_bytes": 295589333,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2024160.1736.002.2024161004933.nc",
+    "sha256": "2d98d22b69532297bb479be49c905a6926478273cde88fd2d78d0afc261ab98d",
+    "bytes": 295589333,
+    "charged_bytes": 295589333
+  },
+  "G3091848403-LAADS": {
+    "geo": "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc",
+    "start_utc": "2024-06-13T17:42:00+00:00",
+    "granule_id": "G3091848403-LAADS",
+    "filename": "VNP02IMG.A2024165.1742.002.2024166004527.nc",
+    "estimated_bytes": 293524760,
+    "path": "data/raw/VNP02IMG/VNP02IMG.A2024165.1742.002.2024166004527.nc",
+    "sha256": "e462feb07d0eedb99e0a2a50494dda6dc2f37ea70369a1901c183cac5a3ff650",
+    "bytes": 293524760,
+    "charged_bytes": 293524760
+  }
+}

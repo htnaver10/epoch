@@ -1,18 +1,22 @@
 # Native-resolution fire harmonization
 
-**Next substantive run:** [the expanded 30-epoch workflow](SUBSTANTIAL_ROUND.md)
-collects fire-rich training scenes, retains MODIS as the baseline, and freezes
-calibration/operating thresholds before separately reserved test predictions.
-Run `run-substantial-round.cmd` and enter Earthdata credentials locally.
+**VIIRS teacher to MODIS student:** [training workflow](TEACHER_STUDENT.md),
+launched with `run-teacher-student.cmd`. The teacher uses separate VIIRS thermal
+imagery; the student retains MODIS-only inference. Soft targets are restricted
+to training tiles and the previous benchmark is explicitly treated as reused.
+
+**Completed supervised run:** [30-epoch results and charts](results/substantial_round_v3/TRAINING_SUMMARY.md).
+The [expanded acquisition workflow](SUBSTANTIAL_ROUND.md) remains available with
+`run-substantial-round.cmd`.
 
 For the difference between executing the small pilot and training a model with
 demonstrated benefit, see [useful-model training workflow](USEFUL_MODEL_TRAINING.md)
 and [current readiness evidence](results/useful_training_readiness.json).
 
-**Windows RTX-host verification (2026-11-14):** environments are prepared; 44 tests,
-full-size synthetic CUDA training/resume/prediction and GDAL/HDF4 file checks pass.
-Real NASA data and reviewed preparation remain required. Start with
-[this computer's readiness report and Windows launchers](WINDOWS_TRAINING_READINESS.md).
+**Windows RTX host:** native NASA preparation and GPU training have been run on
+this computer. Teacher/student verification includes 81 passing tests and an
+actual-data CUDA profile. The [initial readiness report and Windows launchers](WINDOWS_TRAINING_READINESS.md)
+retain the earlier environment-setup evidence.
 
 This is the project-root folder for **all full-resolution work**: plans, research
 notes, acquisition/preprocessing/training/evaluation scripts, configurations,

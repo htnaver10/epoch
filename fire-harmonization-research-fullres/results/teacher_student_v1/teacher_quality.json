@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "validation": {
+    "valid_query_weight": 1896310.0,
+    "positive_query_weight": 1757.0,
+    "brier": 0.0005908464018857653,
+    "logloss": 0.002653166724700165,
+    "precision": 0.8795620437956204,
+    "recall": 0.2743312464428002,
+    "f1": 0.41822125813449024,
+    "roc_auc": 0.9965956107012994,
+    "average_precision": 0.7014523837902863,
+    "ranking_method": "approximate_4096_bin_histogram",
+    "threshold": 0.5,
+    "scope": "recorded VIIRS query fire status; not verified ground-truth wildfire"
+  },
+  "always_clear_brier": 0.0009265362730777141,
+  "minimum_average_precision_exclusive": 0.01,
+  "fit_or_check_partition": "validation",
+  "test_used": false,
+  "note": "Quality gate checks label prediction, not verified wildfire truth.",
+  "teacher_checkpoint_sha256": "9fc2a2743b9c7e49f9f4f381cbe3a2d4ead60cd76ba9fddb2e375ffcb40c0893",
+  "paired_manifest_sha256": "7e075cd4cf61e69bd3397da876644a36e22601507a040bf129af9c9142a8865a"
+}

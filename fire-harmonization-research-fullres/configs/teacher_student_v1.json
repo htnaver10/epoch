@@ -1,0 +1,20 @@
+{
+  "name": "teacher_student_v1",
+  "parent_manifest": "data/manifests/substantial_round_v3.jsonl",
+  "parent_manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+  "student_statistics": "data/manifests/substantial_round_v3_stats.json",
+  "baseline_checkpoint": "models/substantial_round_v3/best.pt",
+  "baseline_checkpoint_sha256": "9bf781a9239779aad4c78521dc73d25e8d0b90423ea0c5b22d0547e9dc8080bf",
+  "teacher_config": "configs/train_viirs_teacher_v1.json",
+  "student_config": "configs/train_distilled_student_v1.json",
+  "download_budget_gib": 16,
+  "reserve_free_gib": 40,
+  "product": "VNP02IMG",
+  "cmr_version": "2",
+  "thermal_bands": ["I04", "I05"],
+  "max_query_side": 768,
+  "temperature": 2.0,
+  "distillation_weight": 0.5,
+  "minimum_teacher_support_fraction": 0.5,
+  "scope": "VIIRS thermal teacher to MODIS-only student; existing 2024 test benchmark has already been examined and is not a new blind test."
+}
