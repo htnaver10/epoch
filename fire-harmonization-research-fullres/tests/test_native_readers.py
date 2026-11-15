@@ -35,5 +35,17 @@ class SubdatasetTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'found 2'):
             self.select('Latitude',['[2x2] Latitude (Float32)','[2x2] Latitude (Float32)'])
 
+    def test_hidden_modis_geolocation_uses_raw_sds_fallback(self):
+        root=Mock();root.GetSubDatasets.return_value=[('HDF4_EOS:angles','[8x8] SensorZenith (Int16)')]
+        expanded=Mock();expanded.GetSubDatasets.return_value=[
+            ('HDF4_EOS:latitude','[8x8] Latitude (Float32)'),
+            ('HDF4_SDS:raw_latitude','[8x8] Latitude (Float32)'),
+            ('HDF4_SDS:raw_longitude','[8x8] Longitude (Float32)')]
+        gdal=Mock();gdal.Open.side_effect=[root,'selected'];gdal.OpenEx.return_value=expanded
+        with patch('firefullres.native.gdal_module',return_value=gdal):
+            self.assertEqual(sds('data/raw/example.hdf','Latitude'),'selected')
+        self.assertEqual(gdal.Open.call_args.args[0],'HDF4_SDS:raw_latitude')
+        self.assertEqual(gdal.OpenEx.call_args.kwargs['open_options'],['LIST_SDS=YES'])
+
 
 if __name__=='__main__':unittest.main()

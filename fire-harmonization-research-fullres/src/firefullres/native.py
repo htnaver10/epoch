@@ -27,6 +27,14 @@ def sds(filename, name):
     tokens=re.split(r'[^a-zA-Z0-9]+',name.strip())
     pattern=r'(?<![a-zA-Z0-9_])'+r'[\s_]+'.join(map(re.escape,tokens))+r'(?![a-zA-Z0-9_])'
     candidates=[uri for uri,description in root.GetSubDatasets() if re.search(pattern,description,re.IGNORECASE)]
+    if not candidates:
+        # GDAL hides raw SDS when EOS swaths exist. MYD03 Latitude/Longitude
+        # are geolocation fields and are absent from the default swath list.
+        # Only retry a missing name and only inspect raw SDS, so the expanded
+        # list cannot duplicate an already selected EOS science field.
+        expanded=gdal.OpenEx(str(path(filename)),gdal.OF_RASTER,open_options=['LIST_SDS=YES'])
+        candidates=[uri for uri,description in expanded.GetSubDatasets()
+                    if uri.startswith('HDF4_SDS:') and re.search(pattern,description,re.IGNORECASE)]
     if len(candidates)!=1:
         raise ValueError(f'Expected one {name} subdataset in {path(filename).name}; found {len(candidates)}')
     return gdal.Open(candidates[0])
