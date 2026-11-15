@@ -1,0 +1,72 @@
+{
+  "checked_utc": "2026-11-14T23:57:29.720758+00:00",
+  "stage": "readers",
+  "python": "3.12.16 | packaged by conda-forge | (main, Oct 26 2026, 11:29:01) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\Darrien\\Desktop\\epoch1\\epoch\\fire-harmonization-research-fullres\\.data-env\\python.exe",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "logical_cpus": 32,
+  "physical_memory": {
+    "total_bytes": 66155405312,
+    "available_bytes": 45770661888
+  },
+  "disk": {
+    "total_bytes": 999003516928,
+    "used_bytes": 747372933120,
+    "free_bytes": 251630583808
+  },
+  "dependencies": {
+    "numpy": {
+      "available": true,
+      "version": "2.5.4"
+    },
+    "h5py": {
+      "available": true,
+      "version": "3.16.0"
+    },
+    "pyproj": {
+      "available": true,
+      "version": "3.8.0"
+    },
+    "earthaccess": {
+      "available": true,
+      "version": "0.19.0"
+    },
+    "matplotlib": {
+      "available": true,
+      "version": "3.11.2"
+    }
+  },
+  "software_errors": [],
+  "earthdata_environment_configured": false,
+  "credential_note": "Presence only; credentials were not read from files or authenticated.",
+  "gdal": {
+    "available": true,
+    "version": "GDAL 3.13.3 \"Iowa City\", released 2026/08/13",
+    "HDF4": true,
+    "HDF4Image": true
+  },
+  "raw_native_files": 0,
+  "manifests": [
+    {
+      "manifest": "data/manifests/software_smoke.jsonl",
+      "rows": 8,
+      "dataset_kinds": [
+        "synthetic_smoke_only"
+      ],
+      "missing_tiles": 8
+    },
+    {
+      "manifest": "data/manifests/windows_fullshape_smoke.jsonl",
+      "rows": 20,
+      "dataset_kinds": [
+        "synthetic_smoke_only"
+      ],
+      "missing_tiles": 0
+    }
+  ],
+  "nasa_tile_manifests_present": false,
+  "scientific_readiness_assessed": false,
+  "scientific_note": "Manifest presence is not an audit or real-file calibration/alignment approval.",
+  "software_stage_ready": true,
+  "nvidia_smi": "NVIDIA GeForce RTX 5070, 610.88, 12227 MiB, 1331 MiB"
+}

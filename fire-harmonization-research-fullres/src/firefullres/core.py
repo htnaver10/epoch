@@ -26,7 +26,7 @@ def path(value, mkdir=False):
 
 
 def relative(value):
-    return str(path(value).relative_to(ROOT))
+    return path(value).relative_to(ROOT).as_posix()
 
 
 def sha256(value):

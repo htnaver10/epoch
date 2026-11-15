@@ -1,0 +1,21 @@
+{
+  "checkpoint": "models\\windows_cuda_smoke\\best.pt",
+  "checkpoint_sha256": "eafa09ca52ec0e158c4c5e269317baf71168da250631a2009fe97a0cb309f818",
+  "manifest_sha256": "893b567f536e2a3626b188aa3e6544d435ad480b81e8c2db6d1d0cc7737120f4",
+  "split": "test",
+  "tiles": 2,
+  "synthetic_smoke_only": true,
+  "predictions": [
+    {
+      "tile_id": "demo_test_0",
+      "prediction": "results\\windows_cuda_smoke_infer\\demo_test_0.npz",
+      "sha256": "a58dc3b20d96065a2af96562750b310de088766cb4f39455b6f88ce061730806"
+    },
+    {
+      "tile_id": "demo_test_1",
+      "prediction": "results\\windows_cuda_smoke_infer\\demo_test_1.npz",
+      "sha256": "bece2d716cac3a086809813b235fef195c11949806125b2d81b697646a01f52d"
+    }
+  ],
+  "ground_location_accuracy_validated": false
+}

@@ -1,0 +1,103 @@
+﻿python.exe : test_cmr_versions_are_distinct_from_filename_collection_codes 
+(test_acquisition.AcquisitionTests.test_cmr_versions_are_distinct_from_filename_collection_codes) ... ok
+At line:4 char:1
++ & 'fire-harmonization-research-fullres/.venv/Scripts/python.exe' -m u ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_cmr_versio...n_codes) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_inventory_retains_both_cmr_and_file_collection_versions 
+(test_acquisition.AcquisitionTests.test_inventory_retains_both_cmr_and_file_collection_versions) ... ok
+test_buckets_keep_every_tile_exactly_once_and_separate_native_shapes 
+(test_loading.SamplingTests.test_buckets_keep_every_tile_exactly_once_and_separate_native_shapes) ... ok
+test_epoch_shuffle_is_reproducible_including_direct_resume 
+(test_loading.SamplingTests.test_epoch_shuffle_is_reproducible_including_direct_resume) ... ok
+test_invalid_or_empty_sampler (test_loading.SamplingTests.test_invalid_or_empty_sampler) ... ok
+test_archive_members_materialized_once_and_values_preserved 
+(test_loading.TileLoadingTests.test_archive_members_materialized_once_and_values_preserved) ... ok
+test_cache_is_bounded_reused_and_evicted (test_loading.TileLoadingTests.test_cache_is_bounded_reused_and_evicted) ... 
+ok
+test_hash_tampering_is_rejected_even_on_cache_hit 
+(test_loading.TileLoadingTests.test_hash_tampering_is_rejected_even_on_cache_hit) ... ok
+test_old_manifests_need_only_headers_and_shape_claims_are_checked 
+(test_loading.TileLoadingTests.test_old_manifests_need_only_headers_and_shape_claims_are_checked) ... ok
+test_adam_lower_bound (test_memory_worksheet.WorksheetTests.test_adam_lower_bound) ... ok
+test_attention_components_show_quadratic_cost 
+(test_memory_worksheet.WorksheetTests.test_attention_components_show_quadratic_cost) ... ok
+test_coordinate_rounding_exposes_low_precision_error 
+(test_memory_worksheet.WorksheetTests.test_coordinate_rounding_exposes_low_precision_error) ... ok
+test_input_payload_matches_plan_arithmetic 
+(test_memory_worksheet.WorksheetTests.test_input_payload_matches_plan_arithmetic) ... ok
+test_known_bfloat16_rounding (test_memory_worksheet.WorksheetTests.test_known_bfloat16_rounding) ... ok
+test_output_guard (test_memory_worksheet.WorksheetTests.test_output_guard) ... ok
+test_report_is_not_a_gpu_profile (test_memory_worksheet.WorksheetTests.test_report_is_not_a_gpu_profile) ... ok
+test_ambiguous_names_still_fail (test_native_readers.SubdatasetTests.test_ambiguous_names_still_fail) ... ok
+test_fire_mask_accepts_space_or_underscore 
+(test_native_readers.SubdatasetTests.test_fire_mask_accepts_space_or_underscore) ... ok
+test_modis_radiance_excludes_uncertainty_and_prefixed_names 
+(test_native_readers.SubdatasetTests.test_modis_radiance_excludes_uncertainty_and_prefixed_names) ... ok
+test_nonfinite_auxiliary_or_wrong_target_semantics_fail_audit 
+(test_pipeline.DatasetTests.test_nonfinite_auxiliary_or_wrong_target_semantics_fail_audit) ... ok
+test_path_guard (test_pipeline.DatasetTests.test_path_guard) ... ok
+test_source_and_event_leakage_is_rejected (test_pipeline.DatasetTests.test_source_and_event_leakage_is_rejected) ... ok
+test_statistics_use_training_only_and_preserve_precision 
+(test_pipeline.DatasetTests.test_statistics_use_training_only_and_preserve_precision) ... ok
+test_synthetic_default_rejection_and_hash_tampering 
+(test_pipeline.DatasetTests.test_synthetic_default_rejection_and_hash_tampering) ... ok
+test_utc_intervals_conservatively_bound_acquisitions 
+(test_pipeline.DatasetTests.test_utc_intervals_conservatively_bound_acquisitions) ... ok
+test_forest_context_cannot_leak_future_even_in_all_land_mode 
+(test_pipeline.GeometryTests.test_forest_context_cannot_leak_future_even_in_all_land_mode) ... ok
+test_forest_context_year_matches_file_and_is_required_for_forest_mode 
+(test_pipeline.GeometryTests.test_forest_context_year_matches_file_and_is_required_for_forest_mode) ... ok
+test_inverse_recovers_fractional_coordinates_without_future_or_label_inputs 
+(test_pipeline.GeometryTests.test_inverse_recovers_fractional_coordinates_without_future_or_label_inputs) ... ok
+test_labels_exclude_cloud_low_confidence_bowtie_and_halo 
+(test_pipeline.GeometryTests.test_labels_exclude_cloud_low_confidence_bowtie_and_halo) ... ok
+test_modis_scaled_integer_calibration_preserves_invalid_mask 
+(test_pipeline.GeometryTests.test_modis_scaled_integer_calibration_preserves_invalid_mask) ... ok
+test_unknown_coordinates_and_extrapolation_have_no_support 
+(test_pipeline.GeometryTests.test_unknown_coordinates_and_extrapolation_have_no_support) ... ok
+test_weighted_losses_ranking_and_unknown_mask 
+(test_pipeline.MetricTests.test_weighted_losses_ranking_and_unknown_mask) ... ok
+test_sized_fixture_retains_native_lattices_and_synthetic_guard 
+(test_pipeline.SizedDemoTests.test_sized_fixture_retains_native_lattices_and_synthetic_guard) ... ok
+test_accumulation_uses_total_exposure_not_mean_of_means 
+(test_torch_pipeline.TorchPipelineTests.test_accumulation_uses_total_exposure_not_mean_of_means) ... ok
+test_channels_last_preserves_model_outputs_and_query_layout 
+(test_torch_pipeline.TorchPipelineTests.test_channels_last_preserves_model_outputs_and_query_layout) ... ok
+test_compile_wrapper_leaves_canonical_checkpoint_keys 
+(test_torch_pipeline.TorchPipelineTests.test_compile_wrapper_leaves_canonical_checkpoint_keys) ... W1114 
+19:01:20.583000 62180 fire-harmonization-research-fullres\.venv\Lib\site-packages\torch\utils\flop_counter.py:29] 
+triton not found; flop counting will not work for triton kernels
+ok
+test_cuda_bf16_native_step_with_prefetch_and_fused_optimizer 
+(test_torch_pipeline.TorchPipelineTests.test_cuda_bf16_native_step_with_prefetch_and_fused_optimizer) ... ok
+test_cuda_prefetch_fused_step_matches_synchronous_step 
+(test_torch_pipeline.TorchPipelineTests.test_cuda_prefetch_fused_step_matches_synchronous_step) ... ok
+test_model_native_shapes_masked_loss_and_backward 
+(test_torch_pipeline.TorchPipelineTests.test_model_native_shapes_masked_loss_and_backward) ... ok
+test_nonfinite_guard_rejects_update_before_optimizer 
+(test_torch_pipeline.TorchPipelineTests.test_nonfinite_guard_rejects_update_before_optimizer) ... ok
+test_persistent_workers_keep_epoch_coverage_and_resume_order 
+(test_torch_pipeline.TorchPipelineTests.test_persistent_workers_keep_epoch_coverage_and_resume_order) ... ok
+test_query_padding_does_not_change_unpadded_predictions 
+(test_torch_pipeline.TorchPipelineTests.test_query_padding_does_not_change_unpadded_predictions) ... ok
+test_shared_training_step_matches_one_large_batch 
+(test_torch_pipeline.TorchPipelineTests.test_shared_training_step_matches_one_large_batch) ... ok
+{"epoch": 0, "processed_tiles": 4, "optimizer_updates": 1, "training_seconds": 0.055968200031202286, "tiles_per_second_including_loader": 71.46915565928508, "loader_wait_seconds": 0.012425899971276522, "validation_seconds": 0.012348699965514243, "checkpoint_seconds": 0.01539840002078563, "epoch_seconds": 0.08387339999899268, "validation": {"valid_query_weight": 7808.0, "positive_query_weight": 227.0, "brier": 0.24877758360931487, "logloss": 0.690402292216044, "precision": 0.056299603174603176, "recall": 1.0, "f1": 0.1065977929091336, "roc_auc": 0.9935501285093095, "average_precision": 0.8890151006346145, "ranking_method": "approximate_4096_bin_histogram", "threshold": 0.5, "scope": "recorded VIIRS query fire status; not verified ground-truth wildfire"}, "peak_allocated_bytes": null, "peak_reserved_bytes": null}
+{"epoch": 1, "processed_tiles": 4, "optimizer_updates": 1, "training_seconds": 0.04440080001950264, "tiles_per_second_including_loader": 90.0884668349002, "loader_wait_seconds": 0.012519000039901584, "validation_seconds": 0.011877399985678494, "checkpoint_seconds": 0.013698700000531971, "epoch_seconds": 0.07009260001359507, "validation": {"valid_query_weight": 7808.0, "positive_query_weight": 227.0, "brier": 0.24350933408368797, "logloss": 0.6795089505095352, "precision": 0.07541528239202658, "recall": 1.0, "f1": 0.14025332097621254, "roc_auc": 0.9986925347219195, "average_precision": 0.9644354954760257, "ranking_method": "approximate_4096_bin_histogram", "threshold": 0.5, "scope": "recorded VIIRS query fire status; not verified ground-truth wildfire"}, "peak_allocated_bytes": null, "peak_reserved_bytes": null}
+test_train_resume_evaluate_and_infer_roundtrip 
+(test_torch_pipeline.TorchPipelineTests.test_train_resume_evaluate_and_infer_roundtrip) ... C:\Users\Darrien\Desktop\ep
+och1\epoch\fire-harmonization-research-fullres\.venv\Lib\site-packages\torch\profiler\profiler.py:224: UserWarning: 
+Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep 
+events across cycles, set acc_events=True.
+  _warn_once(
+[W1114 19:01:24.000000000 CPUAllocator.cpp:245] Memory block of unknown size was allocated before the profiling 
+started, profiler results will not include the deallocation event
+ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 7.701s
+
+OK

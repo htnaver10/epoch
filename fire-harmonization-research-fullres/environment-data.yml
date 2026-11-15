@@ -1,0 +1,12 @@
+name: firefullres-data
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy>=2.1
+  - gdal
+  - libgdal-hdf4
+  - h5py>=3.11
+  - pyproj>=3.6
+  - earthaccess>=0.14
+  - matplotlib>=3.9

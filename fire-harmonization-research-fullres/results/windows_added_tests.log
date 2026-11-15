@@ -1,0 +1,37 @@
+﻿python.exe : test_nonfinite_auxiliary_or_wrong_target_semantics_fail_audit 
+(test_pipeline.DatasetTests.test_nonfinite_auxiliary_or_wrong_target_semantics_fail_audit) ... ok
+At line:4 char:1
++ & 'fire-harmonization-research-fullres/.venv/Scripts/python.exe' -m u ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_nonfinite_...l_audit) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_path_guard (test_pipeline.DatasetTests.test_path_guard) ... ok
+test_source_and_event_leakage_is_rejected (test_pipeline.DatasetTests.test_source_and_event_leakage_is_rejected) ... ok
+test_statistics_use_training_only_and_preserve_precision 
+(test_pipeline.DatasetTests.test_statistics_use_training_only_and_preserve_precision) ... ok
+test_synthetic_default_rejection_and_hash_tampering 
+(test_pipeline.DatasetTests.test_synthetic_default_rejection_and_hash_tampering) ... ok
+test_utc_intervals_conservatively_bound_acquisitions 
+(test_pipeline.DatasetTests.test_utc_intervals_conservatively_bound_acquisitions) ... ok
+test_forest_context_cannot_leak_future_even_in_all_land_mode 
+(test_pipeline.GeometryTests.test_forest_context_cannot_leak_future_even_in_all_land_mode) ... ok
+test_forest_context_year_matches_file_and_is_required_for_forest_mode 
+(test_pipeline.GeometryTests.test_forest_context_year_matches_file_and_is_required_for_forest_mode) ... ok
+test_inverse_recovers_fractional_coordinates_without_future_or_label_inputs 
+(test_pipeline.GeometryTests.test_inverse_recovers_fractional_coordinates_without_future_or_label_inputs) ... ok
+test_labels_exclude_cloud_low_confidence_bowtie_and_halo 
+(test_pipeline.GeometryTests.test_labels_exclude_cloud_low_confidence_bowtie_and_halo) ... ok
+test_modis_scaled_integer_calibration_preserves_invalid_mask 
+(test_pipeline.GeometryTests.test_modis_scaled_integer_calibration_preserves_invalid_mask) ... ok
+test_unknown_coordinates_and_extrapolation_have_no_support 
+(test_pipeline.GeometryTests.test_unknown_coordinates_and_extrapolation_have_no_support) ... ok
+test_weighted_losses_ranking_and_unknown_mask 
+(test_pipeline.MetricTests.test_weighted_losses_ranking_and_unknown_mask) ... ok
+test_sized_fixture_retains_native_lattices_and_synthetic_guard 
+(test_pipeline.SizedDemoTests.test_sized_fixture_retains_native_lattices_and_synthetic_guard) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.613s
+
+OK

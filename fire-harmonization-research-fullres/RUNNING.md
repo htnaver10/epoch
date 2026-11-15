@@ -1,11 +1,16 @@
 # Run the native-resolution pipeline
 
+**For this Windows RTX 5070 host:** use the verified environments and `.cmd`
+launchers in [WINDOWS_TRAINING_READINESS.md](WINDOWS_TRAINING_READINESS.md).
+CUDA execution and native HDF4/HDF5 software checks now pass here. The older
+development-host limits below describe the initial implementation review.
+
 The first implementation now exists: native NASA readers, pairing/preparation,
 a multiresolution CNN, training/resume, CUDA profiling, prediction/evaluation and
 alignment previews. Everything writes inside `fire-harmonization-research-fullres/`.
 The existing app and coarse experiments are not imported or modified.
 
-**Current validation limit:** this development host has NumPy but no PyTorch,
+**Original implementation validation limit:** the development host had NumPy but no PyTorch,
 GDAL/HDF4, h5py, pyproj or earthaccess; its download hosts fail DNS. NumPy geometry,
 calibration, manifest and metric tests run here. PyTorch tests are explicitly
 skipped until installed. No real native NASA training or RTX memory/speed result

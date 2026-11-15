@@ -4,6 +4,10 @@ import re
 from .core import path,relative,sha256,write_json,write_jsonl,read_jsonl,utc,time_bound_seconds
 
 PRODUCTS=['MYD021KM','MYD03','MYD14','MYD02HKM','MYD02QKM','VNP14IMG','VNP03IMG']
+# CMR version strings are provider metadata, not the filename collection code.
+# LAADS uses 6.1/2; LP DAAC uses 061/002 for the same supported collections.
+CMR_VERSIONS={'MYD021KM':'6.1','MYD03':'6.1','MYD14':'061','MYD02HKM':'6.1',
+              'MYD02QKM':'6.1','VNP14IMG':'002','VNP03IMG':'2','MCD12Q1':'061'}
 
 
 def bbox_from_umm(umm):
@@ -30,13 +34,15 @@ def acquire(start,end,bbox,output,download=False,products=None,max_per_product=5
     rows=[]
     for product in products or PRODUCTS:
         if product not in [*PRODUCTS,'MCD12Q1']:raise ValueError('Unsupported product in this Aqua/S-NPP baseline')
-        version='002' if product.startswith('VNP') else '061'
+        version=CMR_VERSIONS[product]
         results=earthaccess.search_data(short_name=product,version=version,bounding_box=tuple(bbox),
                                         temporal=(start,end),count=max_per_product+1)
         if len(results)>max_per_product:raise ValueError(f'{product} exceeds --max-per-product; narrow the pilot or explicitly raise the bound')
         for granule in results:
             umm=granule['umm'];meta=granule['meta'];timing=umm['TemporalExtent'].get('RangeDateTime',{})
-            row={'product':product,'version':version,'granule_id':meta.get('concept-id'),
+            row={'product':product,'version':version,
+                 'filename_collection':'002' if product.startswith('VNP') else '061',
+                 'granule_id':meta.get('concept-id'),
                  'collection_id':meta.get('collection-concept-id'),'granule_ur':umm['GranuleUR'],
                  'start_utc':timing.get('BeginningDateTime'),'end_utc':timing.get('EndingDateTime'),
                  'bbox':bbox_from_umm(umm),'local_path':None,'sha256':None}

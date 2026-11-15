@@ -20,8 +20,13 @@ def gdal_module():
 
 def sds(filename, name):
     gdal=gdal_module();root=gdal.Open(str(path(filename)))
-    normalize=lambda s:re.sub('[^a-z0-9]','',s.lower())
-    candidates=[uri for uri,description in root.GetSubDatasets() if normalize(name) in normalize(description)]
+    # MODIS also exposes e.g. EV_1KM_Emissive_Uncert_Indexes. Substring
+    # matching selected both arrays and refused every real L1B granule.
+    # Match a complete SDS name, allowing GDAL's spaces/underscores in names
+    # such as "fire mask", while keeping suffixes and prefixes distinct.
+    tokens=re.split(r'[^a-zA-Z0-9]+',name.strip())
+    pattern=r'(?<![a-zA-Z0-9_])'+r'[\s_]+'.join(map(re.escape,tokens))+r'(?![a-zA-Z0-9_])'
+    candidates=[uri for uri,description in root.GetSubDatasets() if re.search(pattern,description,re.IGNORECASE)]
     if len(candidates)!=1:
         raise ValueError(f'Expected one {name} subdataset in {path(filename).name}; found {len(candidates)}')
     return gdal.Open(candidates[0])

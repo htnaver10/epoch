@@ -1,0 +1,113 @@
+﻿python.exe : test_api_probe_accepts_header_only_and_real_rows 
+(test_experiment.ExperimentTests.test_api_probe_accepts_header_only_and_real_rows) ... ok
+At line:6 char:2
++  & 'fire-harmonization-research/.venv/Scripts/python.exe' -m unittest ...
++  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_api_probe_...al_rows) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_api_probe_rejects_non_csv_or_incomplete_schema 
+(test_experiment.ExperimentTests.test_api_probe_rejects_non_csv_or_incomplete_schema) ... ok
+test_features_use_modis_and_past_context_only 
+(test_experiment.ExperimentTests.test_features_use_modis_and_past_context_only) ... ok
+test_flagged_date_is_excluded_from_feature_window 
+(test_experiment.ExperimentTests.test_flagged_date_is_excluded_from_feature_window) ... ok
+test_logistic_model_learns_and_returns_expected_occupancy 
+(test_experiment.ExperimentTests.test_logistic_model_learns_and_returns_expected_occupancy) ... ok
+test_neighbors_do_not_wrap_across_grid_boundary 
+(test_experiment.ExperimentTests.test_neighbors_do_not_wrap_across_grid_boundary) ... ok
+test_output_cannot_escape_research (test_experiment.ExperimentTests.test_output_cannot_escape_research) ... ok
+test_oversampling_retains_positive_and_modis_only_cases_with_correct_weights 
+(test_experiment.ExperimentTests.test_oversampling_retains_positive_and_modis_only_cases_with_correct_weights) ... ok
+test_partial_2026_overlap_rejected (test_experiment.ExperimentTests.test_partial_2026_overlap_rejected) ... ok
+test_poisson_fit_supports_zeros_and_nonnegative_predictions 
+(test_experiment.ExperimentTests.test_poisson_fit_supports_zeros_and_nonnegative_predictions) ... ok
+test_reference_direction_is_modis_to_viirs 
+(test_experiment.ExperimentTests.test_reference_direction_is_modis_to_viirs) ... ok
+test_run_snapshot_uses_portable_paths_and_excludes_both_research_folders 
+(test_experiment.ExperimentTests.test_run_snapshot_uses_portable_paths_and_excludes_both_research_folders) ... ok
+test_static_mask_reads_only_supplied_training_years 
+(test_experiment.ExperimentTests.test_static_mask_reads_only_supplied_training_years) ... ok
+test_weighted_logistic_fit_preserves_population_prevalence 
+(test_experiment.ExperimentTests.test_weighted_logistic_fit_preserves_population_prevalence) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.096s
+
+OK
+python.exe : test_box_sum_has_no_spatial_or_temporal_wrap 
+(test_kernel.KernelTests.test_box_sum_has_no_spatial_or_temporal_wrap) ... ok
+At line:6 char:2
++  & 'fire-harmonization-research/.venv/Scripts/python.exe' -m unittest ...
++  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_box_sum_ha...al_wrap) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_edge_denominators_are_observable_cells (test_kernel.KernelTests.test_edge_denominators_are_observable_cells) ... 
+ok
+test_exact_fraction_lookup (test_kernel.KernelTests.test_exact_fraction_lookup) ... ok
+test_fit_rejects_unreachable_activity (test_kernel.KernelTests.test_fit_rejects_unreachable_activity) ... ok
+test_moment_fit_recovers_known_parameter (test_kernel.KernelTests.test_moment_fit_recovers_known_parameter) ... ok
+test_output_guard (test_kernel.KernelTests.test_output_guard) ... ok
+test_response_is_zero_at_no_signal_and_bounded_monotone 
+(test_kernel.KernelTests.test_response_is_zero_at_no_signal_and_bounded_monotone) ... ok
+test_unseen_region_uses_pooled_response (test_kernel.KernelTests.test_unseen_region_uses_pooled_response) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.018s
+
+OK
+python.exe : test_duplicate_month_blocks_ingestion_and_never_claims_training 
+(test_archive_tools.MonthlyArchiveTests.test_duplicate_month_blocks_ingestion_and_never_claims_training) ... ok
+At line:6 char:2
++  & 'fire-harmonization-research/.venv/Scripts/python.exe' -m unittest ...
++  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_duplicate_...raining) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_modis_retains_counts_and_provenance 
+(test_archive_tools.MonthlyArchiveTests.test_modis_retains_counts_and_provenance) ... ok
+test_plan_has_all_months_and_is_not_a_download 
+(test_archive_tools.MonthlyArchiveTests.test_plan_has_all_months_and_is_not_a_download) ... ok
+test_rejects_collection_silent_fallback 
+(test_archive_tools.MonthlyArchiveTests.test_rejects_collection_silent_fallback) ... ok
+test_rejects_truncated_gzip (test_archive_tools.MonthlyArchiveTests.test_rejects_truncated_gzip) ... ok
+test_rejects_wrong_month_bad_time_and_nonfinite 
+(test_archive_tools.MonthlyArchiveTests.test_rejects_wrong_month_bad_time_and_nonfinite) ... ok
+test_viirs_collection_aliases_and_csv_extra_fields 
+(test_archive_tools.MonthlyArchiveTests.test_viirs_collection_aliases_and_csv_extra_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.068s
+
+OK
+python.exe : test_feature_pack_roundtrip_and_future_invariance 
+(test_larger_model.LargerModelTests.test_feature_pack_roundtrip_and_future_invariance) ... ok
+At line:6 char:2
++  & 'fire-harmonization-research/.venv/Scripts/python.exe' -m unittest ...
++  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_feature_pa...ariance) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Trees 1/1; training logloss 0.693147
+test_geographic_predictions_exclude_static_cells_and_reconcile 
+(test_larger_model.LargerModelTests.test_geographic_predictions_exclude_static_cells_and_reconcile) ... ok
+Trees 10/10; training logloss 0.384832
+test_newton_split_reduces_loss_and_predict_matches_training_updates 
+(test_larger_model.LargerModelTests.test_newton_split_reduces_loss_and_predict_matches_training_updates) ... ok
+test_prior6_uses_neither_current_future_nor_invalid 
+(test_larger_model.LargerModelTests.test_prior6_uses_neither_current_future_nor_invalid) ... ok
+test_recorded_occupancy_metrics_handle_probability_ties 
+(test_larger_model.LargerModelTests.test_recorded_occupancy_metrics_handle_probability_ties) ... ok
+Trees 3/3; training logloss 0.677542
+test_saved_model_roundtrip_and_zero_support 
+(test_larger_model.LargerModelTests.test_saved_model_roundtrip_and_zero_support) ... ok
+test_spatial_sum_no_wrap_and_preserves_large_counts 
+(test_larger_model.LargerModelTests.test_spatial_sum_no_wrap_and_preserves_large_counts) ... ok
+test_sufficient_statistics_preserve_binary_loss_and_gradients 
+(test_larger_model.LargerModelTests.test_sufficient_statistics_preserve_binary_loss_and_gradients) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.071s
+
+OK

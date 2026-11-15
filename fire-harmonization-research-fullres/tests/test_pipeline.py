@@ -68,6 +68,26 @@ class MetricTests(unittest.TestCase):
         self.assertEqual(r['valid_query_weight'],4)
 
 
+class SizedDemoTests(unittest.TestCase):
+    def test_sized_fixture_retains_native_lattices_and_synthetic_guard(self):
+        old=core.ROOT;(ROOT/'.cache').mkdir(exist_ok=True)
+        try:
+            with tempfile.TemporaryDirectory(dir=ROOT/'.cache') as temp:
+                core.ROOT=Path(temp)
+                make_demo('sized.jsonl',size=48,query_size=96,train_tiles=2)
+                with self.assertRaisesRegex(ValueError,'Synthetic'):
+                    core.validate_tiles('sized.jsonl')
+                rows=core.validate_tiles('sized.jsonl',True)
+                self.assertEqual(len(rows),6)
+                with np.load(core.path(rows[0]['tile'])) as arrays:
+                    self.assertEqual(arrays['thermal'].shape,(12,48,48))
+                    self.assertEqual(arrays['reflective_500'].shape,(10,96,96))
+                    self.assertEqual(arrays['reflective_250'].shape,(4,192,192))
+                    self.assertEqual(arrays['target'].shape,(96,96))
+                    self.assertEqual(arrays['query_lat'].dtype,np.float64)
+        finally:core.ROOT=old
+
+
 class DatasetTests(unittest.TestCase):
     def setUp(self):
         (ROOT/'.cache').mkdir(exist_ok=True)

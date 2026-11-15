@@ -70,18 +70,19 @@ def write_csv(relative, rows):
 def protected_files():
     """Fingerprint existing project files, excluding research and dependency caches."""
     result = {}
-    excluded = {RESEARCH.name, ".git", "node_modules", ".venv", "__pycache__"}
+    excluded = {RESEARCH.name, "fire-harmonization-research-fullres", ".git", "node_modules", ".venv", "__pycache__"}
     for folder, dirs, files in os.walk(PROJECT):
         dirs[:] = sorted(d for d in dirs if d not in excluded)
         for name in sorted(files):
             path = Path(folder) / name
             if path.is_file() and not path.is_symlink():
-                result[str(path.relative_to(PROJECT))] = hashlib.sha256(path.read_bytes()).hexdigest()
+                result[path.relative_to(PROJECT).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
     return result
 
 
-def verify_isolation():
-    before = json.loads((RESEARCH / "results/main_app_before.json").read_text())
+def verify_isolation(before=None):
+    if before is None:
+        before = json.loads((RESEARCH / "results/main_app_before.json").read_text())
     after = protected_files()
     changed = sorted(k for k in before.keys() & after.keys() if before[k] != after[k])
     result = {"files_checked": len(before), "changed": changed,
@@ -153,7 +154,7 @@ class Archive:
         for path in sorted((self.root / "seasons").glob("*.json")):
             year = int(path.stem)
             m, v = self.arrays(year)
-            sources[str(path.relative_to(PROJECT))] = hashlib.sha256(path.read_bytes()).hexdigest()
+            sources[path.relative_to(PROJECT).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
             md = self.meta["coverage"]["modis"].get(str(year), {}).get("days", 0)
             vd = self.meta["coverage"]["viirs"].get(str(year), {}).get("days", 0)
             rows.append({"year": year, "modis_detections": int(m.sum()),
@@ -423,6 +424,10 @@ def metrics(rows):
 
 
 def run(engine):
+    # A new run checks changes made during that run, preserving the historical
+    # development-host snapshot rather than treating it as this host's baseline.
+    main_before = protected_files()
+    write_json(f"results/{engine}_main_app_before.json", main_before)
     if engine == "lightgbm":
         try:
             import lightgbm  # noqa: F401
@@ -501,7 +506,7 @@ def run(engine):
     write_csv(f"results/{engine}_seasonal_predictions.csv", seasonal)
     write_json(f"results/{engine}_metrics.json", summary)
     write_json(f"results/{engine}_diagnostics.json", diagnostics)
-    result = verify_isolation()
+    result = verify_isolation(main_before)
     print(f"Completed {engine} experiments; main app unchanged: {result['passed']}", flush=True)
     return 0 if result["passed"] else 1
 

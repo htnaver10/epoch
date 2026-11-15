@@ -1,0 +1,49 @@
+{
+  "checkpoint": "models\\windows_cuda_smoke\\best.pt",
+  "checkpoint_sha256": "eafa09ca52ec0e158c4c5e269317baf71168da250631a2009fe97a0cb309f818",
+  "manifest_sha256": "893b567f536e2a3626b188aa3e6544d435ad480b81e8c2db6d1d0cc7737120f4",
+  "split": "test",
+  "tiles": 2,
+  "synthetic_smoke_only": true,
+  "predictions": [
+    {
+      "tile_id": "demo_test_0",
+      "prediction": "results\\windows_cuda_smoke_test\\demo_test_0.npz",
+      "sha256": "4ec84cd334f8d55925cdd849da929e845f227e95ab741802779e5b3e0cf9d33a"
+    },
+    {
+      "tile_id": "demo_test_1",
+      "prediction": "results\\windows_cuda_smoke_test\\demo_test_1.npz",
+      "sha256": "06edeabc2720daed424398473693668202fcf28d18f0eaae7e074a7de2f67a19"
+    }
+  ],
+  "ground_location_accuracy_validated": false,
+  "model_metrics": {
+    "valid_query_weight": 292608.0,
+    "positive_query_weight": 8351.0,
+    "brier": 0.2606943506056173,
+    "logloss": 0.7139613092691988,
+    "precision": 0.03737351586729739,
+    "recall": 1.0,
+    "f1": 0.07205411608383161,
+    "roc_auc": 0.9988891423269347,
+    "average_precision": 0.9743369751155668,
+    "ranking_method": "approximate_4096_bin_histogram",
+    "threshold": 0.5,
+    "scope": "recorded VIIRS query fire status; not verified ground-truth wildfire"
+  },
+  "modis_baseline_metrics": {
+    "valid_query_weight": 292608.0,
+    "positive_query_weight": 8351.0,
+    "brier": 0.01787715988626422,
+    "logloss": 0.4939641823111794,
+    "precision": 1.0,
+    "recall": 0.37360795114357565,
+    "f1": 0.5439804724958591,
+    "roc_auc": 0.6868039755717879,
+    "average_precision": 0.39148511102983985,
+    "ranking_method": "approximate_4096_bin_histogram",
+    "threshold": 0.5,
+    "scope": "recorded VIIRS query fire status; not verified ground-truth wildfire"
+  }
+}

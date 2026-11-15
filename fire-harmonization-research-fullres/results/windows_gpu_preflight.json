@@ -1,0 +1,65 @@
+{
+  "kind": "tiny_synthetic_cuda_compatibility_smoke_test_not_native_model_profile",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "os": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "native_model_trained": false,
+  "full_model_memory_measured": false,
+  "torch_version": "2.11.0+cu128",
+  "wheel_cuda_version": "12.8",
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 5070",
+  "device_total_bytes": 12820480000,
+  "compute_capability": [
+    12,
+    0
+  ],
+  "wheel_architectures": [
+    "sm_75",
+    "sm_80",
+    "sm_86",
+    "sm_90",
+    "sm_100",
+    "sm_120"
+  ],
+  "bf16_supported": true,
+  "cudnn_version": 91900,
+  "user_target_gpu_name_matches": true,
+  "sm120_explicit_in_wheel": true,
+  "gpu_memory_free_before_smoke_bytes": 11571036160,
+  "smoke_tests": [
+    {
+      "mode": "float32",
+      "passed": true,
+      "losses": [
+        0.7561480402946472,
+        0.7554415464401245,
+        0.7547358274459839
+      ],
+      "three_tiny_steps_seconds": 0.006006499985232949,
+      "peak_allocated_bytes": 5403648,
+      "peak_reserved_bytes": 23068672
+    },
+    {
+      "mode": "bfloat16",
+      "passed": true,
+      "losses": [
+        0.7332394123077393,
+        0.7326338887214661,
+        0.7320597171783447
+      ],
+      "three_tiny_steps_seconds": 0.005452399956993759,
+      "peak_allocated_bytes": 5516288,
+      "peak_reserved_bytes": 25165824
+    }
+  ],
+  "float32_grid_sample_backward_passed": true,
+  "geometry_note": "CUDA grid_sample backward may be nondeterministic; use numeric tolerances and repeated-seed validation.",
+  "status": "compatibility_smoke_passed",
+  "not_proven": [
+    "native-model fit in 12GB",
+    "native-model throughput",
+    "NASA-data reader compatibility",
+    "fire detection/localization quality"
+  ]
+}

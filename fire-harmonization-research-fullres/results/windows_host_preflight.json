@@ -1,0 +1,94 @@
+{
+  "checked_utc": "2026-11-14T23:59:30.408045+00:00",
+  "stage": "training",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "C:\\Users\\Darrien\\Desktop\\epoch1\\epoch\\fire-harmonization-research-fullres\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "logical_cpus": 32,
+  "physical_memory": {
+    "total_bytes": 66155405312,
+    "available_bytes": 45596282880
+  },
+  "disk": {
+    "total_bytes": 999003516928,
+    "used_bytes": 738070605824,
+    "free_bytes": 260932911104
+  },
+  "dependencies": {
+    "numpy": {
+      "available": true,
+      "version": "2.1.3"
+    },
+    "torch": {
+      "available": true,
+      "version": "2.11.0+cu128"
+    },
+    "h5py": {
+      "available": true,
+      "version": "3.16.0"
+    },
+    "pyproj": {
+      "available": true,
+      "version": "3.8.0"
+    },
+    "earthaccess": {
+      "available": true,
+      "version": "0.19.0"
+    },
+    "matplotlib": {
+      "available": true,
+      "version": "3.11.2"
+    }
+  },
+  "software_errors": [],
+  "earthdata_environment_configured": false,
+  "credential_note": "Presence only; credentials were not read from files or authenticated.",
+  "cuda": {
+    "available": true,
+    "wheel_cuda": "12.8",
+    "architectures": [
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ],
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "capability": [
+      12,
+      0
+    ],
+    "bf16": true,
+    "free_bytes": 11571036160,
+    "total_bytes": 12820480000
+  },
+  "gdal": {
+    "available": false,
+    "reason": "Native MODIS requires GDAL with HDF4/HDF4Image support; see RUNNING.md"
+  },
+  "raw_native_files": 0,
+  "manifests": [
+    {
+      "manifest": "data/manifests/software_smoke.jsonl",
+      "rows": 8,
+      "dataset_kinds": [
+        "synthetic_smoke_only"
+      ],
+      "missing_tiles": 8
+    },
+    {
+      "manifest": "data/manifests/windows_fullshape_smoke.jsonl",
+      "rows": 20,
+      "dataset_kinds": [
+        "synthetic_smoke_only"
+      ],
+      "missing_tiles": 0
+    }
+  ],
+  "nasa_tile_manifests_present": false,
+  "scientific_readiness_assessed": false,
+  "scientific_note": "Manifest presence is not an audit or real-file calibration/alignment approval.",
+  "software_stage_ready": true,
+  "nvidia_smi": "NVIDIA GeForce RTX 5070, 610.88, 12227 MiB, 1468 MiB"
+}

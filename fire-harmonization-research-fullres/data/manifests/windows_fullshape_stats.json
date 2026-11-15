@@ -1,0 +1,129 @@
+{
+  "schema": "modis_native_viirs_queries_v1",
+  "manifest_sha256": "893b567f536e2a3626b188aa3e6544d435ad480b81e8c2db6d1d0cc7737120f4",
+  "training_tiles": 16,
+  "fit_partition": "train",
+  "channels": {
+    "thermal": {
+      "mean": [
+        0.3513374440673134,
+        0.36330869085981654,
+        0.3734757408887567,
+        0.3821942361605074,
+        0.3901466396260326,
+        0.3972593520289188
+      ],
+      "scale": [
+        0.06688025271342227,
+        0.11204879362404331,
+        0.14894700969750022,
+        0.1800937408757611,
+        0.20716441962392873,
+        0.23117981723788433
+      ],
+      "valid_pixels": [
+        147456.0,
+        147456.0,
+        147456.0,
+        147456.0,
+        147456.0,
+        147456.0
+      ]
+    },
+    "reflective_500": {
+      "mean": [
+        0.42458220127360213,
+        0.44904021377957787,
+        0.47364579132994955,
+        0.49819722779183295,
+        0.5227412802321143
+      ],
+      "scale": [
+        0.11213337576106241,
+        0.21816558090747426,
+        0.3254810349738064,
+        0.43310735617913687,
+        0.5409970198394941
+      ],
+      "valid_pixels": [
+        589824.0,
+        589824.0,
+        589824.0,
+        589824.0,
+        589824.0
+      ]
+    },
+    "reflective_250": {
+      "mean": [
+        0.4245056498801634,
+        0.4490850046135506
+      ],
+      "scale": [
+        0.11212263221370104,
+        0.21813126399538738
+      ],
+      "valid_pixels": [
+        2359296.0,
+        2359296.0
+      ]
+    }
+  },
+  "thermal_transform": "signed_log1p_radiance",
+  "training_groups": [
+    "demo_event_train_0",
+    "demo_event_train_1",
+    "demo_event_train_10",
+    "demo_event_train_11",
+    "demo_event_train_12",
+    "demo_event_train_13",
+    "demo_event_train_14",
+    "demo_event_train_15",
+    "demo_event_train_2",
+    "demo_event_train_3",
+    "demo_event_train_4",
+    "demo_event_train_5",
+    "demo_event_train_6",
+    "demo_event_train_7",
+    "demo_event_train_8",
+    "demo_event_train_9"
+  ],
+  "training_sources": [
+    "synthetic_train_0",
+    "synthetic_train_1",
+    "synthetic_train_10",
+    "synthetic_train_11",
+    "synthetic_train_12",
+    "synthetic_train_13",
+    "synthetic_train_14",
+    "synthetic_train_15",
+    "synthetic_train_2",
+    "synthetic_train_3",
+    "synthetic_train_4",
+    "synthetic_train_5",
+    "synthetic_train_6",
+    "synthetic_train_7",
+    "synthetic_train_8",
+    "synthetic_train_9"
+  ],
+  "training_tile_ids": [
+    "demo_train_0",
+    "demo_train_1",
+    "demo_train_2",
+    "demo_train_3",
+    "demo_train_4",
+    "demo_train_5",
+    "demo_train_6",
+    "demo_train_7",
+    "demo_train_8",
+    "demo_train_9",
+    "demo_train_10",
+    "demo_train_11",
+    "demo_train_12",
+    "demo_train_13",
+    "demo_train_14",
+    "demo_train_15"
+  ],
+  "dataset_kinds": [
+    "synthetic_smoke_only"
+  ]
+}

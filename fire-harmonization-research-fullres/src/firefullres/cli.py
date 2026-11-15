@@ -20,6 +20,9 @@ def main(argv=None):
     a.add_argument('--inference',action='store_true',help='MODIS-only bundle, metric query grid, no VIIRS labels')
     a=sub.add_parser('make-demo',help='Synthetic software fixtures; not NASA data')
     a.add_argument('--output',default='data/manifests/demo.jsonl')
+    a.add_argument('--tile-size',type=int,default=32,help='Use 96 for planned native training shapes')
+    a.add_argument('--query-size',type=int,default=64,help='Use 384 to stress the maximum query canvas')
+    a.add_argument('--train-tiles',type=int,default=4,help='Use 16 to exercise one full default accumulation window')
     a=sub.add_parser('preview',help='Inspect native radiance/reference alignment before training')
     a.add_argument('--manifest',required=True);a.add_argument('--output',required=True)
     a.add_argument('--index',type=int,default=0);a.add_argument('--allow-synthetic',action='store_true')
@@ -54,7 +57,7 @@ def main(argv=None):
             result=prepare(args.bundles,args.output,args.tile_size,args.stride,args.halo,args.max_query_side,not args.all_land,args.inference)
         elif command=='make-demo':
             from .demo import make_demo
-            result=make_demo(args.output)
+            result=make_demo(args.output,args.tile_size,args.query_size,args.train_tiles)
         elif command=='preview':
             from .preview import preview
             result=preview(args.manifest,args.output,args.index,args.allow_synthetic)

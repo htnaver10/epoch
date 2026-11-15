@@ -347,15 +347,16 @@ def add_wape(summary, rows):
 
 
 def preserve():
-    main = json.loads((RESEARCH/"results/main_app_before.json").read_text())
+    main = protected_files()
     old = {}
     for p in RESEARCH.rglob("*"):
         if not p.is_file() or p.is_symlink() or p.is_relative_to(ROOT):
             continue
         if any(part in (".cache", ".venv", "__pycache__") for part in p.relative_to(RESEARCH).parts):
             continue
-        old[str(p.relative_to(RESEARCH))] = hashlib.sha256(p.read_bytes()).hexdigest()
-    write_json("results/protected_hashes.json", {"main":main,"prior_research":old})
+        old[p.relative_to(RESEARCH).as_posix()] = hashlib.sha256(p.read_bytes()).hexdigest()
+    write_json("results/protected_hashes.json", {"main":main,"prior_research":old,
+               "main_baseline_scope":"snapshot_at_run_start"})
 
 
 def verify_preserved():

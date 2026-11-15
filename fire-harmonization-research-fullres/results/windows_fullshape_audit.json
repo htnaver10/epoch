@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "manifest_sha256": "893b567f536e2a3626b188aa3e6544d435ad480b81e8c2db6d1d0cc7737120f4",
+  "tiles": 20,
+  "dataset_kinds": [
+    "synthetic_smoke_only"
+  ],
+  "scope": "tile integrity and leakage audit; not scientific sensor validation"
+}

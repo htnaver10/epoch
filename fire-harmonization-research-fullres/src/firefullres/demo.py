@@ -4,20 +4,22 @@ from .core import SCHEMA,path,sha256,write_npz,write_jsonl,statistics
 from .geometry import reference_targets
 
 
-def make_demo(output='data/manifests/demo.jsonl'):
+def make_demo(output='data/manifests/demo.jsonl',size=32,query_size=64,train_tiles=4):
+    if size<16 or size%8 or query_size<8 or train_tiles<1:
+        raise ValueError('Demo size must be a multiple of 8 >=16; query size >=8; train tiles >=1')
     if path(output).exists():raise ValueError('Demo exists; use a new manifest name')
-    rows=[];size=32
-    for split,count in [('train',4),('validation',2),('test',2)]:
+    rows=[]
+    for split,count in [('train',train_tiles),('validation',2),('test',2)]:
         for i in range(count):
             seed=1000+100*len(rows)+i;rng=np.random.default_rng(seed)
-            y,x=np.indices((size,size));cy,cx=rng.uniform(10,22,2)
+            y,x=np.indices((size,size));cy,cx=rng.uniform(10,22,2)*size/32
             def image(n,channels):
-                yy,xx=np.indices((n,n));heat=np.exp(-((yy*size/n-cy)**2+(xx*size/n-cx)**2)/8)
+                yy,xx=np.indices((n,n));heat=np.exp(-((yy*size/n-cy)**2+(xx*size/n-cx)**2)/(8*(size/32)**2))
                 value=np.stack([rng.normal(.4,.03,(n,n))+(j+1)*heat for j in range(channels)]).astype(np.float32)
                 return np.concatenate([value,np.ones_like(value)])
-            qr,qc=np.meshgrid(np.linspace(4,27,64),np.linspace(4,27,64),indexing='ij')
+            qr,qc=np.meshgrid(np.linspace(4*size/32,27*size/32,query_size),np.linspace(4*size/32,27*size/32,query_size),indexing='ij')
             grid=np.stack([2*(qc+.5)/size-1,2*(qr+.5)/size-1],-1).astype(np.float32)
-            heat=np.exp(-((qr-cy)**2+(qc-cx)**2)/8)
+            heat=np.exp(-((qr-cy)**2+(qc-cx)**2)/(8*(size/32)**2))
             classes=np.where(heat>.55,8,5).astype(np.uint8)
             classes[:3,:]=4
             target,weight,nt,nw=reference_targets(classes,np.zeros(classes.shape,np.uint32),grid,np.ones(classes.shape,bool),(size,size),4)

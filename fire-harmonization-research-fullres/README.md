@@ -1,5 +1,10 @@
 # Native-resolution fire harmonization
 
+**Windows RTX-host verification (2026-11-14):** environments are prepared; 44 tests,
+full-size synthetic CUDA training/resume/prediction and GDAL/HDF4 file checks pass.
+Real NASA data and reviewed preparation remain required. Start with
+[this computer's readiness report and Windows launchers](WINDOWS_TRAINING_READINESS.md).
+
 This is the project-root folder for **all full-resolution work**: plans, research
 notes, acquisition/preprocessing/training/evaluation scripts, configurations,
 source manifests, native data/cache, checkpoints, logs, results and figures.
@@ -28,7 +33,7 @@ inference and alignment previews. All paths stay in this folder. It implements
 the current-acquisition baseline; optional temporal/teacher/uncertainty extensions
 remain future work.
 
-This review host has NumPy but no PyTorch/native-reader stack or attached RTX GPU,
+The original implementation-review host had NumPy but no PyTorch/native-reader stack or attached RTX GPU,
 and package/download hosts fail DNS. NumPy pipeline checks run here; neural
 execution tests are explicitly skipped until PyTorch is installed. Native readers
 require actual-file calibration/alignment QA. No real native model has been

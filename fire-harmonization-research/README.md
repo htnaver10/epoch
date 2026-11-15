@@ -1,5 +1,10 @@
 # Fire harmonization research — isolated from EPOCH
 
+**This Windows computer is prepared (2026-11-14):** the independent environment,
+LightGBM dependency smoke fit and 37 tests pass. See
+[Windows readiness and commands](WINDOWS_TRAINING_READINESS.md). Earlier results
+and development-host installation failures below remain historical records.
+
 This folder contains the discussion record, revised technical plan and executable
 preliminary experiments. **Nothing here is connected to the main app.** Existing
 app data is read-only input. All generated files, models and dependencies stay here.

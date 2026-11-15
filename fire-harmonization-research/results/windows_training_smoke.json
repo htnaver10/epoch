@@ -1,0 +1,12 @@
+{
+  "numpy": "2.5.4",
+  "lightgbm": "4.7.0",
+  "matplotlib": "3.11.2",
+  "lightgbm_tiny_fit": true,
+  "real_2023_archive_shape": [
+    92,
+    80,
+    320
+  ],
+  "local_archive_files": 24
+}

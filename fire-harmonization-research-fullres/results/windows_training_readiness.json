@@ -1,0 +1,56 @@
+{
+  "checked_utc": "2026-11-15T00:04:03.047765+00:00",
+  "training_software_ready": true,
+  "native_reader_software_ready": true,
+  "real_nasa_training_ready": false,
+  "fullres_tests": {
+    "passed": 44,
+    "skipped": 0
+  },
+  "coarse_tests": {
+    "passed": 37,
+    "skipped": 0
+  },
+  "cuda_fullsize_synthetic_roundtrip": {
+    "train_resume_epochs": [
+      0,
+      1
+    ],
+    "evaluated_tiles": 2,
+    "inferred_tiles": 2,
+    "synthetic_only": true
+  },
+  "warm_synthetic_profiles": [
+    {
+      "microbatch": 1,
+      "tiles_per_second": 26.398388642195926,
+      "peak_reserved_bytes": 251658240
+    },
+    {
+      "microbatch": 4,
+      "tiles_per_second": 33.1400138244765,
+      "peak_reserved_bytes": 1593835520
+    }
+  ],
+  "metadata_inventory": {
+    "records": 16,
+    "products": [
+      "MYD021KM",
+      "MYD02HKM",
+      "MYD02QKM",
+      "MYD03",
+      "MYD14",
+      "VNP03IMG",
+      "VNP14IMG"
+    ],
+    "science_files_downloaded": 0
+  },
+  "remaining": [
+    "Configure and verify Earthdata authentication locally",
+    "Download actual native granules and prior land-cover maps for forest-only work",
+    "Review event groups and data splits",
+    "Prepare and inspect real calibration, masks, geolocation alignment and training statistics",
+    "Profile real prepared data before a scientific run"
+  ],
+  "main_app_modified": false
+}

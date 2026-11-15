@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "HDF4_uint16_roundtrip": true,
+  "HDF5_nested_field_roundtrip": true,
+  "PROJ_transform": true,
+  "gdal_version": "GDAL 3.13.3 \"Iowa City\", released 2026/08/13",
+  "scope": "synthetic file I/O only; no native NASA calibration, naming, QA or alignment validation"
+}

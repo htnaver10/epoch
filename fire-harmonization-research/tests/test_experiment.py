@@ -1,7 +1,9 @@
 import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import numpy as np
 
@@ -12,6 +14,25 @@ from probe_nasa import summarize_csv
 
 
 class ExperimentTests(unittest.TestCase):
+    def test_run_snapshot_uses_portable_paths_and_excludes_both_research_folders(self):
+        import experiment
+        research_root=Path(__file__).resolve().parents[1]
+        (research_root/'.cache').mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=research_root/'.cache') as temp:
+            project=Path(temp);research=project/'fire-harmonization-research';research.mkdir()
+            fullres=project/'fire-harmonization-research-fullres';fullres.mkdir()
+            app=project/'frontend'/'app.txt';app.parent.mkdir();app.write_text('before')
+            (research/'old.txt').write_text('research');(fullres/'model.txt').write_text('research')
+            with patch.multiple(experiment,PROJECT=project,RESEARCH=research):
+                before=experiment.protected_files()
+                self.assertEqual(list(before),['frontend/app.txt'])
+                self.assertTrue(experiment.verify_isolation(before)['passed'])
+                (fullres/'model.txt').write_text('updated research')
+                self.assertTrue(experiment.verify_isolation(before)['passed'])
+                app.write_text('after')
+                result=experiment.verify_isolation(before)
+                self.assertFalse(result['passed']);self.assertEqual(result['changed'],['frontend/app.txt'])
+
     def test_output_cannot_escape_research(self):
         with self.assertRaises(ValueError):
             output_path("../frontend/public/data/should_not_exist.json")
