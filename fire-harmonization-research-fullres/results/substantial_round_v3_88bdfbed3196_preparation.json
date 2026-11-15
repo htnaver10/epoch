@@ -1,0 +1,111 @@
+{
+  "manifest": "data/manifests/substantial_round_v3_units/substantial_round_v3_88bdfbed3196.jsonl",
+  "tiles": 50,
+  "split_counts": {
+    "train": 50
+  },
+  "tile_size": 96,
+  "stride": 64,
+  "halo": 16,
+  "max_query_side": 768,
+  "forest_only": false,
+  "inference": false,
+  "bbox": [
+    -125,
+    58,
+    -105,
+    68
+  ],
+  "source_checksums": {
+    "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf": "be34eccede068f67b69cfa3500d0984746da308aa2da03588f892394c39b0182",
+    "data/raw/MYD03/MYD03.A2022197.1925.061.2022313192952.hdf": "171d5401529ddeab44bc6fca2c794000750393804dade3aa52d2bc44e6608ef2",
+    "data/raw/MYD14/MYD14.A2022197.1925.061.2022198114054.hdf": "3e14aecfbd5d7015bf25730f6d3efee59b1319a435d21a1e7e9a435d4c43b809",
+    "data/raw/MYD02HKM/MYD02HKM.A2022197.1925.061.2022319180419.hdf": "77bb2525ad66cff0e6e2bc582b1e6e81528aa835898765fe261b84e06bcdc3ad",
+    "data/raw/MYD02QKM/MYD02QKM.A2022197.1925.061.2022319180419.hdf": "3c1023db26cde4bd545914cb4c6be671a211ea1c0bc7ee01c051ce94a2bf3ee2",
+    "data/raw/VNP14IMG/VNP14IMG.A2022197.1918.002.2024076194531.nc": "49a7aaa2d9eac0003bee7d2089dcb1b1c7763d8c738abb4fc48bd0cc0c9b4ed1",
+    "data/raw/VNP03IMG/VNP03IMG.A2022197.1918.002.2022198022333.nc": "c047e6564ffbb663320dad2425988a4cdf4f3532ba7e66cc36df8e3522e05491"
+  },
+  "excluded_windows": [
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1472,
+      "col": 1216,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1536,
+      "col": 1216,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1600,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1600,
+      "col": 1216,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1664,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1664,
+      "col": 1216,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1728,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1728,
+      "col": 1216,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1792,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1792,
+      "col": 1216,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1856,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "row": 1920,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    }
+  ],
+  "bundle_manifest_sha256": "4b77b40b5e2c6563f39167a71a40481e63786e8a2347938ed97ce7843e53ddd7",
+  "target": "native VIIRS nominal/high-confidence fire status vs observed land at query centers",
+  "native_auxiliary_target": "mean known VIIRS fire status assigned to each native MODIS cell",
+  "geolocation_method": "local bilinear inversion; residual threshold 20m is interpolation consistency, not absolute accuracy",
+  "not_claimed": [
+    "exact pixel footprints",
+    "subpixel ground-truth fire locations",
+    "native reader scientific validation on this host"
+  ]
+}

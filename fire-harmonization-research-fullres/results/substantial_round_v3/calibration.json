@@ -1,0 +1,13 @@
+{
+  "checkpoint": "models/substantial_round_v3/best.pt",
+  "checkpoint_sha256": "9bf781a9239779aad4c78521dc73d25e8d0b90423ea0c5b22d0547e9dc8080bf",
+  "manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+  "fit_split": "validation",
+  "test_used_for_fit": false,
+  "logit_offset": 1.2953030332528215,
+  "raw_logit_cutoff": -3.2499999999999996,
+  "display_calibrated_probability_threshold": 0.12404210429864432,
+  "validation_false_positive_budget_from_modis": 2013.0,
+  "method": "validation-only intercept adjustment and conservative cutoff at MODIS validation false-positive exposure",
+  "caution": "Matching activity totals on calibration data is by construction, not proof of generalization."
+}

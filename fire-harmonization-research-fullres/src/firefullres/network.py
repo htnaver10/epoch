@@ -1,4 +1,5 @@
 """Compact trainable native-band CNN with a coordinate-aware VIIRS-query head."""
+import math
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -27,6 +28,15 @@ class NativeFireNet(nn.Module):
         self.native_head=nn.Conv2d(base,1,1)
         # No normalization or spatial mixing over padded query canvases.
         self.query_head=nn.Sequential(nn.Conv2d(base+3*branch,base,1),nn.SiLU(),nn.Conv2d(base,1,1))
+
+    def initialize_output_priors(self,fine,native):
+        """Start rare-event scores at training prevalence, without using holdouts."""
+        for head,probability in ((self.query_head[-1],fine),(self.native_head,native)):
+            if not math.isfinite(probability) or not 0<probability<1:
+                raise ValueError('Output priors must be finite probabilities strictly between zero and one')
+        with torch.no_grad():
+            for head,probability in ((self.query_head[-1],fine),(self.native_head,native)):
+                head.weight.zero_();head.bias.fill_(math.log(probability/(1-probability)))
 
     def block(self,layer,x):
         return checkpoint(layer,x,use_reentrant=False) if self.activation_checkpointing and self.training else layer(x)

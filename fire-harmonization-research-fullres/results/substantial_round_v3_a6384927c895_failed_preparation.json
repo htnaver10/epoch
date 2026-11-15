@@ -1,0 +1,29 @@
+{
+  "tiles": 0,
+  "excluded_windows": [
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024158.0640.061.2024158194107.hdf",
+      "row": 448,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024158.0640.061.2024158194107.hdf",
+      "row": 512,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024158.0640.061.2024158194107.hdf",
+      "row": 576,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024158.0640.061.2024158194107.hdf",
+      "row": 640,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    }
+  ]
+}

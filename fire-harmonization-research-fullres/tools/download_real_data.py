@@ -20,14 +20,14 @@ CREDENTIAL_KEYS=('EARTHDATA_USERNAME','EARTHDATA_PASSWORD','EARTHDATA_TOKEN')
 
 
 @contextmanager
-def local_credentials(allow_prompt=True):
+def local_credentials(allow_prompt=True,launcher='download-real-data.cmd'):
     previous={name:os.environ.get(name) for name in CREDENTIAL_KEYS}
     configured=bool(previous['EARTHDATA_TOKEN'] or
         previous['EARTHDATA_USERNAME'] and previous['EARTHDATA_PASSWORD'])
     try:
         if not configured:
             if not allow_prompt or not sys.stdin.isatty():
-                raise ValueError('Open download-real-data.cmd in a local terminal to enter your Earthdata login.')
+                raise ValueError(f'Open {launcher} in a local terminal to enter your Earthdata login.')
             username=input('NASA Earthdata username: ').strip()
             password=getpass.getpass('NASA Earthdata password (hidden): ')
             if not username or not password:raise ValueError('Both username and password are required.')

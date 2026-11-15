@@ -1,0 +1,146 @@
+{
+  "manifest": "data/manifests/substantial_round_v2_units/substantial_round_v2_6557d75b5ecb.jsonl",
+  "tiles": 10,
+  "split_counts": {
+    "test": 10
+  },
+  "tile_size": 96,
+  "stride": 64,
+  "halo": 16,
+  "forest_only": false,
+  "inference": false,
+  "bbox": [
+    -79,
+    46,
+    -66,
+    55
+  ],
+  "source_checksums": {
+    "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf": "36509ae6910c68dc9552401705fe14798f4730c775c0aa64f55995c84827e392",
+    "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf": "7b65cc49e84fd2d2c52d9515513364eefde54d25299995de66fa12a8e1e55106",
+    "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf": "0a42d652f43a7cd0b9bd027267cea51ff818cd2133cebd07403d9ca9563c97cc",
+    "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf": "9887cfcd0b8bde88f7bd163048d4abed07e5fd0f33fd2519552f45b0a4472dce",
+    "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf": "4ee36a1d2a4f69284c5d4e147fcd4e576fbc5c412e50736afb1632419602b3eb",
+    "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc": "2e5653420065c904f884798d34df937320a73c1bab749c6f37760176e6b25554",
+    "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc": "5903578e161c09dbe8806b4be927c8611429613e7d5acc659722ba5ea48a1180"
+  },
+  "excluded_windows": [
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1664,
+      "col": 64,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1664,
+      "col": 128,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1728,
+      "col": 64,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1728,
+      "col": 128,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1728,
+      "col": 192,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1728,
+      "col": 256,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1792,
+      "col": 64,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1792,
+      "col": 128,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1792,
+      "col": 192,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1792,
+      "col": 256,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1856,
+      "col": 64,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1856,
+      "col": 128,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1856,
+      "col": 192,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1856,
+      "col": 256,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1920,
+      "col": 64,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1920,
+      "col": 128,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1920,
+      "col": 192,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+      "row": 1920,
+      "col": 256,
+      "reason": "query_extent_over_cap"
+    }
+  ],
+  "bundle_manifest_sha256": "bafdeebc08dc972afea4233d38904e30d56d98c061a2086e53e07d7754fa96a9",
+  "target": "native VIIRS nominal/high-confidence fire status vs observed land at query centers",
+  "native_auxiliary_target": "mean known VIIRS fire status assigned to each native MODIS cell",
+  "geolocation_method": "local bilinear inversion; residual threshold 20m is interpolation consistency, not absolute accuracy",
+  "not_claimed": [
+    "exact pixel footprints",
+    "subpixel ground-truth fire locations",
+    "native reader scientific validation on this host"
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "ready_for_expanded_experiment": false,
+  "counts": {
+    "train": {
+      "tiles": 21,
+      "positive_queries": 54.0,
+      "regions": 2,
+      "conservative_groups": 2
+    },
+    "validation": {
+      "tiles": 71,
+      "positive_queries": 242.0,
+      "regions": 1,
+      "conservative_groups": 1
+    },
+    "test": {
+      "tiles": 10,
+      "positive_queries": 0.0,
+      "regions": 1,
+      "conservative_groups": 1
+    }
+  },
+  "skipped_sources": [
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021195.1050.061.2021196154734.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021197.2010.061.2021198152538.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021198.0945.061.2021198193020.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021211.1050.061.2021212164202.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021213.2010.061.2021214160335.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021216.1905.061.2021217160544.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021195.1050.061.2021196154734.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021198.0805.061.2021198193030.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021200.2045.061.2021202201138.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021203.1800.061.2021204155737.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0805.061.2021214194008.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021216.2040.061.2021217160654.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022189.2015.061.2022318104536.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022190.0805.061.2022318181200.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022195.1000.061.2022319114302.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022198.0855.061.2022319205217.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022203.1050.061.2022320120745.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022205.2010.061.2022320210620.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2023153.1725.061.2023154154107.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2023154.0700.061.2023154191057.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2023161.1950.061.2023162154154.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2023156.1750.061.2023157151346.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024158.0640.061.2024158194107.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024163.0650.061.2024163191844.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+      "reason": "no eligible tiles after fixed QA/geography"
+    }
+  ],
+  "scope": "Expanded all-land VIIRS-reference detection experiment; not forest-only or operational wildfire truth",
+  "config_sha256": "04201b929fafecf5892ea58081e8a3b711bfcce74aacbfc76363b7de56f54660",
+  "note": "Acquisition-cohort groups are conservative, not verified incident IDs. Test scenes were not selected by fire labels."
+}

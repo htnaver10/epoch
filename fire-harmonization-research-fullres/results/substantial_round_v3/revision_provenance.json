@@ -1,0 +1,10 @@
+{
+  "supersedes": "substantial_round_v2",
+  "reason": "384-pixel query extent cap excluded usable native windows; v2 failed admission and did not train",
+  "query_canvas_limit": 768,
+  "cohorts_and_source_bundles_unchanged": true,
+  "test_model_predictions_examined": false,
+  "no_new_transfer_for_existing_sources": true,
+  "training_requirements_unchanged": true,
+  "created_utc": "2026-11-15T03:06:37.518022+00:00"
+}

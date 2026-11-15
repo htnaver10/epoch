@@ -1,0 +1,38 @@
+{
+  "manifest": "data/manifests/substantial_round_v3_units/substantial_round_v3_711669a914d5.jsonl",
+  "tiles": 142,
+  "split_counts": {
+    "train": 142
+  },
+  "tile_size": 96,
+  "stride": 64,
+  "halo": 16,
+  "max_query_side": 768,
+  "forest_only": false,
+  "inference": false,
+  "bbox": [
+    -125,
+    58,
+    -105,
+    68
+  ],
+  "source_checksums": {
+    "data/raw/MYD021KM/MYD021KM.A2022195.1000.061.2022319114302.hdf": "9395ec078d452409202c5052535e9a2cb6f7d53d5d9bb3ed227ee386528ee4d7",
+    "data/raw/MYD03/MYD03.A2022195.1000.061.2022313191106.hdf": "4e98d5e883bc9213a9b6f2cca9bb1919283bd2163207213f0af9110eec316f9c",
+    "data/raw/MYD14/MYD14.A2022195.1000.061.2022196111354.hdf": "dd5f15bada1bc91a8c2d2db75664bbca20ffb168e434624e950923eea420f050",
+    "data/raw/MYD02HKM/MYD02HKM.A2022195.1000.061.2022319114302.hdf": "886690f09e8d97b350d584b18d6dada04c4cf268ce3d5c695b1dd0b1d60203d3",
+    "data/raw/MYD02QKM/MYD02QKM.A2022195.1000.061.2022319114302.hdf": "6ee32157dc4711cc55cde4db89e9dcc6f0128e6e988da7ce39035dd4bd2830d5",
+    "data/raw/VNP14IMG/VNP14IMG.A2022195.1000.002.2024076192601.nc": "a6d9a3a497804ab09c7ef04f99c494f128359e1e11171dedb7e1bb5dab059087",
+    "data/raw/VNP03IMG/VNP03IMG.A2022195.1000.002.2022195175430.nc": "cc2abe81b5c9b7ea31dd5aa923daa251f482cc89a316646824d9ea4245090dae"
+  },
+  "excluded_windows": [],
+  "bundle_manifest_sha256": "44f95ecba0e736468c9f9fb7d5d01353d63ea7f19a963cad85022dce07acf611",
+  "target": "native VIIRS nominal/high-confidence fire status vs observed land at query centers",
+  "native_auxiliary_target": "mean known VIIRS fire status assigned to each native MODIS cell",
+  "geolocation_method": "local bilinear inversion; residual threshold 20m is interpolation consistency, not absolute accuracy",
+  "not_claimed": [
+    "exact pixel footprints",
+    "subpixel ground-truth fire locations",
+    "native reader scientific validation on this host"
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "checkpoint": "models/real_training_pilot_v1/last.pt",
+  "checkpoint_sha256": "2df55ba0ad714b401939e698d6d9df5e9bdc316f080d55bf57a5a011978e6d78",
+  "manifest_sha256": "3c4df98f029546f69eb82cfa6d8b90382dabb5c659ef952f2e983328893eb980",
+  "split": "validation",
+  "tiles": 71,
+  "synthetic_smoke_only": false,
+  "predictions": [
+    {
+      "tile_id": "019a410db41f9ec5aecb",
+      "prediction": "results/real_training_pilot_v1_evaluation/019a410db41f9ec5aecb.npz",
+      "sha256": "a2314e8859eb7a9d15aaf7459f2544f52f25a294da4c8422990245ef3a780ec0"
+    },
+    {
+      "tile_id": "7a954f39647e53e88ab9",
+      "prediction": "results/real_training_pilot_v1_evaluation/7a954f39647e53e88ab9.npz",
+      "sha256": "78eb946b6348a1d226344d33bdd9eb300e4a00f66d87549a2392cca1c315ec3c"
+    },
+    {
+      "tile_id": "7b1730abd6445e906b1c",
+      "prediction": "results/real_training_pilot_v1_evaluation/7b1730abd6445e906b1c.npz",
+      "sha256": "a68854eaae254d7080dad3c2b5d5b4a9d1ee3f7b9549faa7e1bee70ad19b8341"
+    },
+    {
+      "tile_id": "2ebaa0394f2ccc7d1138",
+      "prediction": "results/real_training_pilot_v1_evaluation/2ebaa0394f2ccc7d1138.npz",
+      "sha256": "422e38a329552cc9c3533750e04434754c89d8340c82950fb8946c0748cb5b57"
+    },
+    {
+      "tile_id": "cdcbf667ca035a21d1de",
+      "prediction": "results/real_training_pilot_v1_evaluation/cdcbf667ca035a21d1de.npz",
+      "sha256": "7c3aad7400a8e9e7fa7a904b7fa6af62d4a274d5ead08d6493cd274cc6c60566"
+    },
+    {
+      "tile_id": "1a4c96f8fec0fbb0df22",
+      "prediction": "results/real_training_pilot_v1_evaluation/1a4c96f8fec0fbb0df22.npz",
+      "sha256": "ddef5b0eef7ce3a09e4efdf93c54536d8859d97e4ce999d6734e2519c4c9a94e"
+    },
+    {
+      "tile_id": "b32cc93dcec4b0ccc635",
+      "prediction": "results/real_training_pilot_v1_evaluation/b32cc93dcec4b0ccc635.npz",
+      "sha256": "952ce8dc72e93e73333d9222555a73afcb61a287aa75ba6704c6b675498162f3"
+    },
+    {
+      "tile_id": "4a9e28c07cbb88ce4bd0",
+      "prediction": "results/real_training_pilot_v1_evaluation/4a9e28c07cbb88ce4bd0.npz",
+      "sha256": "10dadf37b46088f738ad1bed73314079c4f1609c9b96be420067663ead7a4393"
+    },
+    {
+      "tile_id": "2c48aa5e758269d024ed",
+      "prediction": "results/real_training_pilot_v1_evaluation/2c48aa5e758269d024ed.npz",
+      "sha256": "ef392bfaa1c2e99af4deb86ec15fd9d1789784d3412245c2ca7e66c94ceffa30"
+    },
+    {
+      "tile_id": "bce521d812ea358d2496",
+      "prediction": "results/real_training_pilot_v1_evaluation/bce521d812ea358d2496.npz",
+      "sha256": "0e1f775eb1cfdbdc797c22d6e22bfd00d236517a7b3f84265721b3f019a110ac"
+    },
+    {
+      "tile_id": "c6d3688dd59a5914727d",
+      "prediction": "results/real_training_pilot_v1_evaluation/c6d3688dd59a5914727d.npz",
+      "sha256": "8783630c8e7cd455db52bbe81701ef9635fe8922f4b850c2afd547650d6caa0d"
+    },
+    {
+      "tile_id": "f23bb99d8528e65fe011",
+      "prediction": "results/real_training_pilot_v1_evaluation/f23bb99d8528e65fe011.npz",
+      "sha256": "143b7376a603a6710ff9c5053c16957fb498e33a620b9ad47337233c5017abfa"
+    },
+    {
+      "tile_id": "f3e7a67d0aae92c0361e",
+      "prediction": "results/real_training_pilot_v1_evaluation/f3e7a67d0aae92c0361e.npz",
+      "sha256": "56d6deae73669da63a1068d1db568851f24b9f8bb5782675d40373407849c348"
+    },
+    {
+      "tile_id": "aa5b49805ecaadab16d3",
+      "prediction": "results/real_training_pilot_v1_evaluation/aa5b49805ecaadab16d3.npz",
+      "sha256": "6e3f88843663f5698fe2a851fc3bbb0982ff3493267b686bac1cf4668472cb7a"
+    },
+    {
+      "tile_id": "d7e2900c91a758a66949",
+      "prediction": "results/real_training_pilot_v1_evaluation/d7e2900c91a758a66949.npz",
+      "sha256": "9fe2844bbeeb890254411e6cdc611cd5f3fb9873ce227d4d29239fbf1641ff49"
+    },
+    {
+      "tile_id": "31fa01a1ed6e401ccf33",
+      "prediction": "results/real_training_pilot_v1_evaluation/31fa01a1ed6e401ccf33.npz",
+      "sha256": "f5316aefcfdf86670a4113cb0d84711bb49536c4d5ecc718154f2acb2587045a"
+    },
+    {
+      "tile_id": "7b0bfb0abf7f6ca43e82",
+      "prediction": "results/real_training_pilot_v1_evaluation/7b0bfb0abf7f6ca43e82.npz",
+      "sha256": "c4348fabea0bfdce9759c853d12fe84e827314d52a7cf06609128fa13ef44549"
+    },
+    {
+      "tile_id": "1d3b021e4036248b096a",
+      "prediction": "results/real_training_pilot_v1_evaluation/1d3b021e4036248b096a.npz",
+      "sha256": "eccdf0f6b2fb939584eaf1d4faed0cf9d8d928066fe83c60437cc73cac43a389"
+    },
+    {
+      "tile_id": "c9ffe68261a2742794ea",
+      "prediction": "results/real_training_pilot_v1_evaluation/c9ffe68261a2742794ea.npz",
+      "sha256": "893e66ef1524f6adf5cfbbec7c0bbcd5e5443ac0ae6e0c8d9add32b3a6325013"
+    },
+    {
+      "tile_id": "be6c1261783e39be16f9",
+      "prediction": "results/real_training_pilot_v1_evaluation/be6c1261783e39be16f9.npz",
+      "sha256": "74492a095245478fdd0dbed5458dfebfb195c0a7d0bdc6a74a6974ad2b86c2c1"
+    },
+    {
+      "tile_id": "3f3db9f94a8a065f348b",
+      "prediction": "results/real_training_pilot_v1_evaluation/3f3db9f94a8a065f348b.npz",
+      "sha256": "89a5ef13f07451154b74e583d503d5d87b2cdc3802575a636aa813fc965db65b"
+    },
+    {
+      "tile_id": "dc4adbde993920e70cc9",
+      "prediction": "results/real_training_pilot_v1_evaluation/dc4adbde993920e70cc9.npz",
+      "sha256": "e614030c3284b448f0a526803be4b91015a18106caeba76e46a25e29ef37cb0c"
+    },
+    {
+      "tile_id": "d6a2ce36aba439a379ac",
+      "prediction": "results/real_training_pilot_v1_evaluation/d6a2ce36aba439a379ac.npz",
+      "sha256": "b36c61dce63bc6de92b839a074babb3ed8c761a6d976311bf13f8df6553483db"
+    },
+    {
+      "tile_id": "0f1706324613f3984e80",
+      "prediction": "results/real_training_pilot_v1_evaluation/0f1706324613f3984e80.npz",
+      "sha256": "e9f336d4e0cd26236a0c4ba712703c44cc06a1d15ef5a334e3e493bd262c1df1"
+    },
+    {
+      "tile_id": "9a04abfb0f14ff13a083",
+      "prediction": "results/real_training_pilot_v1_evaluation/9a04abfb0f14ff13a083.npz",
+      "sha256": "e39e9a5c3364a2e8d7f2c5b2cb95398de2bf3b623856e0e9e8ca076d1289097d"
+    },
+    {
+      "tile_id": "c3f93877127f52fe5455",
+      "prediction": "results/real_training_pilot_v1_evaluation/c3f93877127f52fe5455.npz",
+      "sha256": "4091a7340e908cd73a800149c38f5aa118a4c2c946e1c3f080110ff15bbc17bc"
+    },
+    {
+      "tile_id": "45d6326e766a22183bcd",
+      "prediction": "results/real_training_pilot_v1_evaluation/45d6326e766a22183bcd.npz",
+      "sha256": "bf52875d18df9a1d57f7be32336fa13109b667250fc6af2e33db3cad4eb41f13"
+    },
+    {
+      "tile_id": "a94af2eb2eee4800fc4b",
+      "prediction": "results/real_training_pilot_v1_evaluation/a94af2eb2eee4800fc4b.npz",
+      "sha256": "d1fe8edef98866c9fa77cfdf7ad8a4704f7856782b12bc36fd28d04510a257d0"
+    },
+    {
+      "tile_id": "76dbe762bed9292b0471",
+      "prediction": "results/real_training_pilot_v1_evaluation/76dbe762bed9292b0471.npz",
+      "sha256": "17e444345e60ed671193a3400224ec194433aca8b5505ed9429c9da904b553c3"
+    },
+    {
+      "tile_id": "27f5a33faa3aa9b785f1",
+      "prediction": "results/real_training_pilot_v1_evaluation/27f5a33faa3aa9b785f1.npz",
+      "sha256": "b5955838a4896e5588f74700b6852ed938ac110727a0669e8f5501b9067616bf"
+    },
+    {
+      "tile_id": "6b45822a087f50857ce3",
+      "prediction": "results/real_training_pilot_v1_evaluation/6b45822a087f50857ce3.npz",
+      "sha256": "c71dcd13809344c3876cc000cca056d1afb49cdbf25573b5a41f4757f7f39118"
+    },
+    {
+      "tile_id": "0cdb0baf7519e91d6d26",
+      "prediction": "results/real_training_pilot_v1_evaluation/0cdb0baf7519e91d6d26.npz",
+      "sha256": "a174c9c5ce70d51382d16584328b528246a7558822e2bccb075ba13013d48d3d"
+    },
+    {
+      "tile_id": "eb6b76f295847db3a393",
+      "prediction": "results/real_training_pilot_v1_evaluation/eb6b76f295847db3a393.npz",
+      "sha256": "d8ee50f074dc15d34a8bdada0c24914a36bc2d1bd364c2b4350b129306bd83a6"
+    },
+    {
+      "tile_id": "59965575ef5cfdfc956c",
+      "prediction": "results/real_training_pilot_v1_evaluation/59965575ef5cfdfc956c.npz",
+      "sha256": "563c842b6cbfffc950620c7b1b54fa97db479791aea9125ea04ac89b97812305"
+    },
+    {
+      "tile_id": "45b127b1a703a5badaa5",
+      "prediction": "results/real_training_pilot_v1_evaluation/45b127b1a703a5badaa5.npz",
+      "sha256": "1ef47c72c4e93eb68dd2780b07a87377ef618df29f8b85935ab2083948934c5c"
+    },
+    {
+      "tile_id": "327b1d6cd1cd08c26f75",
+      "prediction": "results/real_training_pilot_v1_evaluation/327b1d6cd1cd08c26f75.npz",
+      "sha256": "f2003c6f3ca497b5bfa363c31a767e9d31741763d6509cb13aef3a3ba37f653f"
+    },
+    {
+      "tile_id": "a6042c757623a184e11b",
+      "prediction": "results/real_training_pilot_v1_evaluation/a6042c757623a184e11b.npz",
+      "sha256": "8102edc3a327f3bbbd2ed8cf3c52a743e4e5e2a59b1abdc00883dbe40bd95152"
+    },
+    {
+      "tile_id": "8e41ff608e7d6398b275",
+      "prediction": "results/real_training_pilot_v1_evaluation/8e41ff608e7d6398b275.npz",
+      "sha256": "37adbb3c30b27dcbfd0a363314d2923ecfe23fbdb2866bc8c59af604290491da"
+    },
+    {
+      "tile_id": "3ab07bf208329c230d23",
+      "prediction": "results/real_training_pilot_v1_evaluation/3ab07bf208329c230d23.npz",
+      "sha256": "cec47bae394daee480614bc9bf17fa7a9334041b7eda18f59c181ee7c2cb6dae"
+    },
+    {
+      "tile_id": "cc649cd39d3af4685673",
+      "prediction": "results/real_training_pilot_v1_evaluation/cc649cd39d3af4685673.npz",
+      "sha256": "8e44963a37df403bb722332a7758a6b51f301b41034028d9ec0b80532966b654"
+    },
+    {
+      "tile_id": "00440094490b1a452025",
+      "prediction": "results/real_training_pilot_v1_evaluation/00440094490b1a452025.npz",
+      "sha256": "ca6ee50e5f6fb73e9bbed738b5d121c86a544cbb5dc410322b6f8115fa22d7bd"
+    },
+    {
+      "tile_id": "9ef064bc51ae4dafede8",
+      "prediction": "results/real_training_pilot_v1_evaluation/9ef064bc51ae4dafede8.npz",
+      "sha256": "26bb7e5766486dcc572f3db271ae37c74292b3790dbcb5c01f164a52fe5b0964"
+    },
+    {
+      "tile_id": "15aab5ec01e7b33f5a53",
+      "prediction": "results/real_training_pilot_v1_evaluation/15aab5ec01e7b33f5a53.npz",
+      "sha256": "72ba7091fe1c5443e08594d2e769084964dc3c9f012614dd95115e775d3af1d1"
+    },
+    {
+      "tile_id": "b67181b0f54f414c1bf9",
+      "prediction": "results/real_training_pilot_v1_evaluation/b67181b0f54f414c1bf9.npz",
+      "sha256": "370ca54404f0f456a817c291c14b3b2475c1a7b47acd822d4fac388b5a156a69"
+    },
+    {
+      "tile_id": "88ebec8864c00c919e20",
+      "prediction": "results/real_training_pilot_v1_evaluation/88ebec8864c00c919e20.npz",
+      "sha256": "b8e667088f1d94b4da7561b0b6e7897bee615fa73f25f5493b2697165374ead1"
+    },
+    {
+      "tile_id": "f874516e038debb8cf34",
+      "prediction": "results/real_training_pilot_v1_evaluation/f874516e038debb8cf34.npz",
+      "sha256": "7a2da9ee41a1544cb328a2dd0f3e17b112be23a027582b5c63e16c696f8276db"
+    },
+    {
+      "tile_id": "8ff47f24341d22f62a08",
+      "prediction": "results/real_training_pilot_v1_evaluation/8ff47f24341d22f62a08.npz",
+      "sha256": "4d1bb892778305e42284d1778cc5b0c7ef84ef2a135efa84a8bfe851d029a1c2"
+    },
+    {
+      "tile_id": "68cf2248d50eb6660ccc",
+      "prediction": "results/real_training_pilot_v1_evaluation/68cf2248d50eb6660ccc.npz",
+      "sha256": "ade0d37dd4decfe34bd6f1a0b65264398346f93efa0005061b6c204286875769"
+    },
+    {
+      "tile_id": "9da2ed8dea303635e5b4",
+      "prediction": "results/real_training_pilot_v1_evaluation/9da2ed8dea303635e5b4.npz",
+      "sha256": "9f53191bea87df4fa61404b44bba5b2d257a676e6769b5df1df1a148b8d3dca7"
+    },
+    {
+      "tile_id": "577fed242213e107ae79",
+      "prediction": "results/real_training_pilot_v1_evaluation/577fed242213e107ae79.npz",
+      "sha256": "81d4f25d7be08092f12a178e9a14ef38510c73ef80d5b28f89fe3bc622d08955"
+    },
+    {
+      "tile_id": "ceaf320d27b9e2edede7",
+      "prediction": "results/real_training_pilot_v1_evaluation/ceaf320d27b9e2edede7.npz",
+      "sha256": "96b52150b46fab0aa45032e418551583120789a2959acbd12e11ff96c08377a5"
+    },
+    {
+      "tile_id": "120e8cdfbab299443d0e",
+      "prediction": "results/real_training_pilot_v1_evaluation/120e8cdfbab299443d0e.npz",
+      "sha256": "dedbf711af09864231be698e5307e93fffbfdf95ce89e42d7e0e7e6228f5f8cc"
+    },
+    {
+      "tile_id": "92e28b1b326b65853d60",
+      "prediction": "results/real_training_pilot_v1_evaluation/92e28b1b326b65853d60.npz",
+      "sha256": "5884f3c0ffb2be48776e27f8706a19109dd0f40afb2e0fc7d3aaf95891986d52"
+    },
+    {
+      "tile_id": "f9c473ca019ab49ef684",
+      "prediction": "results/real_training_pilot_v1_evaluation/f9c473ca019ab49ef684.npz",
+      "sha256": "8d4a24d7cf9b68b0025a289309474e2e289c5b8805f80dda2a6701d55ade7ade"
+    },
+    {
+      "tile_id": "3a451286918d8fda7abd",
+      "prediction": "results/real_training_pilot_v1_evaluation/3a451286918d8fda7abd.npz",
+      "sha256": "ad066409cb5019b299f2ee0ac43666eaa88171a46c737d804b1ba59cdaa69fc6"
+    },
+    {
+      "tile_id": "ca563231239e9f960409",
+      "prediction": "results/real_training_pilot_v1_evaluation/ca563231239e9f960409.npz",
+      "sha256": "48dce0d7b536b567353a2b037e74d53f9c1624a2a7e8f79caf9368a08834a218"
+    },
+    {
+      "tile_id": "67585b29f94ce2bda104",
+      "prediction": "results/real_training_pilot_v1_evaluation/67585b29f94ce2bda104.npz",
+      "sha256": "b8caf4bc926b58a29962ceb0b86d6ec4e3221c1ee8f18f69f5f4dcf894a3a27c"
+    },
+    {
+      "tile_id": "1ccc1dce2f32a08c3e94",
+      "prediction": "results/real_training_pilot_v1_evaluation/1ccc1dce2f32a08c3e94.npz",
+      "sha256": "af78bf752331d1981a135f8e3c51ef27ddc7e4c5468af4a80046e3b5ff182826"
+    },
+    {
+      "tile_id": "298e72b5a32e495a10fe",
+      "prediction": "results/real_training_pilot_v1_evaluation/298e72b5a32e495a10fe.npz",
+      "sha256": "d5ef1fd6dd8c14ac5c3502690abc4ee596d5315e0fa157d9b525cb551e694aa1"
+    },
+    {
+      "tile_id": "6218e92de66bd3c3c97e",
+      "prediction": "results/real_training_pilot_v1_evaluation/6218e92de66bd3c3c97e.npz",
+      "sha256": "dda1144bf7fada431cd1ced821d9ad95c986921e5fa825d6d6b19e0db7b144c7"
+    },
+    {
+      "tile_id": "61b062125fb5a9cdaef6",
+      "prediction": "results/real_training_pilot_v1_evaluation/61b062125fb5a9cdaef6.npz",
+      "sha256": "56bdbc81b20ce0f168d916b6675f4df7d78f82c575b4dbaff8d3f0b35b6c64ed"
+    },
+    {
+      "tile_id": "c342ba991b581d068a7a",
+      "prediction": "results/real_training_pilot_v1_evaluation/c342ba991b581d068a7a.npz",
+      "sha256": "3d745ffa7104ac7f9ff53fc6dd76a70abe925ec42a92d9ad8da0e9ef3e40927e"
+    },
+    {
+      "tile_id": "1ea7c75e9b1e4c894bc1",
+      "prediction": "results/real_training_pilot_v1_evaluation/1ea7c75e9b1e4c894bc1.npz",
+      "sha256": "a5969644e286e99863fe6248daa2821bb48c1316d8de32f99cbac1b9828bdbaa"
+    },
+    {
+      "tile_id": "661346191437576e06c3",
+      "prediction": "results/real_training_pilot_v1_evaluation/661346191437576e06c3.npz",
+      "sha256": "f2c3bee72e2b0ab7e60f5c93b1c6f449bd9634dec9ee6c524d3894d987320ce4"
+    },
+    {
+      "tile_id": "ba7413d6a55b72a650ea",
+      "prediction": "results/real_training_pilot_v1_evaluation/ba7413d6a55b72a650ea.npz",
+      "sha256": "bf0df8f9a9aff02f2edea96c27de06f1e65a1a5360974d5e1deddc65bb0ff907"
+    },
+    {
+      "tile_id": "8d8d3951692f1c4bec1a",
+      "prediction": "results/real_training_pilot_v1_evaluation/8d8d3951692f1c4bec1a.npz",
+      "sha256": "117259bcaae04bb57aab1ecfa75814dc3ee976843ca426f0e95aeefb437597a1"
+    },
+    {
+      "tile_id": "e5b5c9a9b0eec5c54c58",
+      "prediction": "results/real_training_pilot_v1_evaluation/e5b5c9a9b0eec5c54c58.npz",
+      "sha256": "4f98bdd92396f1f916fc8b23df2ad09ac8a6dff39c13c61aa489a191a0c3ecc0"
+    },
+    {
+      "tile_id": "e56e40bab3ee600969ad",
+      "prediction": "results/real_training_pilot_v1_evaluation/e56e40bab3ee600969ad.npz",
+      "sha256": "720a34b7654b7f768db0bcaf7cabec84d55a24e77c93886a298c2ecb6420a174"
+    },
+    {
+      "tile_id": "421a5419471ff466b21b",
+      "prediction": "results/real_training_pilot_v1_evaluation/421a5419471ff466b21b.npz",
+      "sha256": "d8606b5d46c476417feb87e2e1b6be9cf001d65b8bb0274d2460d107242dd426"
+    },
+    {
+      "tile_id": "247ad852007ed281e96a",
+      "prediction": "results/real_training_pilot_v1_evaluation/247ad852007ed281e96a.npz",
+      "sha256": "b38f6076a36055e84ae274e4a6d92a2bbd6ec5adfeb8d762767b37720a060823"
+    },
+    {
+      "tile_id": "20b8299b9de4077fb83f",
+      "prediction": "results/real_training_pilot_v1_evaluation/20b8299b9de4077fb83f.npz",
+      "sha256": "efb148517f0873a3eb0d2f7631e29f9d3c55046b292288d1d4c3775eb66ee543"
+    }
+  ],
+  "ground_location_accuracy_validated": false,
+  "model_metrics": {
+    "valid_query_weight": 462751.0,
+    "positive_query_weight": 242.0,
+    "brier": 0.14977877681404228,
+    "logloss": 0.48447401236153986,
+    "precision": 0.0028179084390048998,
+    "recall": 0.5537190082644629,
+    "f1": 0.005607281096348991,
+    "roc_auc": 0.7974122692524241,
+    "average_precision": 0.009262373823635624,
+    "ranking_method": "approximate_4096_bin_histogram",
+    "threshold": 0.5,
+    "scope": "recorded VIIRS query fire status; not verified ground-truth wildfire"
+  },
+  "modis_baseline_metrics": {
+    "valid_query_weight": 462751.0,
+    "positive_query_weight": 242.0,
+    "brier": 0.0008427858610786362,
+    "logloss": 0.023287047596993692,
+    "precision": 0.32547169811320753,
+    "recall": 0.5702479338842975,
+    "f1": 0.41441441441441446,
+    "roc_auc": 0.784814783769497,
+    "average_precision": 0.18582430628315805,
+    "ranking_method": "approximate_4096_bin_histogram",
+    "threshold": 0.5,
+    "scope": "recorded VIIRS query fire status; not verified ground-truth wildfire"
+  }
+}

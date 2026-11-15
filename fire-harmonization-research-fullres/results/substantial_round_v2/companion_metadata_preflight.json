@@ -1,0 +1,437 @@
+{
+  "bc_2021": {
+    "MYD021KM": {
+      "product": "MYD021KM",
+      "version": "6.1",
+      "granule_id": "G2089286740-LAADS",
+      "collection_id": "C1379758607-LAADS",
+      "start_utc": "2021-07-11T21:30:00.000Z",
+      "end_utc": "2021-07-11T21:35:00.000Z",
+      "bbox": [
+        -145.950586,
+        31.256187,
+        -111.192383,
+        53.100952
+      ],
+      "estimated_bytes": 146053050,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD03": {
+      "product": "MYD03",
+      "version": "6.1",
+      "granule_id": "G2089282275-LAADS",
+      "collection_id": "C1379841358-LAADS",
+      "start_utc": "2021-07-11T21:30:00.000Z",
+      "end_utc": "2021-07-11T21:35:00.000Z",
+      "bbox": [
+        -145.950586,
+        31.256187,
+        -111.192383,
+        53.100952
+      ],
+      "estimated_bytes": 34949315,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD02HKM": {
+      "product": "MYD02HKM",
+      "version": "6.1",
+      "granule_id": "G2089286753-LAADS",
+      "collection_id": "C1379758778-LAADS",
+      "start_utc": "2021-07-11T21:30:00.000Z",
+      "end_utc": "2021-07-11T21:35:00.000Z",
+      "bbox": [
+        -145.950586,
+        31.256187,
+        -111.192383,
+        53.100952
+      ],
+      "estimated_bytes": 145898165,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD02QKM": {
+      "product": "MYD02QKM",
+      "version": "6.1",
+      "granule_id": "G2089286766-LAADS",
+      "collection_id": "C1379759127-LAADS",
+      "start_utc": "2021-07-11T21:30:00.000Z",
+      "end_utc": "2021-07-11T21:35:00.000Z",
+      "bbox": [
+        -145.950586,
+        31.256187,
+        -111.192383,
+        53.100952
+      ],
+      "estimated_bytes": 175315502,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "VNP03IMG": {
+      "product": "VNP03IMG",
+      "version": "2",
+      "granule_id": "G2128150154-LAADS",
+      "collection_id": "C2105092163-LAADS",
+      "start_utc": "2021-07-11T21:30:00.000Z",
+      "end_utc": "2021-07-11T21:36:00.000Z",
+      "bbox": [
+        -158.768112,
+        33.313255,
+        -110.206284,
+        59.231682
+      ],
+      "estimated_bytes": 164538904,
+      "day_night": "Day",
+      "producer_filename": ""
+    }
+  },
+  "central_2021": {
+    "MYD021KM": {
+      "product": "MYD021KM",
+      "version": "6.1",
+      "granule_id": "G2089286630-LAADS",
+      "collection_id": "C1379758607-LAADS",
+      "start_utc": "2021-07-11T19:55:00.000Z",
+      "end_utc": "2021-07-11T20:00:00.000Z",
+      "bbox": [
+        -134.660033,
+        44.419339,
+        -87.693508,
+        67.035209
+      ],
+      "estimated_bytes": 156743471,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD03": {
+      "product": "MYD03",
+      "version": "6.1",
+      "granule_id": "G2089280760-LAADS",
+      "collection_id": "C1379841358-LAADS",
+      "start_utc": "2021-07-11T19:55:00.000Z",
+      "end_utc": "2021-07-11T20:00:00.000Z",
+      "bbox": [
+        -134.660033,
+        44.419339,
+        -87.693508,
+        67.035209
+      ],
+      "estimated_bytes": 39186324,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD02HKM": {
+      "product": "MYD02HKM",
+      "version": "6.1",
+      "granule_id": "G2089286652-LAADS",
+      "collection_id": "C1379758778-LAADS",
+      "start_utc": "2021-07-11T19:55:00.000Z",
+      "end_utc": "2021-07-11T20:00:00.000Z",
+      "bbox": [
+        -134.660033,
+        44.419339,
+        -87.693508,
+        67.035209
+      ],
+      "estimated_bytes": 144747670,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD02QKM": {
+      "product": "MYD02QKM",
+      "version": "6.1",
+      "granule_id": "G2089286663-LAADS",
+      "collection_id": "C1379759127-LAADS",
+      "start_utc": "2021-07-11T19:55:00.000Z",
+      "end_utc": "2021-07-11T20:00:00.000Z",
+      "bbox": [
+        -134.660033,
+        44.419339,
+        -87.693508,
+        67.035209
+      ],
+      "estimated_bytes": 171420056,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "VNP03IMG": {
+      "product": "VNP03IMG",
+      "version": "2",
+      "granule_id": "G2128150128-LAADS",
+      "collection_id": "C2105092163-LAADS",
+      "start_utc": "2021-07-11T19:54:00.000Z",
+      "end_utc": "2021-07-11T20:00:00.000Z",
+      "bbox": [
+        -161.788498,
+        50.338337,
+        -72.89238,
+        77.505272
+      ],
+      "estimated_bytes": 187621878,
+      "day_night": "Day",
+      "producer_filename": ""
+    }
+  },
+  "nwt_2022": {
+    "MYD021KM": {
+      "product": "MYD021KM",
+      "version": "6.1",
+      "granule_id": "G2550195020-LAADS",
+      "collection_id": "C1379758607-LAADS",
+      "start_utc": "2022-07-06T10:50:00.000Z",
+      "end_utc": "2022-07-06T10:55:00.000Z",
+      "bbox": [
+        -150.94615,
+        53.819543,
+        -81.87716,
+        77.2786
+      ],
+      "estimated_bytes": 143716186,
+      "day_night": "Both",
+      "producer_filename": ""
+    },
+    "MYD03": {
+      "product": "MYD03",
+      "version": "6.1",
+      "granule_id": "G2543950032-LAADS",
+      "collection_id": "C1379841358-LAADS",
+      "start_utc": "2022-07-06T10:50:00.000Z",
+      "end_utc": "2022-07-06T10:55:00.000Z",
+      "bbox": [
+        -150.94615,
+        53.819543,
+        -81.87716,
+        77.2786
+      ],
+      "estimated_bytes": 38295088,
+      "day_night": "Both",
+      "producer_filename": ""
+    },
+    "MYD02HKM": {
+      "product": "MYD02HKM",
+      "version": "6.1",
+      "granule_id": "G2550195072-LAADS",
+      "collection_id": "C1379758778-LAADS",
+      "start_utc": "2022-07-06T10:50:00.000Z",
+      "end_utc": "2022-07-06T10:55:00.000Z",
+      "bbox": [
+        -150.94615,
+        53.819543,
+        -81.87716,
+        77.2786
+      ],
+      "estimated_bytes": 98116537,
+      "day_night": "Both",
+      "producer_filename": ""
+    },
+    "MYD02QKM": {
+      "product": "MYD02QKM",
+      "version": "6.1",
+      "granule_id": "G2550195089-LAADS",
+      "collection_id": "C1379759127-LAADS",
+      "start_utc": "2022-07-06T10:50:00.000Z",
+      "end_utc": "2022-07-06T10:55:00.000Z",
+      "bbox": [
+        -150.94615,
+        53.819543,
+        -81.87716,
+        77.2786
+      ],
+      "estimated_bytes": 112202384,
+      "day_night": "Both",
+      "producer_filename": ""
+    },
+    "VNP03IMG": {
+      "product": "VNP03IMG",
+      "version": "2",
+      "granule_id": "G2326770398-LAADS",
+      "collection_id": "C2105092163-LAADS",
+      "start_utc": "2022-07-06T10:48:00.000Z",
+      "end_utc": "2022-07-06T10:54:00.000Z",
+      "bbox": [
+        -169.269638,
+        51.303787,
+        -75.023476,
+        78.701729
+      ],
+      "estimated_bytes": 178875009,
+      "day_night": "Both",
+      "producer_filename": ""
+    }
+  },
+  "ontario_2023": {
+    "MYD021KM": {
+      "product": "MYD021KM",
+      "version": "6.1",
+      "granule_id": "G2702914470-LAADS",
+      "collection_id": "C1379758607-LAADS",
+      "start_utc": "2023-06-02T17:25:00.000Z",
+      "end_utc": "2023-06-02T17:30:00.000Z",
+      "bbox": [
+        -84.519621,
+        35.552975,
+        -46.819622,
+        57.632186
+      ],
+      "estimated_bytes": 150760170,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD03": {
+      "product": "MYD03",
+      "version": "6.1",
+      "granule_id": "G2702907811-LAADS",
+      "collection_id": "C1379841358-LAADS",
+      "start_utc": "2023-06-02T17:25:00.000Z",
+      "end_utc": "2023-06-02T17:30:00.000Z",
+      "bbox": [
+        -84.519621,
+        35.552975,
+        -46.819622,
+        57.632186
+      ],
+      "estimated_bytes": 34540653,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD02HKM": {
+      "product": "MYD02HKM",
+      "version": "6.1",
+      "granule_id": "G2702914508-LAADS",
+      "collection_id": "C1379758778-LAADS",
+      "start_utc": "2023-06-02T17:25:00.000Z",
+      "end_utc": "2023-06-02T17:30:00.000Z",
+      "bbox": [
+        -84.519621,
+        35.552975,
+        -46.819622,
+        57.632186
+      ],
+      "estimated_bytes": 142230935,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD02QKM": {
+      "product": "MYD02QKM",
+      "version": "6.1",
+      "granule_id": "G2702914543-LAADS",
+      "collection_id": "C1379759127-LAADS",
+      "start_utc": "2023-06-02T17:25:00.000Z",
+      "end_utc": "2023-06-02T17:30:00.000Z",
+      "bbox": [
+        -84.519621,
+        35.552975,
+        -46.819622,
+        57.632186
+      ],
+      "estimated_bytes": 165061486,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "VNP03IMG": {
+      "product": "VNP03IMG",
+      "version": "2",
+      "granule_id": "G2702422961-LAADS",
+      "collection_id": "C2105092163-LAADS",
+      "start_utc": "2023-06-02T17:18:00.000Z",
+      "end_utc": "2023-06-02T17:24:00.000Z",
+      "bbox": [
+        -130.547653,
+        53.384129,
+        -23.61165,
+        80.795158
+      ],
+      "estimated_bytes": 176225071,
+      "day_night": "Day",
+      "producer_filename": ""
+    }
+  },
+  "quebec_2024": {
+    "MYD021KM": {
+      "product": "MYD021KM",
+      "version": "6.1",
+      "granule_id": "G3081865269-LAADS",
+      "collection_id": "C1379758607-LAADS",
+      "start_utc": "2024-06-05T18:45:00.000Z",
+      "end_utc": "2024-06-05T18:50:00.000Z",
+      "bbox": [
+        -96.781808,
+        32.251418,
+        -61.669618,
+        54.175324
+      ],
+      "estimated_bytes": 159353211,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD03": {
+      "product": "MYD03",
+      "version": "6.1",
+      "granule_id": "G3081122687-LAADS",
+      "collection_id": "C1379841358-LAADS",
+      "start_utc": "2024-06-05T18:45:00.000Z",
+      "end_utc": "2024-06-05T18:50:00.000Z",
+      "bbox": [
+        -96.781808,
+        32.251418,
+        -61.669618,
+        54.175324
+      ],
+      "estimated_bytes": 36516178,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD02HKM": {
+      "product": "MYD02HKM",
+      "version": "6.1",
+      "granule_id": "G3081865277-LAADS",
+      "collection_id": "C1379758778-LAADS",
+      "start_utc": "2024-06-05T18:45:00.000Z",
+      "end_utc": "2024-06-05T18:50:00.000Z",
+      "bbox": [
+        -96.781808,
+        32.251418,
+        -61.669618,
+        54.175324
+      ],
+      "estimated_bytes": 143658263,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "MYD02QKM": {
+      "product": "MYD02QKM",
+      "version": "6.1",
+      "granule_id": "G3081865281-LAADS",
+      "collection_id": "C1379759127-LAADS",
+      "start_utc": "2024-06-05T18:45:00.000Z",
+      "end_utc": "2024-06-05T18:50:00.000Z",
+      "bbox": [
+        -96.781808,
+        32.251418,
+        -61.669618,
+        54.175324
+      ],
+      "estimated_bytes": 167155892,
+      "day_night": "Day",
+      "producer_filename": ""
+    },
+    "VNP03IMG": {
+      "product": "VNP03IMG",
+      "version": "2",
+      "granule_id": "G3080789623-LAADS",
+      "collection_id": "C2105092163-LAADS",
+      "start_utc": "2024-06-05T18:36:00.000Z",
+      "end_utc": "2024-06-05T18:42:00.000Z",
+      "bbox": [
+        -130.941238,
+        44.996853,
+        -60.944324,
+        71.72979
+      ],
+      "estimated_bytes": 176342680,
+      "day_night": "Day",
+      "producer_filename": ""
+    }
+  }
+}

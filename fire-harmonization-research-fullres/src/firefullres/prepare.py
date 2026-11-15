@@ -40,11 +40,29 @@ def query_crop(vlat,vlon,lat,lon,max_side):
     return slice(r0,r1),slice(c0,c1)
 
 
+def inside_bbox(lat,lon,bbox):
+    """Keep the entire native context in its declared geographic block."""
+    west,south,east,north=bbox
+    return bool(np.isfinite(lat).all() and np.isfinite(lon).all() and
+        (lat>=south).all() and (lat<=north).all() and (lon>=west).all() and (lon<=east).all())
+
+
+def store_tile(dest,arrays,reuse=False):
+    if path(dest).exists():
+        if not reuse:raise ValueError('Tile already exists; choose a new manifest/dataset name')
+        with np.load(path(dest),allow_pickle=False) as old:
+            if set(old.files)!=set(arrays) or any(old[k].dtype!=v.dtype or not np.array_equal(old[k],v) for k,v in arrays.items()):
+                raise ValueError('Interrupted-run tile differs from current inputs; use a fresh dataset version')
+    else:write_npz(dest,**arrays)
+
+
 def prepare(bundles, output_manifest, tile_size=96, stride=64, halo=16, max_query_side=384,
-            forest_only=True, inference=False):
+            forest_only=True, inference=False,bbox=None,reuse_tiles=False):
     if tile_size%8 or 2*halo>=tile_size or stride!=tile_size-2*halo:
         raise ValueError('Use tile-size divisible by 8 and stride = tile-size - 2*halo to avoid duplicated/gapped evaluation cores')
     if path(output_manifest).exists():raise ValueError('Output manifest already exists; use a new dataset version')
+    if bbox is not None and (len(bbox)!=4 or not -180<=bbox[0]<bbox[2]<=180 or not -90<=bbox[1]<bbox[3]<=90):
+        raise ValueError('Use a finite non-antimeridian geographic block')
     records=read_jsonl(bundles);rows=[];excluded=[];chosen=set();source_checksums={}
     # Closest interval is selected first for duplicate MODIS windows, independent of fire labels.
     if not inference:records.sort(key=lambda b:(time_bound_seconds(b),str(b.get('viirs_fire'))))
@@ -72,6 +90,7 @@ def prepare(bundles, output_manifest, tile_size=96, stride=64, halo=16, max_quer
                 identity=(b['modis_1km'],r,c,tile_size)
                 if identity in chosen:continue
                 lat=mlat[r:r+tile_size,c:c+tile_size];lon=mlon[r:r+tile_size,c:c+tile_size]
+                if bbox is not None and not inside_bbox(lat,lon,bbox):continue
                 try:
                     if inference:
                         qlat,qlon=geographic_queries(lat,lon,max_side=max_query_side)
@@ -110,8 +129,7 @@ def prepare(bundles, output_manifest, tile_size=96, stride=64, halo=16, max_quer
                     continue
                 identifier=hashlib.sha256(json.dumps(identity).encode()).hexdigest()[:20]
                 dest=f'data/tiles/{path(output_manifest).stem}/{identifier}.npz'
-                if path(dest).exists():raise ValueError('Tile already exists; choose a new manifest/dataset name')
-                write_npz(dest,**arrays)
+                store_tile(dest,arrays,reuse_tiles)
                 rows.append({'schema':SCHEMA,'dataset_kind':'nasa_native','tile_id':identifier,'tile':dest,'sha256':sha256(dest),
                     'split':b['split'],'event_group':b['event_group'],'region_id':b['region_id'],
                     'source_ids':[relative(p) for p in sources], 'source_window':[r,c,tile_size,tile_size],
@@ -127,7 +145,8 @@ def prepare(bundles, output_manifest, tile_size=96, stride=64, halo=16, max_quer
         raise ValueError('No valid native tiles; inspect the failed_preparation audit for calibration/geolocation exclusions')
     write_jsonl(output_manifest,rows)
     audit={'manifest':relative(output_manifest),'tiles':len(rows),'split_counts':dict(Counter(r['split'] for r in rows)),
-           'tile_size':tile_size,'stride':stride,'halo':halo,'forest_only':forest_only,'inference':inference,
+           'tile_size':tile_size,'stride':stride,'halo':halo,'max_query_side':max_query_side,
+           'forest_only':forest_only,'inference':inference,'bbox':bbox,
            'source_checksums':source_checksums,'excluded_windows':excluded,'bundle_manifest_sha256':sha256(bundles),
            'target':'native VIIRS nominal/high-confidence fire status vs observed land at query centers',
            'native_auxiliary_target':'mean known VIIRS fire status assigned to each native MODIS cell',

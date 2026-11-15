@@ -1,0 +1,15 @@
+{
+  "status": "ready_for_local_earthdata_login",
+  "new_campaign_science_downloaded": false,
+  "thirty_epoch_run_started": false,
+  "software_tests_passed": 64,
+  "gpu_update_smoke_passed": true,
+  "training_candidate_days": 34,
+  "target_training_acquisitions": 24,
+  "new_validation_candidate_days": 4,
+  "reserved_test_candidate_days": 5,
+  "planned_transfer_budget_gib": 32,
+  "retained_free_space_gib": 40,
+  "pilot_checkpoint_unchanged": true,
+  "next_command": "run-substantial-round.cmd"
+}

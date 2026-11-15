@@ -1,0 +1,21 @@
+{
+  "status": "stopped_before_training_data_admission_failed",
+  "authenticated": true,
+  "epochs_requested": 30,
+  "downloaded_files": 212,
+  "charged_gib": 15.39,
+  "updated_utc": "2026-11-15T03:04:57.914857+00:00",
+  "credentials_saved": false,
+  "free_disk_gib": 221.9,
+  "selected_acquisitions": {
+    "bc_2021": 8,
+    "central_2021": 8,
+    "nwt_2022": 8,
+    "ontario_2023": 4,
+    "quebec_2024": 5
+  },
+  "completed_preparation_units": 3,
+  "completed_preparation_tiles": 21,
+  "completed_epochs": 0,
+  "superseded_by": "substantial_round_v3"
+}

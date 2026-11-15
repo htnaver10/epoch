@@ -181,6 +181,10 @@ def train(manifest,statistics_file,config_file,run_name,allow_synthetic=False,re
     device=device_for(config['device'])
     if device.type=='cpu' and config['precision']!='float32':raise ValueError('Use the smoke_cpu.json config for CPU tests')
     model=NativeFireNet(**config['model']).to(device)
+    if config['initialize_output_prior'] and not resume:
+        priors=stats.get('training_target_prevalence')
+        if not priors:raise ValueError('Prior initialization requires training-only target prevalences in statistics')
+        model.initialize_output_priors(priors['fine'],priors['native'])
     executor=configure_model(model,config,device)
     optimizer=optimizer_for(model,config,device)
     scaler=torch.amp.GradScaler('cuda',enabled=device.type=='cuda' and config['precision']=='float16')
@@ -308,6 +312,10 @@ def profile(manifest,statistics_file,config_file,output,steps=10,allow_synthetic
         rows.sort(key=lambda r:np.prod(tile_shapes(r)[1]),reverse=True)
     random.seed(config['seed']);torch.manual_seed(config['seed'])
     model=NativeFireNet(**config['model']).to(device);executor=configure_model(model,config,device)
+    if config['initialize_output_prior']:
+        priors=stats.get('training_target_prevalence')
+        if not priors:raise ValueError('Prior initialization requires training-only target prevalences in statistics')
+        model.initialize_output_priors(priors['fine'],priors['native'])
     optimizer=optimizer_for(model,config,device)
     scaler=torch.amp.GradScaler('cuda',enabled=device.type=='cuda' and config['precision']=='float16')
     data_loader=loader(rows,stats,config,shuffle=not worst_case,accumulated=True)

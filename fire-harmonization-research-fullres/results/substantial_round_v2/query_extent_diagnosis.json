@@ -1,0 +1,76 @@
+[
+  {
+    "group": "bc_2021",
+    "source": "data/raw/MYD021KM/MYD021KM.A2021192.2130.061.2021193154836.hdf",
+    "all_extent_quantiles": [
+      384.0,
+      400.0,
+      400.0,
+      416.0,
+      496.0,
+      512.0
+    ],
+    "usable_angle_extent_quantiles": [
+      384.0,
+      400.0,
+      400.0,
+      408.0,
+      416.0,
+      416.0
+    ],
+    "usable_angle_windows": 27,
+    "usable_angle_windows_at_caps": {
+      "384": 3,
+      "512": 27,
+      "768": 27,
+      "1024": 27
+    }
+  },
+  {
+    "group": "central_2021",
+    "source": "data/raw/MYD021KM/MYD021KM.A2021200.2045.061.2021202201138.hdf",
+    "all_extent_quantiles": [
+      480.0,
+      672.0,
+      720.0,
+      768.0,
+      768.0,
+      784.0
+    ],
+    "usable_angle_extent_quantiles": [],
+    "usable_angle_windows": 0,
+    "usable_angle_windows_at_caps": {
+      "384": 0,
+      "512": 0,
+      "768": 0,
+      "1024": 0
+    }
+  },
+  {
+    "group": "nwt_2022",
+    "source": "data/raw/MYD021KM/MYD021KM.A2022189.2015.061.2022318104536.hdf",
+    "all_extent_quantiles": [
+      416.0,
+      432.0,
+      432.0,
+      464.0,
+      512.0,
+      576.0
+    ],
+    "usable_angle_extent_quantiles": [
+      416.0,
+      432.0,
+      432.0,
+      464.0,
+      512.0,
+      576.0
+    ],
+    "usable_angle_windows": 105,
+    "usable_angle_windows_at_caps": {
+      "384": 0,
+      "512": 95,
+      "768": 105,
+      "1024": 105
+    }
+  }
+]

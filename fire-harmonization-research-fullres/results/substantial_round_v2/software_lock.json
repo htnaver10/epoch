@@ -1,0 +1,34 @@
+{
+  "training_config_sha256": "d451332b0dfc85b8387d5c86ce719b6aaf0059b95a1ba305c36b56c3f836b517",
+  "source_sha256": {
+    "src/firefullres/__init__.py": "6f6913edb314f0838488ea671e6bfe40a1ea2eadcc0eb40138161fdfac255c74",
+    "src/firefullres/acquisition.py": "a288c0905044589eb7782e33c14f4f085f7bc52a528333c00bea48710fc578e0",
+    "src/firefullres/calibration.py": "6f174605e5f08380864e07240f93574331a8954e536720008781dad36db1274d",
+    "src/firefullres/campaign.py": "d2bb4ebd12586d10c52e353d5769dbf3b0567fd82e9d09d27315c210b4a12e2f",
+    "src/firefullres/cli.py": "8da38b42fd3566103e9f47e6f3a154ffdd3d295a39eb70fbd7d3745aacc7362b",
+    "src/firefullres/core.py": "16d8a3c1adc5888f593e6b448b823707aa9dccd9ed6efde7d5946a24b95ac9b2",
+    "src/firefullres/demo.py": "66c6c9f3c655f21f76ff60acc220e3bbcddca9db65d3e7bd8591add7e236d9f8",
+    "src/firefullres/engine.py": "57e2822305b8dc0388d3c02b8c64ba0f179123bc83a6b5152703926994c6c9d0",
+    "src/firefullres/geometry.py": "f3f57a6dc085c4a766652f356753e4dcbdb71440cc329816dec729220f9bb36c",
+    "src/firefullres/loading.py": "ece923c773984a902131a8c246ab6b8b935b74c7556168580758cae177b8e5db",
+    "src/firefullres/metrics.py": "825dfc0a9d200ac86539af124569f66775e85fc961cccb41bbddca65b988fc83",
+    "src/firefullres/native.py": "e85598cc266bc0d7848d9d2fb82ea707b900432a0ba82518980b353ad131bfce",
+    "src/firefullres/network.py": "0c1d8c0bed58181eb5f582c2b2466b9dd7cdbabd6baca3f8d976816923255c9f",
+    "src/firefullres/prepare.py": "cfb84e7538e3aa5aa35776b14e7220237aec419147c499d0aef89a4b121f4fcf",
+    "src/firefullres/preview.py": "0da22f8a2522215233f52e3777d8d72ee9ae24af84dfb71703532dfab978a751",
+    "src/firefullres/runtime.py": "c4453ae308c80c1e27439c06d8458b8a3627932ebdb94799cbd5259c7ec75025",
+    "tools/run_substantial_round.py": "050a81dad10ec4144bfc87c125ff7b6a48ae0b038531d410236c04dbb97968e8",
+    "tools/evaluate_substantial_round.py": "ab722e658f311d38789d72bacc7a9c4d8c46a3daa3b5fea9d5614e83e78fc12b",
+    "tools/download_real_data.py": "754bd292a5d6ae2b898221796e9ae01c98012feb0ac2850d9faad34db2832910"
+  },
+  "data_versions": {
+    "numpy": "2.5.4",
+    "earthaccess": "0.19.0",
+    "h5py": "3.16.0",
+    "pyproj": "3.8.0"
+  },
+  "training_versions": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.1.3"
+  }
+}

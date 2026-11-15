@@ -1,0 +1,10 @@
+{
+  "verified_files": 212,
+  "verified_gib": 16.018,
+  "mismatches": [],
+  "all_inherited_checksums_match": true,
+  "v2_source_snapshot_matches_software_lock": true,
+  "original_pilot_checkpoint_unchanged": true,
+  "elapsed_seconds": 8.28,
+  "checked_utc": "2026-11-15T03:18:43.342950+00:00"
+}

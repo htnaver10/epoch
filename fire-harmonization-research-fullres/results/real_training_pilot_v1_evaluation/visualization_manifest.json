@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "independent_metric_keys_checked": [
+    "valid_query_weight",
+    "positive_query_weight",
+    "precision",
+    "recall",
+    "f1",
+    "brier",
+    "logloss"
+  ],
+  "tile_hashes_checked": 125,
+  "prediction_hashes_checked": 71,
+  "unique_exposed_query_centers": 462751,
+  "inputs": {
+    "models/real_training_pilot_v1/last.pt": "2df55ba0ad714b401939e698d6d9df5e9bdc316f080d55bf57a5a011978e6d78",
+    "data/manifests/real_training_pilot_v1.jsonl": "3c4df98f029546f69eb82cfa6d8b90382dabb5c659ef952f2e983328893eb980",
+    "results/real_training_pilot_v1_evaluation/report.json": "36f911ce0daafd67a1624d38fb1b4a00d0087a1f5040823073fad959fbe3bb15",
+    "tools/summarize_pilot_evaluation.py": "fd40cf8e37e24f7887f81c635dd2ae5e85bc8b818d6e19cb0298dd2d36c81ec0"
+  },
+  "outputs": {
+    "results/real_training_pilot_v1_evaluation/EVALUATION.md": "89598da3e845a85dad025bf4e7521db9bd5c056874f4851cfd2102f755572b71",
+    "results/real_training_pilot_v1_evaluation/visual_evaluation.json": "525c859e0afd94cdcdb1931ce21f5c768be51bcee3902dc3f656582ba6f835e7",
+    "results/real_training_pilot_v1_evaluation/calibration_figure_data.csv": "bd0936bbfa9abfd9be127f0877048cb8befa49e01e43e57895ce3a117e381ed1",
+    "results/real_training_pilot_v1_evaluation/metrics.csv": "cebb7acf6cc9fd2542abdeb3ffbf7f15d8cc4c89934a157fe1ed2cb4060c500b",
+    "results/real_training_pilot_v1_evaluation/spatial_figure_data.csv": "34fe3d24dc4714c6b1069b42f97c4d414a9e31004cf002881db07aea2ec3975b",
+    "results/real_training_pilot_v1_evaluation/visual_evaluation_by_tile.csv": "0599eae77f142d0db8f548a30fdd73da0875b6ad4ba581e9751869349255dcb2",
+    "visualizations/real_training_pilot_v1_evaluation/01_before_after_summary.png": "88cbce7bff0e41c4d9932443ae0e9fb5fc3672b8c39c8a6480085230ee321797",
+    "visualizations/real_training_pilot_v1_evaluation/02_detection_errors.png": "aa84a510ace5a9ffcaee7871fdbb929cf84af4640f319b4a1c29649b39e54a5a",
+    "visualizations/real_training_pilot_v1_evaluation/03_spatial_before_after.png": "fd228fbce3645fbc382ff1785972a3fb2a9a45980cbbec53c3982383525bb0ac",
+    "visualizations/real_training_pilot_v1_evaluation/04_tile_activity_errors.png": "972124f5e44ac43bec9ad4ba6a1a7e00e176494815b6635403ccb6c4248dbd94",
+    "visualizations/real_training_pilot_v1_evaluation/05_probability_diagnostics.png": "11d167e47ca3f25707a4d57ccb70ca012bd462caefea9a0fa854c2a5c445e6c4",
+    "visualizations/real_training_pilot_v1_evaluation/01_before_after_summary.svg": "f232c3be4ee887b3951f21ebdd6bdf921160a9495deea9cbe32ce756011a9663",
+    "visualizations/real_training_pilot_v1_evaluation/02_detection_errors.svg": "6828a3dea35bd7cb6d5bfb2ddb256713dacd25da26667fe479eb93597893e2f2",
+    "visualizations/real_training_pilot_v1_evaluation/03_spatial_before_after.svg": "21e2d21e348d320de809eb3b55af6a3dcfe519cfe6797423b15d2d3221c28030",
+    "visualizations/real_training_pilot_v1_evaluation/04_tile_activity_errors.svg": "ac54328bab782413bd436cfc274373f682877f54fd8c23e2b0169d544b0ed891",
+    "visualizations/real_training_pilot_v1_evaluation/05_probability_diagnostics.svg": "da75019d0c5030ed3151c1c8fc7b4f05623caf364ae53498eeb9f962a890e785"
+  }
+}

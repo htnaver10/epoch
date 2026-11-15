@@ -14,6 +14,21 @@ class TorchPipelineTests(unittest.TestCase):
     def setUp(self):
         import torch
         torch.set_num_threads(2);torch.manual_seed(3)
+    def test_training_prior_initialization_is_constant_and_trainable(self):
+        import torch
+        from firefullres.network import NativeFireNet
+        model=NativeFireNet(base=8,branch=4)
+        model.initialize_output_priors(.001,.002)
+        inputs={'thermal':torch.randn(1,12,32,32),'reflective_500':torch.randn(1,10,64,64),
+                'reflective_250':torch.randn(1,4,128,128),'geometry':torch.randn(1,14,32,32),
+                'query_grid':torch.zeros(1,16,16,2)}
+        output=model(**inputs)
+        torch.testing.assert_close(output['logits'].sigmoid(),torch.full_like(output['logits'],.001))
+        torch.testing.assert_close(output['native_logits'].sigmoid(),torch.full_like(output['native_logits'],.002))
+        torch.nn.functional.binary_cross_entropy_with_logits(output['logits'],torch.ones_like(output['logits'])).backward()
+        self.assertNotEqual(float(model.query_head[-1].bias.grad.abs().sum()),0.)
+        self.assertTrue(all(p.grad is None or torch.isfinite(p.grad).all() for p in model.parameters()))
+        with self.assertRaises(ValueError):model.initialize_output_priors(0.,.1)
     def test_model_native_shapes_masked_loss_and_backward(self):
         import torch
         from firefullres.network import NativeFireNet

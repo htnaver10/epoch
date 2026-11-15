@@ -18,6 +18,8 @@ def main(argv=None):
     a.add_argument('--halo',type=int,default=16);a.add_argument('--max-query-side',type=int,default=384)
     a.add_argument('--all-land',action='store_true',help='Explicit thermal-activity baseline without a forest-only claim')
     a.add_argument('--inference',action='store_true',help='MODIS-only bundle, metric query grid, no VIIRS labels')
+    a.add_argument('--bbox',nargs=4,type=float,help='Require complete native context inside west,south,east,north')
+    a.add_argument('--reuse-tiles',action='store_true',help='Resume interrupted preparation only when tile arrays exactly match')
     a=sub.add_parser('make-demo',help='Synthetic software fixtures; not NASA data')
     a.add_argument('--output',default='data/manifests/demo.jsonl')
     a.add_argument('--tile-size',type=int,default=32,help='Use 96 for planned native training shapes')
@@ -54,7 +56,7 @@ def main(argv=None):
             result=propose_pairs(args.inventory,args.output)
         elif command=='prepare':
             from .prepare import prepare
-            result=prepare(args.bundles,args.output,args.tile_size,args.stride,args.halo,args.max_query_side,not args.all_land,args.inference)
+            result=prepare(args.bundles,args.output,args.tile_size,args.stride,args.halo,args.max_query_side,not args.all_land,args.inference,args.bbox,args.reuse_tiles)
         elif command=='make-demo':
             from .demo import make_demo
             result=make_demo(args.output,args.tile_size,args.query_size,args.train_tiles)

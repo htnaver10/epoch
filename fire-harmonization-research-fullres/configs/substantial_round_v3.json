@@ -1,0 +1,100 @@
+{
+  "name": "substantial_round_v3",
+  "seed": 42,
+  "epochs": 30,
+  "download_budget_gib": 32,
+  "reserve_free_gib": 40,
+  "max_granules_per_query": 1000,
+  "min_training_tiles": 500,
+  "min_training_positive_queries": 1000,
+  "min_training_regions": 3,
+  "training_config": "configs/train_substantial_v2.json",
+  "scope": "Expanded all-land VIIRS-reference detection experiment; not forest-only or operational wildfire truth",
+  "groups": [
+    {
+      "id": "bc_2021",
+      "split": "train",
+      "start": "2021-07-10T00:00:00Z",
+      "end": "2021-08-05T23:59:59Z",
+      "bbox": [
+        -130,
+        49,
+        -118,
+        58
+      ],
+      "max_candidates": 24,
+      "max_pairs": 8,
+      "control_pairs": 2
+    },
+    {
+      "id": "central_2021",
+      "split": "train",
+      "start": "2021-07-10T00:00:00Z",
+      "end": "2021-08-05T23:59:59Z",
+      "bbox": [
+        -110,
+        50,
+        -95,
+        62
+      ],
+      "max_candidates": 24,
+      "max_pairs": 8,
+      "control_pairs": 2
+    },
+    {
+      "id": "nwt_2022",
+      "split": "train",
+      "start": "2022-07-05T00:00:00Z",
+      "end": "2022-08-05T23:59:59Z",
+      "bbox": [
+        -125,
+        58,
+        -105,
+        68
+      ],
+      "max_candidates": 24,
+      "max_pairs": 8,
+      "control_pairs": 2
+    },
+    {
+      "id": "ontario_2023",
+      "split": "validation",
+      "start": "2023-06-01T00:00:00Z",
+      "end": "2023-06-12T23:59:59Z",
+      "bbox": [
+        -92,
+        49,
+        -84,
+        57
+      ],
+      "max_candidates": 4,
+      "max_pairs": 4
+    },
+    {
+      "id": "quebec_20230605",
+      "split": "validation",
+      "existing_bundles": "data/manifests/validation_quebec_20230605_proposed_bundles.jsonl",
+      "bbox": [
+        -80,
+        45,
+        -65,
+        55
+      ]
+    },
+    {
+      "id": "quebec_2024",
+      "split": "test",
+      "start": "2024-06-01T00:00:00Z",
+      "end": "2024-06-15T23:59:59Z",
+      "bbox": [
+        -79,
+        46,
+        -66,
+        55
+      ],
+      "max_candidates": 6,
+      "max_pairs": 6
+    }
+  ],
+  "max_query_side": 768
+}

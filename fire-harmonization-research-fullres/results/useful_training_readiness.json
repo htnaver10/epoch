@@ -1,0 +1,91 @@
+{
+  "manifest": "data/manifests/real_training_pilot_v1.jsonl",
+  "manifest_sha256": "3c4df98f029546f69eb82cfa6d8b90382dabb5c659ef952f2e983328893eb980",
+  "partitions": {
+    "train": {
+      "tiles": 54,
+      "acquisition_event_groups": 1,
+      "regions": [
+        "pilot_western_canada"
+      ],
+      "positive_reference_queries": 7.0,
+      "known_reference_queries": 382427.0,
+      "fire_positive_tiles": 2
+    },
+    "validation": {
+      "tiles": 71,
+      "acquisition_event_groups": 1,
+      "regions": [
+        "quebec_east_canada"
+      ],
+      "positive_reference_queries": 242.0,
+      "known_reference_queries": 462751.0,
+      "fire_positive_tiles": 7
+    },
+    "test": {
+      "tiles": 0,
+      "acquisition_event_groups": 0,
+      "regions": [],
+      "positive_reference_queries": 0,
+      "known_reference_queries": 0,
+      "fire_positive_tiles": 0
+    }
+  },
+  "training_reference_prevalence": 1.8304146935232085e-05,
+  "recorded_run": "real_training_pilot_v1",
+  "best_recorded_validation": {
+    "valid_query_weight": 462751.0,
+    "positive_query_weight": 242.0,
+    "brier": 0.14977802983587454,
+    "logloss": 0.4844726771378045,
+    "precision": 0.0028181454920187597,
+    "recall": 0.5537190082644629,
+    "f1": 0.0056077504132577265,
+    "roc_auc": 0.7974570170973131,
+    "average_precision": 0.009259201929717662,
+    "ranking_method": "approximate_4096_bin_histogram",
+    "threshold": 0.5,
+    "scope": "recorded VIIRS query fire status; not verified ground-truth wildfire"
+  },
+  "best_recorded_epoch": 0,
+  "validation_baselines": {
+    "official_modis_on_same_reference_support": {
+      "valid_query_weight": 462751.0,
+      "positive_query_weight": 242.0,
+      "brier": 0.0008427858610786362,
+      "logloss": 0.023287047596993692,
+      "precision": 0.32547169811320753,
+      "recall": 0.5702479338842975,
+      "f1": 0.41441441441441446,
+      "roc_auc": 0.784814783769497,
+      "average_precision": 0.18582430628315805,
+      "ranking_method": "approximate_4096_bin_histogram",
+      "threshold": 0.5,
+      "scope": "recorded VIIRS query fire status; not verified ground-truth wildfire"
+    },
+    "constant_training_prevalence": {
+      "valid_query_weight": 462751.0,
+      "positive_query_weight": 242.0,
+      "brier": 0.0005229406221354659,
+      "logloss": 0.005722936472703053,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.0005229594317462307,
+      "ranking_method": "approximate_4096_bin_histogram",
+      "threshold": 0.5,
+      "scope": "recorded VIIRS query fire status; not verified ground-truth wildfire"
+    }
+  },
+  "issues": [
+    "Below the project feasibility target of 100 independent reference-event groups; current acquisition groups are conservative mergers, not verified incidents.",
+    "Below the project feasibility target of 10,000 tiles; repeated/overlapping crops do not replace independent events.",
+    "Very few positive training labels; increasing epochs cannot supply missing fire diversity. The 1,000-label flag is an investigation heuristic, not a sufficiency threshold.",
+    "No independent sealed test partition.",
+    "Dataset is not forest-only; prior land-cover context is required for that claim."
+  ],
+  "usefulness_established": false,
+  "acceptance": "Use a frozen independent test to demonstrate better reference detection than MODIS at matched false-alarm rate, calibration and acceptable region/day-night behavior. Pixel counts alone do not establish usefulness.",
+  "scope": "VIIRS-reference thermal/fire activity, not independently verified wildfire truth"
+}

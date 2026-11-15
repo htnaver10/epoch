@@ -1,0 +1,121 @@
+{
+  "manifest": "data/manifests/substantial_round_v3_units/substantial_round_v3_929cbfdbe830.jsonl",
+  "tiles": 10,
+  "split_counts": {
+    "train": 10
+  },
+  "tile_size": 96,
+  "stride": 64,
+  "halo": 16,
+  "max_query_side": 768,
+  "forest_only": false,
+  "inference": false,
+  "bbox": [
+    -130,
+    49,
+    -118,
+    58
+  ],
+  "source_checksums": {
+    "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf": "7edfdc301a1c7223a72a26f6d9ed7d3611f743dddecb057c864f11af5c8043b9",
+    "data/raw/MYD03/MYD03.A2021214.0945.061.2021214165745.hdf": "2dd83e7188272c86ecc014933994306a0d199c35b7b764e430cb0195ebc14e84",
+    "data/raw/MYD14/MYD14.A2021214.0945.061.2021214161156.hdf": "1c4f7bff58ff8d2cdfeae40e830d16af9c8e895004bfc61c63b62c356df0c4e2",
+    "data/raw/VNP14IMG/VNP14IMG.A2021214.0948.002.2024074061307.nc": "64604d78156a4ae474a97ca59167c850aaf722ca9f18e5371f0d7c5373c4315a",
+    "data/raw/VNP03IMG/VNP03IMG.A2021214.0948.002.2021214164304.nc": "3201a396d709d6a2d25b2929bac2b5883f0c15f79f5036eb5753d4cc9ad46231"
+  },
+  "excluded_windows": [
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 64,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 128,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 192,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 256,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 320,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 384,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 448,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 512,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 576,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 640,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 704,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 768,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 832,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf",
+      "row": 896,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    }
+  ],
+  "bundle_manifest_sha256": "cf3a4ea3b209a02ab5994b211e4cd3012d718ee59853de6107fe14f6bbcccad2",
+  "target": "native VIIRS nominal/high-confidence fire status vs observed land at query centers",
+  "native_auxiliary_target": "mean known VIIRS fire status assigned to each native MODIS cell",
+  "geolocation_method": "local bilinear inversion; residual threshold 20m is interpolation consistency, not absolute accuracy",
+  "not_claimed": [
+    "exact pixel footprints",
+    "subpixel ground-truth fire locations",
+    "native reader scientific validation on this host"
+  ]
+}

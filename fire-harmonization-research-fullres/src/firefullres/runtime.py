@@ -19,6 +19,7 @@ DEFAULTS = {
     'cuda_prefetch': False,
     'compile_mode': None,
     'compile_dynamic': False,
+    'initialize_output_prior': False,
 }
 
 

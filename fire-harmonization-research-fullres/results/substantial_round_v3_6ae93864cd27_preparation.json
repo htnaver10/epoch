@@ -1,0 +1,87 @@
+{
+  "manifest": "data/manifests/substantial_round_v3_units/substantial_round_v3_6ae93864cd27.jsonl",
+  "tiles": 139,
+  "split_counts": {
+    "train": 139
+  },
+  "tile_size": 96,
+  "stride": 64,
+  "halo": 16,
+  "max_query_side": 768,
+  "forest_only": false,
+  "inference": false,
+  "bbox": [
+    -125,
+    58,
+    -105,
+    68
+  ],
+  "source_checksums": {
+    "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf": "5f314a657df95cd0c45fe76c6b995bc8f9725493d145d60aeeaacf91fa886e2c",
+    "data/raw/MYD03/MYD03.A2022187.1050.061.2022312134928.hdf": "e52565e7693b11e1cc85083d252e1ed26906df85473f20a010c56fa82c484792",
+    "data/raw/MYD14/MYD14.A2022187.1050.061.2022188122233.hdf": "bb48bd3e64fd6ea25dfb9ec24acfc90c2aeb93743cb9cc2ff85ed48fc4093b36",
+    "data/raw/MYD02HKM/MYD02HKM.A2022187.1050.061.2022318044331.hdf": "0c9f1034afd6d53a7c3c261a630097601f2b15fedca92ca496914ff52e19d5d3",
+    "data/raw/MYD02QKM/MYD02QKM.A2022187.1050.061.2022318044331.hdf": "c7e7b5cc5ec1cd3146d1baadc287ef4a93a9847093b59234fb944e625729bf67",
+    "data/raw/VNP14IMG/VNP14IMG.A2022187.1048.002.2024076174557.nc": "38c5b0819cd9679d6cb274fb7eb300477f14358d4d2f60204a6de6b35332e67a",
+    "data/raw/VNP03IMG/VNP03IMG.A2022187.1048.002.2022187174746.nc": "115e1bedbbe27232d4999ba51b6235360c4da13742b1f6ed97fc5dc217dc1c6c"
+  },
+  "excluded_windows": [
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf",
+      "row": 1152,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf",
+      "row": 1216,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf",
+      "row": 1280,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf",
+      "row": 1344,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf",
+      "row": 1408,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf",
+      "row": 1472,
+      "col": 1216,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf",
+      "row": 1536,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    },
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf",
+      "row": 1600,
+      "col": 1152,
+      "reason": "query_extent_over_cap"
+    }
+  ],
+  "bundle_manifest_sha256": "02e156a34801aeeafff86a08120641cc122e31621bbc8a0f0d64d7b412baef80",
+  "target": "native VIIRS nominal/high-confidence fire status vs observed land at query centers",
+  "native_auxiliary_target": "mean known VIIRS fire status assigned to each native MODIS cell",
+  "geolocation_method": "local bilinear inversion; residual threshold 20m is interpolation consistency, not absolute accuracy",
+  "not_claimed": [
+    "exact pixel footprints",
+    "subpixel ground-truth fire locations",
+    "native reader scientific validation on this host"
+  ]
+}

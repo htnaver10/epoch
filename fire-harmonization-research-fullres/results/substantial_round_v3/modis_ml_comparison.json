@@ -1,0 +1,31 @@
+{
+  "source": "test_predictions.npz",
+  "known_queries": 585464.0,
+  "positive_queries": 95.0,
+  "modis": {
+    "tp": 76.0,
+    "fp": 93.0,
+    "fn": 19.0,
+    "precision": 0.44970414201183434,
+    "recall": 0.8
+  },
+  "model_default": {
+    "tp": 56.0,
+    "fp": 48.0,
+    "fn": 39.0,
+    "precision": 0.5384615384615384,
+    "recall": 0.5894736842105263
+  },
+  "exploratory_union": {
+    "tp": 79.0,
+    "fp": 107.0,
+    "fn": 16.0,
+    "precision": 0.42473118279569894,
+    "recall": 0.8315789473684211
+  },
+  "union_exploratory": true,
+  "union_examined_after_original_test_evaluation": true,
+  "additional_true_queries": 3.0,
+  "additional_false_queries": 14.0,
+  "note": "Union means MODIS positive OR raw model probability >=0.5. No model, cutoff, calibration or sealed evaluation was changed."
+}

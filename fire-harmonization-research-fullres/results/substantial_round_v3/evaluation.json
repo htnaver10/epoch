@@ -1,0 +1,4027 @@
+{
+  "checkpoint": "models/substantial_round_v3/best.pt",
+  "checkpoint_sha256": "9bf781a9239779aad4c78521dc73d25e8d0b90423ea0c5b22d0547e9dc8080bf",
+  "manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+  "calibration": {
+    "checkpoint": "models/substantial_round_v3/best.pt",
+    "checkpoint_sha256": "9bf781a9239779aad4c78521dc73d25e8d0b90423ea0c5b22d0547e9dc8080bf",
+    "manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+    "fit_split": "validation",
+    "test_used_for_fit": false,
+    "logit_offset": 1.2953030332528215,
+    "raw_logit_cutoff": -3.2499999999999996,
+    "display_calibrated_probability_threshold": 0.12404210429864432,
+    "validation_false_positive_budget_from_modis": 2013.0,
+    "method": "validation-only intercept adjustment and conservative cutoff at MODIS validation false-positive exposure",
+    "caution": "Matching activity totals on calibration data is by construction, not proof of generalization."
+  },
+  "validation": {
+    "modis": {
+      "true_positives": 1112.0,
+      "false_positives": 2013.0,
+      "false_negatives": 645.0,
+      "true_negatives": 1892540.0,
+      "precision": 0.35584,
+      "recall": 0.632896983494593,
+      "f1": 0.4555510036870135,
+      "false_positive_rate": 0.0010625197605978825,
+      "brier": 0.001401669558247333,
+      "logloss": 0.03872958464573143,
+      "observed_positive_weight": 1757.0,
+      "predicted_positive_weight": 3125.0,
+      "score_sum_active_query_equivalents": 3125.0,
+      "score_sum_bias_fraction": 0.7785998861696073,
+      "known_reference_exposure": 1896310.0,
+      "roc_auc_exact": 0.8159172318669976,
+      "average_precision_exact": 0.22555019686746447
+    },
+    "always_clear_reference": {
+      "true_positives": 0.0,
+      "false_positives": 0.0,
+      "false_negatives": 1757.0,
+      "true_negatives": 1894553.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "brier": 0.0009265362730777141,
+      "logloss": 0.025601143327083166,
+      "observed_positive_weight": 1757.0,
+      "predicted_positive_weight": 0.0,
+      "score_sum_active_query_equivalents": 0.0,
+      "score_sum_bias_fraction": -1.0,
+      "known_reference_exposure": 1896310.0,
+      "roc_auc_exact": 0.5,
+      "average_precision_exact": 0.0009265362730777141
+    },
+    "raw_model_at_0_5": {
+      "true_positives": 61.0,
+      "false_positives": 72.0,
+      "false_negatives": 1696.0,
+      "true_negatives": 1894481.0,
+      "precision": 0.45864661654135336,
+      "recall": 0.03471826977803073,
+      "f1": 0.06455026455026455,
+      "false_positive_rate": 3.800368741333708e-05,
+      "brier": 0.0008388413549037386,
+      "logloss": 0.004022235652246401,
+      "observed_positive_weight": 1757.0,
+      "predicted_positive_weight": 133.0,
+      "score_sum_active_query_equivalents": 638.6831972129648,
+      "score_sum_bias_fraction": -0.6364922042043456,
+      "known_reference_exposure": 1896310.0,
+      "roc_auc_exact": 0.9906794992286939,
+      "average_precision_exact": 0.219419690729097
+    },
+    "validation_adjusted_model_at_frozen_threshold": {
+      "true_positives": 728.0,
+      "false_positives": 1962.0,
+      "false_negatives": 1029.0,
+      "true_negatives": 1892591.0,
+      "precision": 0.27063197026022306,
+      "recall": 0.41434262948207173,
+      "f1": 0.327411738250506,
+      "false_positive_rate": 0.0010356004820134353,
+      "brier": 0.0008218800572585045,
+      "logloss": 0.0035812426037018113,
+      "observed_positive_weight": 1757.0,
+      "predicted_positive_weight": 2690.0,
+      "score_sum_active_query_equivalents": 1756.9998622974665,
+      "score_sum_bias_fraction": -7.837366732681354e-08,
+      "known_reference_exposure": 1896310.0,
+      "roc_auc_exact": 0.9906794992286939,
+      "average_precision_exact": 0.219419690729097
+    }
+  },
+  "test": {
+    "modis": {
+      "true_positives": 76.0,
+      "false_positives": 93.0,
+      "false_negatives": 19.0,
+      "true_negatives": 585276.0,
+      "precision": 0.44970414201183434,
+      "recall": 0.8,
+      "f1": 0.5757575757575758,
+      "false_positive_rate": 0.000158874146051465,
+      "brier": 0.00019130125848899334,
+      "logloss": 0.005285852627850859,
+      "observed_positive_weight": 95.0,
+      "predicted_positive_weight": 169.0,
+      "score_sum_active_query_equivalents": 169.0,
+      "score_sum_bias_fraction": 0.7789473684210526,
+      "known_reference_exposure": 585464.0,
+      "roc_auc_exact": 0.8999205629269743,
+      "average_precision_exact": 0.3597957665015326
+    },
+    "always_clear_reference": {
+      "true_positives": 0.0,
+      "false_positives": 0.0,
+      "false_negatives": 95.0,
+      "true_negatives": 585369.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "brier": 0.00016226446032548543,
+      "logloss": 0.00448353273061807,
+      "observed_positive_weight": 95.0,
+      "predicted_positive_weight": 0.0,
+      "score_sum_active_query_equivalents": 0.0,
+      "score_sum_bias_fraction": -1.0,
+      "known_reference_exposure": 585464.0,
+      "roc_auc_exact": 0.5,
+      "average_precision_exact": 0.00016226446032548543
+    },
+    "raw_model_at_0_5": {
+      "true_positives": 56.0,
+      "false_positives": 48.0,
+      "false_negatives": 39.0,
+      "true_negatives": 585321.0,
+      "precision": 0.5384615384615384,
+      "recall": 0.5894736842105263,
+      "f1": 0.5628140703517588,
+      "false_positive_rate": 8.199955925236902e-05,
+      "brier": 0.00012577436312960935,
+      "logloss": 0.0007022877052096473,
+      "observed_positive_weight": 95.0,
+      "predicted_positive_weight": 104.0,
+      "score_sum_active_query_equivalents": 282.21906737570157,
+      "score_sum_bias_fraction": 1.970727025007385,
+      "known_reference_exposure": 585464.0,
+      "roc_auc_exact": 0.9983533283684038,
+      "average_precision_exact": 0.5002445434565459
+    },
+    "validation_adjusted_model_at_frozen_threshold": {
+      "true_positives": 83.0,
+      "false_positives": 663.0,
+      "false_negatives": 12.0,
+      "true_negatives": 584706.0,
+      "precision": 0.11126005361930295,
+      "recall": 0.8736842105263158,
+      "f1": 0.197384066587396,
+      "false_positive_rate": 0.001132618912173347,
+      "brier": 0.0002361190509997393,
+      "logloss": 0.0015153686249890878,
+      "observed_positive_weight": 95.0,
+      "predicted_positive_weight": 746.0,
+      "score_sum_active_query_equivalents": 715.6510090912834,
+      "score_sum_bias_fraction": 6.533168516750352,
+      "known_reference_exposure": 585464.0,
+      "roc_auc_exact": 0.9983533283684038,
+      "average_precision_exact": 0.5002445434565459
+    }
+  },
+  "validation_tiles": [
+    {
+      "tile_id": "3d7592ddc1bc9da30395",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "7ccbcee475684aad13e0",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "29ff2896b1edd4ad0e62",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "68e1f959646bb14426c0",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "2caf04381e3e48fff189",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "6abbfb034c6aea76618c",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "b481937aa1b58e7fd46c",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "20dbe9b62d7e462232c5",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "9934dd26da4e68b7583a",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "e757a8c6b24a950797a1",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "b87868fc52889954b4f2",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "f093f060955a065f771a",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "89402142271a292ecbd3",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "55d3fc0156ae21994d04",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "3bd278116d24609c51b2",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "718a5eab88ac650a3f4b",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "893733d0e8624fe707be",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "bcbd29592daf80a31b6e",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "92ce99aac6bf9a9918ae",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "8c5bd47653d776ae0ba0",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "b789c5807d2726e13961",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "6f1e03467ce8d9c3fd50",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "019a410db41f9ec5aecb",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "7a954f39647e53e88ab9",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "7b1730abd6445e906b1c",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "2ebaa0394f2ccc7d1138",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "cdcbf667ca035a21d1de",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "1a4c96f8fec0fbb0df22",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "b32cc93dcec4b0ccc635",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "4a9e28c07cbb88ce4bd0",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "2c48aa5e758269d024ed",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "bce521d812ea358d2496",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "c6d3688dd59a5914727d",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "f23bb99d8528e65fe011",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "f3e7a67d0aae92c0361e",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "aa5b49805ecaadab16d3",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "d7e2900c91a758a66949",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "31fa01a1ed6e401ccf33",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "7b0bfb0abf7f6ca43e82",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "1d3b021e4036248b096a",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "c9ffe68261a2742794ea",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "be6c1261783e39be16f9",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "ba7413d6a55b72a650ea",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "3f3db9f94a8a065f348b",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "e56e40bab3ee600969ad",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "421a5419471ff466b21b",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "8d8d3951692f1c4bec1a",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "dc4adbde993920e70cc9",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "d6a2ce36aba439a379ac",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "0f1706324613f3984e80",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "e5b5c9a9b0eec5c54c58",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "9a04abfb0f14ff13a083",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "c3f93877127f52fe5455",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "45d6326e766a22183bcd",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "a94af2eb2eee4800fc4b",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "76dbe762bed9292b0471",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "27f5a33faa3aa9b785f1",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "6b45822a087f50857ce3",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "0cdb0baf7519e91d6d26",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "eb6b76f295847db3a393",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "59965575ef5cfdfc956c",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "45b127b1a703a5badaa5",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "120e8cdfbab299443d0e",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "327b1d6cd1cd08c26f75",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "a6042c757623a184e11b",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "8e41ff608e7d6398b275",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "3ab07bf208329c230d23",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "cc649cd39d3af4685673",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "00440094490b1a452025",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "9ef064bc51ae4dafede8",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "15aab5ec01e7b33f5a53",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "b67181b0f54f414c1bf9",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "88ebec8864c00c919e20",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "f874516e038debb8cf34",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "8ff47f24341d22f62a08",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "92e28b1b326b65853d60",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "68cf2248d50eb6660ccc",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "9da2ed8dea303635e5b4",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "577fed242213e107ae79",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "ceaf320d27b9e2edede7",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "1a72979f40a4aff74149",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "dc3a5b5e15a8291680d7",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "b1b26e03538db1f28d83",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "628b53e6ed8884ce75ab",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "f0e588aab8f1c3e79a8a",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "bfe4021e221de2ccb6d3",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "21c435aadafe8c07c3e5",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "041d2234cfb1b75e20df",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "0e53c349755403f758a6",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "1ff18c14bfc95d9ea59d",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "9de074ef3211a7f34c8c",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "191afa1a390416006307",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "9c42889bf784a5fd3f5c",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "fdf525d6d14e4a3c2c27",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "5386baa0a1aadb7f2d88",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "9f135b0efb1b9b0e9d79",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "d72a7749bd4c69fc1aea",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "6ccc3483b7ec72b452dd",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "ead664ae2fe89a152158",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "3ec1312960ce731e12be",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "b6a266970062c94d321b",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "de033b53ed130d8b8d95",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "2e25394b0b664d1e658f",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "2e10a58114d0ea67b802",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "10d204f85b35d9b871a0",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "c977b0649356c68ee98f",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "30dcd1b234022cc1a6e8",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "015169e3ab37645a158d",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "de76c089691eb3cd11e3",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "175bcf2c5d723c231065",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "a81f234fe8282ce02eaf",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "e5f5f6f78dd2111ac224",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "34a274d6969d882e5350",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "c249cfd559f842d0ebcf",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "7b2446eeaf98cd355ccd",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "f5aa305632a84eec2fe5",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "a7e204511bc7189eaa35",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "af2dad0c2a53b1ba594d",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "6b59c8c9ea32d43adaa5",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "67e72ea4596956ed48d8",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "cd8ff525253db5e81c45",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "1e17a86a1a3eee7db63c",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "aca9238af6cd5e452de0",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "6b21284d877b68b36676",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "6103cb5f2e0eee7b0265",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "da86b143fcfd40220c13",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "98263846673f6183a819",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "eed233493d3b20468e79",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "50a302939baca66adba2",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "285881b4bc9ce08cb277",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "d6073bc48395a7adc407",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "7681ca37604252920841",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "074b7db743a571c86986",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "17598916d4f42389a334",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "060b04b0b79254ac93dc",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "be7a1e1dd4279d3af7d5",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "aaff2851109f9fbb3c90",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "1c0f822b0d0b985808e9",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "81368d277bd1aa0f492f",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "add7eb2af6b3ad9a7dcd",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "5b04c8a3a27e82389298",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "1671a03301f9da4b033b",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "82e0b549a949f15a4954",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "fdc911c70c300e879455",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "022318639c2446b2ad7d",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "e07987ffb72c14994f46",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "21a27ceb6166e084e4a2",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "266244dd3150cdd3be3a",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "44fd7c13cc7172e3e39c",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "f65b81539ac0ebdcb2c8",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "a552b2dac04c55495a85",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "83adedb2623cc81fbaa0",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "8434d26962f4e394905d",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "6bc55c69a4ac2fac67ec",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "ebf2e0581e9d61a5164d",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "5dd817146245844f1a5f",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "f9c473ca019ab49ef684",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "3a451286918d8fda7abd",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "ca563231239e9f960409",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "67585b29f94ce2bda104",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "1ccc1dce2f32a08c3e94",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "298e72b5a32e495a10fe",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "6218e92de66bd3c3c97e",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "247ad852007ed281e96a",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "20b8299b9de4077fb83f",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1800.002.2024079120156.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1800.002.2023157023125.nc"
+      ]
+    },
+    {
+      "tile_id": "61b062125fb5a9cdaef6",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "223396d776a4e5827784",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "c342ba991b581d068a7a",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "1ea7c75e9b1e4c894bc1",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "661346191437576e06c3",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "f958eb4fa2334348737e",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    },
+    {
+      "tile_id": "0d9137c8697e383f5fad",
+      "event_group": "quebec_20230605",
+      "region_id": "quebec_20230605",
+      "acquisition_utc": "2023-06-05T17:55:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD03/MYD03.A2023156.1755.061.2023157150851.hdf",
+        "data/raw/MYD14/MYD14.A2023156.1755.061.2023157112146.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2023156.1755.061.2023157151317.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2023156.1754.002.2024079120155.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2023156.1754.002.2023157023139.nc"
+      ]
+    }
+  ],
+  "test_tiles": [
+    {
+      "tile_id": "4800530f679888c921dc",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "1bd6281a4ffbb4fc559b",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "2414fae45970d6362142",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "1593b43dec90dd4f1bfe",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "003affc9ddf84fee6761",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "5ed621b740255a754378",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "85cad3ec585346070c8c",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "44a1dad80b577c1e5867",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "2ba3c2795c9fcfa4ce2f",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "476cbf42b6233bbcf898",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "b585097acfb64934f64b",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "dd9f3ac1f5f956158d6d",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "5183580e1f33f6f7a9d2",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "f1c416e4e182c1a42090",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "22a81805a14195167baf",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "f7e4273bbcd1064787ed",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "2790c6ce339d168c722d",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "c3eedb837bf9eaa89f9e",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-05T18:45:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD03/MYD03.A2024157.1845.061.2024158174211.hdf",
+        "data/raw/MYD14/MYD14.A2024157.1845.061.2024158143227.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024157.1845.061.2024158180428.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024157.1836.002.2024166212619.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024157.1836.002.2024158032121.nc"
+      ]
+    },
+    {
+      "tile_id": "80dee0d57d0555ccf28a",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "e4afbff40efdc320e665",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "f60e23f28439acc79240",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "7a2d1a0a2ef885fd34b5",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "a8df565f0f38dce3826c",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "1ef5a9b8dc1630156bd3",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "4c76fcece9b709afb1f4",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "68f58700efb69625eaa7",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "eade32546ea628f43b82",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "785aaa8bc8f53a2471e6",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "4038bfe67f41e255f5e3",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "e5463d4b3512a253f3f3",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "d26795e87a78a814df81",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "4e3f930c793bd7de1ccc",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "ca7ba7a384d0f48e86f2",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "f4c2c7f86d4983597e33",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "e7ad1b23c44dc69a5d9f",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "38ccb7299f376757b2ee",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "8426f5d22a9f5c21b183",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "80cb8f49b6538b6bea91",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "7b908e83b9af7d146592",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "75ddc2bc26f7c29ac0e1",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "21693ae3414e07ce385d",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "becc7a9c624777551dd2",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "3d44b29bc85d9ec66855",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "8bd09014770b3b9f3541",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "f56a17f73833bbf33b90",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "1706aee617d5f7a9392f",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "ef9e4306093e8738d514",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "fdb187605e141ced9116",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "0633e571c9087b5aa9af",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "0a25472fcd34dc3d9f7b",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "1872c33d5a6c0b5a1c8f",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "78b4011e7126df1d60a2",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "a6b425c78f9871c74c6f",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "ed10ff0c2a2a09422444",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "2fcfde85c493f20a537b",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "1a7446024ad0d5aee095",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "9ded172911b83696bfaa",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "1b41efecb863f4c0e7f6",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "433088614c2cb69168d0",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "d90def4e29dd3aa46e36",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "66bfa9820196445da3f1",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "b6433b988f7ef2229a63",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "a9e57bb788b0dc21f834",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "2dbeea692b29babbdc5c",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "358ec935364ba67b33f5",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "ee8cffdcd3184ca9c3bc",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "b56548b6adbb2c50efba",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "b2dbb14ad39ae647df72",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "fac98a831c14e03dbf55",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "bedd9a7ad297ef470692",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "b665b8d3ad6e034633b0",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "39864ef7704ba6e85715",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "a1619d465f8c1681c083",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-08T17:35:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD03/MYD03.A2024160.1735.061.2024161155741.hdf",
+        "data/raw/MYD14/MYD14.A2024160.1735.061.2024161123235.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024160.1735.061.2024161161754.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024160.1736.002.2024167000829.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024160.1736.002.2024161002951.nc"
+      ]
+    },
+    {
+      "tile_id": "44db52dfcf9073f923f9",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "65663d38f6ac02f23e5f",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "213ae618e5d9a046a82c",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "175f8e59f4b44d4bcba1",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "7a006b2f3d475c0982d5",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "9357610608da37c624a4",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "b48e06629aa1532f29bd",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "c34deaf114070d357ebc",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "299fc3fe1192a45aac8c",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "4f54612fc7b7f8be4786",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    },
+    {
+      "tile_id": "d5786bce2d9b0f67e86d",
+      "event_group": "quebec_2024",
+      "region_id": "quebec_2024",
+      "acquisition_utc": "2024-06-13T17:40:00.000Z",
+      "source_ids": [
+        "data/raw/MYD021KM/MYD021KM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD03/MYD03.A2024165.1740.061.2024166154500.hdf",
+        "data/raw/MYD14/MYD14.A2024165.1740.061.2024166124004.hdf",
+        "data/raw/MYD02HKM/MYD02HKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/MYD02QKM/MYD02QKM.A2024165.1740.061.2024166155008.hdf",
+        "data/raw/VNP14IMG/VNP14IMG.A2024165.1742.002.2024167035322.nc",
+        "data/raw/VNP03IMG/VNP03IMG.A2024165.1742.002.2024166002745.nc"
+      ]
+    }
+  ],
+  "scope": "Expanded all-land VIIRS-reference detection experiment; not forest-only or operational wildfire truth",
+  "model_usefulness_established": false,
+  "limitations": [
+    "This expansion is not the full 100-event feasibility target.",
+    "Cohorts are not verified wildfire incidents; reference pixels within events are correlated.",
+    "Test labels were read for integrity/coverage only, not used for checkpoint, intercept or threshold selection.",
+    "Offset/threshold apply in this evaluation; generic run.py inference still emits raw model scores.",
+    "No operational wildfire, forest-only or absolute subpixel location claim."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "tiles": 0,
+  "excluded_windows": [
+    {
+      "source": "data/raw/MYD021KM/MYD021KM.A2021200.2045.061.2021202201138.hdf",
+      "row": 960,
+      "col": 0,
+      "reason": "query_extent_over_cap"
+    }
+  ]
+}

@@ -1,5 +1,14 @@
 # Native-resolution fire harmonization
 
+**Next substantive run:** [the expanded 30-epoch workflow](SUBSTANTIAL_ROUND.md)
+collects fire-rich training scenes, retains MODIS as the baseline, and freezes
+calibration/operating thresholds before separately reserved test predictions.
+Run `run-substantial-round.cmd` and enter Earthdata credentials locally.
+
+For the difference between executing the small pilot and training a model with
+demonstrated benefit, see [useful-model training workflow](USEFUL_MODEL_TRAINING.md)
+and [current readiness evidence](results/useful_training_readiness.json).
+
 **Windows RTX-host verification (2026-11-14):** environments are prepared; 44 tests,
 full-size synthetic CUDA training/resume/prediction and GDAL/HDF4 file checks pass.
 Real NASA data and reviewed preparation remain required. Start with

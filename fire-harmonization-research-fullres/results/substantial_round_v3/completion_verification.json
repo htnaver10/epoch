@@ -1,0 +1,16 @@
+{
+  "epochs_completed": 30,
+  "last_checkpoint_completed_epoch": 30,
+  "best_checkpoint_completed_epoch": 27,
+  "best_checkpoint_strict_model_reload": true,
+  "evaluation_checkpoint_sha_matches": true,
+  "evaluation_manifest_sha_matches": true,
+  "best_epoch_agrees_with_validation_selection": true,
+  "all_epochs_processed_every_training_tile": true,
+  "optimizer_updates_completed": 2280,
+  "training_and_validation_seconds": 507.8394955002004,
+  "peak_reserved_gib": 3.869140625,
+  "software_tests_passed": 64,
+  "software_lock_still_matches": true,
+  "completed_utc": "2026-11-15T03:50:24.720097+00:00"
+}

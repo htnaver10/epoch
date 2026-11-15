@@ -1,0 +1,1626 @@
+{
+  "bc_2021": {
+    "available_days": 12,
+    "candidates": [
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293471803-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-11T21:30:00.000Z",
+          "end_utc": "2021-07-11T21:35:00.000Z",
+          "bbox": [
+            -145.950585694498,
+            31.2561868978438,
+            -111.192382590361,
+            53.1009523513271
+          ],
+          "estimated_bytes": 511942,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919219240-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-11T21:30:00.000Z",
+          "end_utc": "2021-07-11T21:36:00.000Z",
+          "bbox": [
+            -158.759643554688,
+            33.3180618286133,
+            -110.214775085449,
+            59.2284164428711
+          ],
+          "estimated_bytes": 2580791,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 360.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293597563-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-14T10:50:00.000Z",
+          "end_utc": "2021-07-14T10:55:00.000Z",
+          "bbox": [
+            -147.642518147345,
+            46.2374436138843,
+            -97.6621735100129,
+            68.8269644755349
+          ],
+          "estimated_bytes": 742163,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919228950-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-14T10:48:00.000Z",
+          "end_utc": "2021-07-14T10:54:00.000Z",
+          "bbox": [
+            -153.034881591797,
+            31.7135581970215,
+            -106.41096496582,
+            57.5210876464844
+          ],
+          "estimated_bytes": 1017547,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293613209-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-16T20:10:00.000Z",
+          "end_utc": "2021-07-16T20:15:00.000Z",
+          "bbox": [
+            -126.68379068073,
+            32.3496822630924,
+            -91.2242562481451,
+            54.2387177590262
+          ],
+          "estimated_bytes": 549371,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919235496-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-16T20:00:00.000Z",
+          "end_utc": "2021-07-16T20:06:00.000Z",
+          "bbox": [
+            -160.52815246582,
+            49.1931571960449,
+            -76.6998519897461,
+            76.2539901733398
+          ],
+          "estimated_bytes": 2698069,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 900.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293646671-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-17T09:45:00.000Z",
+          "end_utc": "2021-07-17T09:50:00.000Z",
+          "bbox": [
+            -130.504645965464,
+            36.3800024436526,
+            -92.6540985153536,
+            58.2883242008589
+          ],
+          "estimated_bytes": 500685,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919237752-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-17T09:48:00.000Z",
+          "end_utc": "2021-07-17T09:54:00.000Z",
+          "bbox": [
+            -141.213821411133,
+            41.0805358886719,
+            -80.4296264648438,
+            67.5776672363281
+          ],
+          "estimated_bytes": 2381008,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 540.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293697171-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-19T22:20:00.000Z",
+          "end_utc": "2021-07-19T22:25:00.000Z",
+          "bbox": [
+            -159.671097475053,
+            33.0177063977909,
+            -123.769228135735,
+            54.9406480870567
+          ],
+          "estimated_bytes": 341010,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919241457-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-19T22:18:00.000Z",
+          "end_utc": "2021-07-19T22:24:00.000Z",
+          "bbox": [
+            -163.249816894531,
+            23.9995269775391,
+            -122.259323120117,
+            49.3885459899902
+          ],
+          "estimated_bytes": 1929772,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293936058-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-22T19:40:00.000Z",
+          "end_utc": "2021-07-22T19:45:00.000Z",
+          "bbox": [
+            -152.42866331088,
+            55.5051616124488,
+            -78.6462153366547,
+            79.3629609419969
+          ],
+          "estimated_bytes": 956639,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919260906-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-22T19:42:00.000Z",
+          "end_utc": "2021-07-22T19:48:00.000Z",
+          "bbox": [
+            -130.859405517578,
+            32.3842926025391,
+            -83.4066619873047,
+            58.2463760375977
+          ],
+          "estimated_bytes": 3808895,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 480.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293948713-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-25T10:35:00.000Z",
+          "end_utc": "2021-07-25T10:40:00.000Z",
+          "bbox": [
+            -143.079084192612,
+            34.6018842336651,
+            -106.62342191801,
+            56.4247284099694
+          ],
+          "estimated_bytes": 354482,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919266457-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-25T10:36:00.000Z",
+          "end_utc": "2021-07-25T10:42:00.000Z",
+          "bbox": [
+            -162.447906494141,
+            49.7535285949707,
+            -76.2181015014648,
+            76.9213180541992
+          ],
+          "estimated_bytes": 2228014,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293960576-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-27T19:55:00.000Z",
+          "end_utc": "2021-07-27T20:00:00.000Z",
+          "bbox": [
+            -134.307469961461,
+            44.168045907729,
+            -87.7093125922107,
+            66.7608236908774
+          ],
+          "estimated_bytes": 986454,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919272821-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-27T19:54:00.000Z",
+          "end_utc": "2021-07-27T20:00:00.000Z",
+          "bbox": [
+            -160.590759277344,
+            49.7768402099609,
+            -73.9422760009766,
+            76.9871215820312
+          ],
+          "estimated_bytes": 2426234,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 360.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293978976-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-30T10:50:00.000Z",
+          "end_utc": "2021-07-30T10:55:00.000Z",
+          "bbox": [
+            -147.683360406356,
+            46.4428815864957,
+            -97.3688288227728,
+            69.0495241179416
+          ],
+          "estimated_bytes": 713244,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919279538-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-30T10:48:00.000Z",
+          "end_utc": "2021-07-30T10:54:00.000Z",
+          "bbox": [
+            -153.071182250977,
+            32.3357086181641,
+            -105.831871032715,
+            58.1707077026367
+          ],
+          "estimated_bytes": 1035808,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293991461-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-08-01T20:10:00.000Z",
+          "end_utc": "2021-08-01T20:15:00.000Z",
+          "bbox": [
+            -126.542848514571,
+            32.1667144023221,
+            -91.2247221448487,
+            54.046253268704
+          ],
+          "estimated_bytes": 550064,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919291096-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-08-01T20:00:00.000Z",
+          "end_utc": "2021-08-01T20:06:00.000Z",
+          "bbox": [
+            -159.252212524414,
+            48.6445503234863,
+            -77.6269912719727,
+            75.6526565551758
+          ],
+          "estimated_bytes": 2961551,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 900.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293992627-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-08-02T09:45:00.000Z",
+          "end_utc": "2021-08-02T09:50:00.000Z",
+          "bbox": [
+            -130.488502779353,
+            36.5425412375579,
+            -92.5211655762592,
+            58.4582485448079
+          ],
+          "estimated_bytes": 530855,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919290988-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-08-02T09:48:00.000Z",
+          "end_utc": "2021-08-02T09:54:00.000Z",
+          "bbox": [
+            -141.520050048828,
+            41.6613426208496,
+            -79.5530776977539,
+            68.2041015625
+          ],
+          "estimated_bytes": 2516329,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 540.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2294004857-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-08-04T19:05:00.000Z",
+          "end_utc": "2021-08-04T19:10:00.000Z",
+          "bbox": [
+            -119.465668728875,
+            42.2811527944564,
+            -75.2135184800081,
+            64.7362855720604
+          ],
+          "estimated_bytes": 945622,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919298324-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-08-04T19:06:00.000Z",
+          "end_utc": "2021-08-04T19:12:00.000Z",
+          "bbox": [
+            -169.853530883789,
+            57.1694602966309,
+            -23.9221363067627,
+            84.092903137207
+          ],
+          "estimated_bytes": 1838563,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      }
+    ],
+    "selection": "daily closest-interval candidate, then evenly spaced calendar days; no labels inspected"
+  },
+  "central_2021": {
+    "available_days": 12,
+    "candidates": [
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293473404-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-11T19:55:00.000Z",
+          "end_utc": "2021-07-11T20:00:00.000Z",
+          "bbox": [
+            -134.660033487955,
+            44.419339320204,
+            -87.693507805113,
+            67.0352094970034
+          ],
+          "estimated_bytes": 976681,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919219970-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-11T19:54:00.000Z",
+          "end_utc": "2021-07-11T20:00:00.000Z",
+          "bbox": [
+            -161.776657104492,
+            50.3435363769531,
+            -72.9156799316406,
+            77.5033950805664
+          ],
+          "estimated_bytes": 2655865,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 360.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293597563-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-14T10:50:00.000Z",
+          "end_utc": "2021-07-14T10:55:00.000Z",
+          "bbox": [
+            -147.642518147345,
+            46.2374436138843,
+            -97.6621735100129,
+            68.8269644755349
+          ],
+          "estimated_bytes": 742163,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919228950-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-14T10:48:00.000Z",
+          "end_utc": "2021-07-14T10:54:00.000Z",
+          "bbox": [
+            -153.034881591797,
+            31.7135581970215,
+            -106.41096496582,
+            57.5210876464844
+          ],
+          "estimated_bytes": 1017547,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293613209-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-16T20:10:00.000Z",
+          "end_utc": "2021-07-16T20:15:00.000Z",
+          "bbox": [
+            -126.68379068073,
+            32.3496822630924,
+            -91.2242562481451,
+            54.2387177590262
+          ],
+          "estimated_bytes": 549371,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919235496-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-16T20:00:00.000Z",
+          "end_utc": "2021-07-16T20:06:00.000Z",
+          "bbox": [
+            -160.52815246582,
+            49.1931571960449,
+            -76.6998519897461,
+            76.2539901733398
+          ],
+          "estimated_bytes": 2698069,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 900.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293647107-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-17T08:05:00.000Z",
+          "end_utc": "2021-07-17T08:10:00.000Z",
+          "bbox": [
+            -105.336354632963,
+            40.1370590465436,
+            -64.1007915655772,
+            62.2676162771225
+          ],
+          "estimated_bytes": 841485,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919239297-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-17T08:06:00.000Z",
+          "end_utc": "2021-07-17T08:12:00.000Z",
+          "bbox": [
+            -116.684440612793,
+            42.6650657653809,
+            -52.64208984375,
+            69.1955642700195
+          ],
+          "estimated_bytes": 2650554,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293932104-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-19T20:45:00.000Z",
+          "end_utc": "2021-07-19T20:50:00.000Z",
+          "bbox": [
+            -149.565638604424,
+            46.0869347200956,
+            -100.165625980854,
+            68.8570855442813
+          ],
+          "estimated_bytes": 876910,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919241576-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-19T20:42:00.000Z",
+          "end_utc": "2021-07-19T20:48:00.000Z",
+          "bbox": [
+            -157.047744750977,
+            41.7970542907715,
+            -94.9559860229492,
+            68.1880111694336
+          ],
+          "estimated_bytes": 3077269,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 480.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293936141-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-22T18:00:00.000Z",
+          "end_utc": "2021-07-22T18:05:00.000Z",
+          "bbox": [
+            -119.018145473992,
+            52.0422493202494,
+            -56.8137433112682,
+            75.4328756973688
+          ],
+          "estimated_bytes": 844786,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919256351-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-22T18:00:00.000Z",
+          "end_utc": "2021-07-22T18:06:00.000Z",
+          "bbox": [
+            -103.834449768066,
+            30.8115634918213,
+            -57.9816932678223,
+            56.4936790466309
+          ],
+          "estimated_bytes": 2738342,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 360.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293948528-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-25T08:55:00.000Z",
+          "end_utc": "2021-07-25T09:00:00.000Z",
+          "bbox": [
+            -117.889867853815,
+            38.3790723428915,
+            -78.345625413431,
+            60.4047311259912
+          ],
+          "estimated_bytes": 712572,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919266642-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-25T08:54:00.000Z",
+          "end_utc": "2021-07-25T09:00:00.000Z",
+          "bbox": [
+            -140.369369506836,
+            51.1333198547363,
+            -47.1006965637207,
+            78.5194625854492
+          ],
+          "estimated_bytes": 1965083,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 360.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293960576-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-27T19:55:00.000Z",
+          "end_utc": "2021-07-27T20:00:00.000Z",
+          "bbox": [
+            -134.307469961461,
+            44.168045907729,
+            -87.7093125922107,
+            66.7608236908774
+          ],
+          "estimated_bytes": 986454,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919272821-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-27T19:54:00.000Z",
+          "end_utc": "2021-07-27T20:00:00.000Z",
+          "bbox": [
+            -160.590759277344,
+            49.7768402099609,
+            -73.9422760009766,
+            76.9871215820312
+          ],
+          "estimated_bytes": 2426234,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 360.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293978976-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-07-30T10:50:00.000Z",
+          "end_utc": "2021-07-30T10:55:00.000Z",
+          "bbox": [
+            -147.683360406356,
+            46.4428815864957,
+            -97.3688288227728,
+            69.0495241179416
+          ],
+          "estimated_bytes": 713244,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919279538-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-07-30T10:48:00.000Z",
+          "end_utc": "2021-07-30T10:54:00.000Z",
+          "bbox": [
+            -153.071182250977,
+            32.3357086181641,
+            -105.831871032715,
+            58.1707077026367
+          ],
+          "estimated_bytes": 1035808,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293991461-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-08-01T20:10:00.000Z",
+          "end_utc": "2021-08-01T20:15:00.000Z",
+          "bbox": [
+            -126.542848514571,
+            32.1667144023221,
+            -91.2247221448487,
+            54.046253268704
+          ],
+          "estimated_bytes": 550064,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919291096-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-08-01T20:00:00.000Z",
+          "end_utc": "2021-08-01T20:06:00.000Z",
+          "bbox": [
+            -159.252212524414,
+            48.6445503234863,
+            -77.6269912719727,
+            75.6526565551758
+          ],
+          "estimated_bytes": 2961551,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 900.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2293992660-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-08-02T08:05:00.000Z",
+          "end_utc": "2021-08-02T08:10:00.000Z",
+          "bbox": [
+            -105.324367214069,
+            40.3002622261491,
+            -63.9405363408793,
+            62.4401513871077
+          ],
+          "estimated_bytes": 843450,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919290883-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-08-02T08:06:00.000Z",
+          "end_utc": "2021-08-02T08:12:00.000Z",
+          "bbox": [
+            -117.05281829834,
+            43.2416801452637,
+            -51.6984367370605,
+            69.8193511962891
+          ],
+          "estimated_bytes": 2620930,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2294004861-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2021-08-04T20:40:00.000Z",
+          "end_utc": "2021-08-04T20:45:00.000Z",
+          "bbox": [
+            -132.012191446482,
+            29.0347522272688,
+            -98.5881057107324,
+            50.7848875622396
+          ],
+          "estimated_bytes": 521145,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2919296119-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2021-08-04T20:42:00.000Z",
+          "end_utc": "2021-08-04T20:48:00.000Z",
+          "bbox": [
+            -156.172668457031,
+            41.2354888916016,
+            -95.2738800048828,
+            67.5828857421875
+          ],
+          "estimated_bytes": 2772340,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 480.0
+      }
+    ],
+    "selection": "daily closest-interval candidate, then evenly spaced calendar days; no labels inspected"
+  },
+  "nwt_2022": {
+    "available_days": 10,
+    "candidates": [
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2331719657-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2022-07-06T10:50:00.000Z",
+          "end_utc": "2022-07-06T10:55:00.000Z",
+          "bbox": [
+            -150.946152269723,
+            53.8195420456335,
+            -81.8771634899355,
+            77.2785984320975
+          ],
+          "estimated_bytes": 937965,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2921587267-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2022-07-06T10:48:00.000Z",
+          "end_utc": "2022-07-06T10:54:00.000Z",
+          "bbox": [
+            -169.243789672852,
+            51.3090744018555,
+            -75.0353698730469,
+            78.7000732421875
+          ],
+          "estimated_bytes": 2610659,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2335728082-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2022-07-08T20:15:00.000Z",
+          "end_utc": "2022-07-08T20:20:00.000Z",
+          "bbox": [
+            -136.828092445807,
+            42.8842264618216,
+            -91.8622194091514,
+            65.3987861942763
+          ],
+          "estimated_bytes": 889109,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2920844581-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2022-07-08T20:06:00.000Z",
+          "end_utc": "2022-07-08T20:12:00.000Z",
+          "bbox": [
+            -159.564514160156,
+            48.1553955078125,
+            -79.7724761962891,
+            75.1031875610352
+          ],
+          "estimated_bytes": 3440645,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 840.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2342795556-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2022-07-09T08:05:00.000Z",
+          "end_utc": "2022-07-09T08:10:00.000Z",
+          "bbox": [
+            -105.268553258503,
+            46.0223396132568,
+            -55.7794785466016,
+            68.6161127247412
+          ],
+          "estimated_bytes": 873235,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2920846734-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2022-07-09T08:12:00.000Z",
+          "end_utc": "2022-07-09T08:18:00.000Z",
+          "bbox": [
+            -118.908226013184,
+            43.7751846313477,
+            -52.2371063232422,
+            70.3939895629883
+          ],
+          "estimated_bytes": 2531614,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 780.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2341237910-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2022-07-11T17:30:00.000Z",
+          "end_utc": "2022-07-11T17:35:00.000Z",
+          "bbox": [
+            -108.279949463966,
+            50.9012289136102,
+            -49.3873787711775,
+            74.1855976737675
+          ],
+          "estimated_bytes": 862192,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2920848120-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2022-07-11T17:30:00.000Z",
+          "end_utc": "2022-07-11T17:36:00.000Z",
+          "bbox": [
+            -139.686248779297,
+            55.3267860412598,
+            -16.7006378173828,
+            82.6426391601562
+          ],
+          "estimated_bytes": 3139311,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 360.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2357383566-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2022-07-14T10:00:00.000Z",
+          "end_utc": "2022-07-14T10:05:00.000Z",
+          "bbox": [
+            -135.772459131741,
+            50.372114214991,
+            -77.0244130322346,
+            73.4022865920607
+          ],
+          "estimated_bytes": 1011273,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2921587124-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2022-07-14T10:00:00.000Z",
+          "end_utc": "2022-07-14T10:06:00.000Z",
+          "bbox": [
+            -145.725524902344,
+            43.5722732543945,
+            -79.5692138671875,
+            70.1747283935547
+          ],
+          "estimated_bytes": 1854741,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 360.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2357434457-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2022-07-16T19:25:00.000Z",
+          "end_utc": "2022-07-16T19:30:00.000Z",
+          "bbox": [
+            -129.362050352454,
+            46.6014782395577,
+            -79.2896109237973,
+            69.4218014464943
+          ],
+          "estimated_bytes": 1036175,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2921588188-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2022-07-16T19:18:00.000Z",
+          "end_utc": "2022-07-16T19:24:00.000Z",
+          "bbox": [
+            -167.538558959961,
+            55.5197868347168,
+            -41.7284393310547,
+            82.8765487670898
+          ],
+          "estimated_bytes": 2671894,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 720.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2357435461-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2022-07-17T08:55:00.000Z",
+          "end_utc": "2022-07-17T09:00:00.000Z",
+          "bbox": [
+            -116.878252927071,
+            38.5235799038962,
+            -77.2246165707808,
+            60.5743473386989
+          ],
+          "estimated_bytes": 698388,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2921586453-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2022-07-17T09:00:00.000Z",
+          "end_utc": "2022-07-17T09:06:00.000Z",
+          "bbox": [
+            -145.155212402344,
+            52.2538719177246,
+            -45.543098449707,
+            79.7169418334961
+          ],
+          "estimated_bytes": 3101740,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 660.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2357125587-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2022-07-19T20:00:00.000Z",
+          "end_utc": "2022-07-19T20:05:00.000Z",
+          "bbox": [
+            -174.917117123688,
+            61.142459732272,
+            -61.4506205469438,
+            85.8603905563667
+          ],
+          "estimated_bytes": 607622,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2920857041-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2022-07-19T20:00:00.000Z",
+          "end_utc": "2022-07-19T20:06:00.000Z",
+          "bbox": [
+            -159.247451782227,
+            48.6000938415527,
+            -77.4509506225586,
+            75.6868438720703
+          ],
+          "estimated_bytes": 3276964,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 360.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2361890048-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2022-07-22T10:50:00.000Z",
+          "end_utc": "2022-07-22T10:55:00.000Z",
+          "bbox": [
+            -145.724769061333,
+            42.8752500640646,
+            -101.237218818439,
+            65.2102910842357
+          ],
+          "estimated_bytes": 531370,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2920861536-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2022-07-22T10:48:00.000Z",
+          "end_utc": "2022-07-22T10:54:00.000Z",
+          "bbox": [
+            -171.178955078125,
+            52.0496635437012,
+            -73.2962417602539,
+            79.4031753540039
+          ],
+          "estimated_bytes": 2614742,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2363508414-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2022-07-24T20:10:00.000Z",
+          "end_utc": "2022-07-24T20:15:00.000Z",
+          "bbox": [
+            -130.00153100474,
+            37.706191742591,
+            -90.473388897859,
+            59.8809732473147
+          ],
+          "estimated_bytes": 671889,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2921592128-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2022-07-24T20:06:00.000Z",
+          "end_utc": "2022-07-24T20:12:00.000Z",
+          "bbox": [
+            -157.940536499023,
+            47.4005241394043,
+            -80.8156967163086,
+            74.2773056030273
+          ],
+          "estimated_bytes": 3111175,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 540.0
+      }
+    ],
+    "selection": "daily closest-interval candidate, then evenly spaced calendar days; no labels inspected"
+  },
+  "ontario_2023": {
+    "available_days": 5,
+    "candidates": [
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2704317459-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2023-06-02T17:25:00.000Z",
+          "end_utc": "2023-06-02T17:30:00.000Z",
+          "bbox": [
+            -84.5196211031695,
+            35.5529754444758,
+            -46.8196222917288,
+            57.6321864594194
+          ],
+          "estimated_bytes": 677487,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2921652883-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2023-06-02T17:18:00.000Z",
+          "end_utc": "2023-06-02T17:24:00.000Z",
+          "bbox": [
+            -130.535919189453,
+            53.3893737792969,
+            -23.6447601318359,
+            80.7942352294922
+          ],
+          "estimated_bytes": 1364212,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 720.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2704317700-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2023-06-03T07:00:00.000Z",
+          "end_utc": "2023-06-03T07:05:00.000Z",
+          "bbox": [
+            -85.9746091520628,
+            31.2939710120184,
+            -51.817038974663,
+            53.0007069597483
+          ],
+          "estimated_bytes": 564742,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2921665686-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2023-06-03T07:06:00.000Z",
+          "end_utc": "2023-06-03T07:12:00.000Z",
+          "bbox": [
+            -98.2322006225586,
+            36.4051284790039,
+            -45.6401329040527,
+            62.4623680114746
+          ],
+          "estimated_bytes": 2149943,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 720.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2704923480-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2023-06-05T17:55:00.000Z",
+          "end_utc": "2023-06-05T18:00:00.000Z",
+          "bbox": [
+            -98.6081190357364,
+            42.2590690700922,
+            -54.4300143338619,
+            64.7549127404732
+          ],
+          "estimated_bytes": 961267,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2921671503-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2023-06-05T17:54:00.000Z",
+          "end_utc": "2023-06-05T18:00:00.000Z",
+          "bbox": [
+            -99.1925277709961,
+            27.5287227630615,
+            -55.8649635314941,
+            53.1350708007812
+          ],
+          "estimated_bytes": 2551175,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 360.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G2708332129-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2023-06-10T19:50:00.000Z",
+          "end_utc": "2023-06-10T19:55:00.000Z",
+          "bbox": [
+            -139.651210073596,
+            50.3893434780949,
+            -82.2200581256865,
+            73.6187045509068
+          ],
+          "estimated_bytes": 1089177,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G2921686460-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2023-06-10T19:48:00.000Z",
+          "end_utc": "2023-06-10T19:54:00.000Z",
+          "bbox": [
+            -152.868423461914,
+            47.3533973693848,
+            -75.9056625366211,
+            74.1970367431641
+          ],
+          "estimated_bytes": 2530089,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      }
+    ],
+    "selection": "daily closest-interval candidate, then evenly spaced calendar days; no labels inspected"
+  },
+  "quebec_20230605": {
+    "existing_bundles": "data/manifests/validation_quebec_20230605_proposed_bundles.jsonl"
+  },
+  "quebec_2024": {
+    "available_days": 5,
+    "candidates": [
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G3070529748-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2024-06-05T18:45:00.000Z",
+          "end_utc": "2024-06-05T18:50:00.000Z",
+          "bbox": [
+            -96.7818080933014,
+            32.2514184616513,
+            -61.6696182002779,
+            54.1753235120175
+          ],
+          "estimated_bytes": 770041,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G3098305889-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2024-06-05T18:36:00.000Z",
+          "end_utc": "2024-06-05T18:42:00.000Z",
+          "bbox": [
+            -130.928695678711,
+            45.0018653869629,
+            -60.9592742919922,
+            71.727165222168
+          ],
+          "estimated_bytes": 2288302,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 840.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G3072881994-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2024-06-06T06:40:00.000Z",
+          "end_utc": "2024-06-06T06:45:00.000Z",
+          "bbox": [
+            -75.4018877134376,
+            36.4798438119502,
+            -37.7773415201905,
+            58.4423138905612
+          ],
+          "estimated_bytes": 563516,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G3098390058-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2024-06-06T06:42:00.000Z",
+          "end_utc": "2024-06-06T06:48:00.000Z",
+          "bbox": [
+            -99.5938949584961,
+            46.8166275024414,
+            -23.9979114532471,
+            73.8097763061523
+          ],
+          "estimated_bytes": 1143144,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 480.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G3078852536-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2024-06-08T17:35:00.000Z",
+          "end_utc": "2024-06-08T17:40:00.000Z",
+          "bbox": [
+            -95.5254411160362,
+            47.4452120526568,
+            -44.4701318819024,
+            70.3847629030871
+          ],
+          "estimated_bytes": 788417,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G3098566009-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2024-06-08T17:36:00.000Z",
+          "end_utc": "2024-06-08T17:42:00.000Z",
+          "bbox": [
+            -103.166542053223,
+            36.2259559631348,
+            -50.8923873901367,
+            62.1941528320312
+          ],
+          "estimated_bytes": 2401557,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G3085701157-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2024-06-11T06:50:00.000Z",
+          "end_utc": "2024-06-11T06:55:00.000Z",
+          "bbox": [
+            -78.3441896620174,
+            27.6812575083474,
+            -46.3599255540739,
+            49.2620078447849
+          ],
+          "estimated_bytes": 328653,
+          "day_night": "Night",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G3098809327-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2024-06-11T06:48:00.000Z",
+          "end_utc": "2024-06-11T06:54:00.000Z",
+          "bbox": [
+            -101.774391174316,
+            47.4280624389648,
+            -24.4253578186035,
+            74.3794479370117
+          ],
+          "estimated_bytes": 1532969,
+          "day_night": "Both",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 420.0
+      },
+      {
+        "modis": {
+          "product": "MYD14",
+          "version": "061",
+          "granule_id": "G3095027251-LPCLOUD",
+          "collection_id": "C2278858993-LPCLOUD",
+          "start_utc": "2024-06-13T17:40:00.000Z",
+          "end_utc": "2024-06-13T17:45:00.000Z",
+          "bbox": [
+            -86.5097467066589,
+            39.4994287840792,
+            -45.5726175953606,
+            61.8174054380721
+          ],
+          "estimated_bytes": 785473,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "viirs": {
+          "product": "VNP14IMG",
+          "version": "002",
+          "granule_id": "G3098940749-LPCLOUD",
+          "collection_id": "C2734202914-LPCLOUD",
+          "start_utc": "2024-06-13T17:42:00.000Z",
+          "end_utc": "2024-06-13T17:48:00.000Z",
+          "bbox": [
+            -104.07096862793,
+            35.5918807983398,
+            -52.5583038330078,
+            61.6207084655762
+          ],
+          "estimated_bytes": 2367153,
+          "day_night": "Day",
+          "producer_filename": ""
+        },
+        "interval_bound_seconds": 480.0
+      }
+    ],
+    "selection": "daily closest-interval candidate, then evenly spaced calendar days; no labels inspected"
+  }
+}
