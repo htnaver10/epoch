@@ -1,0 +1,16 @@
+{
+  "selected_iteration": 9,
+  "trained_iterations": 49,
+  "best_validation_average_precision": 0.4242321557790745,
+  "training_queries": 10371908,
+  "positive_training_queries": 1913,
+  "feature_count": 118,
+  "seconds": 14.70642180001596,
+  "model_sha256": "2814c2a1eb6fed42e29ed0f1016c7cb2e5574020fdb9017670c4369abc5d7826",
+  "base_model_sha256": "35535575bd95e385a17bc462c14e1e9ea6fdd534d673db762a3acb9ff67c7759",
+  "feature_receipt_sha256": "f9c71cca5f03ede799febe6e67c92a58b6c8098f93bbe63d5d1307ec7c4f5e4b",
+  "combined_native_reload_passed": true,
+  "lightgbm_version": "4.7.0",
+  "training_labels": "unmodified VIIRS reference labels",
+  "test_used_for_fit": false
+}

@@ -1,0 +1,474 @@
+[
+  {
+    "feature": "cell_contrast_reflectance_7",
+    "gain": 531.1336002349854
+  },
+  {
+    "feature": "log_contrast_31_32",
+    "gain": 328.8302286863327
+  },
+  {
+    "feature": "band22_ring7_mean",
+    "gain": 299.5960998535156
+  },
+  {
+    "feature": "band32_ring21_std",
+    "gain": 88.60429859161377
+  },
+  {
+    "feature": "band32_ring7_delta",
+    "gain": 87.3917007446289
+  },
+  {
+    "feature": "band31_ring7_std",
+    "gain": 68.88897132873535
+  },
+  {
+    "feature": "query_native_col_offset",
+    "gain": 59.16274034976959
+  },
+  {
+    "feature": "band32_ring7_std",
+    "gain": 41.14483022689819
+  },
+  {
+    "feature": "log_radiance_32",
+    "gain": 39.40760040283203
+  },
+  {
+    "feature": "band31_ring21_std",
+    "gain": 35.47039985656738
+  },
+  {
+    "feature": "band20_ring7_mean",
+    "gain": 33.07954025268555
+  },
+  {
+    "feature": "band32_ring7_mean",
+    "gain": 28.91759967803955
+  },
+  {
+    "feature": "log_radiance_23",
+    "gain": 26.71880054473877
+  },
+  {
+    "feature": "band20_ring7_std",
+    "gain": 25.93079948425293
+  },
+  {
+    "feature": "band22_ring7_std",
+    "gain": 18.720900058746338
+  },
+  {
+    "feature": "band31_ring7_mean",
+    "gain": 15.890000343322754
+  },
+  {
+    "feature": "cell_contrast_reflectance_1",
+    "gain": 15.873730182647705
+  },
+  {
+    "feature": "band32_ring21_delta",
+    "gain": 15.59031057357788
+  },
+  {
+    "feature": "band32_ring7_z",
+    "gain": 8.009610176086426
+  },
+  {
+    "feature": "band22_ring21_delta",
+    "gain": 6.842990040779114
+  },
+  {
+    "feature": "cell_contrast_reflectance_3",
+    "gain": 3.640079975128174
+  },
+  {
+    "feature": "cell_contrast_reflectance_4",
+    "gain": 3.489680051803589
+  },
+  {
+    "feature": "log_radiance_21",
+    "gain": 3.352440118789673
+  },
+  {
+    "feature": "geometry_2",
+    "gain": 2.6122899055480957
+  },
+  {
+    "feature": "log_radiance_20",
+    "gain": 0.0
+  },
+  {
+    "feature": "thermal_valid_20",
+    "gain": 0.0
+  },
+  {
+    "feature": "thermal_valid_21",
+    "gain": 0.0
+  },
+  {
+    "feature": "log_radiance_22",
+    "gain": 0.0
+  },
+  {
+    "feature": "thermal_valid_22",
+    "gain": 0.0
+  },
+  {
+    "feature": "thermal_valid_23",
+    "gain": 0.0
+  },
+  {
+    "feature": "log_radiance_31",
+    "gain": 0.0
+  },
+  {
+    "feature": "thermal_valid_31",
+    "gain": 0.0
+  },
+  {
+    "feature": "thermal_valid_32",
+    "gain": 0.0
+  },
+  {
+    "feature": "band20_ring7_delta",
+    "gain": 0.0
+  },
+  {
+    "feature": "band20_ring7_z",
+    "gain": 0.0
+  },
+  {
+    "feature": "band20_ring7_valid_fraction",
+    "gain": 0.0
+  },
+  {
+    "feature": "band20_ring7_supported",
+    "gain": 0.0
+  },
+  {
+    "feature": "band22_ring7_delta",
+    "gain": 0.0
+  },
+  {
+    "feature": "band22_ring7_z",
+    "gain": 0.0
+  },
+  {
+    "feature": "band22_ring7_valid_fraction",
+    "gain": 0.0
+  },
+  {
+    "feature": "band22_ring7_supported",
+    "gain": 0.0
+  },
+  {
+    "feature": "band31_ring7_delta",
+    "gain": 0.0
+  },
+  {
+    "feature": "band31_ring7_z",
+    "gain": 0.0
+  },
+  {
+    "feature": "band31_ring7_valid_fraction",
+    "gain": 0.0
+  },
+  {
+    "feature": "band31_ring7_supported",
+    "gain": 0.0
+  },
+  {
+    "feature": "band32_ring7_valid_fraction",
+    "gain": 0.0
+  },
+  {
+    "feature": "band32_ring7_supported",
+    "gain": 0.0
+  },
+  {
+    "feature": "band20_ring21_mean",
+    "gain": 0.0
+  },
+  {
+    "feature": "band20_ring21_std",
+    "gain": 0.0
+  },
+  {
+    "feature": "band20_ring21_delta",
+    "gain": 0.0
+  },
+  {
+    "feature": "band20_ring21_z",
+    "gain": 0.0
+  },
+  {
+    "feature": "band20_ring21_valid_fraction",
+    "gain": 0.0
+  },
+  {
+    "feature": "band20_ring21_supported",
+    "gain": 0.0
+  },
+  {
+    "feature": "band22_ring21_mean",
+    "gain": 0.0
+  },
+  {
+    "feature": "band22_ring21_std",
+    "gain": 0.0
+  },
+  {
+    "feature": "band22_ring21_z",
+    "gain": 0.0
+  },
+  {
+    "feature": "band22_ring21_valid_fraction",
+    "gain": 0.0
+  },
+  {
+    "feature": "band22_ring21_supported",
+    "gain": 0.0
+  },
+  {
+    "feature": "band31_ring21_mean",
+    "gain": 0.0
+  },
+  {
+    "feature": "band31_ring21_delta",
+    "gain": 0.0
+  },
+  {
+    "feature": "band31_ring21_z",
+    "gain": 0.0
+  },
+  {
+    "feature": "band31_ring21_valid_fraction",
+    "gain": 0.0
+  },
+  {
+    "feature": "band31_ring21_supported",
+    "gain": 0.0
+  },
+  {
+    "feature": "band32_ring21_mean",
+    "gain": 0.0
+  },
+  {
+    "feature": "band32_ring21_z",
+    "gain": 0.0
+  },
+  {
+    "feature": "band32_ring21_valid_fraction",
+    "gain": 0.0
+  },
+  {
+    "feature": "band32_ring21_supported",
+    "gain": 0.0
+  },
+  {
+    "feature": "log_contrast_20_31",
+    "gain": 0.0
+  },
+  {
+    "feature": "contrast_valid_20_31",
+    "gain": 0.0
+  },
+  {
+    "feature": "log_contrast_22_31",
+    "gain": 0.0
+  },
+  {
+    "feature": "contrast_valid_22_31",
+    "gain": 0.0
+  },
+  {
+    "feature": "contrast_valid_31_32",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_3",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_valid_3",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_4",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_valid_4",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_5",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_valid_5",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_6",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_valid_6",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_7",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_valid_7",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_1",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_valid_1",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_2",
+    "gain": 0.0
+  },
+  {
+    "feature": "reflectance_valid_2",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_0",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_1",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_3",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_4",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_5",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_6",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_7",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_8",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_9",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_10",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_11",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_12",
+    "gain": 0.0
+  },
+  {
+    "feature": "geometry_13",
+    "gain": 0.0
+  },
+  {
+    "feature": "query_native_row_offset",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_mean_reflectance_3",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_valid_fraction_3",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_mean_reflectance_4",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_valid_fraction_4",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_mean_reflectance_5",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_contrast_reflectance_5",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_valid_fraction_5",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_mean_reflectance_6",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_contrast_reflectance_6",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_valid_fraction_6",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_mean_reflectance_7",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_valid_fraction_7",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_mean_reflectance_1",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_valid_fraction_1",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_mean_reflectance_2",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_contrast_reflectance_2",
+    "gain": 0.0
+  },
+  {
+    "feature": "cell_valid_fraction_2",
+    "gain": 0.0
+  },
+  {
+    "feature": "operational_modis_detection",
+    "gain": 0.0
+  }
+]

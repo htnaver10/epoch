@@ -1,0 +1,20 @@
+{
+  "name": "contextual_neural_residual_hybrid_v1",
+  "seed": 42,
+  "base_model": "models/mlp/inference.pt",
+  "base_model_sha256": "35535575bd95e385a17bc462c14e1e9ea6fdd534d673db762a3acb9ff67c7759",
+  "feature_receipt_sha256": "921474f86e93f032fa6b3805741b990120e31056e8305c38b98e19a5241bef0e",
+  "feature_count": 118,
+  "base_inference_precision": "float32",
+  "residual": {
+    "objective": "binary", "metric": "average_precision",
+    "learning_rate": 0.03, "num_leaves": 15, "max_depth": 4,
+    "min_data_in_leaf": 200, "lambda_l2": 5.0, "max_delta_step": 1.0,
+    "max_bin": 127, "num_threads": 8, "seed": 42,
+    "deterministic": true, "force_col_wise": true, "verbosity": -1,
+    "boost_from_average": false, "num_boost_round": 300, "stopping_rounds": 40
+  },
+  "policy": "Largest validation recall within standard MODIS validation false-positive budget; conservative tied cutoff",
+  "native_cell_policy": "Separate validation-only cutoff for max score per observed MODIS native cell, with that scale's MODIS false-positive budget",
+  "scope": "Reused regional benchmark, not a new blind test. No new satellite data. VIIRS is a reference observation, not ground truth."
+}

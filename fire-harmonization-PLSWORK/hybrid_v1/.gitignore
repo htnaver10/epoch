@@ -1,0 +1,7 @@
+data/
+models/*.pt
+models/*.txt
+results/*.npy
+results/*.npz
+__pycache__/
+*.partial

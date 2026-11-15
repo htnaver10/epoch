@@ -1,0 +1,28 @@
+{
+  "query": {
+    "cutoff": -1.8994811846629425,
+    "logit_offset": 0.3912866680571737,
+    "validation_false_positive_budget": 2013.0
+  },
+  "native_cell": {
+    "cutoff": -1.6160044479370115,
+    "logit_offset": 2.305825961570231,
+    "validation_false_positive_budget": 135.0
+  },
+  "base_mlp_cell": {
+    "cutoff": -1.8652071952819822,
+    "logit_offset": 2.5387755286707376,
+    "validation_false_positive_budget": 135.0
+  },
+  "artifact_sha256": {
+    "models/base_mlp.pt": "35535575bd95e385a17bc462c14e1e9ea6fdd534d673db762a3acb9ff67c7759",
+    "models/residual.txt": "2814c2a1eb6fed42e29ed0f1016c7cb2e5574020fdb9017670c4369abc5d7826",
+    "data/receipt.json": "f9c71cca5f03ede799febe6e67c92a58b6c8098f93bbe63d5d1307ec7c4f5e4b",
+    "results/software_lock.json": "65b95fd3b396a18b1ff821744849a9d81b3b526dcf7d410c9096ee01e7b63bfe"
+  },
+  "fit_split": "validation",
+  "test_used_for_fit": false,
+  "new_blind_test": false,
+  "selection": "Largest validation recall within standard MODIS validation false-positive budget; conservative tied cutoff",
+  "native_cell_selection": "Separate validation-only cutoff for max score per observed MODIS native cell, with that scale's MODIS false-positive budget"
+}

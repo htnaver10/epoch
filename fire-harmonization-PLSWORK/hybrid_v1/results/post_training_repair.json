@@ -1,0 +1,14 @@
+{
+  "reason": "Post-training verifier repair: parse JSONL manifest one record per line; allow this recorded tooling-only correction while preserving the original source snapshot and model/policy hashes. No training, preprocessing, inference mathematics, model selection, threshold, or evaluation result changed.",
+  "original_software_lock_sha256": "65b95fd3b396a18b1ff821744849a9d81b3b526dcf7d410c9096ee01e7b63bfe",
+  "changes": {
+    "common.py": {
+      "before": "c3c4a2bc8538384158e8e4210f6956f1c746850c1d0cac8569b2353813e5dab4",
+      "after": "6b06ee1f573845a8ba6e350768f729d28c7af66c02624679499f72ee9e995b1e"
+    },
+    "verification.py": {
+      "before": "33640388e9fe9eb2ecabe9515e5f1b1a3ee04e4fea117b9eb43ddf07a0b4032f",
+      "after": "9ae31938bb270279517e8e3b1276e199395947f4c286d8d00de1cefa274bfc0b"
+    }
+  }
+}
