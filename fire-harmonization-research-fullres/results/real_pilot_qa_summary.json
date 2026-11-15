@@ -1,0 +1,10 @@
+{
+  "tiles": 54,
+  "positive_queries": 7.0,
+  "known_queries": 382427.0,
+  "preview_index": 0,
+  "partitions": {
+    "train": 54
+  },
+  "scope": "all-land real-reader QA; no independent validation split or scientific forest model"
+}

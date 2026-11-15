@@ -35,6 +35,14 @@ class PilotLauncherTests(unittest.TestCase):
             self.assertFalse(acquire.call_args.kwargs['download'])
             credentials.assert_not_called();pairs.assert_not_called()
 
+    def test_additional_acquisition_range_is_passed_to_inventory(self):
+        with patch.object(pilot,'acquire',return_value={'granules':8}) as acquire,\
+             contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(pilot.main(['--inventory-only','--tag','second',
+                '--start','2022-07-01T20:00:00Z','--end','2022-07-01T23:59:59Z',
+                '--bbox','-125','50','-110','65']),0)
+            self.assertEqual(acquire.call_args.args[:3],('2022-07-01T20:00:00Z','2022-07-01T23:59:59Z',[-125.,50.,-110.,65.]))
+
     def test_missing_noninteractive_credentials_fail_before_network(self):
         with patch.dict(os.environ,{},clear=True),patch.object(pilot,'acquire') as acquire,\
              contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):

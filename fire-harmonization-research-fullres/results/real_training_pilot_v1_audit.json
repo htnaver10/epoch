@@ -1,0 +1,280 @@
+{
+  "passed": true,
+  "scope": "small real-NASA all-land training pilot; no final held-out test",
+  "manifest": "data/manifests/real_training_pilot_v1.jsonl",
+  "manifest_sha256": "3c4df98f029546f69eb82cfa6d8b90382dabb5c659ef952f2e983328893eb980",
+  "statistics": "data/manifests/real_training_pilot_v1_stats.json",
+  "input_manifests": {
+    "data/manifests/real_pilot_all_land_qa.jsonl": "16e9c841fc5deae412e55835e6a90f8f499df125fe829da1b5830b56328c20e9",
+    "data/manifests/real_pilot_validation_all_land.jsonl": "e1c122703212353fb386185ca541621d8726fdd14fc4b2bb29e7fc2bc347dc44"
+  },
+  "split_counts": {
+    "train": 54,
+    "validation": 71
+  },
+  "positive_reference_queries": {
+    "train": 7.0,
+    "validation": 242.0
+  },
+  "known_reference_queries": {
+    "train": 382427.0,
+    "validation": 462751.0
+  },
+  "native_training_bbox": [
+    -131.2485809326172,
+    48.68610763549805,
+    -118.9681167602539,
+    55.383033752441406
+  ],
+  "validation_block_bbox": [
+    -80.0,
+    45.0,
+    -65.0,
+    55.0
+  ],
+  "native_validation_bbox": [
+    -77.07891845703125,
+    45.752540588378906,
+    -65.6494369506836,
+    54.99885559082031
+  ],
+  "training_footprint_buffer_degrees": 2,
+  "excluded_validation_tiles": [
+    {
+      "tile_id": "f8bc29a99bbebcd297b7",
+      "native_bbox": [
+        -65.1825180053711,
+        31.98565101623535,
+        -63.936546325683594,
+        32.96915817260742
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "f71a6cc8ff4582040491",
+      "native_bbox": [
+        -65.85753631591797,
+        31.89104461669922,
+        -64.63399505615234,
+        32.87510299682617
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "09b8d2b69db963849cf4",
+      "native_bbox": [
+        -70.3030776977539,
+        41.290122985839844,
+        -68.87794494628906,
+        42.30217742919922
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "4e30d3519bdede534d87",
+      "native_bbox": [
+        -70.50547790527344,
+        41.853092193603516,
+        -69.06603240966797,
+        42.865997314453125
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "809cfcae47e0b05d53b4",
+      "native_bbox": [
+        -70.92416381835938,
+        42.97721481323242,
+        -69.45708465576172,
+        43.99188995361328
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "72806fe7f99f2b9d56e9",
+      "native_bbox": [
+        -71.14196014404297,
+        43.53934097290039,
+        -69.6535873413086,
+        44.55509948730469
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "055a2961ee87387ea54c",
+      "native_bbox": [
+        -71.97079467773438,
+        43.40547180175781,
+        -70.43744659423828,
+        44.4334831237793
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "b208f7ef0c0ee4cc66f3",
+      "native_bbox": [
+        -71.35719299316406,
+        44.09905242919922,
+        -69.85856628417969,
+        45.11777114868164
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "ae54697772b590fdea22",
+      "native_bbox": [
+        -69.6114501953125,
+        54.22563552856445,
+        -67.44515991210938,
+        55.25465774536133
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "50695da7cdda8a0f81a5",
+      "native_bbox": [
+        -68.5931396484375,
+        54.918453216552734,
+        -66.17257690429688,
+        55.958534240722656
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "44b7f74b60979b108304",
+      "native_bbox": [
+        -69.83961486816406,
+        54.7918586730957,
+        -67.64214324951172,
+        55.825870513916016
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "7b6e7a02009a0ef65006",
+      "native_bbox": [
+        -70.97479248046875,
+        54.664955139160156,
+        -68.92879486083984,
+        55.69416809082031
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "03c3b873e05d7857ba78",
+      "native_bbox": [
+        -68.81122589111328,
+        55.488136291503906,
+        -66.35115051269531,
+        56.51206970214844
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "48029df5068bea8e7c17",
+      "native_bbox": [
+        -70.0770492553711,
+        55.35801315307617,
+        -67.84070587158203,
+        56.382083892822266
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "feff147de9324d6c5b75",
+      "native_bbox": [
+        -72.30316925048828,
+        55.09718322753906,
+        -70.3212890625,
+        56.122039794921875
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "6a7311f363c257477db7",
+      "native_bbox": [
+        -69.03142547607422,
+        56.04423141479492,
+        -66.53312683105469,
+        57.086936950683594
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "505a3d07cb64170e65dc",
+      "native_bbox": [
+        -71.48362731933594,
+        55.78590774536133,
+        -69.37052917480469,
+        56.81906509399414
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "d40cc937f775c9114185",
+      "native_bbox": [
+        -69.2568588256836,
+        56.61296844482422,
+        -66.71866607666016,
+        57.6396598815918
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "5fc0d936921807f0530f",
+      "native_bbox": [
+        -70.56112670898438,
+        56.48078918457031,
+        -68.25151824951172,
+        57.50730895996094
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "64771a64880938c85fa6",
+      "native_bbox": [
+        -69.48958587646484,
+        57.169921875,
+        -66.91036987304688,
+        58.21320724487305
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "fbd405f5835d7c66980d",
+      "native_bbox": [
+        -69.96990966796875,
+        58.30634307861328,
+        -67.29955291748047,
+        59.340240478515625
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "cae0487a8c09c9a9b4d6",
+      "native_bbox": [
+        -70.4756851196289,
+        59.42866134643555,
+        -67.7088623046875,
+        60.465599060058594
+      ],
+      "reason": "outside validation block"
+    },
+    {
+      "tile_id": "c6f6a29c89a495fe72f6",
+      "native_bbox": [
+        -71.00445556640625,
+        60.55061721801758,
+        -68.13988494873047,
+        61.611568450927734
+      ],
+      "reason": "outside validation block"
+    }
+  ],
+  "validation_preview_index": 77,
+  "normalization_fit_partition": "train",
+  "forest_only": false,
+  "event_group_policy": "Conservatively merge all shared-source acquisitions within each dated regional pilot; no random crop split.",
+  "independent_test_available": false,
+  "wildfire_ground_truth_validated": false
+}

@@ -1,0 +1,22 @@
+{
+  "start": "2022-07-01T20:00:00Z",
+  "end": "2022-07-01T23:59:59Z",
+  "bbox": [
+    -125,
+    50,
+    -110,
+    65
+  ],
+  "downloaded": false,
+  "products": [
+    "MYD021KM",
+    "MYD03",
+    "MYD14",
+    "MYD02HKM",
+    "MYD02QKM",
+    "VNP14IMG",
+    "VNP03IMG"
+  ],
+  "max_per_product": 50,
+  "granules": 26
+}

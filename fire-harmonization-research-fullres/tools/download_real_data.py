@@ -44,18 +44,21 @@ def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--inventory-only',action='store_true',help='Check public metadata without credentials or science-file downloads')
     parser.add_argument('--no-prompt',action='store_true',help='Require credentials already in this process environment')
+    parser.add_argument('--start',default='2023-07-01T20:00:00Z',help='Acquisition range start in UTC')
+    parser.add_argument('--end',default='2023-07-01T23:59:59Z',help='Acquisition range end in UTC')
+    parser.add_argument('--bbox',type=float,nargs=4,default=[-125,50,-110,65],metavar=('WEST','SOUTH','EAST','NORTH'))
     parser.add_argument('--tag',default='pilot_'+datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S'),
         help='Fresh output name using letters, numbers, underscores or hyphens')
     args=parser.parse_args(argv)
     if not re.fullmatch(r'[A-Za-z0-9_-]+',args.tag):parser.error('Use an alphanumeric output tag with underscores/hyphens')
     inventory=f'data/manifests/{args.tag}_'+('inventory' if args.inventory_only else 'downloads')+'.jsonl'
     bundles=f'data/manifests/{args.tag}_proposed_bundles.jsonl'
-    print('Real NASA pilot: 2023-07-01, western Canada, all seven MODIS/VIIRS products.',flush=True)
+    print(f'Real NASA pilot: {args.start} to {args.end}, bbox {args.bbox}, all seven MODIS/VIIRS products.',flush=True)
     if not args.inventory_only:
         print('Enter your Earthdata login here. Your password is hidden and is not saved to a file.',flush=True)
     try:
         def fetch():
-            return acquire('2023-07-01T20:00:00Z','2023-07-01T23:59:59Z',[-125,50,-110,65],
+            return acquire(args.start,args.end,args.bbox,
                 inventory,download=not args.inventory_only,max_per_product=50)
         if args.inventory_only:
             result=fetch()

@@ -1,5 +1,65 @@
 # Training readiness on this Windows PC
 
+**The real-data training pilot is now assembled.** Run this in PowerShell:
+
+```powershell
+cd "C:\Users\Darrien\Desktop\epoch1\epoch\fire-harmonization-research-fullres"
+.\train-real-data.cmd
+```
+
+The first real CUDA epoch completed in about 30 seconds, including validation and
+checkpointing. `best.pt` and `last.pt` were saved, and checkpoint reload was
+verified. The launcher therefore resumes from that first completed epoch. See
+[execution verification](results/real_training_pilot_v1_execution.json).
+
+This trains to **two total epochs**, automatically resuming an existing pilot
+checkpoint. It uses 54 western-North-America training tiles and 71 eastern-Canada
+validation tiles from real NASA granules. Shared granules stay in one partition;
+the complete native input footprints are geographically separated, and validation
+is restricted to the selected eastern block. Normalization is fitted on training
+only. The checksum/array/source/event audit is in
+[real_training_pilot_v1_audit.json](results/real_training_pilot_v1_audit.json).
+See the inspected [validation alignment preview](visualizations/real_training_pilot_v1_validation_alignment.png).
+
+Checkpoints are `models/real_training_pilot_v1/last.pt` and `best.pt`;
+progress is `logs/real_training_pilot_v1/epochs.jsonl`. To extend to five total
+epochs, run `.\train-real-data.cmd --epochs 5`. The first epoch includes startup
+and kernel setup; wait for its epoch summary. This is an **all-land execution
+pilot**, with only seven positive training query centers and no final test set.
+Model quality needs a substantially larger fire-positive training population;
+forest-only training additionally needs prior land-cover context.
+
+To reproduce dataset assembly after the two source tile manifests exist, run
+`tools/assemble_real_pilot.py` in `.data-env` with a fresh output dataset version.
+The builder retains the original prepared tiles and records the excluded
+validation footprints; it does not create a random crop split.
+
+**Real-data update:** the first authenticated pilot download is now present:
+16 source files and one proposed pair. The MYD03 geolocation reader was corrected
+to expose hidden raw SDS using GDAL's documented `LIST_SDS=YES` fallback. A
+conservative, train-only **all-land reader-QA** manifest now contains 54 real
+tiles, with seven positive and 382,427 known reference query centers. This is not
+a reviewed forest-only training/validation dataset. The real-data CUDA profiling
+path completed three optimizer updates; see
+[QA summary](results/real_pilot_qa_summary.json),
+[alignment preview](visualizations/real_pilot_all_land_qa_alignment.png) and
+[real-data GPU profile](results/real_pilot_rtx5070_profile.json).
+
+The next candidate validation download is a separate eastern-Canada acquisition.
+Public metadata confirms 14 source granules across all seven products, with
+candidate MODIS/VIIRS interval overlaps within the required limit:
+
+```powershell
+cd "C:\Users\Darrien\Desktop\epoch1\epoch\fire-harmonization-research-fullres"
+.\download-real-data.cmd --start 2023-06-05T17:45:00Z --end 2023-06-05T18:10:00Z --bbox -80 45 -65 55 --tag validation_quebec_20230605
+```
+
+This command prompts for Earthdata credentials locally. It downloads candidate
+validation inputs; preparation, event/source split checks and actual-file QA must
+finish before a checkpointed real-data pilot run. Forest-only training additionally
+requires prior land-cover context. The earlier setup assessment below is retained
+as a dated record of the host before the authenticated download.
+
 Checked 2026-11-14. **The computer can run the implemented CNN training pipeline.**
 Both Python environments and the native NASA reader environment are installed.
 CUDA training, checkpoint resume, evaluation and inference passed on full-size

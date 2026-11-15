@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "dataset": "data/manifests/real_training_pilot_v1.jsonl",
+  "training_tiles": 54,
+  "validation_tiles": 71,
+  "completed_epochs": 1,
+  "checkpoint": "models/real_training_pilot_v1/last.pt",
+  "checkpoint_sha256": "2df55ba0ad714b401939e698d6d9df5e9bdc316f080d55bf57a5a011978e6d78",
+  "checkpoint_reload_verified": true,
+  "model_parameters_finite": true,
+  "optimizer_state_present": true,
+  "scope": "real NASA all-land pilot; sparse positive training labels; no independent test set"
+}
