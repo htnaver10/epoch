@@ -6,6 +6,15 @@ CUDA training, checkpoint resume, evaluation and inference passed on full-size
 synthetic tiles. **Scientific training is waiting for real NASA data, Earthdata
 authentication, reviewed splits and calibration/alignment QA.**
 
+**To start downloading with your new Earthdata account:** double-click
+[`download-real-data.cmd`](download-real-data.cmd) in this folder. Enter your
+Earthdata username and password in its local terminal; the password is hidden.
+It downloads the bounded 2023-07-01 pilot, saves source checksums and proposes
+pairs under fresh timestamped manifest names. Credentials are not saved to files.
+The pilot is the next real-reader/alignment check; training still needs reviewed
+independent events/splits and forest context. From PowerShell, the same launcher
+is `.\fire-harmonization-research-fullres\download-real-data.cmd` at the project root.
+
 | Item | Observed on this computer |
 |---|---|
 | GPU | NVIDIA GeForce RTX 5070, 12,227 MiB, compute capability 12.0 |
