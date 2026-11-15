@@ -1,0 +1,19 @@
+{
+  "files": {
+    "common.py": "ebab2bc31cfd0accab8515733e022d26a67d5543868ad3bdf02297aabd22ca55",
+    "data.py": "432342d2fdc4005ca6edaf3c00ee297432541364a6b04813ab0e9c84ce3214df",
+    "evaluation.py": "58be23d9fc0bf5a958b6956ce4cbad185182293d5b9825a94adacf3f7a02feeb",
+    "features.py": "927feddbd464a024b16bfdecbc11409a66b1bedda17dceb24829792636ba9ffe",
+    "inference.py": "60d41d74bdc6bbbf8e29986dbc85e6f51c4027eb1551b918835220ee51186c95",
+    "model.py": "d190f3bc9d0b30ecd993ef0303881f12aff385871beb5234154cc23b5c7e8cae",
+    "policy.py": "e382d74a041c0bf51a6b8b16afcd27cf9e563897aeeb6e5a50b48922e2415570",
+    "report.py": "8110ed16d6adb0af78539d8434a03471697ec5816cf6cbb790f4c0f519c71b15",
+    "run.py": "63fe288326d141e1aa5dfb7414e016158d461b75e19ab3faa1d29d91fd41fda5",
+    "tests.py": "e602fb00c0e2b27c7db34fb4bcf6e92aeaa381b9219a457928b6c3d14688d78b",
+    "verify.py": "23245d511eb65fdf454dc0b843cc2cac1d5f0f30ad9b0b4b60880984bfe13625"
+  },
+  "config_sha256": "50439e3cc49fc72a7468a1467451d83c6f8098a1334fd4f972be7a5df17fde29",
+  "shared_modis_manifest_sha256": "b3030b7a998a0d7dc6fe13d33f554ff2b174d69c412445611f7c908b0ffb7a9d",
+  "shared_copy_receipt_sha256": "b07fb40fe00f6856b067f94b52f25957bee4e8006bc34a014b945ddc1b34792f",
+  "prior_artifact_lock_sha256": "bfa630cde4549a75c5e5b1891971d38eea7275a5c019e6cd7e0e8fb68904583f"
+}

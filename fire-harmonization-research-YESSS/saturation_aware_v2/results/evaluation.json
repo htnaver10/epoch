@@ -1,0 +1,1669 @@
+{
+  "model_name": "SaturationAwareBackgroundV2",
+  "new_blind_test": false,
+  "uses_fire_labels_for_fit": false,
+  "policy_sha256": "6970fb92bde8ca5069f9156d456d2d989f0ee75a1fc559b8eb06c954f9c9bc7b",
+  "training": {
+    "coarse": {
+      "model_name": "SaturationAwareBackgroundV2",
+      "stage": "coarse",
+      "epochs_completed": 40,
+      "selected_epoch": 40,
+      "selection_metric": "unlabeled validation SmoothL1 reconstruction loss",
+      "best_loss": 0.052724089447268425,
+      "training_samples": 1696366,
+      "validation_samples": 2198395,
+      "parameters": 6306,
+      "seconds_this_invocation": 3.9840472000068985,
+      "export_sha256": "7b7cd4d60904db0ecae4d226133c0053ad608ffd36b766e89c17ea4ddedbf52f",
+      "uses_viirs_labels": false,
+      "uses_modis_fire_labels": false,
+      "torch_version": "2.11.0+cu128"
+    },
+    "fine": {
+      "model_name": "SaturationAwareBackgroundV2",
+      "stage": "fine",
+      "epochs_completed": 21,
+      "selected_epoch": 14,
+      "selection_metric": "unlabeled validation SmoothL1 reconstruction loss",
+      "best_loss": 0.04125968272618769,
+      "training_samples": 1941171,
+      "validation_samples": 5425882,
+      "parameters": 4993,
+      "seconds_this_invocation": 2.794784899975639,
+      "export_sha256": "37c749c5d347ba6d684337fb01a3c3cf3851b561b2085aa3140fdecc499b0aa6",
+      "uses_viirs_labels": false,
+      "uses_modis_fire_labels": false,
+      "torch_version": "2.11.0+cu128"
+    }
+  },
+  "policy": {
+    "model_name": "SaturationAwareBackgroundV2",
+    "stages": {
+      "coarse": {
+        "day": {
+          "residual_center": [
+            -0.0007205009460449219,
+            0.0325549840927124
+          ],
+          "residual_scale": [
+            0.40068531036376953,
+            0.20038741827011108
+          ],
+          "cutoff": 10.82079797307688,
+          "calibration_samples": 1356539,
+          "per_channel_observed_samples": [
+            1356539,
+            1355818
+          ],
+          "requested_alert_fraction": 0.001,
+          "realized_alert_fraction": 0.0009996026653122394,
+          "selected_channel_counts": [
+            721,
+            1355818
+          ]
+        },
+        "night": {
+          "residual_center": [
+            0.020392436534166336,
+            -0.002405494451522827
+          ],
+          "residual_scale": [
+            0.17881403863430023,
+            0.05
+          ],
+          "cutoff": 9.153917431831362,
+          "calibration_samples": 841856,
+          "per_channel_observed_samples": [
+            841856,
+            841818
+          ],
+          "requested_alert_fraction": 0.001,
+          "realized_alert_fraction": 0.0009989831990269119,
+          "selected_channel_counts": [
+            38,
+            841818
+          ]
+        }
+      },
+      "fine": {
+        "day": {
+          "residual_center": [
+            -0.004839837551116943
+          ],
+          "residual_scale": [
+            0.17511650919914246
+          ],
+          "cutoff": 5.565351216444703,
+          "calibration_samples": 5425882,
+          "per_channel_observed_samples": [
+            5425882
+          ],
+          "requested_alert_fraction": 0.01,
+          "realized_alert_fraction": 0.009999848872496674,
+          "selected_channel_counts": null
+        }
+      }
+    },
+    "artifacts": {
+      "models/coarse/inference.pt": "7b7cd4d60904db0ecae4d226133c0053ad608ffd36b766e89c17ea4ddedbf52f",
+      "models/fine/inference.pt": "37c749c5d347ba6d684337fb01a3c3cf3851b561b2085aa3140fdecc499b0aa6",
+      "data/features/receipt.json": "4ef1f0151cc4673c09b8e561a40add9b5d097ee1fd8730901e9d7f6b62346f3e",
+      "results/source_lock.json": "5a119759435b5f0a9979abd622c50e47df70195d732af744955216d0c5244cf6"
+    },
+    "fit_split": "unlabeled_whole_swath_development",
+    "uses_reference_labels": false,
+    "threshold_uses_modis_fire_flags": false,
+    "nighttime_fallback": false,
+    "meaning": "Empirical alert-volume control; anomaly scores are not fire probabilities and alert volume is not false-positive rate",
+    "channel_rule": "Use standardized band-22 residual when valid, otherwise band-21 residual. Separate prediction heads and observed-target masks; no radiance blending or saturated-value imputation.",
+    "fixed_before_reference_evaluation": true,
+    "localization": "Unchanged V1 heuristic: valid 500m daytime children, strong residual, top two including ties; unresolved alerts retain all children."
+  },
+  "support": "VIIRS query centers assigned to native MODIS cells; approximate footprint support",
+  "notes": "Both stages are anomaly detectors. Localization weights and reconstruction residuals are not fire probabilities.",
+  "validation": {
+    "query": {
+      "VIIRS_reference_self_comparison": {
+        "TP": 1757,
+        "FP": 0,
+        "FN": 0,
+        "TN": 1894553,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "reference_positives": 1757,
+        "samples": 1896310,
+        "average_precision": 1.0
+      },
+      "standard_MODIS": {
+        "TP": 1112,
+        "FP": 2013,
+        "FN": 645,
+        "TN": 1892540,
+        "precision": 0.35584,
+        "recall": 0.632896983494593,
+        "f1": 0.4555510036870135,
+        "reference_positives": 1757,
+        "samples": 1896310,
+        "average_precision": 0.22555019686746447
+      },
+      "unsupervised_coarse": {
+        "TP": 1388,
+        "FP": 2891,
+        "FN": 369,
+        "TN": 1891662,
+        "precision": 0.32437485393783594,
+        "recall": 0.7899829254410927,
+        "f1": 0.4599072233267064,
+        "reference_positives": 1757,
+        "samples": 1896310,
+        "average_precision": 0.37215456874211766
+      },
+      "unsupervised_two_stage": {
+        "TP": 1144,
+        "FP": 2386,
+        "FN": 613,
+        "TN": 1892167,
+        "precision": 0.3240793201133145,
+        "recall": 0.6511098463289698,
+        "f1": 0.43275959901645544,
+        "reference_positives": 1757,
+        "samples": 1896310,
+        "average_precision": null
+      },
+      "V1_coarse": {
+        "TP": 361,
+        "FP": 1573,
+        "FN": 1396,
+        "TN": 1892980,
+        "precision": 0.18665977249224405,
+        "recall": 0.20546385885031304,
+        "f1": 0.19561094554321323,
+        "reference_positives": 1757,
+        "samples": 1896310,
+        "average_precision": 0.06939854627580921
+      },
+      "V1_two_stage": {
+        "TP": 357,
+        "FP": 1491,
+        "FN": 1400,
+        "TN": 1893062,
+        "precision": 0.19318181818181818,
+        "recall": 0.20318725099601595,
+        "f1": 0.19805825242718447,
+        "reference_positives": 1757,
+        "samples": 1896310,
+        "average_precision": null
+      }
+    },
+    "native_cell": {
+      "VIIRS_reference_self_comparison": {
+        "TP": 725,
+        "FP": 0,
+        "FN": 0,
+        "TN": 302753,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "reference_positives": 725,
+        "samples": 303478,
+        "average_precision": 1.0
+      },
+      "standard_MODIS": {
+        "TP": 358,
+        "FP": 135,
+        "FN": 367,
+        "TN": 302618,
+        "precision": 0.7261663286004056,
+        "recall": 0.49379310344827587,
+        "f1": 0.5878489326765188,
+        "reference_positives": 725,
+        "samples": 303478,
+        "average_precision": 0.35978523837967613
+      },
+      "unsupervised_coarse": {
+        "TP": 479,
+        "FP": 213,
+        "FN": 246,
+        "TN": 302540,
+        "precision": 0.6921965317919075,
+        "recall": 0.6606896551724138,
+        "f1": 0.6760762173606211,
+        "reference_positives": 725,
+        "samples": 303478,
+        "average_precision": 0.5899541550426545
+      }
+    },
+    "coverage": {
+      "positive": 0.9971542401821286,
+      "negative": 0.9999994721710082,
+      "eligible_positives": 1752,
+      "positive_count": 1757,
+      "positive_selected_band_counts": {
+        "0": 5,
+        "21": 1032,
+        "22": 720
+      }
+    },
+    "known_query_model_coverage": 0.9999968359603651,
+    "all_native_alerts": 1659,
+    "alerts_with_supported_localization": 613,
+    "tile_metrics": [
+      {
+        "tile_id": "3d7592ddc1bc9da30395",
+        "positive_queries": 0,
+        "known_queries": 10
+      },
+      {
+        "tile_id": "019a410db41f9ec5aecb",
+        "positive_queries": 0,
+        "known_queries": 174
+      },
+      {
+        "tile_id": "9a04abfb0f14ff13a083",
+        "positive_queries": 0,
+        "known_queries": 2213
+      },
+      {
+        "tile_id": "7ccbcee475684aad13e0",
+        "positive_queries": 0,
+        "known_queries": 9429
+      },
+      {
+        "tile_id": "1a72979f40a4aff74149",
+        "positive_queries": 0,
+        "known_queries": 22565
+      },
+      {
+        "tile_id": "dc3a5b5e15a8291680d7",
+        "positive_queries": 0,
+        "known_queries": 24887
+      },
+      {
+        "tile_id": "de76c089691eb3cd11e3",
+        "positive_queries": 0,
+        "known_queries": 26459
+      },
+      {
+        "tile_id": "7a954f39647e53e88ab9",
+        "positive_queries": 0,
+        "known_queries": 1095
+      },
+      {
+        "tile_id": "7b1730abd6445e906b1c",
+        "positive_queries": 0,
+        "known_queries": 2454
+      },
+      {
+        "tile_id": "c3f93877127f52fe5455",
+        "positive_queries": 0,
+        "known_queries": 9738
+      },
+      {
+        "tile_id": "29ff2896b1edd4ad0e62",
+        "positive_queries": 0,
+        "known_queries": 19261
+      },
+      {
+        "tile_id": "b1b26e03538db1f28d83",
+        "positive_queries": 0,
+        "known_queries": 21964
+      },
+      {
+        "tile_id": "628b53e6ed8884ce75ab",
+        "positive_queries": 0,
+        "known_queries": 16525
+      },
+      {
+        "tile_id": "175bcf2c5d723c231065",
+        "positive_queries": 0,
+        "known_queries": 14762
+      },
+      {
+        "tile_id": "eed233493d3b20468e79",
+        "positive_queries": 0,
+        "known_queries": 2995
+      },
+      {
+        "tile_id": "074b7db743a571c86986",
+        "positive_queries": 0,
+        "known_queries": 19504
+      },
+      {
+        "tile_id": "45d6326e766a22183bcd",
+        "positive_queries": 0,
+        "known_queries": 1771
+      },
+      {
+        "tile_id": "2ebaa0394f2ccc7d1138",
+        "positive_queries": 0,
+        "known_queries": 7370
+      },
+      {
+        "tile_id": "cdcbf667ca035a21d1de",
+        "positive_queries": 0,
+        "known_queries": 11303
+      },
+      {
+        "tile_id": "a94af2eb2eee4800fc4b",
+        "positive_queries": 0,
+        "known_queries": 15162
+      },
+      {
+        "tile_id": "68e1f959646bb14426c0",
+        "positive_queries": 0,
+        "known_queries": 17896
+      },
+      {
+        "tile_id": "f0e588aab8f1c3e79a8a",
+        "positive_queries": 0,
+        "known_queries": 11050
+      },
+      {
+        "tile_id": "bfe4021e221de2ccb6d3",
+        "positive_queries": 2,
+        "known_queries": 10852
+      },
+      {
+        "tile_id": "a81f234fe8282ce02eaf",
+        "positive_queries": 0,
+        "known_queries": 3563
+      },
+      {
+        "tile_id": "1671a03301f9da4b033b",
+        "positive_queries": 0,
+        "known_queries": 3804
+      },
+      {
+        "tile_id": "17598916d4f42389a334",
+        "positive_queries": 0,
+        "known_queries": 22163
+      },
+      {
+        "tile_id": "44fd7c13cc7172e3e39c",
+        "positive_queries": 0,
+        "known_queries": 2702
+      },
+      {
+        "tile_id": "76dbe762bed9292b0471",
+        "positive_queries": 0,
+        "known_queries": 3676
+      },
+      {
+        "tile_id": "27f5a33faa3aa9b785f1",
+        "positive_queries": 0,
+        "known_queries": 7494
+      },
+      {
+        "tile_id": "1a4c96f8fec0fbb0df22",
+        "positive_queries": 0,
+        "known_queries": 8752
+      },
+      {
+        "tile_id": "b32cc93dcec4b0ccc635",
+        "positive_queries": 0,
+        "known_queries": 19033
+      },
+      {
+        "tile_id": "6b45822a087f50857ce3",
+        "positive_queries": 0,
+        "known_queries": 18643
+      },
+      {
+        "tile_id": "0cdb0baf7519e91d6d26",
+        "positive_queries": 0,
+        "known_queries": 11915
+      },
+      {
+        "tile_id": "21c435aadafe8c07c3e5",
+        "positive_queries": 0,
+        "known_queries": 2500
+      },
+      {
+        "tile_id": "041d2234cfb1b75e20df",
+        "positive_queries": 0,
+        "known_queries": 9307
+      },
+      {
+        "tile_id": "e5f5f6f78dd2111ac224",
+        "positive_queries": 0,
+        "known_queries": 13752
+      },
+      {
+        "tile_id": "50a302939baca66adba2",
+        "positive_queries": 0,
+        "known_queries": 21435
+      },
+      {
+        "tile_id": "060b04b0b79254ac93dc",
+        "positive_queries": 0,
+        "known_queries": 23459
+      },
+      {
+        "tile_id": "f65b81539ac0ebdcb2c8",
+        "positive_queries": 0,
+        "known_queries": 2658
+      },
+      {
+        "tile_id": "eb6b76f295847db3a393",
+        "positive_queries": 0,
+        "known_queries": 2624
+      },
+      {
+        "tile_id": "59965575ef5cfdfc956c",
+        "positive_queries": 0,
+        "known_queries": 3828
+      },
+      {
+        "tile_id": "4a9e28c07cbb88ce4bd0",
+        "positive_queries": 0,
+        "known_queries": 6427
+      },
+      {
+        "tile_id": "2c48aa5e758269d024ed",
+        "positive_queries": 11,
+        "known_queries": 19992
+      },
+      {
+        "tile_id": "bce521d812ea358d2496",
+        "positive_queries": 0,
+        "known_queries": 18014
+      },
+      {
+        "tile_id": "45b127b1a703a5badaa5",
+        "positive_queries": 0,
+        "known_queries": 8267
+      },
+      {
+        "tile_id": "2caf04381e3e48fff189",
+        "positive_queries": 0,
+        "known_queries": 3876
+      },
+      {
+        "tile_id": "0e53c349755403f758a6",
+        "positive_queries": 0,
+        "known_queries": 15802
+      },
+      {
+        "tile_id": "1ff18c14bfc95d9ea59d",
+        "positive_queries": 4,
+        "known_queries": 23452
+      },
+      {
+        "tile_id": "34a274d6969d882e5350",
+        "positive_queries": 2,
+        "known_queries": 19156
+      },
+      {
+        "tile_id": "82e0b549a949f15a4954",
+        "positive_queries": 7,
+        "known_queries": 12181
+      },
+      {
+        "tile_id": "be7a1e1dd4279d3af7d5",
+        "positive_queries": 0,
+        "known_queries": 11683
+      },
+      {
+        "tile_id": "a552b2dac04c55495a85",
+        "positive_queries": 0,
+        "known_queries": 2443
+      },
+      {
+        "tile_id": "120e8cdfbab299443d0e",
+        "positive_queries": 0,
+        "known_queries": 2017
+      },
+      {
+        "tile_id": "327b1d6cd1cd08c26f75",
+        "positive_queries": 1,
+        "known_queries": 15536
+      },
+      {
+        "tile_id": "a6042c757623a184e11b",
+        "positive_queries": 102,
+        "known_queries": 17779
+      },
+      {
+        "tile_id": "9de074ef3211a7f34c8c",
+        "positive_queries": 3,
+        "known_queries": 11094
+      },
+      {
+        "tile_id": "8e41ff608e7d6398b275",
+        "positive_queries": 0,
+        "known_queries": 2039
+      },
+      {
+        "tile_id": "6abbfb034c6aea76618c",
+        "positive_queries": 9,
+        "known_queries": 6792
+      },
+      {
+        "tile_id": "b481937aa1b58e7fd46c",
+        "positive_queries": 1,
+        "known_queries": 17693
+      },
+      {
+        "tile_id": "191afa1a390416006307",
+        "positive_queries": 0,
+        "known_queries": 19434
+      },
+      {
+        "tile_id": "9c42889bf784a5fd3f5c",
+        "positive_queries": 1,
+        "known_queries": 12836
+      },
+      {
+        "tile_id": "c249cfd559f842d0ebcf",
+        "positive_queries": 3,
+        "known_queries": 6140
+      },
+      {
+        "tile_id": "fdc911c70c300e879455",
+        "positive_queries": 25,
+        "known_queries": 9621
+      },
+      {
+        "tile_id": "aaff2851109f9fbb3c90",
+        "positive_queries": 26,
+        "known_queries": 26953
+      },
+      {
+        "tile_id": "83adedb2623cc81fbaa0",
+        "positive_queries": 0,
+        "known_queries": 3684
+      },
+      {
+        "tile_id": "3ab07bf208329c230d23",
+        "positive_queries": 0,
+        "known_queries": 14209
+      },
+      {
+        "tile_id": "cc649cd39d3af4685673",
+        "positive_queries": 0,
+        "known_queries": 15417
+      },
+      {
+        "tile_id": "c6d3688dd59a5914727d",
+        "positive_queries": 4,
+        "known_queries": 5540
+      },
+      {
+        "tile_id": "f23bb99d8528e65fe011",
+        "positive_queries": 0,
+        "known_queries": 485
+      },
+      {
+        "tile_id": "fdf525d6d14e4a3c2c27",
+        "positive_queries": 0,
+        "known_queries": 5472
+      },
+      {
+        "tile_id": "00440094490b1a452025",
+        "positive_queries": 19,
+        "known_queries": 15015
+      },
+      {
+        "tile_id": "20dbe9b62d7e462232c5",
+        "positive_queries": 20,
+        "known_queries": 14208
+      },
+      {
+        "tile_id": "5386baa0a1aadb7f2d88",
+        "positive_queries": 0,
+        "known_queries": 10892
+      },
+      {
+        "tile_id": "7b2446eeaf98cd355ccd",
+        "positive_queries": 0,
+        "known_queries": 10319
+      },
+      {
+        "tile_id": "f5aa305632a84eec2fe5",
+        "positive_queries": 114,
+        "known_queries": 10310
+      },
+      {
+        "tile_id": "285881b4bc9ce08cb277",
+        "positive_queries": 622,
+        "known_queries": 14953
+      },
+      {
+        "tile_id": "1c0f822b0d0b985808e9",
+        "positive_queries": 3,
+        "known_queries": 36392
+      },
+      {
+        "tile_id": "9ef064bc51ae4dafede8",
+        "positive_queries": 0,
+        "known_queries": 8888
+      },
+      {
+        "tile_id": "15aab5ec01e7b33f5a53",
+        "positive_queries": 0,
+        "known_queries": 5250
+      },
+      {
+        "tile_id": "f3e7a67d0aae92c0361e",
+        "positive_queries": 0,
+        "known_queries": 3531
+      },
+      {
+        "tile_id": "aa5b49805ecaadab16d3",
+        "positive_queries": 16,
+        "known_queries": 7979
+      },
+      {
+        "tile_id": "9934dd26da4e68b7583a",
+        "positive_queries": 9,
+        "known_queries": 13213
+      },
+      {
+        "tile_id": "e757a8c6b24a950797a1",
+        "positive_queries": 0,
+        "known_queries": 7584
+      },
+      {
+        "tile_id": "b87868fc52889954b4f2",
+        "positive_queries": 0,
+        "known_queries": 7288
+      },
+      {
+        "tile_id": "9f135b0efb1b9b0e9d79",
+        "positive_queries": 50,
+        "known_queries": 11033
+      },
+      {
+        "tile_id": "d72a7749bd4c69fc1aea",
+        "positive_queries": 0,
+        "known_queries": 12677
+      },
+      {
+        "tile_id": "a7e204511bc7189eaa35",
+        "positive_queries": 105,
+        "known_queries": 17089
+      },
+      {
+        "tile_id": "022318639c2446b2ad7d",
+        "positive_queries": 229,
+        "known_queries": 21422
+      },
+      {
+        "tile_id": "81368d277bd1aa0f492f",
+        "positive_queries": 0,
+        "known_queries": 37563
+      },
+      {
+        "tile_id": "b67181b0f54f414c1bf9",
+        "positive_queries": 0,
+        "known_queries": 4
+      },
+      {
+        "tile_id": "88ebec8864c00c919e20",
+        "positive_queries": 0,
+        "known_queries": 95
+      },
+      {
+        "tile_id": "d7e2900c91a758a66949",
+        "positive_queries": 0,
+        "known_queries": 6453
+      },
+      {
+        "tile_id": "6ccc3483b7ec72b452dd",
+        "positive_queries": 0,
+        "known_queries": 4278
+      },
+      {
+        "tile_id": "f874516e038debb8cf34",
+        "positive_queries": 0,
+        "known_queries": 8669
+      },
+      {
+        "tile_id": "f093f060955a065f771a",
+        "positive_queries": 0,
+        "known_queries": 1404
+      },
+      {
+        "tile_id": "89402142271a292ecbd3",
+        "positive_queries": 0,
+        "known_queries": 12748
+      },
+      {
+        "tile_id": "ead664ae2fe89a152158",
+        "positive_queries": 121,
+        "known_queries": 10735
+      },
+      {
+        "tile_id": "3ec1312960ce731e12be",
+        "positive_queries": 0,
+        "known_queries": 16519
+      },
+      {
+        "tile_id": "af2dad0c2a53b1ba594d",
+        "positive_queries": 0,
+        "known_queries": 21398
+      },
+      {
+        "tile_id": "e07987ffb72c14994f46",
+        "positive_queries": 0,
+        "known_queries": 24037
+      },
+      {
+        "tile_id": "add7eb2af6b3ad9a7dcd",
+        "positive_queries": 0,
+        "known_queries": 36178
+      },
+      {
+        "tile_id": "8434d26962f4e394905d",
+        "positive_queries": 0,
+        "known_queries": 109
+      },
+      {
+        "tile_id": "8ff47f24341d22f62a08",
+        "positive_queries": 0,
+        "known_queries": 21
+      },
+      {
+        "tile_id": "31fa01a1ed6e401ccf33",
+        "positive_queries": 0,
+        "known_queries": 481
+      },
+      {
+        "tile_id": "7b0bfb0abf7f6ca43e82",
+        "positive_queries": 0,
+        "known_queries": 1400
+      },
+      {
+        "tile_id": "1d3b021e4036248b096a",
+        "positive_queries": 0,
+        "known_queries": 2111
+      },
+      {
+        "tile_id": "b6a266970062c94d321b",
+        "positive_queries": 0,
+        "known_queries": 3526
+      },
+      {
+        "tile_id": "55d3fc0156ae21994d04",
+        "positive_queries": 0,
+        "known_queries": 5687
+      },
+      {
+        "tile_id": "3bd278116d24609c51b2",
+        "positive_queries": 0,
+        "known_queries": 5378
+      },
+      {
+        "tile_id": "de033b53ed130d8b8d95",
+        "positive_queries": 0,
+        "known_queries": 7133
+      },
+      {
+        "tile_id": "6b59c8c9ea32d43adaa5",
+        "positive_queries": 0,
+        "known_queries": 13609
+      },
+      {
+        "tile_id": "67e72ea4596956ed48d8",
+        "positive_queries": 0,
+        "known_queries": 23459
+      },
+      {
+        "tile_id": "21a27ceb6166e084e4a2",
+        "positive_queries": 0,
+        "known_queries": 28632
+      },
+      {
+        "tile_id": "5b04c8a3a27e82389298",
+        "positive_queries": 0,
+        "known_queries": 33034
+      },
+      {
+        "tile_id": "ebf2e0581e9d61a5164d",
+        "positive_queries": 0,
+        "known_queries": 601
+      },
+      {
+        "tile_id": "92e28b1b326b65853d60",
+        "positive_queries": 0,
+        "known_queries": 1499
+      },
+      {
+        "tile_id": "68cf2248d50eb6660ccc",
+        "positive_queries": 0,
+        "known_queries": 2775
+      },
+      {
+        "tile_id": "c9ffe68261a2742794ea",
+        "positive_queries": 0,
+        "known_queries": 2083
+      },
+      {
+        "tile_id": "be6c1261783e39be16f9",
+        "positive_queries": 0,
+        "known_queries": 3618
+      },
+      {
+        "tile_id": "718a5eab88ac650a3f4b",
+        "positive_queries": 0,
+        "known_queries": 4090
+      },
+      {
+        "tile_id": "893733d0e8624fe707be",
+        "positive_queries": 0,
+        "known_queries": 7341
+      },
+      {
+        "tile_id": "bcbd29592daf80a31b6e",
+        "positive_queries": 0,
+        "known_queries": 8982
+      },
+      {
+        "tile_id": "2e25394b0b664d1e658f",
+        "positive_queries": 0,
+        "known_queries": 10378
+      },
+      {
+        "tile_id": "cd8ff525253db5e81c45",
+        "positive_queries": 0,
+        "known_queries": 15421
+      },
+      {
+        "tile_id": "1e17a86a1a3eee7db63c",
+        "positive_queries": 0,
+        "known_queries": 20797
+      },
+      {
+        "tile_id": "266244dd3150cdd3be3a",
+        "positive_queries": 0,
+        "known_queries": 27332
+      },
+      {
+        "tile_id": "f9c473ca019ab49ef684",
+        "positive_queries": 0,
+        "known_queries": 216
+      },
+      {
+        "tile_id": "3a451286918d8fda7abd",
+        "positive_queries": 0,
+        "known_queries": 1094
+      },
+      {
+        "tile_id": "ca563231239e9f960409",
+        "positive_queries": 0,
+        "known_queries": 2100
+      },
+      {
+        "tile_id": "67585b29f94ce2bda104",
+        "positive_queries": 0,
+        "known_queries": 6161
+      },
+      {
+        "tile_id": "1ccc1dce2f32a08c3e94",
+        "positive_queries": 0,
+        "known_queries": 7093
+      },
+      {
+        "tile_id": "298e72b5a32e495a10fe",
+        "positive_queries": 0,
+        "known_queries": 8146
+      },
+      {
+        "tile_id": "6218e92de66bd3c3c97e",
+        "positive_queries": 0,
+        "known_queries": 9776
+      },
+      {
+        "tile_id": "61b062125fb5a9cdaef6",
+        "positive_queries": 0,
+        "known_queries": 13043
+      },
+      {
+        "tile_id": "5dd817146245844f1a5f",
+        "positive_queries": 0,
+        "known_queries": 16935
+      },
+      {
+        "tile_id": "6bc55c69a4ac2fac67ec",
+        "positive_queries": 0,
+        "known_queries": 26305
+      },
+      {
+        "tile_id": "223396d776a4e5827784",
+        "positive_queries": 0,
+        "known_queries": 32454
+      },
+      {
+        "tile_id": "c342ba991b581d068a7a",
+        "positive_queries": 0,
+        "known_queries": 36
+      },
+      {
+        "tile_id": "1ea7c75e9b1e4c894bc1",
+        "positive_queries": 0,
+        "known_queries": 740
+      },
+      {
+        "tile_id": "661346191437576e06c3",
+        "positive_queries": 0,
+        "known_queries": 2683
+      },
+      {
+        "tile_id": "f958eb4fa2334348737e",
+        "positive_queries": 0,
+        "known_queries": 5252
+      },
+      {
+        "tile_id": "0d9137c8697e383f5fad",
+        "positive_queries": 0,
+        "known_queries": 10520
+      },
+      {
+        "tile_id": "ba7413d6a55b72a650ea",
+        "positive_queries": 0,
+        "known_queries": 102
+      },
+      {
+        "tile_id": "9da2ed8dea303635e5b4",
+        "positive_queries": 0,
+        "known_queries": 1020
+      },
+      {
+        "tile_id": "3f3db9f94a8a065f348b",
+        "positive_queries": 0,
+        "known_queries": 1861
+      },
+      {
+        "tile_id": "e56e40bab3ee600969ad",
+        "positive_queries": 0,
+        "known_queries": 7550
+      },
+      {
+        "tile_id": "421a5419471ff466b21b",
+        "positive_queries": 0,
+        "known_queries": 7664
+      },
+      {
+        "tile_id": "247ad852007ed281e96a",
+        "positive_queries": 0,
+        "known_queries": 8631
+      },
+      {
+        "tile_id": "20b8299b9de4077fb83f",
+        "positive_queries": 89,
+        "known_queries": 12084
+      },
+      {
+        "tile_id": "8d8d3951692f1c4bec1a",
+        "positive_queries": 0,
+        "known_queries": 1221
+      },
+      {
+        "tile_id": "577fed242213e107ae79",
+        "positive_queries": 0,
+        "known_queries": 1031
+      },
+      {
+        "tile_id": "dc4adbde993920e70cc9",
+        "positive_queries": 0,
+        "known_queries": 6033
+      },
+      {
+        "tile_id": "d6a2ce36aba439a379ac",
+        "positive_queries": 0,
+        "known_queries": 8384
+      },
+      {
+        "tile_id": "0f1706324613f3984e80",
+        "positive_queries": 0,
+        "known_queries": 8999
+      },
+      {
+        "tile_id": "92ce99aac6bf9a9918ae",
+        "positive_queries": 0,
+        "known_queries": 12143
+      },
+      {
+        "tile_id": "ceaf320d27b9e2edede7",
+        "positive_queries": 0,
+        "known_queries": 13409
+      },
+      {
+        "tile_id": "8c5bd47653d776ae0ba0",
+        "positive_queries": 0,
+        "known_queries": 15300
+      },
+      {
+        "tile_id": "2e10a58114d0ea67b802",
+        "positive_queries": 159,
+        "known_queries": 16860
+      },
+      {
+        "tile_id": "aca9238af6cd5e452de0",
+        "positive_queries": 0,
+        "known_queries": 13524
+      },
+      {
+        "tile_id": "6b21284d877b68b36676",
+        "positive_queries": 0,
+        "known_queries": 25461
+      },
+      {
+        "tile_id": "d6073bc48395a7adc407",
+        "positive_queries": 0,
+        "known_queries": 17444
+      },
+      {
+        "tile_id": "e5b5c9a9b0eec5c54c58",
+        "positive_queries": 0,
+        "known_queries": 10835
+      },
+      {
+        "tile_id": "10d204f85b35d9b871a0",
+        "positive_queries": 0,
+        "known_queries": 10004
+      },
+      {
+        "tile_id": "b789c5807d2726e13961",
+        "positive_queries": 0,
+        "known_queries": 11482
+      },
+      {
+        "tile_id": "6f1e03467ce8d9c3fd50",
+        "positive_queries": 0,
+        "known_queries": 13767
+      },
+      {
+        "tile_id": "c977b0649356c68ee98f",
+        "positive_queries": 0,
+        "known_queries": 13105
+      },
+      {
+        "tile_id": "30dcd1b234022cc1a6e8",
+        "positive_queries": 0,
+        "known_queries": 10289
+      },
+      {
+        "tile_id": "6103cb5f2e0eee7b0265",
+        "positive_queries": 0,
+        "known_queries": 8626
+      },
+      {
+        "tile_id": "da86b143fcfd40220c13",
+        "positive_queries": 0,
+        "known_queries": 22220
+      },
+      {
+        "tile_id": "015169e3ab37645a158d",
+        "positive_queries": 0,
+        "known_queries": 14072
+      },
+      {
+        "tile_id": "98263846673f6183a819",
+        "positive_queries": 0,
+        "known_queries": 14393
+      },
+      {
+        "tile_id": "7681ca37604252920841",
+        "positive_queries": 0,
+        "known_queries": 23840
+      }
+    ],
+    "localization_removed_true_positive_queries": 244,
+    "localization_removed_false_positive_queries": 505
+  },
+  "test": {
+    "query": {
+      "VIIRS_reference_self_comparison": {
+        "TP": 95,
+        "FP": 0,
+        "FN": 0,
+        "TN": 585369,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "reference_positives": 95,
+        "samples": 585464,
+        "average_precision": 1.0
+      },
+      "standard_MODIS": {
+        "TP": 76,
+        "FP": 93,
+        "FN": 19,
+        "TN": 585276,
+        "precision": 0.44970414201183434,
+        "recall": 0.8,
+        "f1": 0.5757575757575758,
+        "reference_positives": 95,
+        "samples": 585464,
+        "average_precision": 0.3597957665015326
+      },
+      "unsupervised_coarse": {
+        "TP": 83,
+        "FP": 136,
+        "FN": 12,
+        "TN": 585233,
+        "precision": 0.3789954337899543,
+        "recall": 0.8736842105263158,
+        "f1": 0.5286624203821656,
+        "reference_positives": 95,
+        "samples": 585464,
+        "average_precision": 0.5316982291234552
+      },
+      "unsupervised_two_stage": {
+        "TP": 55,
+        "FP": 91,
+        "FN": 40,
+        "TN": 585278,
+        "precision": 0.3767123287671233,
+        "recall": 0.5789473684210527,
+        "f1": 0.45643153526970953,
+        "reference_positives": 95,
+        "samples": 585464,
+        "average_precision": null
+      },
+      "V1_coarse": {
+        "TP": 8,
+        "FP": 54,
+        "FN": 87,
+        "TN": 585315,
+        "precision": 0.12903225806451613,
+        "recall": 0.08421052631578947,
+        "f1": 0.10191082802547771,
+        "reference_positives": 95,
+        "samples": 585464,
+        "average_precision": 0.016890024534226045
+      },
+      "V1_two_stage": {
+        "TP": 6,
+        "FP": 44,
+        "FN": 89,
+        "TN": 585325,
+        "precision": 0.12,
+        "recall": 0.06315789473684211,
+        "f1": 0.08275862068965517,
+        "reference_positives": 95,
+        "samples": 585464,
+        "average_precision": null
+      }
+    },
+    "native_cell": {
+      "VIIRS_reference_self_comparison": {
+        "TP": 39,
+        "FP": 0,
+        "FN": 0,
+        "TN": 103030,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "reference_positives": 39,
+        "samples": 103069,
+        "average_precision": 1.0
+      },
+      "standard_MODIS": {
+        "TP": 29,
+        "FP": 9,
+        "FN": 10,
+        "TN": 103021,
+        "precision": 0.7631578947368421,
+        "recall": 0.7435897435897436,
+        "f1": 0.7532467532467533,
+        "reference_positives": 39,
+        "samples": 103069,
+        "average_precision": 0.5675734056489208
+      },
+      "unsupervised_coarse": {
+        "TP": 32,
+        "FP": 20,
+        "FN": 7,
+        "TN": 103010,
+        "precision": 0.6153846153846154,
+        "recall": 0.8205128205128205,
+        "f1": 0.7032967032967034,
+        "reference_positives": 39,
+        "samples": 103069,
+        "average_precision": 0.7391109088736879
+      }
+    },
+    "coverage": {
+      "positive": 1.0,
+      "negative": 1.0,
+      "eligible_positives": 95,
+      "positive_count": 95,
+      "positive_selected_band_counts": {
+        "0": 0,
+        "21": 68,
+        "22": 27
+      }
+    },
+    "known_query_model_coverage": 1.0,
+    "all_native_alerts": 118,
+    "alerts_with_supported_localization": 69,
+    "tile_metrics": [
+      {
+        "tile_id": "4800530f679888c921dc",
+        "positive_queries": 0,
+        "known_queries": 2364
+      },
+      {
+        "tile_id": "1bd6281a4ffbb4fc559b",
+        "positive_queries": 0,
+        "known_queries": 1425
+      },
+      {
+        "tile_id": "2414fae45970d6362142",
+        "positive_queries": 0,
+        "known_queries": 1080
+      },
+      {
+        "tile_id": "1593b43dec90dd4f1bfe",
+        "positive_queries": 0,
+        "known_queries": 51
+      },
+      {
+        "tile_id": "003affc9ddf84fee6761",
+        "positive_queries": 0,
+        "known_queries": 5536
+      },
+      {
+        "tile_id": "476cbf42b6233bbcf898",
+        "positive_queries": 0,
+        "known_queries": 7735
+      },
+      {
+        "tile_id": "b585097acfb64934f64b",
+        "positive_queries": 0,
+        "known_queries": 12853
+      },
+      {
+        "tile_id": "dd9f3ac1f5f956158d6d",
+        "positive_queries": 0,
+        "known_queries": 8214
+      },
+      {
+        "tile_id": "5183580e1f33f6f7a9d2",
+        "positive_queries": 0,
+        "known_queries": 10996
+      },
+      {
+        "tile_id": "5ed621b740255a754378",
+        "positive_queries": 0,
+        "known_queries": 1747
+      },
+      {
+        "tile_id": "85cad3ec585346070c8c",
+        "positive_queries": 0,
+        "known_queries": 10269
+      },
+      {
+        "tile_id": "f1c416e4e182c1a42090",
+        "positive_queries": 0,
+        "known_queries": 12558
+      },
+      {
+        "tile_id": "f7e4273bbcd1064787ed",
+        "positive_queries": 0,
+        "known_queries": 10448
+      },
+      {
+        "tile_id": "2790c6ce339d168c722d",
+        "positive_queries": 0,
+        "known_queries": 13046
+      },
+      {
+        "tile_id": "44a1dad80b577c1e5867",
+        "positive_queries": 0,
+        "known_queries": 2547
+      },
+      {
+        "tile_id": "2ba3c2795c9fcfa4ce2f",
+        "positive_queries": 0,
+        "known_queries": 11715
+      },
+      {
+        "tile_id": "22a81805a14195167baf",
+        "positive_queries": 0,
+        "known_queries": 9066
+      },
+      {
+        "tile_id": "c3eedb837bf9eaa89f9e",
+        "positive_queries": 0,
+        "known_queries": 6181
+      },
+      {
+        "tile_id": "80dee0d57d0555ccf28a",
+        "positive_queries": 0,
+        "known_queries": 12941
+      },
+      {
+        "tile_id": "8426f5d22a9f5c21b183",
+        "positive_queries": 0,
+        "known_queries": 8
+      },
+      {
+        "tile_id": "e4afbff40efdc320e665",
+        "positive_queries": 0,
+        "known_queries": 21343
+      },
+      {
+        "tile_id": "80cb8f49b6538b6bea91",
+        "positive_queries": 0,
+        "known_queries": 3447
+      },
+      {
+        "tile_id": "f56a17f73833bbf33b90",
+        "positive_queries": 0,
+        "known_queries": 12443
+      },
+      {
+        "tile_id": "f60e23f28439acc79240",
+        "positive_queries": 0,
+        "known_queries": 14529
+      },
+      {
+        "tile_id": "fac98a831c14e03dbf55",
+        "positive_queries": 0,
+        "known_queries": 1743
+      },
+      {
+        "tile_id": "1706aee617d5f7a9392f",
+        "positive_queries": 30,
+        "known_queries": 11336
+      },
+      {
+        "tile_id": "7a2d1a0a2ef885fd34b5",
+        "positive_queries": 11,
+        "known_queries": 15726
+      },
+      {
+        "tile_id": "7b908e83b9af7d146592",
+        "positive_queries": 0,
+        "known_queries": 1793
+      },
+      {
+        "tile_id": "ef9e4306093e8738d514",
+        "positive_queries": 0,
+        "known_queries": 9487
+      },
+      {
+        "tile_id": "a8df565f0f38dce3826c",
+        "positive_queries": 3,
+        "known_queries": 11553
+      },
+      {
+        "tile_id": "75ddc2bc26f7c29ac0e1",
+        "positive_queries": 0,
+        "known_queries": 1624
+      },
+      {
+        "tile_id": "fdb187605e141ced9116",
+        "positive_queries": 0,
+        "known_queries": 8577
+      },
+      {
+        "tile_id": "b665b8d3ad6e034633b0",
+        "positive_queries": 0,
+        "known_queries": 7397
+      },
+      {
+        "tile_id": "1ef5a9b8dc1630156bd3",
+        "positive_queries": 0,
+        "known_queries": 9434
+      },
+      {
+        "tile_id": "21693ae3414e07ce385d",
+        "positive_queries": 0,
+        "known_queries": 877
+      },
+      {
+        "tile_id": "0633e571c9087b5aa9af",
+        "positive_queries": 0,
+        "known_queries": 9854
+      },
+      {
+        "tile_id": "39864ef7704ba6e85715",
+        "positive_queries": 0,
+        "known_queries": 6134
+      },
+      {
+        "tile_id": "4c76fcece9b709afb1f4",
+        "positive_queries": 0,
+        "known_queries": 7538
+      },
+      {
+        "tile_id": "becc7a9c624777551dd2",
+        "positive_queries": 0,
+        "known_queries": 638
+      },
+      {
+        "tile_id": "a1619d465f8c1681c083",
+        "positive_queries": 0,
+        "known_queries": 6859
+      },
+      {
+        "tile_id": "68f58700efb69625eaa7",
+        "positive_queries": 0,
+        "known_queries": 4909
+      },
+      {
+        "tile_id": "3d44b29bc85d9ec66855",
+        "positive_queries": 0,
+        "known_queries": 928
+      },
+      {
+        "tile_id": "8bd09014770b3b9f3541",
+        "positive_queries": 0,
+        "known_queries": 1219
+      },
+      {
+        "tile_id": "eade32546ea628f43b82",
+        "positive_queries": 0,
+        "known_queries": 15372
+      },
+      {
+        "tile_id": "65663d38f6ac02f23e5f",
+        "positive_queries": 0,
+        "known_queries": 20064
+      },
+      {
+        "tile_id": "785aaa8bc8f53a2471e6",
+        "positive_queries": 0,
+        "known_queries": 14280
+      },
+      {
+        "tile_id": "c34deaf114070d357ebc",
+        "positive_queries": 0,
+        "known_queries": 2390
+      },
+      {
+        "tile_id": "213ae618e5d9a046a82c",
+        "positive_queries": 0,
+        "known_queries": 16820
+      },
+      {
+        "tile_id": "4038bfe67f41e255f5e3",
+        "positive_queries": 0,
+        "known_queries": 15629
+      },
+      {
+        "tile_id": "299fc3fe1192a45aac8c",
+        "positive_queries": 0,
+        "known_queries": 3124
+      },
+      {
+        "tile_id": "175f8e59f4b44d4bcba1",
+        "positive_queries": 0,
+        "known_queries": 9926
+      },
+      {
+        "tile_id": "e5463d4b3512a253f3f3",
+        "positive_queries": 0,
+        "known_queries": 10187
+      },
+      {
+        "tile_id": "4f54612fc7b7f8be4786",
+        "positive_queries": 0,
+        "known_queries": 775
+      },
+      {
+        "tile_id": "7a006b2f3d475c0982d5",
+        "positive_queries": 0,
+        "known_queries": 5510
+      },
+      {
+        "tile_id": "d26795e87a78a814df81",
+        "positive_queries": 0,
+        "known_queries": 15920
+      },
+      {
+        "tile_id": "bedd9a7ad297ef470692",
+        "positive_queries": 0,
+        "known_queries": 337
+      },
+      {
+        "tile_id": "0a25472fcd34dc3d9f7b",
+        "positive_queries": 0,
+        "known_queries": 12628
+      },
+      {
+        "tile_id": "1872c33d5a6c0b5a1c8f",
+        "positive_queries": 0,
+        "known_queries": 15157
+      },
+      {
+        "tile_id": "4e3f930c793bd7de1ccc",
+        "positive_queries": 0,
+        "known_queries": 8274
+      },
+      {
+        "tile_id": "d5786bce2d9b0f67e86d",
+        "positive_queries": 0,
+        "known_queries": 12
+      },
+      {
+        "tile_id": "78b4011e7126df1d60a2",
+        "positive_queries": 0,
+        "known_queries": 11887
+      },
+      {
+        "tile_id": "9357610608da37c624a4",
+        "positive_queries": 0,
+        "known_queries": 6307
+      },
+      {
+        "tile_id": "ca7ba7a384d0f48e86f2",
+        "positive_queries": 0,
+        "known_queries": 1576
+      },
+      {
+        "tile_id": "a6b425c78f9871c74c6f",
+        "positive_queries": 0,
+        "known_queries": 8117
+      },
+      {
+        "tile_id": "ed10ff0c2a2a09422444",
+        "positive_queries": 0,
+        "known_queries": 3277
+      },
+      {
+        "tile_id": "f4c2c7f86d4983597e33",
+        "positive_queries": 0,
+        "known_queries": 259
+      },
+      {
+        "tile_id": "2fcfde85c493f20a537b",
+        "positive_queries": 0,
+        "known_queries": 13231
+      },
+      {
+        "tile_id": "b48e06629aa1532f29bd",
+        "positive_queries": 0,
+        "known_queries": 12559
+      },
+      {
+        "tile_id": "1a7446024ad0d5aee095",
+        "positive_queries": 0,
+        "known_queries": 185
+      },
+      {
+        "tile_id": "9ded172911b83696bfaa",
+        "positive_queries": 42,
+        "known_queries": 13779
+      },
+      {
+        "tile_id": "1b41efecb863f4c0e7f6",
+        "positive_queries": 0,
+        "known_queries": 3007
+      },
+      {
+        "tile_id": "433088614c2cb69168d0",
+        "positive_queries": 0,
+        "known_queries": 7299
+      },
+      {
+        "tile_id": "d90def4e29dd3aa46e36",
+        "positive_queries": 0,
+        "known_queries": 2701
+      },
+      {
+        "tile_id": "66bfa9820196445da3f1",
+        "positive_queries": 0,
+        "known_queries": 41
+      },
+      {
+        "tile_id": "e7ad1b23c44dc69a5d9f",
+        "positive_queries": 0,
+        "known_queries": 83
+      },
+      {
+        "tile_id": "b6433b988f7ef2229a63",
+        "positive_queries": 0,
+        "known_queries": 5545
+      },
+      {
+        "tile_id": "a9e57bb788b0dc21f834",
+        "positive_queries": 0,
+        "known_queries": 2002
+      },
+      {
+        "tile_id": "2dbeea692b29babbdc5c",
+        "positive_queries": 0,
+        "known_queries": 9
+      },
+      {
+        "tile_id": "358ec935364ba67b33f5",
+        "positive_queries": 9,
+        "known_queries": 10691
+      },
+      {
+        "tile_id": "ee8cffdcd3184ca9c3bc",
+        "positive_queries": 0,
+        "known_queries": 3911
+      },
+      {
+        "tile_id": "b56548b6adbb2c50efba",
+        "positive_queries": 0,
+        "known_queries": 352
+      },
+      {
+        "tile_id": "44db52dfcf9073f923f9",
+        "positive_queries": 0,
+        "known_queries": 254
+      },
+      {
+        "tile_id": "38ccb7299f376757b2ee",
+        "positive_queries": 0,
+        "known_queries": 27
+      },
+      {
+        "tile_id": "b2dbb14ad39ae647df72",
+        "positive_queries": 0,
+        "known_queries": 1792
+      }
+    ],
+    "localization_removed_true_positive_queries": 28,
+    "localization_removed_false_positive_queries": 45
+  }
+}

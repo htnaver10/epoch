@@ -1,0 +1,80 @@
+[
+  {
+    "file": "comparison/01_overview.png",
+    "pdf": "comparison/01_overview.pdf",
+    "title": "Overall comparison",
+    "caption": "Each model uses its existing frozen policy. Policies were selected differently; these are not equal-alert-budget comparisons. VIIRS defines the reference labels."
+  },
+  {
+    "file": "comparison/02_precision_recall.png",
+    "pdf": "comparison/02_precision_recall.pdf",
+    "title": "Precision\u2013recall ranking",
+    "caption": "Dots/squares show frozen operating points. Curves are diagnostic sweeps of saved scores; no new threshold was selected. V2 localization has a binary policy, so it is shown as a point only. VIIRS self-comparison is omitted from ranking curves."
+  },
+  {
+    "file": "comparison/03_native_cells.png",
+    "pdf": "comparison/03_native_cells.pdf",
+    "title": "Comparison at native MODIS-cell scale",
+    "caption": "PLS MLP and hybrid use separately frozen validation cell policies; V2 preserves its native alert policy. The MLP cell comparator uses CPU float32 scores; its original query comparator used BF16. No saved tree cell policy exists, so none was fitted for this chart. Partial observed support is not a full physical footprint."
+  },
+  {
+    "file": "spatial/01_shared_scene.png",
+    "pdf": "spatial/01_shared_scene.pdf",
+    "title": "Shared scene: all models",
+    "caption": "This display uses the test tile with the most positive labels; it is not a typical-scene claim. The crop includes the union of reference positives and all model alerts in that tile, with an eight-query margin. Maps use query indices, not a claim of finer measured thermal resolution."
+  },
+  {
+    "file": "models/viirs.png",
+    "pdf": "models/viirs.pdf",
+    "title": "VIIRS reference",
+    "caption": "Top panels cover the complete benchmark; bottom panels show the same selected tile and crop (9ded172911b83696bfaa). Self-comparison; not independent accuracy."
+  },
+  {
+    "file": "models/modis.png",
+    "pdf": "models/modis.pdf",
+    "title": "Standard MODIS",
+    "caption": "Top panels cover the complete benchmark; bottom panels show the same selected tile and crop (9ded172911b83696bfaa)."
+  },
+  {
+    "file": "models/mlp.png",
+    "pdf": "models/mlp.pdf",
+    "title": "PLSWORK contextual MLP",
+    "caption": "Top panels cover the complete benchmark; bottom panels show the same selected tile and crop (9ded172911b83696bfaa)."
+  },
+  {
+    "file": "models/tree.png",
+    "pdf": "models/tree.pdf",
+    "title": "PLSWORK tree baseline",
+    "caption": "Top panels cover the complete benchmark; bottom panels show the same selected tile and crop (9ded172911b83696bfaa)."
+  },
+  {
+    "file": "models/hybrid.png",
+    "pdf": "models/hybrid.pdf",
+    "title": "PLSWORK neural/tree hybrid",
+    "caption": "Top panels cover the complete benchmark; bottom panels show the same selected tile and crop (9ded172911b83696bfaa)."
+  },
+  {
+    "file": "models/v2.png",
+    "pdf": "models/v2.pdf",
+    "title": "SaturationAwareBackgroundV2",
+    "caption": "Top panels cover the complete benchmark; bottom panels show the same selected tile and crop (9ded172911b83696bfaa)."
+  },
+  {
+    "file": "models/v2_localized.png",
+    "pdf": "models/v2_localized.pdf",
+    "title": "V2 with localization",
+    "caption": "Top panels cover the complete benchmark; bottom panels show the same selected tile and crop (9ded172911b83696bfaa)."
+  },
+  {
+    "file": "comparison/04_by_overpass.png",
+    "pdf": "comparison/04_by_overpass.pdf",
+    "title": "Results by overpass",
+    "caption": "All benchmark locations are retained, including overpasses with few or no positive labels. Compare using the same count scale across panels."
+  },
+  {
+    "file": "training/01_learning_curves.png",
+    "pdf": "training/01_learning_curves.pdf",
+    "title": "Saved learning curves",
+    "caption": "These curves describe their original experiments; no model was retrained. Different objectives, development composition and precision prevent a direct training-loss comparison."
+  }
+]

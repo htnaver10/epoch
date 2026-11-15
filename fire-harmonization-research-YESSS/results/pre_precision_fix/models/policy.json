@@ -1,0 +1,63 @@
+{
+  "stages": {
+    "coarse": {
+      "day": {
+        "residual_center": [
+          -0.024665355682373047,
+          -0.0016207695007324219
+        ],
+        "residual_scale": [
+          0.2418028712272644,
+          0.20696906745433807
+        ],
+        "cutoff": 9.531586647033693,
+        "calibration_samples": 689675,
+        "requested_alert_fraction": 0.001,
+        "realized_alert_fraction": 0.001000471236451952,
+        "pooled_fallback": false
+      },
+      "night": {
+        "residual_center": [
+          -0.024665355682373047,
+          -0.0016207695007324219
+        ],
+        "residual_scale": [
+          0.2418028712272644,
+          0.20696906745433807
+        ],
+        "cutoff": 9.531586647033693,
+        "calibration_samples": 689675,
+        "requested_alert_fraction": 0.001,
+        "realized_alert_fraction": 0.001000471236451952,
+        "pooled_fallback": true
+      }
+    },
+    "fine": {
+      "day": {
+        "residual_center": [
+          0.027038265019655228
+        ],
+        "residual_scale": [
+          0.2289871722459793
+        ],
+        "cutoff": 5.419306278228761,
+        "calibration_samples": 2761434,
+        "requested_alert_fraction": 0.01,
+        "realized_alert_fraction": 0.010000239006255445,
+        "pooled_fallback": false
+      }
+    }
+  },
+  "artifacts": {
+    "models/coarse/inference.pt": "d75685c34977bbedc3a4075dcbcf4dc39679c90a980e37a819b2fa60f66cde2f",
+    "models/fine/inference.pt": "30445438ad8213c7d16abda63daf41c8589877cecbb191a88d790908e78c8e47",
+    "data/features/receipt.json": "e5149424fd491af9a75a4f4c5b53f088bb1698c6103c3679fc2969be3344aa1a",
+    "results/fit_lock.json": "115f6d89d1013be56530bdb1bcd2f44f9824800f9ec8e577b00f74daf93dbdb8"
+  },
+  "fit_split": "validation_MODIS_measurements_only",
+  "uses_reference_labels": false,
+  "threshold_uses_modis_fire_flags": false,
+  "meaning": "Empirical unlabeled alert-volume thresholds, not fire probabilities or false-positive guarantees",
+  "localization": "Daytime only; all four 500m samples must be valid; require SWIR anomaly above unlabeled 99th percentile; retain top two scores including ties; otherwise unresolved",
+  "fixed_before_reference_evaluation": true
+}

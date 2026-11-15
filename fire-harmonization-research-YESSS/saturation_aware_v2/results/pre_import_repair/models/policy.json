@@ -1,0 +1,83 @@
+{
+  "model_name": "SaturationAwareBackgroundV2",
+  "stages": {
+    "coarse": {
+      "day": {
+        "residual_center": [
+          -0.0007205009460449219,
+          0.0325549840927124
+        ],
+        "residual_scale": [
+          0.40068531036376953,
+          0.20038741827011108
+        ],
+        "cutoff": 10.82079797307688,
+        "calibration_samples": 1356539,
+        "per_channel_observed_samples": [
+          1356539,
+          1355818
+        ],
+        "requested_alert_fraction": 0.001,
+        "realized_alert_fraction": 0.0009996026653122394,
+        "selected_channel_counts": [
+          721,
+          1355818
+        ]
+      },
+      "night": {
+        "residual_center": [
+          0.020392436534166336,
+          -0.002405494451522827
+        ],
+        "residual_scale": [
+          0.17881403863430023,
+          0.05
+        ],
+        "cutoff": 9.153917431831362,
+        "calibration_samples": 841856,
+        "per_channel_observed_samples": [
+          841856,
+          841818
+        ],
+        "requested_alert_fraction": 0.001,
+        "realized_alert_fraction": 0.0009989831990269119,
+        "selected_channel_counts": [
+          38,
+          841818
+        ]
+      }
+    },
+    "fine": {
+      "day": {
+        "residual_center": [
+          -0.004839837551116943
+        ],
+        "residual_scale": [
+          0.17511650919914246
+        ],
+        "cutoff": 5.565351216444703,
+        "calibration_samples": 5425882,
+        "per_channel_observed_samples": [
+          5425882
+        ],
+        "requested_alert_fraction": 0.01,
+        "realized_alert_fraction": 0.009999848872496674,
+        "selected_channel_counts": null
+      }
+    }
+  },
+  "artifacts": {
+    "models/coarse/inference.pt": "7b7cd4d60904db0ecae4d226133c0053ad608ffd36b766e89c17ea4ddedbf52f",
+    "models/fine/inference.pt": "37c749c5d347ba6d684337fb01a3c3cf3851b561b2085aa3140fdecc499b0aa6",
+    "data/features/receipt.json": "4ef1f0151cc4673c09b8e561a40add9b5d097ee1fd8730901e9d7f6b62346f3e",
+    "results/source_lock.json": "e757c44b2c107de3b416f435ade1df32b573117cea59f04fb38f7498bd1fcad0"
+  },
+  "fit_split": "unlabeled_whole_swath_development",
+  "uses_reference_labels": false,
+  "threshold_uses_modis_fire_flags": false,
+  "nighttime_fallback": false,
+  "meaning": "Empirical alert-volume control; anomaly scores are not fire probabilities and alert volume is not false-positive rate",
+  "channel_rule": "Use standardized band-22 residual when valid, otherwise band-21 residual. Separate prediction heads and observed-target masks; no radiance blending or saturated-value imputation.",
+  "fixed_before_reference_evaluation": true,
+  "localization": "Unchanged V1 heuristic: valid 500m daytime children, strong residual, top two including ties; unresolved alerts retain all children."
+}

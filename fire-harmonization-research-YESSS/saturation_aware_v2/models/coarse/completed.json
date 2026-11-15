@@ -1,0 +1,16 @@
+{
+  "model_name": "SaturationAwareBackgroundV2",
+  "stage": "coarse",
+  "epochs_completed": 40,
+  "selected_epoch": 40,
+  "selection_metric": "unlabeled validation SmoothL1 reconstruction loss",
+  "best_loss": 0.052724089447268425,
+  "training_samples": 1696366,
+  "validation_samples": 2198395,
+  "parameters": 6306,
+  "seconds_this_invocation": 3.9840472000068985,
+  "export_sha256": "7b7cd4d60904db0ecae4d226133c0053ad608ffd36b766e89c17ea4ddedbf52f",
+  "uses_viirs_labels": false,
+  "uses_modis_fire_labels": false,
+  "torch_version": "2.11.0+cu128"
+}

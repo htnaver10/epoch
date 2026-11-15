@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.partial
+data/source_tiles/
+data/modis/
+data/references/
+data/features/*.npy
+models/**/*.pt
+results/**/*.npz
+results/**/*.npy

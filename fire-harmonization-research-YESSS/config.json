@@ -1,0 +1,14 @@
+{
+  "name": "unsupervised_two_stage_v1",
+  "source_folder": "../fire-harmonization-PLSWORK",
+  "source_manifest": "data/manifests/source_v3.jsonl",
+  "source_manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+  "python": "../fire-harmonization-research-fullres/.venv/Scripts/python.exe",
+  "halo": 16,
+  "seed": 42,
+  "training": {"hidden": [64, 32], "epochs": 40, "patience": 7, "batch_size": 32768, "learning_rate": 0.001, "weight_decay": 0.0001, "gradient_clip": 1.0, "device": "cuda"},
+  "coarse_alert_fraction": 0.001,
+  "localization_alert_fraction": 0.01,
+  "minimum_daylight_cosine": 0.17364817766693041,
+  "scope": "Self-supervised background prediction on the existing paired-scene corpus; no VIIRS or MODIS fire labels used for fitting, early stopping, normalization or thresholds. Previously examined benchmark, not a new blind test."
+}

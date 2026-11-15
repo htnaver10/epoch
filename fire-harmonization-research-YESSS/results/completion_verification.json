@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "physical_copy_files_verified": 3303,
+  "satellite_downloads": 0,
+  "fire_labels_used_for_training_or_selection": false,
+  "fire_labels_used_for_thresholds": false,
+  "test_inputs_used_for_fitting": false,
+  "source_and_feature_hashes_verified": true,
+  "input_only_inference_matches_evaluation": true,
+  "localization_preserves_parent_alerts": true,
+  "original_reference_exposure_unchanged": true,
+  "independent_confusion_counts_reconcile": true,
+  "unlabeled_alert_budgets_respected": true,
+  "new_blind_test": false
+}

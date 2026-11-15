@@ -1,0 +1,15 @@
+{
+  "stage": "fine",
+  "epochs_completed": 13,
+  "selected_epoch": 6,
+  "selection_metric": "unlabeled validation SmoothL1 reconstruction loss",
+  "best_loss": 0.06385627829940596,
+  "training_samples": 4605619,
+  "validation_samples": 2761434,
+  "parameters": 4993,
+  "seconds_this_invocation": 2.9147358000045642,
+  "export_sha256": "30445438ad8213c7d16abda63daf41c8589877cecbb191a88d790908e78c8e47",
+  "uses_viirs_labels": false,
+  "uses_modis_fire_labels": false,
+  "torch_version": "2.11.0+cu128"
+}

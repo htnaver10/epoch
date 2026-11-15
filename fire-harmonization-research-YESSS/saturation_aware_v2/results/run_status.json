@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "verification": {
+    "passed": true,
+    "model_name": "SaturationAwareBackgroundV2",
+    "prior_models_and_results_unchanged": true,
+    "shared_files_verified": 3303,
+    "feature_hashes_verified": true,
+    "fit_sources_frozen": true,
+    "fire_labels_used_for_fitting_or_policy": false,
+    "whole_swaths_disjoint": true,
+    "nighttime_calibration_present": true,
+    "positive_reference_coverage": 1.0,
+    "test_exposure_unchanged": true,
+    "independent_confusion_counts_reconcile": true,
+    "strict_exports_match_selected": true,
+    "input_only_inference_matches_evaluation": true,
+    "no_viirs_at_inference": true,
+    "satellite_downloads": 0,
+    "new_blind_test": false
+  }
+}

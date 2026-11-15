@@ -1,0 +1,15 @@
+{
+  "reason": "Use consistent float64 residual scores in unlabeled calibration and inference; fix conservative threshold tie comparison. No VIIRS labels or test results used to fit the correction. No retraining or architecture changes.",
+  "changes": {
+    "src/fireyes/policy.py": {
+      "before": "f2c3bdf484ad9727d9153417d2a936ce12a46b612c8b7e400adddff597faa6b6",
+      "after": "0a298858015a5e64c6b448e69fc196936e5b5f49742894c59f56a8f8ca4028fb"
+    }
+  },
+  "original_fit_lock_sha256": "115f6d89d1013be56530bdb1bcd2f44f9824800f9ec8e577b00f74daf93dbdb8",
+  "preserved_models": {
+    "coarse": "d75685c34977bbedc3a4075dcbcf4dc39679c90a980e37a819b2fa60f66cde2f",
+    "fine": "30445438ad8213c7d16abda63daf41c8589877cecbb191a88d790908e78c8e47"
+  },
+  "archived_results": "results/pre_precision_fix"
+}

@@ -1,0 +1,1024 @@
+{
+  "scope": "Post-hoc diagnosis on previously examined test reference; no fitting or threshold changes",
+  "positive_queries": 95,
+  "negative_queries": 585369,
+  "eligible_positive_queries": 20,
+  "eligible_negative_queries": 577070,
+  "positive_coverage": 0.21052631578947367,
+  "negative_coverage": 0.9858226178700956,
+  "failures_by_requirement": {
+    "geometry": 0,
+    "interior": 5,
+    "band_20_valid": 72,
+    "band_22_valid": 68,
+    "band_31_valid": 0,
+    "band_32_valid": 0,
+    "band_20_ring_7_support": 0,
+    "band_22_ring_7_support": 0,
+    "band_20_ring_21_support": 0,
+    "band_22_ring_21_support": 0
+  },
+  "failure_combinations": {
+    "usable": 20,
+    "band_20_valid;band_22_valid": 63,
+    "band_20_valid": 6,
+    "interior;band_20_valid;band_22_valid": 3,
+    "interior;band_22_valid": 1,
+    "interior": 1,
+    "band_22_valid": 1
+  },
+  "valid_measurements_at_positive_queries": {
+    "20": 23,
+    "21": 95,
+    "22": 27,
+    "23": 43,
+    "31": 95,
+    "32": 95
+  },
+  "raw_invalid_codes_at_positive_queries": {
+    "20": {
+      "65533": 72
+    },
+    "21": {},
+    "22": {
+      "65533": 68
+    },
+    "23": {
+      "65533": 52
+    },
+    "31": {},
+    "32": {}
+  },
+  "band21_alternative_eligibility_only": 90,
+  "eligibility_ceiling_on_original_recall": 0.21052631578947367,
+  "model_export_sha256": {
+    "coarse": "d75685c34977bbedc3a4075dcbcf4dc39679c90a980e37a819b2fa60f66cde2f",
+    "fine": "30445438ad8213c7d16abda63daf41c8589877cecbb191a88d790908e78c8e47"
+  },
+  "raw_code_sources": [
+    "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/5/MOD021KM.fs",
+    "https://mcst.gsfc.nasa.gov/sites/default/files/file_attachments/M1055_PDD_D_072712final.pdf"
+  ],
+  "raw_samples": [
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "1706aee617d5f7a9392f",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "7a2d1a0a2ef885fd34b5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "a8df565f0f38dce3826c",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "a8df565f0f38dce3826c",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "a8df565f0f38dce3826c",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "a8df565f0f38dce3826c",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "9ded172911b83696bfaa",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 20,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 22,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 23,
+      "raw_code": 65533
+    },
+    {
+      "tile": "358ec935364ba67b33f5",
+      "band": 23,
+      "raw_code": 65533
+    }
+  ]
+}

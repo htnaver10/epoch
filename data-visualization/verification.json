@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "png_figures": 13,
+  "pdf_figures": 13,
+  "source_files_unchanged": 111,
+  "same_query_locations_verified": true,
+  "metrics_reconciled": true,
+  "native_cell_comparison_verified": true,
+  "gallery_resources_exist": true,
+  "new_blind_test": false,
+  "no_model_or_policy_mutations": true,
+  "gallery_links_checked": 55,
+  "all_images_have_alt_text": true,
+  "visual_review": "Overview, PR curve, native cells, per-overpass, shared spatial map, MLP sheet and training curves inspected; shared layout for remaining sheets."
+}

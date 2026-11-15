@@ -1,0 +1,17 @@
+{
+  "name": "SaturationAwareBackgroundV2",
+  "seed": 42,
+  "halo": 16,
+  "context_radius": 10,
+  "minimum_daylight_cosine": 0.17364817766693041,
+  "development_holdout_fraction": 0.2,
+  "training": {"hidden": [64, 32], "epochs": 40, "patience": 7, "batch_size": 32768, "learning_rate": 0.001, "weight_decay": 0.0001, "gradient_clip": 1.0, "device": "cuda"},
+  "coarse_alert_fraction": 0.001,
+  "localization_alert_fraction": 0.01,
+  "minimum_calibration_samples": 1000,
+  "coarse_channels": [21, 22],
+  "scoring_rule": "Use standardized band-22 residual when valid, otherwise band-21 residual. Separate prediction heads and observed-target masks; no radiance blending or saturated-value imputation.",
+  "development_rule": "Within each training regional cohort/day-night stratum with at least two swaths, hold out max(1,floor(0.2*n)) whole swaths by seeded SHA-256 order. Add the inherited validation swath. No test inputs, VIIRS labels or MODIS fire flags determine the partition.",
+  "boundary_rule": "Fit on the original disjoint halo=16 native interiors. Predict on native cells with a complete radius-10 context. Evaluate only the original known reference query centers, retaining invalid queries as undetected.",
+  "scope": "Corrected unsupervised background model trained from scratch on existing local MODIS inputs. Original model and scores preserved. Benchmark has been examined and informed the saturation repair; this is development evidence, not a new blind test."
+}

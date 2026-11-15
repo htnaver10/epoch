@@ -1,0 +1,23 @@
+{
+  "reason": "Evaluation helper changed sys.path and directed the report/verify stage imports to original V1 tools. Load the identical frozen metric helper by file location instead. Training, features, thresholds and predictions unchanged. Add a module-resolution regression test.",
+  "changes": {
+    "evaluation.py": {
+      "before": "58be23d9fc0bf5a958b6956ce4cbad185182293d5b9825a94adacf3f7a02feeb",
+      "after": "e26b94bfa5b153db8372d6e559a02f352eea8c2de9ab92507867663f5aac3c77"
+    },
+    "tests.py": {
+      "before": "e602fb00c0e2b27c7db34fb4bcf6e92aeaa381b9219a457928b6c3d14688d78b",
+      "after": "ad9adbc8df1ab355de895e18b071e3a961cf2f475b9847ad97b1ba340fafffa5"
+    }
+  },
+  "original_source_lock_sha256": "e757c44b2c107de3b416f435ade1df32b573117cea59f04fb38f7498bd1fcad0",
+  "models_sha256": {
+    "coarse": "7b7cd4d60904db0ecae4d226133c0053ad608ffd36b766e89c17ea4ddedbf52f",
+    "fine": "37c749c5d347ba6d684337fb01a3c3cf3851b561b2085aa3140fdecc499b0aa6"
+  },
+  "archived": "results/pre_import_repair",
+  "provenance_only_updates": [
+    "policy source-lock checksum",
+    "evaluation policy checksum and source-lock metadata"
+  ]
+}

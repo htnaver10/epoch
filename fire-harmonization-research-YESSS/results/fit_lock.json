@@ -1,0 +1,13 @@
+{
+  "files": {
+    "config.json": "8a8ddca00065fe00778c57c410c71e59cabd26dcc80a2c61310a7ec369c246a6",
+    "src/fireyes/common.py": "9692dcb2980b0041305e089db142e77b61b776c4ddb6127e07e330d7189ba8d2",
+    "src/fireyes/features.py": "e58d99b3c5a9cfc3ccbb647f2cfdfc35b6390ec7c4911b5e21bf65d8ad660145",
+    "src/fireyes/data.py": "c9830dbcee086fbae29189b27e5c93c4222dcb44a9e3a030b164efa84031e351",
+    "src/fireyes/model.py": "85bba8cd6cd2594e38e0cb5381ace03e2fb3bbdbf7d73721f776712cba3c59b6",
+    "src/fireyes/policy.py": "0a298858015a5e64c6b448e69fc196936e5b5f49742894c59f56a8f8ca4028fb",
+    "src/fireyes/inference.py": "b087064dd47612ec6a2e853919c13703b43c717601eeee6e6f7d8b0d2f48ccf5"
+  },
+  "input_manifest_sha256": "b3030b7a998a0d7dc6fe13d33f554ff2b174d69c412445611f7c908b0ffb7a9d",
+  "copy_receipt_sha256": "b07fb40fe00f6856b067f94b52f25957bee4e8006bc34a014b945ddc1b34792f"
+}
