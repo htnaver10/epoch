@@ -1,19 +1,19 @@
 {
   "status": "preparing",
-  "processed": 590,
+  "processed": 600,
   "selected_candidates": 2871,
-  "admitted": 87,
-  "excluded": 503,
+  "admitted": 96,
+  "excluded": 504,
   "excluded_reason_counts": {
     "ValueError: query_extent_over_cap": 18,
     "ValueError: no_viirs_geolocation_overlap": 370,
     "ValueError: no_valid_reference_queries": 97,
-    "ValueError: no_invertible_geolocation": 18
+    "ValueError: no_invertible_geolocation": 19
   },
-  "positive_tiles": 12,
-  "positive_queries": 83,
+  "positive_tiles": 16,
+  "positive_queries": 236,
   "groups": {
-    "central_2021": 45,
-    "bc_2021": 42
+    "central_2021": 46,
+    "bc_2021": 50
   }
 }
