@@ -5,6 +5,20 @@ For the sparse 3D model overview, run `npx serve` inside `ready-to-run` and open
 The globe and its cached data are bundled; a Python backend is not required.
 See [ML-OVERVIEW.md](ML-OVERVIEW.md) for controls and coverage limits.
 
+The complete demo is included in `ready-to-run`, including the 3D globe,
+tile finder, detection layers, scene atlas, historical calendar, and response
+scenarios. On another computer:
+
+```sh
+git clone https://github.com/htnaver10/epoch.git
+cd epoch/ready-to-run
+npx serve
+```
+
+Open the Local URL printed by serve and select **MLP research**. No Python
+backend, model downloads, API keys, GPU, training or inference are required to
+view the bundled results. Git LFS checkpoint files are for separate research use.
+
 The **50.6M-parameter model presentation** is available with `run-ml-viewer.cmd`,
 then <http://127.0.0.1:8000/?mode=ml&view=presentation>. All **1,608 processed patches**, **22,174,168
 eligible query scores**, and **8,040 comparison/layer images** are prepared in

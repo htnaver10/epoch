@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "model_version": "wide-mlp-80a8b0e65bba",
+  "scenes": 1608,
+  "checks": [
+    "50.6M model presentation opens with benchmark-only scenes and a decoded rendered comparison",
+    "All five pre-rendered layers load",
+    "Next/previous/keyboard and reload preserve scene selection",
+    "Every dataset split is distinct; date/search and no-results recovery work",
+    "PNG, real GeoJSON, all-query NPZ and complete summary CSV downloads",
+    "Presentation layout, timed scene tour and Escape exit",
+    "390px mobile layout without horizontal overflow",
+    "Presentation works with API and external network requests unavailable",
+    "Missing catalogue has a recoverable error state",
+    "Standalone atlas contains every prepared scene"
+  ],
+  "runtime_errors": []
+}

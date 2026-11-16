@@ -78,6 +78,14 @@ The script writes `frontend/public/data/ml-overview.json` and a receipt in
 `backend/data/ml_overview/verification.json`. Publishing includes the JSON in
 `ready-to-run/data/` along with the application build.
 
+Tile identities and bounds come from the same frozen catalogue. Rebuild them with
+`backend\.venv\Scripts\python.exe backend\scripts\prepare_ml_tile_index.py`
+before the frontend build when the source catalogue changes. Run
+`backend\.venv\Scripts\python.exe backend\scripts\verify_static_demo.py` to
+verify all 13,032 cached source files, bundled inputs, and model provenance in
+the runnable site. Git attributes preserve the exact hashed data bytes across
+platforms, including their original line endings.
+
 With `npx serve` running on port 3000:
 
 ```powershell
