@@ -9,7 +9,7 @@ from torch.nn import functional as F
 
 from model import WideFireMLP
 from settings import ROOT, PARENT, V1, DEFAULT_RUN, path, read, write, sha, freeze_sources, artifact, run_config
-from dataset import TrainingData, heldout
+from dataset import TrainingData, heldout, verify_previous_features
 from firefullres.calibration import exact_ranking, sigmoid, fit_intercept, matched_false_alarm_cutoff, metrics
 
 
@@ -116,6 +116,7 @@ def train(run_id=DEFAULT_RUN):
     torch.manual_seed(options['seed'])
     torch.cuda.manual_seed_all(options['seed'])
     rng = np.random.default_rng(options['seed'])
+    verify_previous_features()
     data = TrainingData(run['dataset'])
     validation = heldout('validation')
     model = WideFireMLP(**run['architecture']).cuda()
