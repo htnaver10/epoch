@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "prepared": 245,
+  "expected_cap": 1500,
+  "selected_candidates": null,
+  "positive_queries": 6219,
+  "positive_tiles": 121,
+  "group_counts": {
+    "central_2021": 93,
+    "bc_2021": 68,
+    "nwt_2022": 77,
+    "pilot_20230701_all_shared_sources": 7
+  },
+  "excluded_reason_counts": null,
+  "receipt": "results/expansion_receipt.json"
+}

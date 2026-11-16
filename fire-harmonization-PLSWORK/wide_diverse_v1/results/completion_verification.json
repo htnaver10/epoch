@@ -1,0 +1,34 @@
+{
+  "complete": true,
+  "extra_tiles_hash_checked": 245,
+  "source_overlap_with_parent_heldout": false,
+  "duplicate_native_windows": false,
+  "parent_feature_files_hash_checked": 20,
+  "parent_manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+  "parent_model_sha256": "35535575bd95e385a17bc462c14e1e9ea6fdd534d673db762a3acb9ff67c7759",
+  "export_exactly_matches_selected_weights": true,
+  "input_only_keys": [
+    "geometry",
+    "inference_valid",
+    "query_grid",
+    "reflective_250",
+    "reflective_500",
+    "thermal"
+  ],
+  "label_free_inference_passed": true,
+  "deployment_compared_known_queries": 11336,
+  "maximum_bf16_logit_difference": 0.0,
+  "deployment_different_decisions": 0,
+  "numerical_note": "CUDA BF16 matrix batch shapes can change rounding; CPU float32 may also differ near thresholds.",
+  "deployment": {
+    "output": "results/inference_output.npz",
+    "requires_viirs": false,
+    "requires_labels": false,
+    "query_shape": [
+      448,
+      384
+    ],
+    "execution": "CUDA BF16",
+    "model_sha256": "80a8b0e65bba826868ccff828cff8b1e44f1000276d852e0ef8c4f7b4c747899"
+  }
+}

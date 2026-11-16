@@ -1,0 +1,28 @@
+{
+  "inputs": {
+    "parent_receipt": "921474f86e93f032fa6b3805741b990120e31056e8305c38b98e19a5241bef0e",
+    "extra_manifest": "130d9456e8704f9cc2589ad245102d51a0c785e40dafbbd81eb15472e492b9c0",
+    "expansion_receipt": "350cd8177a4e8176af0e07965661892f9973b7bf4e9c8d6c9754a49658740a42",
+    "config": "6a61e837628f011f4d5850934dfefdc01a1632f51477b428f4772f944506b851"
+  },
+  "groups": [
+    "bc_2021",
+    "central_2021",
+    "nwt_2022",
+    "pilot_20230701_all_shared_sources"
+  ],
+  "new_tiles": 245,
+  "new_queries": 4745517,
+  "new_positive_queries": 6219.0,
+  "parent_training_queries": 10371908,
+  "training_only_normalization": true,
+  "source_overlap_with_heldout": false,
+  "files": {
+    "data/features/extra_X.npy": "f629d4c11e26fbf562d2b73271b9e889d9b793ea5d29046b1265cb24b2406918",
+    "data/features/extra_y.npy": "06bbb7dfebfb91d51be7d29d22d3a9404961c58689487a9829d64171e1f7f5c8",
+    "data/features/extra_w.npy": "c19f9f66fcb67ded0cc94ce31ad97f67cc7c822237dcf219e9e4e1c74c1865ae",
+    "data/features/extra_group.npy": "6c663fb282ac617a2d1f196733d2026223e24b1c288688c64841bb932e2821fb",
+    "data/statistics.json": "3f1cae530c14f22575ba3f49bbb8d58d2f50f49eb37729575bd85d05a0833a60",
+    "data/features/parent_group.npy": "88dc35b047a4dfcf402e6ca2490369ed036d1c061b43371862635c52f7693399"
+  }
+}

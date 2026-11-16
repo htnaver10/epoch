@@ -1,0 +1,308 @@
+[
+  {
+    "epoch": 1,
+    "training_group_balanced_logloss_estimate": 0.0017335194129373122,
+    "validation_average_precision": 0.25601345566880984,
+    "validation_logloss": 0.0025928028751201703,
+    "learning_rate": 0.0001,
+    "seconds": 9.072492000006605,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65426,
+    "cohort_draws": [
+      65756,
+      65637,
+      65474,
+      65277
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 2,
+    "training_group_balanced_logloss_estimate": 0.0014422400624880538,
+    "validation_average_precision": 0.3216439481450878,
+    "validation_logloss": 0.0024101223927857204,
+    "learning_rate": 9.97534852915723e-05,
+    "seconds": 8.889933600032236,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65900,
+    "cohort_draws": [
+      65485,
+      65520,
+      65274,
+      65865
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 3,
+    "training_group_balanced_logloss_estimate": 0.0013488445342773048,
+    "validation_average_precision": 0.40670253724961714,
+    "validation_logloss": 0.0025551125952972607,
+    "learning_rate": 9.901664203302126e-05,
+    "seconds": 8.897605900012422,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65199,
+    "cohort_draws": [
+      65669,
+      65621,
+      65416,
+      65438
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 4,
+    "training_group_balanced_logloss_estimate": 0.0013213170004746644,
+    "validation_average_precision": 0.2802644048449548,
+    "validation_logloss": 0.0024795806768829727,
+    "learning_rate": 9.779754323328192e-05,
+    "seconds": 8.89992410002742,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65457,
+    "cohort_draws": [
+      65491,
+      65449,
+      65853,
+      65351
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 5,
+    "training_group_balanced_logloss_estimate": 0.0012964502017211998,
+    "validation_average_precision": 0.422747437276407,
+    "validation_logloss": 0.0027983577279674784,
+    "learning_rate": 9.610954559391703e-05,
+    "seconds": 8.851056699990295,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65589,
+    "cohort_draws": [
+      65812,
+      65371,
+      65389,
+      65572
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 6,
+    "training_group_balanced_logloss_estimate": 0.0012373156769172056,
+    "validation_average_precision": 0.40463899706156675,
+    "validation_logloss": 0.002352785055888123,
+    "learning_rate": 9.397114317029975e-05,
+    "seconds": 8.83808970003156,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65620,
+    "cohort_draws": [
+      64764,
+      65522,
+      65571,
+      66287
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 7,
+    "training_group_balanced_logloss_estimate": 0.0013179096376916277,
+    "validation_average_precision": 0.4269055999878222,
+    "validation_logloss": 0.002390295882358428,
+    "learning_rate": 9.140576474687264e-05,
+    "seconds": 8.809554999985266,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65677,
+    "cohort_draws": [
+      65308,
+      65916,
+      65522,
+      65398
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 8,
+    "training_group_balanced_logloss_estimate": 0.0012694240139126123,
+    "validation_average_precision": 0.4124854004438978,
+    "validation_logloss": 0.002926237967467729,
+    "learning_rate": 8.844151714648274e-05,
+    "seconds": 8.834897699998692,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65708,
+    "cohort_draws": [
+      65480,
+      65354,
+      65996,
+      65314
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 9,
+    "training_group_balanced_logloss_estimate": 0.0012114987445102088,
+    "validation_average_precision": 0.42646994202814914,
+    "validation_logloss": 0.00226674055778243,
+    "learning_rate": 8.511087728614862e-05,
+    "seconds": 8.818545799993444,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65787,
+    "cohort_draws": [
+      65778,
+      65438,
+      65703,
+      65225
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 10,
+    "training_group_balanced_logloss_estimate": 0.0012578201631185948,
+    "validation_average_precision": 0.43783829824786447,
+    "validation_logloss": 0.002906444553017801,
+    "learning_rate": 8.14503363531613e-05,
+    "seconds": 8.822021800035145,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65689,
+    "cohort_draws": [
+      65376,
+      65336,
+      65781,
+      65651
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 11,
+    "training_group_balanced_logloss_estimate": 0.0012249736510057119,
+    "validation_average_precision": 0.3454288226245531,
+    "validation_logloss": 0.0023473256418562113,
+    "learning_rate": 7.75e-05,
+    "seconds": 8.821876100031659,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65474,
+    "cohort_draws": [
+      65302,
+      65298,
+      65852,
+      65692
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 12,
+    "training_group_balanced_logloss_estimate": 0.001210509256225123,
+    "validation_average_precision": 0.381946604673841,
+    "validation_logloss": 0.0023040588321044143,
+    "learning_rate": 7.330314893841101e-05,
+    "seconds": 8.804365499992855,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65832,
+    "cohort_draws": [
+      65568,
+      65671,
+      65442,
+      65463
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 13,
+    "training_group_balanced_logloss_estimate": 0.0011916303444650111,
+    "validation_average_precision": 0.40256979151658817,
+    "validation_logloss": 0.0025966174216608072,
+    "learning_rate": 6.890576474687263e-05,
+    "seconds": 8.805933600000571,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65058,
+    "cohort_draws": [
+      65763,
+      65739,
+      64827,
+      65815
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 14,
+    "training_group_balanced_logloss_estimate": 0.001208500154803005,
+    "validation_average_precision": 0.4204508971419598,
+    "validation_logloss": 0.002526747669079401,
+    "learning_rate": 6.435602608679918e-05,
+    "seconds": 8.767903800006025,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 66181,
+    "cohort_draws": [
+      65536,
+      65328,
+      65522,
+      65758
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 15,
+    "training_group_balanced_logloss_estimate": 0.0012169545000233484,
+    "validation_average_precision": 0.3977649584268198,
+    "validation_logloss": 0.002415968895656173,
+    "learning_rate": 5.970378084704441e-05,
+    "seconds": 8.779823500022758,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65449,
+    "cohort_draws": [
+      65218,
+      65699,
+      65561,
+      65666
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 16,
+    "training_group_balanced_logloss_estimate": 0.0011834626819791083,
+    "validation_average_precision": 0.4242735742648933,
+    "validation_logloss": 0.0023698860393093057,
+    "learning_rate": 5.5000000000000016e-05,
+    "seconds": 8.80335840000771,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65454,
+    "cohort_draws": [
+      65283,
+      65692,
+      65977,
+      65192
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 17,
+    "training_group_balanced_logloss_estimate": 0.00115118033932049,
+    "validation_average_precision": 0.4376856428131778,
+    "validation_logloss": 0.0023769265345521943,
+    "learning_rate": 5.0296219152955604e-05,
+    "seconds": 8.777558500005398,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65262,
+    "cohort_draws": [
+      65159,
+      65490,
+      65619,
+      65876
+    ],
+    "peak_reserved_gib": 1.2265625
+  },
+  {
+    "epoch": 18,
+    "training_group_balanced_logloss_estimate": 0.001228201906542381,
+    "validation_average_precision": 0.4067595084497251,
+    "validation_logloss": 0.002318178398428642,
+    "learning_rate": 4.5643973913200835e-05,
+    "seconds": 8.783756099990569,
+    "sampled_queries": 262144,
+    "sampled_positive_queries": 65523,
+    "cohort_draws": [
+      65398,
+      65501,
+      65730,
+      65515
+    ],
+    "peak_reserved_gib": 1.2265625
+  }
+]

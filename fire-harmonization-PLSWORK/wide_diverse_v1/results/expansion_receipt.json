@@ -1,0 +1,1600 @@
+{
+  "schema": "wide_diverse_train_expansion_v1",
+  "manifest": "data/manifests/extra_train.jsonl",
+  "tiles": 245,
+  "split": "train",
+  "dataset_kinds": [
+    "nasa_native"
+  ],
+  "parent_manifest": "fire-harmonization-PLSWORK\\data\\manifests\\source_v3.jsonl",
+  "parent_training": {
+    "tiles": 844,
+    "groups": [
+      "bc_2021",
+      "central_2021",
+      "nwt_2022"
+    ],
+    "acquisition_dates": [
+      "2021-07-11",
+      "2021-07-14",
+      "2021-07-17",
+      "2021-07-27",
+      "2021-07-30",
+      "2021-08-02",
+      "2022-07-06",
+      "2022-07-08",
+      "2022-07-14",
+      "2022-07-16",
+      "2022-07-22"
+    ],
+    "acquisition_date_count": 11,
+    "positive_1deg_cells": {
+      "unique_1deg_positive_cells": 52,
+      "by_latitude_degree": {
+        "49": 2,
+        "50": 5,
+        "51": 2,
+        "52": 4,
+        "53": 6,
+        "54": 3,
+        "55": 2,
+        "56": 4,
+        "57": 4,
+        "58": 2,
+        "59": 2,
+        "60": 2,
+        "61": 3,
+        "62": 3,
+        "63": 4,
+        "64": 2,
+        "65": 2
+      },
+      "cell_count": 52,
+      "cells_lat_lon": [
+        [
+          49,
+          -121
+        ],
+        [
+          49,
+          -120
+        ],
+        [
+          50,
+          -125
+        ],
+        [
+          50,
+          -123
+        ],
+        [
+          50,
+          -122
+        ],
+        [
+          50,
+          -121
+        ],
+        [
+          50,
+          -120
+        ],
+        [
+          51,
+          -123
+        ],
+        [
+          51,
+          -122
+        ],
+        [
+          52,
+          -127
+        ],
+        [
+          52,
+          -126
+        ],
+        [
+          52,
+          -125
+        ],
+        [
+          52,
+          -124
+        ],
+        [
+          53,
+          -127
+        ],
+        [
+          53,
+          -126
+        ],
+        [
+          53,
+          -125
+        ],
+        [
+          53,
+          -124
+        ],
+        [
+          53,
+          -122
+        ],
+        [
+          53,
+          -121
+        ],
+        [
+          54,
+          -126
+        ],
+        [
+          54,
+          -125
+        ],
+        [
+          54,
+          -122
+        ],
+        [
+          55,
+          -126
+        ],
+        [
+          55,
+          -125
+        ],
+        [
+          56,
+          -109
+        ],
+        [
+          56,
+          -108
+        ],
+        [
+          56,
+          -106
+        ],
+        [
+          56,
+          -105
+        ],
+        [
+          57,
+          -109
+        ],
+        [
+          57,
+          -106
+        ],
+        [
+          57,
+          -105
+        ],
+        [
+          57,
+          -104
+        ],
+        [
+          58,
+          -117
+        ],
+        [
+          58,
+          -105
+        ],
+        [
+          59,
+          -105
+        ],
+        [
+          59,
+          -104
+        ],
+        [
+          60,
+          -115
+        ],
+        [
+          60,
+          -112
+        ],
+        [
+          61,
+          -123
+        ],
+        [
+          61,
+          -118
+        ],
+        [
+          61,
+          -116
+        ],
+        [
+          62,
+          -116
+        ],
+        [
+          62,
+          -115
+        ],
+        [
+          62,
+          -108
+        ],
+        [
+          63,
+          -122
+        ],
+        [
+          63,
+          -117
+        ],
+        [
+          63,
+          -115
+        ],
+        [
+          63,
+          -109
+        ],
+        [
+          64,
+          -122
+        ],
+        [
+          64,
+          -118
+        ],
+        [
+          65,
+          -120
+        ],
+        [
+          65,
+          -119
+        ]
+      ]
+    }
+  },
+  "expanded_training": {
+    "tiles": 245,
+    "groups": [
+      "bc_2021",
+      "central_2021",
+      "nwt_2022",
+      "pilot_20230701_all_shared_sources"
+    ],
+    "added_groups": [
+      "pilot_20230701_all_shared_sources"
+    ],
+    "acquisition_dates": [
+      "2021-07-11",
+      "2021-07-14",
+      "2021-07-17",
+      "2021-07-19",
+      "2021-07-27",
+      "2021-07-30",
+      "2021-08-02",
+      "2021-08-04",
+      "2022-07-06",
+      "2022-07-08",
+      "2022-07-09",
+      "2022-07-14",
+      "2022-07-22",
+      "2022-07-24",
+      "2023-07-01"
+    ],
+    "acquisition_date_count": 15,
+    "positive_1deg_cells": {
+      "unique_1deg_positive_cells": 83,
+      "by_latitude_degree": {
+        "39": 1,
+        "40": 1,
+        "42": 1,
+        "43": 1,
+        "45": 1,
+        "46": 4,
+        "47": 5,
+        "48": 6,
+        "49": 6,
+        "50": 7,
+        "51": 8,
+        "52": 3,
+        "53": 4,
+        "54": 6,
+        "55": 4,
+        "56": 3,
+        "57": 5,
+        "58": 1,
+        "59": 2,
+        "60": 5,
+        "61": 4,
+        "62": 3,
+        "63": 1,
+        "65": 1
+      },
+      "cell_count": 83,
+      "cells_lat_lon": [
+        [
+          39,
+          -121
+        ],
+        [
+          40,
+          -121
+        ],
+        [
+          42,
+          -122
+        ],
+        [
+          43,
+          -123
+        ],
+        [
+          45,
+          -118
+        ],
+        [
+          46,
+          -118
+        ],
+        [
+          46,
+          -117
+        ],
+        [
+          46,
+          -116
+        ],
+        [
+          46,
+          -115
+        ],
+        [
+          47,
+          -121
+        ],
+        [
+          47,
+          -117
+        ],
+        [
+          47,
+          -116
+        ],
+        [
+          47,
+          -115
+        ],
+        [
+          47,
+          -114
+        ],
+        [
+          48,
+          -121
+        ],
+        [
+          48,
+          -120
+        ],
+        [
+          48,
+          -119
+        ],
+        [
+          48,
+          -117
+        ],
+        [
+          48,
+          -116
+        ],
+        [
+          48,
+          -92
+        ],
+        [
+          49,
+          -124
+        ],
+        [
+          49,
+          -122
+        ],
+        [
+          49,
+          -121
+        ],
+        [
+          49,
+          -120
+        ],
+        [
+          49,
+          -119
+        ],
+        [
+          49,
+          -118
+        ],
+        [
+          50,
+          -122
+        ],
+        [
+          50,
+          -121
+        ],
+        [
+          50,
+          -120
+        ],
+        [
+          50,
+          -119
+        ],
+        [
+          50,
+          -117
+        ],
+        [
+          50,
+          -96
+        ],
+        [
+          50,
+          -95
+        ],
+        [
+          51,
+          -122
+        ],
+        [
+          51,
+          -121
+        ],
+        [
+          51,
+          -120
+        ],
+        [
+          51,
+          -119
+        ],
+        [
+          51,
+          -96
+        ],
+        [
+          51,
+          -95
+        ],
+        [
+          51,
+          -94
+        ],
+        [
+          51,
+          -93
+        ],
+        [
+          52,
+          -96
+        ],
+        [
+          52,
+          -95
+        ],
+        [
+          52,
+          -94
+        ],
+        [
+          53,
+          -106
+        ],
+        [
+          53,
+          -105
+        ],
+        [
+          53,
+          -104
+        ],
+        [
+          53,
+          -95
+        ],
+        [
+          54,
+          -109
+        ],
+        [
+          54,
+          -107
+        ],
+        [
+          54,
+          -106
+        ],
+        [
+          54,
+          -105
+        ],
+        [
+          54,
+          -104
+        ],
+        [
+          54,
+          -103
+        ],
+        [
+          55,
+          -107
+        ],
+        [
+          55,
+          -106
+        ],
+        [
+          55,
+          -105
+        ],
+        [
+          55,
+          -104
+        ],
+        [
+          56,
+          -110
+        ],
+        [
+          56,
+          -107
+        ],
+        [
+          56,
+          -105
+        ],
+        [
+          57,
+          -117
+        ],
+        [
+          57,
+          -114
+        ],
+        [
+          57,
+          -112
+        ],
+        [
+          57,
+          -110
+        ],
+        [
+          57,
+          -108
+        ],
+        [
+          58,
+          -117
+        ],
+        [
+          59,
+          -132
+        ],
+        [
+          59,
+          -130
+        ],
+        [
+          60,
+          -131
+        ],
+        [
+          60,
+          -130
+        ],
+        [
+          60,
+          -129
+        ],
+        [
+          60,
+          -128
+        ],
+        [
+          60,
+          -127
+        ],
+        [
+          61,
+          -130
+        ],
+        [
+          61,
+          -129
+        ],
+        [
+          61,
+          -121
+        ],
+        [
+          61,
+          -106
+        ],
+        [
+          62,
+          -133
+        ],
+        [
+          62,
+          -107
+        ],
+        [
+          62,
+          -106
+        ],
+        [
+          63,
+          -133
+        ],
+        [
+          65,
+          -118
+        ]
+      ]
+    },
+    "positive_tiles": 121,
+    "negative_tiles": 245,
+    "positive_queries": 6219,
+    "valid_queries": 4745517,
+    "by_event_group": {
+      "central_2021": {
+        "tiles": 93,
+        "positive_tiles": 54,
+        "negative_tiles": 93,
+        "positive_queries": 3058,
+        "valid_queries": 1954145,
+        "dates": [
+          "2021-07-11",
+          "2021-07-17",
+          "2021-07-19",
+          "2021-07-27",
+          "2021-08-02",
+          "2021-08-04"
+        ],
+        "acquisition_date_count": 6
+      },
+      "bc_2021": {
+        "tiles": 68,
+        "positive_tiles": 41,
+        "negative_tiles": 68,
+        "positive_queries": 2742,
+        "valid_queries": 1214428,
+        "dates": [
+          "2021-07-11",
+          "2021-07-14",
+          "2021-07-17",
+          "2021-07-30",
+          "2021-08-02"
+        ],
+        "acquisition_date_count": 5
+      },
+      "nwt_2022": {
+        "tiles": 77,
+        "positive_tiles": 24,
+        "negative_tiles": 77,
+        "positive_queries": 412,
+        "valid_queries": 1449667,
+        "dates": [
+          "2022-07-06",
+          "2022-07-08",
+          "2022-07-09",
+          "2022-07-14",
+          "2022-07-22",
+          "2022-07-24"
+        ],
+        "acquisition_date_count": 6
+      },
+      "pilot_20230701_all_shared_sources": {
+        "tiles": 7,
+        "positive_tiles": 2,
+        "negative_tiles": 7,
+        "positive_queries": 7,
+        "valid_queries": 127277,
+        "dates": [
+          "2023-07-01"
+        ],
+        "acquisition_date_count": 1
+      }
+    }
+  },
+  "combined_positive_1deg_cells": {
+    "unique_cells": 127,
+    "new_cells_outside_parent": 75,
+    "cells_lat_lon": [
+      [
+        39,
+        -121
+      ],
+      [
+        40,
+        -121
+      ],
+      [
+        42,
+        -122
+      ],
+      [
+        43,
+        -123
+      ],
+      [
+        45,
+        -118
+      ],
+      [
+        46,
+        -118
+      ],
+      [
+        46,
+        -117
+      ],
+      [
+        46,
+        -116
+      ],
+      [
+        46,
+        -115
+      ],
+      [
+        47,
+        -121
+      ],
+      [
+        47,
+        -117
+      ],
+      [
+        47,
+        -116
+      ],
+      [
+        47,
+        -115
+      ],
+      [
+        47,
+        -114
+      ],
+      [
+        48,
+        -121
+      ],
+      [
+        48,
+        -120
+      ],
+      [
+        48,
+        -119
+      ],
+      [
+        48,
+        -117
+      ],
+      [
+        48,
+        -116
+      ],
+      [
+        48,
+        -92
+      ],
+      [
+        49,
+        -124
+      ],
+      [
+        49,
+        -122
+      ],
+      [
+        49,
+        -121
+      ],
+      [
+        49,
+        -120
+      ],
+      [
+        49,
+        -119
+      ],
+      [
+        49,
+        -118
+      ],
+      [
+        50,
+        -125
+      ],
+      [
+        50,
+        -123
+      ],
+      [
+        50,
+        -122
+      ],
+      [
+        50,
+        -121
+      ],
+      [
+        50,
+        -120
+      ],
+      [
+        50,
+        -119
+      ],
+      [
+        50,
+        -117
+      ],
+      [
+        50,
+        -96
+      ],
+      [
+        50,
+        -95
+      ],
+      [
+        51,
+        -123
+      ],
+      [
+        51,
+        -122
+      ],
+      [
+        51,
+        -121
+      ],
+      [
+        51,
+        -120
+      ],
+      [
+        51,
+        -119
+      ],
+      [
+        51,
+        -96
+      ],
+      [
+        51,
+        -95
+      ],
+      [
+        51,
+        -94
+      ],
+      [
+        51,
+        -93
+      ],
+      [
+        52,
+        -127
+      ],
+      [
+        52,
+        -126
+      ],
+      [
+        52,
+        -125
+      ],
+      [
+        52,
+        -124
+      ],
+      [
+        52,
+        -96
+      ],
+      [
+        52,
+        -95
+      ],
+      [
+        52,
+        -94
+      ],
+      [
+        53,
+        -127
+      ],
+      [
+        53,
+        -126
+      ],
+      [
+        53,
+        -125
+      ],
+      [
+        53,
+        -124
+      ],
+      [
+        53,
+        -122
+      ],
+      [
+        53,
+        -121
+      ],
+      [
+        53,
+        -106
+      ],
+      [
+        53,
+        -105
+      ],
+      [
+        53,
+        -104
+      ],
+      [
+        53,
+        -95
+      ],
+      [
+        54,
+        -126
+      ],
+      [
+        54,
+        -125
+      ],
+      [
+        54,
+        -122
+      ],
+      [
+        54,
+        -109
+      ],
+      [
+        54,
+        -107
+      ],
+      [
+        54,
+        -106
+      ],
+      [
+        54,
+        -105
+      ],
+      [
+        54,
+        -104
+      ],
+      [
+        54,
+        -103
+      ],
+      [
+        55,
+        -126
+      ],
+      [
+        55,
+        -125
+      ],
+      [
+        55,
+        -107
+      ],
+      [
+        55,
+        -106
+      ],
+      [
+        55,
+        -105
+      ],
+      [
+        55,
+        -104
+      ],
+      [
+        56,
+        -110
+      ],
+      [
+        56,
+        -109
+      ],
+      [
+        56,
+        -108
+      ],
+      [
+        56,
+        -107
+      ],
+      [
+        56,
+        -106
+      ],
+      [
+        56,
+        -105
+      ],
+      [
+        57,
+        -117
+      ],
+      [
+        57,
+        -114
+      ],
+      [
+        57,
+        -112
+      ],
+      [
+        57,
+        -110
+      ],
+      [
+        57,
+        -109
+      ],
+      [
+        57,
+        -108
+      ],
+      [
+        57,
+        -106
+      ],
+      [
+        57,
+        -105
+      ],
+      [
+        57,
+        -104
+      ],
+      [
+        58,
+        -117
+      ],
+      [
+        58,
+        -105
+      ],
+      [
+        59,
+        -132
+      ],
+      [
+        59,
+        -130
+      ],
+      [
+        59,
+        -105
+      ],
+      [
+        59,
+        -104
+      ],
+      [
+        60,
+        -131
+      ],
+      [
+        60,
+        -130
+      ],
+      [
+        60,
+        -129
+      ],
+      [
+        60,
+        -128
+      ],
+      [
+        60,
+        -127
+      ],
+      [
+        60,
+        -115
+      ],
+      [
+        60,
+        -112
+      ],
+      [
+        61,
+        -130
+      ],
+      [
+        61,
+        -129
+      ],
+      [
+        61,
+        -123
+      ],
+      [
+        61,
+        -121
+      ],
+      [
+        61,
+        -118
+      ],
+      [
+        61,
+        -116
+      ],
+      [
+        61,
+        -106
+      ],
+      [
+        62,
+        -133
+      ],
+      [
+        62,
+        -116
+      ],
+      [
+        62,
+        -115
+      ],
+      [
+        62,
+        -108
+      ],
+      [
+        62,
+        -107
+      ],
+      [
+        62,
+        -106
+      ],
+      [
+        63,
+        -133
+      ],
+      [
+        63,
+        -122
+      ],
+      [
+        63,
+        -117
+      ],
+      [
+        63,
+        -115
+      ],
+      [
+        63,
+        -109
+      ],
+      [
+        64,
+        -122
+      ],
+      [
+        64,
+        -118
+      ],
+      [
+        65,
+        -120
+      ],
+      [
+        65,
+        -119
+      ],
+      [
+        65,
+        -118
+      ]
+    ]
+  },
+  "combined_training_group_count": 4,
+  "heldout_group_source_overlap": false,
+  "heldout_groups": [
+    "quebec_20230605",
+    "quebec_2024"
+  ],
+  "selected_candidates": null,
+  "excluded_candidates": null,
+  "raw_source_files": 156,
+  "raw_source_bytes": 12969597667,
+  "raw_source_gib": 12.079,
+  "raw_source_checksums": {
+    "data/raw/MYD021KM/MYD021KM.A2021192.1955.061.2021193154940.hdf": "4c7ec08df37ebf8c63856f5d196775ea6c5d8570b66fb168811368161f430a03",
+    "data/raw/MYD021KM/MYD021KM.A2021192.2130.061.2021193154836.hdf": "a0af9b00d0574c5cc53281c916d9af7578c85ae8ca14d69c787dfed19fde5803",
+    "data/raw/MYD021KM/MYD021KM.A2021195.1050.061.2021196154734.hdf": "6865cdefb073d10d8a7ebc9d8bb22b58155578ccaee64c08cf7ef8980315c29c",
+    "data/raw/MYD021KM/MYD021KM.A2021197.2010.061.2021198152538.hdf": "f61bf1d429e648d60e2b512fb29929b2c3b8b025969084847e30b1d702be250e",
+    "data/raw/MYD021KM/MYD021KM.A2021198.0805.061.2021198193030.hdf": "eb40834681664ca9f16b98f11ab4eaf94b83513a5ad1109905676184651ec968",
+    "data/raw/MYD021KM/MYD021KM.A2021198.0945.061.2021198193020.hdf": "e7c93cd153d23fa5898c06529c4813ce2637ee52ca1ad81d66227c36f75527c6",
+    "data/raw/MYD021KM/MYD021KM.A2021200.2045.061.2021202201138.hdf": "b325506bb49a2c8b5e9a03846243625866738e02b195d8483af0e79993f874ad",
+    "data/raw/MYD021KM/MYD021KM.A2021203.1800.061.2021204155737.hdf": "2c888238c722f959ff0cd5088b35135624b479275b46375113c269bcdc5827e9",
+    "data/raw/MYD021KM/MYD021KM.A2021208.1955.061.2021209155044.hdf": "3eeb4c5f8ec0dd9c512c01500c9fd4e73e1a0d0965f75d758290219f032556ac",
+    "data/raw/MYD021KM/MYD021KM.A2021211.1050.061.2021212164202.hdf": "ce83f57de98fb0e51841019334238107d6598fd4fbbd404080797ddd5a833a81",
+    "data/raw/MYD021KM/MYD021KM.A2021213.2010.061.2021214160335.hdf": "7cf291b9e437a126d93ddd4fb7a2b9bb074d83751df43fc63cd870b0099a4723",
+    "data/raw/MYD021KM/MYD021KM.A2021214.0805.061.2021214194008.hdf": "8c3d831d445883e94dca10c2177d9ac95abbc42ef36fef9f55cf7e3107199afb",
+    "data/raw/MYD021KM/MYD021KM.A2021214.0945.061.2021214194044.hdf": "7edfdc301a1c7223a72a26f6d9ed7d3611f743dddecb057c864f11af5c8043b9",
+    "data/raw/MYD021KM/MYD021KM.A2021216.1905.061.2021217160544.hdf": "5fe762c031054ec625a216ef7f1e2f641ee388db73c5eb239052348cfaf0e442",
+    "data/raw/MYD021KM/MYD021KM.A2021216.2040.061.2021217160654.hdf": "33792f065a637000682e3d7031c2711a75f84a49f14f5c776f70a4e0022562bc",
+    "data/raw/MYD021KM/MYD021KM.A2022187.1050.061.2022318044331.hdf": "5f314a657df95cd0c45fe76c6b995bc8f9725493d145d60aeeaacf91fa886e2c",
+    "data/raw/MYD021KM/MYD021KM.A2022189.2015.061.2022318104536.hdf": "7935f82281a6e1e68be1cb2224b03d89a5132d1a46a453d4d8884d671c16cfe1",
+    "data/raw/MYD021KM/MYD021KM.A2022190.0805.061.2022318181200.hdf": "9ede94e5471fc19f8a1fdc249f3acab888dfa903dc80fffbeb9715d2608e7a87",
+    "data/raw/MYD021KM/MYD021KM.A2022195.1000.061.2022319114302.hdf": "9395ec078d452409202c5052535e9a2cb6f7d53d5d9bb3ed227ee386528ee4d7",
+    "data/raw/MYD021KM/MYD021KM.A2022197.1925.061.2022319180419.hdf": "be34eccede068f67b69cfa3500d0984746da308aa2da03588f892394c39b0182",
+    "data/raw/MYD021KM/MYD021KM.A2022198.0855.061.2022319205217.hdf": "4c00e77ffc83ace3bb3665578b2635743bb83862241571f7f6cc414780b8b3fc",
+    "data/raw/MYD021KM/MYD021KM.A2022203.1050.061.2022320120745.hdf": "a452a52b9317428d1039bf4f226d39022b3d219c229bdfabbc63a46b076e3d89",
+    "data/raw/MYD021KM/MYD021KM.A2022205.2010.061.2022320210620.hdf": "26045f2fa84ff57cca3b51213405f2d59f03cbdf57e62cff821a9cf7948e50fc",
+    "data/raw/MYD021KM/MYD021KM.A2023182.2125.061.2023183152241.hdf": "628d03661a5768a07bbd3b7d38121e5cc22c1ded13f792a2be11fca8ea5cbfd7",
+    "data/raw/MYD02HKM/MYD02HKM.A2021192.1955.061.2021193154940.hdf": "0574a5052c3ad8145c5fd5ec7d5723aa099ca43fe440e940b692069989db1230",
+    "data/raw/MYD02HKM/MYD02HKM.A2021192.2130.061.2021193154836.hdf": "ebc6ef00d8a06ec484a73f3e38e2c09902f67891648d850e7d72f011b33ea4c1",
+    "data/raw/MYD02HKM/MYD02HKM.A2021195.1050.061.2021196154734.hdf": "311783058af120842add45e5b6a425518c0b8f9338b150d804a545f1eed6d95f",
+    "data/raw/MYD02HKM/MYD02HKM.A2021197.2010.061.2021198152538.hdf": "e1231ca502b086bea1990e75d4e7bc7a6c0798dbc60edf5ac058aa4415544396",
+    "data/raw/MYD02HKM/MYD02HKM.A2021200.2045.061.2021202201138.hdf": "f2d0cbef24203ac61d363a397a325fa6146d6ba538316380b4149341eaef03b4",
+    "data/raw/MYD02HKM/MYD02HKM.A2021203.1800.061.2021204155737.hdf": "8eeb26c9ee9adff8a145855f4c8a43d6fcc40ef276aa8edcda4aaba366aa251a",
+    "data/raw/MYD02HKM/MYD02HKM.A2021208.1955.061.2021209155044.hdf": "b2856f1d51e6b1faf95c22ec73fe1df395e2ea62434135b75cc712ef3f0f4a40",
+    "data/raw/MYD02HKM/MYD02HKM.A2021211.1050.061.2021212164202.hdf": "437e27b2d8a1cf0777ab548b9a875a42ab0c389cf7edcfd770b58def63711f14",
+    "data/raw/MYD02HKM/MYD02HKM.A2021213.2010.061.2021214160335.hdf": "21298944579c10e4c00ab685bf70d961189ae4be8187faa60010b90f2dabc8fd",
+    "data/raw/MYD02HKM/MYD02HKM.A2021216.1905.061.2021217160544.hdf": "e6588229483d2ebb3184ec895c568e908b12516713cc4eda8bcf87cac787e4e7",
+    "data/raw/MYD02HKM/MYD02HKM.A2021216.2040.061.2021217160654.hdf": "f2d954ce45814c2ebc4e011736a9c3baa51c2a8a822e14e31ea07e6021dab861",
+    "data/raw/MYD02HKM/MYD02HKM.A2022187.1050.061.2022318044331.hdf": "0c9f1034afd6d53a7c3c261a630097601f2b15fedca92ca496914ff52e19d5d3",
+    "data/raw/MYD02HKM/MYD02HKM.A2022189.2015.061.2022318104536.hdf": "13028ae7e9c1aabad6c3b910c0df6e38dc0b0200a5a4249fe64471861228f3b9",
+    "data/raw/MYD02HKM/MYD02HKM.A2022190.0805.061.2022318181200.hdf": "db52b1646932122fcb1aeb64204935653eb98efce74e5f43061eaa4dcd8b6c1a",
+    "data/raw/MYD02HKM/MYD02HKM.A2022195.1000.061.2022319114302.hdf": "886690f09e8d97b350d584b18d6dada04c4cf268ce3d5c695b1dd0b1d60203d3",
+    "data/raw/MYD02HKM/MYD02HKM.A2022197.1925.061.2022319180419.hdf": "77bb2525ad66cff0e6e2bc582b1e6e81528aa835898765fe261b84e06bcdc3ad",
+    "data/raw/MYD02HKM/MYD02HKM.A2022205.2010.061.2022320210620.hdf": "e34c7ad985dcb9c36bb33ef47e7304ff4c9cd44b093eda57017b91bdad1a324b",
+    "data/raw/MYD02HKM/MYD02HKM.A2023182.2125.061.2023183152241.hdf": "78ea7251604f7d621701ff595b0da851baca84ba15f48a58d53f587cb23bcc9a",
+    "data/raw/MYD02QKM/MYD02QKM.A2021192.1955.061.2021193154940.hdf": "0a902909c7e2087bb90297081b5267c4c8332ac1c46c27d4c94bebce259b9eab",
+    "data/raw/MYD02QKM/MYD02QKM.A2021192.2130.061.2021193154836.hdf": "3a0ba3a648ff3ba77ba3299e53f05c508dae6d0176e30f20c31f4a82fa96eb7c",
+    "data/raw/MYD02QKM/MYD02QKM.A2021195.1050.061.2021196154734.hdf": "9fbd1f888e6c5318b4c9295ecd736247889e43218244ea7231907e107338ef83",
+    "data/raw/MYD02QKM/MYD02QKM.A2021197.2010.061.2021198152538.hdf": "ac067a4bc7e8f8659427c10fbadb241238f8f32bcb74a159a6e3ac4b8f5b9dec",
+    "data/raw/MYD02QKM/MYD02QKM.A2021200.2045.061.2021202201138.hdf": "919b8ebe191f4b0da5f3643f67900067c59fc1057cd49361327a68d94a2676e1",
+    "data/raw/MYD02QKM/MYD02QKM.A2021203.1800.061.2021204155737.hdf": "342db2a03108ce27aedb0643bc417a833719c05dc178052c744cffb1adcf53e2",
+    "data/raw/MYD02QKM/MYD02QKM.A2021208.1955.061.2021209155044.hdf": "d39c859a8276946bc08d46e595835620e85a754a8491f092e2dc00c958bed5df",
+    "data/raw/MYD02QKM/MYD02QKM.A2021211.1050.061.2021212164202.hdf": "ed5cfceb17813585fb8e1d7c1b98ba61c903217f693d0ce097efdbad81416fad",
+    "data/raw/MYD02QKM/MYD02QKM.A2021213.2010.061.2021214160335.hdf": "279e2930e5766d70e427922d6549b5347bc213d47defc1e49106024e7cf3ad63",
+    "data/raw/MYD02QKM/MYD02QKM.A2021216.1905.061.2021217160544.hdf": "f341145e5c81dbb49e209c2269512a0e42c286d4e7d56797c5b313f3ddde3432",
+    "data/raw/MYD02QKM/MYD02QKM.A2021216.2040.061.2021217160654.hdf": "24c051435b15418907a5d40ba4ff7b47b34748b572d9cba91539f5405d08481a",
+    "data/raw/MYD02QKM/MYD02QKM.A2022187.1050.061.2022318044331.hdf": "c7e7b5cc5ec1cd3146d1baadc287ef4a93a9847093b59234fb944e625729bf67",
+    "data/raw/MYD02QKM/MYD02QKM.A2022189.2015.061.2022318104536.hdf": "9995b6c54f9c8c049e1dcca22622df22e8c93307dd7c5711e88a4a8cdd4d6e4b",
+    "data/raw/MYD02QKM/MYD02QKM.A2022190.0805.061.2022318181200.hdf": "e31f73815d0e2c6c6d8a7e1e2ee9eaaaac55d463b25295a7827c90e8a99644e2",
+    "data/raw/MYD02QKM/MYD02QKM.A2022195.1000.061.2022319114302.hdf": "6ee32157dc4711cc55cde4db89e9dcc6f0128e6e988da7ce39035dd4bd2830d5",
+    "data/raw/MYD02QKM/MYD02QKM.A2022197.1925.061.2022319180419.hdf": "3c1023db26cde4bd545914cb4c6be671a211ea1c0bc7ee01c051ce94a2bf3ee2",
+    "data/raw/MYD02QKM/MYD02QKM.A2022205.2010.061.2022320210620.hdf": "263772dc0597297c55309f65c4e080786cb1721574f50996c7712899b34eac86",
+    "data/raw/MYD02QKM/MYD02QKM.A2023182.2125.061.2023183152241.hdf": "39860aab10cd220f6974307dc693c64e5b41f24e9ce4bc5700218c4e94281787",
+    "data/raw/MYD03/MYD03.A2021192.1955.061.2021193151617.hdf": "96a56249ce6ef61f862055955e7bb31790ec24f32baefc85de9ceb9f6254f6b1",
+    "data/raw/MYD03/MYD03.A2021192.2130.061.2021193152842.hdf": "ff30397297972e412b29e5f9f98a8f9ac73b14a26f7dc32c08fc297a634d0d73",
+    "data/raw/MYD03/MYD03.A2021195.1050.061.2021196151658.hdf": "168d51ec1f3919e010a34637469b5253465b905c37a5e704053763b001c86525",
+    "data/raw/MYD03/MYD03.A2021197.2010.061.2021198151721.hdf": "0f85bd887d56418dee16a08a4319301745c125223f99bf1d657a02af6de7b2f5",
+    "data/raw/MYD03/MYD03.A2021198.0805.061.2021198165813.hdf": "b6437cb7b926ee475abb583821a1700b1f28748f4662a13e48da88d05b0e6cbb",
+    "data/raw/MYD03/MYD03.A2021198.0945.061.2021198165532.hdf": "e3d04458f0724c9a3602b4377cebfeff2787b5a5d437570c44f42986114d6555",
+    "data/raw/MYD03/MYD03.A2021200.2045.061.2021202192303.hdf": "a0eb22e2b9b885774b976fb7f2e1bb0555718b5f809f0d6bcbc0514691b478c6",
+    "data/raw/MYD03/MYD03.A2021203.1800.061.2021204152925.hdf": "5dee2e1cecf9a1ec79ae6822d43c07674c1b129d7d188accfb4ddcb43887a254",
+    "data/raw/MYD03/MYD03.A2021208.1955.061.2021209153057.hdf": "2de362039d8a0c586b42eed82eb1545a85549dae199cdf2110077ba77c530348",
+    "data/raw/MYD03/MYD03.A2021211.1050.061.2021212163151.hdf": "4aabe791beaa16f17cfc71e21e7cbd38b9a690c4635b1277f0d9ae50a0943712",
+    "data/raw/MYD03/MYD03.A2021213.2010.061.2021214154424.hdf": "508286c539db29ffe3bfc72ed23bd9cce3bd7540fdca32a67452fa2cd43fa6a9",
+    "data/raw/MYD03/MYD03.A2021214.0805.061.2021214165747.hdf": "9bb6092e08423ff982e29870c04935dc107444fe5e5820f31a973f48f18abfca",
+    "data/raw/MYD03/MYD03.A2021214.0945.061.2021214165745.hdf": "2dd83e7188272c86ecc014933994306a0d199c35b7b764e430cb0195ebc14e84",
+    "data/raw/MYD03/MYD03.A2021216.1905.061.2021217160035.hdf": "b5173e4ed83bafd00fcbd1a6b4ede2bfe7aaf1d45d6242fabb12778bd4a68262",
+    "data/raw/MYD03/MYD03.A2021216.2040.061.2021217160118.hdf": "92cc26dd39100594ab61f10658a407558b5132257712ea9acbdd3e591b91e829",
+    "data/raw/MYD03/MYD03.A2022187.1050.061.2022312134928.hdf": "e52565e7693b11e1cc85083d252e1ed26906df85473f20a010c56fa82c484792",
+    "data/raw/MYD03/MYD03.A2022189.2015.061.2022312222417.hdf": "bd871f70c06f4c9d2df5776c0ea1885a6b80337c27866fa9dd1e2541c66aecea",
+    "data/raw/MYD03/MYD03.A2022190.0805.061.2022313184004.hdf": "e0c8f8056ebd530279c7f16753ba7c0b24b28e3d4025c7a3c24488dbadf80f78",
+    "data/raw/MYD03/MYD03.A2022195.1000.061.2022313191106.hdf": "4e98d5e883bc9213a9b6f2cca9bb1919283bd2163207213f0af9110eec316f9c",
+    "data/raw/MYD03/MYD03.A2022197.1925.061.2022313192952.hdf": "171d5401529ddeab44bc6fca2c794000750393804dade3aa52d2bc44e6608ef2",
+    "data/raw/MYD03/MYD03.A2022198.0855.061.2022313193143.hdf": "6af752f8d9ba9e953e6ed8ff44fbcd069a6f5677d9d163e6a4a22d21a3c1e1db",
+    "data/raw/MYD03/MYD03.A2022203.1050.061.2022315014843.hdf": "76a3c41a09024d7b1feb018eb40c4e4f600c019bc3a340b3e3f208e94ee16109",
+    "data/raw/MYD03/MYD03.A2022205.2010.061.2022315021554.hdf": "ea333e1f67b31ba26a8f824d6e9aa3f13c44d7da2fd62a641130201bd8ae85c6",
+    "data/raw/MYD03/MYD03.A2023182.2125.061.2023183151258.hdf": "d83c6556668073ea2d5edbae5cdf02a676d81c9f3ec0197f90a80706ec2feab0",
+    "data/raw/MYD14/MYD14.A2021192.1955.061.2021193122222.hdf": "c5ffe258dd0f43fa099c02e57f0599314eafa7bfb0252052f55d76c3825c702a",
+    "data/raw/MYD14/MYD14.A2021192.2130.061.2021193122627.hdf": "a10d4dbb583cc5fd5779682873746f8dfc3180250ab1717e6aec482110506289",
+    "data/raw/MYD14/MYD14.A2021195.1050.061.2021196121249.hdf": "042f91f9cb1e83ef022a8ae1862abdca6b4faccfbaa3466bf23e94a5841ff914",
+    "data/raw/MYD14/MYD14.A2021197.2010.061.2021198113918.hdf": "8da0d3ccc720e7dff7db3b68ce700a6e967882deb8f058aa39316594cff5cfff",
+    "data/raw/MYD14/MYD14.A2021198.0805.061.2021198153537.hdf": "e65f2b8773690872f9cd1ea1876dee838792700b3217346e96e699a52e4b7c95",
+    "data/raw/MYD14/MYD14.A2021198.0945.061.2021198153526.hdf": "31219932ba6d5a2fcdb96d1cf6703626eaf3fe8bae8d0d96606c459ad449e5aa",
+    "data/raw/MYD14/MYD14.A2021200.2045.061.2021202170556.hdf": "390c65764af4c76291a951458671e7174275d8e703b946a3dca5ed42efe19809",
+    "data/raw/MYD14/MYD14.A2021203.1800.061.2021204123845.hdf": "62b7c2894846336e4fd838406610b2e7226a4053c3e66d340859f7f7612df872",
+    "data/raw/MYD14/MYD14.A2021208.1955.061.2021209122654.hdf": "3f14418b6108efcfc909629570b8630ce103c3dd2d31ec092dc58b845ffdf338",
+    "data/raw/MYD14/MYD14.A2021211.1050.061.2021212125542.hdf": "c3279c0e76df76ba0d1f7f753fc25db5adeeb718fb659a90511c8d58df36d582",
+    "data/raw/MYD14/MYD14.A2021213.2010.061.2021214123648.hdf": "e0c3099ea4c686ae991b58b29d9d0b57e630db636e066bf642b8e8945e8c6b8b",
+    "data/raw/MYD14/MYD14.A2021214.0805.061.2021214161054.hdf": "03bb5358e76920e4a468151c407c596a1d805d698a9ba04f1474cfe4b718e617",
+    "data/raw/MYD14/MYD14.A2021214.0945.061.2021214161156.hdf": "1c4f7bff58ff8d2cdfeae40e830d16af9c8e895004bfc61c63b62c356df0c4e2",
+    "data/raw/MYD14/MYD14.A2021216.1905.061.2021217122100.hdf": "7fca09fada2c1ed6424d962ee3f233d1f92281b384ad6be28c01914312069653",
+    "data/raw/MYD14/MYD14.A2021216.2040.061.2021217123301.hdf": "66b56677de6c44763d7fb842b966f9f6252dc9cdd83ec5a78c76603003a60656",
+    "data/raw/MYD14/MYD14.A2022187.1050.061.2022188122233.hdf": "bb48bd3e64fd6ea25dfb9ec24acfc90c2aeb93743cb9cc2ff85ed48fc4093b36",
+    "data/raw/MYD14/MYD14.A2022189.2015.061.2022190115143.hdf": "0496c4e2f1fb18d69e103a04e175a5577dab39552d32d522d6c6aad7ffbd9f98",
+    "data/raw/MYD14/MYD14.A2022190.0805.061.2022193214308.hdf": "222161932ff3229475938e90fbe3ed25414a0a4d317c4abc88d054ff2c538332",
+    "data/raw/MYD14/MYD14.A2022195.1000.061.2022196111354.hdf": "dd5f15bada1bc91a8c2d2db75664bbca20ffb168e434624e950923eea420f050",
+    "data/raw/MYD14/MYD14.A2022197.1925.061.2022198114054.hdf": "3e14aecfbd5d7015bf25730f6d3efee59b1319a435d21a1e7e9a435d4c43b809",
+    "data/raw/MYD14/MYD14.A2022198.0855.061.2022198152134.hdf": "991eb58797abd4ecf77dff4d579dfae501d7fe1ea526852e3ac993498823b077",
+    "data/raw/MYD14/MYD14.A2022203.1050.061.2022204114643.hdf": "60c3ee064f3a024b91c3f905ab8c1bb6bfe5f5b1f62a3fefec92a0ddad7cd657",
+    "data/raw/MYD14/MYD14.A2022205.2010.061.2022206122030.hdf": "e78fe76e38ac6485f2a3d18d6dd2c09acaf865779db9beb04991416a5603d469",
+    "data/raw/MYD14/MYD14.A2023182.2125.061.2023183112923.hdf": "2b2af95ec5f9b549fdc1a8872d8784b3a6b5e94f5f29661f1f020adba23aca4a",
+    "data/raw/VNP03IMG/VNP03IMG.A2021192.1954.002.2021193042840.nc": "ea60abb17499c6f15a1a870063830e43428da669f00f7d8e5c0619432c4bb319",
+    "data/raw/VNP03IMG/VNP03IMG.A2021192.2130.002.2021193043208.nc": "d375eae3c5457fb1e94e2b3d81e06d79f215362f09803b5cb2894c28ed926571",
+    "data/raw/VNP03IMG/VNP03IMG.A2021195.1048.002.2021195173756.nc": "f966367613e7102fa049077666c4110c7f6e3708ea17e6bf7c4386c5d5cd3c21",
+    "data/raw/VNP03IMG/VNP03IMG.A2021197.2000.002.2021198043329.nc": "e871b5bb77a051952ac1ad5813c82b38434bd92ea6ccc1dc044419867e1fee50",
+    "data/raw/VNP03IMG/VNP03IMG.A2021198.0806.002.2021198163526.nc": "69271b2221f077cb96f2356d14def59e8a46bd3cf8c4cb8f5ae5c59e15d1efca",
+    "data/raw/VNP03IMG/VNP03IMG.A2021198.0948.002.2021198163524.nc": "02cb1e3593723453d75dd3dcce2e645d4e3c952c6d742a67dd0e2f8c8ad9a32c",
+    "data/raw/VNP03IMG/VNP03IMG.A2021200.2042.002.2021201032431.nc": "163556821a63950e88808ecec95f166c9407ab58c113ca1f7fd799d2d388c1b7",
+    "data/raw/VNP03IMG/VNP03IMG.A2021203.1800.002.2021204025317.nc": "7fc34c9d0ee51ee57847fb9ec50c614d3012888ad4873f85d7f003324a64de77",
+    "data/raw/VNP03IMG/VNP03IMG.A2021208.1954.002.2021209055043.nc": "5ff0d6a29c808bbc209867b0c22be4b710d61b1f158c3dc740b340206c770331",
+    "data/raw/VNP03IMG/VNP03IMG.A2021211.1048.002.2021211185756.nc": "328df8512ba7e7ce1818f468700669cfc3670fb40dddeeb77e36300f2651000e",
+    "data/raw/VNP03IMG/VNP03IMG.A2021213.2000.002.2021214043829.nc": "ad75c709509e45a33cc91cf3cfdb03000f9907f39a4d7fc70489b18fc3bc6559",
+    "data/raw/VNP03IMG/VNP03IMG.A2021214.0806.002.2021214164308.nc": "07b42cf5162f99aeda6d4729c4056ea4917f8de297a37dd7d6fb7eb1f916d0e3",
+    "data/raw/VNP03IMG/VNP03IMG.A2021214.0948.002.2021214164304.nc": "3201a396d709d6a2d25b2929bac2b5883f0c15f79f5036eb5753d4cc9ad46231",
+    "data/raw/VNP03IMG/VNP03IMG.A2021216.1906.002.2021263053028.nc": "ba930c1aaad3d8d53c58e262c93254526134f8a03ae1956c3391d447f5bda31b",
+    "data/raw/VNP03IMG/VNP03IMG.A2021216.2042.002.2021263052619.nc": "5999a092f958d1adffc437784de80c593c75a51440e3324de253193219d25ef1",
+    "data/raw/VNP03IMG/VNP03IMG.A2022187.1048.002.2022187174746.nc": "115e1bedbbe27232d4999ba51b6235360c4da13742b1f6ed97fc5dc217dc1c6c",
+    "data/raw/VNP03IMG/VNP03IMG.A2022189.2006.002.2022190051226.nc": "051d2fbd86bc5371e32b8affa5595f50b64efce870c04cb7d2d5e17ce9a41d08",
+    "data/raw/VNP03IMG/VNP03IMG.A2022190.0812.002.2022190162644.nc": "6a006dd5b5706296e1b14f25e8d4acf4aead6060368264a3ca90b901aa160d4e",
+    "data/raw/VNP03IMG/VNP03IMG.A2022195.1000.002.2022195175430.nc": "cc2abe81b5c9b7ea31dd5aa923daa251f482cc89a316646824d9ea4245090dae",
+    "data/raw/VNP03IMG/VNP03IMG.A2022197.1918.002.2022198022333.nc": "c047e6564ffbb663320dad2425988a4cdf4f3532ba7e66cc36df8e3522e05491",
+    "data/raw/VNP03IMG/VNP03IMG.A2022198.0900.002.2022198153854.nc": "defa27b83753546b79b9d577881377b0dbcbb75069de519310e399b96a8456be",
+    "data/raw/VNP03IMG/VNP03IMG.A2022203.1048.002.2022203174216.nc": "28234d328277445e842765ef520747c07e648040a414ec3574cd1cb7c6d0687e",
+    "data/raw/VNP03IMG/VNP03IMG.A2022205.2006.002.2022206065424.nc": "21ec871295d902812a3a7c809266cfa82ee6802bcff9f492bc30df60bf6f4943",
+    "data/raw/VNP03IMG/VNP03IMG.A2023182.2130.002.2023183052828.nc": "308fc9d7776adf3587f1493fd9b6e8f78bfcae2e6775ebbb5aed502c614aea4b",
+    "data/raw/VNP14IMG/VNP14IMG.A2021192.1954.002.2024074004604.nc": "1dcea5191397fde07999e76b81ca3220e978f490e443450219300a4093b7e58b",
+    "data/raw/VNP14IMG/VNP14IMG.A2021192.2130.002.2024074004602.nc": "cbdda2ce323ff41d69905fcd4add0de26ef772343d60bc268090ed6b5866b2b9",
+    "data/raw/VNP14IMG/VNP14IMG.A2021195.1048.002.2024074012435.nc": "98a8f54804ba68847d115fabd7c8b22979f393da723b3ee72dbc9eace132f777",
+    "data/raw/VNP14IMG/VNP14IMG.A2021197.2000.002.2024074015559.nc": "aab6d55ed751e47e9e4a06f73cf3292ccefe9fa69ced6122462ee50687ab5c07",
+    "data/raw/VNP14IMG/VNP14IMG.A2021198.0806.002.2024074021004.nc": "89ed32f0c6873a225467852467c9a7ae9a9d9f7ea97db5acfffeba3575141bbc",
+    "data/raw/VNP14IMG/VNP14IMG.A2021198.0948.002.2024074021006.nc": "f3367f4c84f618b3a0715c7c2cbc41789eba3133dbe0f926d6b90695040bf058",
+    "data/raw/VNP14IMG/VNP14IMG.A2021200.2042.002.2024074024327.nc": "f65ad7d959cdf0e1025c60b01744c53c94388b8d7958251ca597043cdc20b393",
+    "data/raw/VNP14IMG/VNP14IMG.A2021203.1800.002.2024074035905.nc": "2bfd81ce3b62d21b5e5512c4f050e7c973fb570fcc451c4d0fad03e4e1eac8d2",
+    "data/raw/VNP14IMG/VNP14IMG.A2021208.1954.002.2024074051336.nc": "1bad98b7e796b25a75057dbbf7658c99a3bf5c80092514c99a29425a76019522",
+    "data/raw/VNP14IMG/VNP14IMG.A2021211.1048.002.2024074054804.nc": "9945dc073ee73fa5813e4227fb9c15f918a01ebe38b362c02b555fda7ce93c36",
+    "data/raw/VNP14IMG/VNP14IMG.A2021213.2000.002.2024074060609.nc": "0d650edb24a9c1e2e862c11f50676799d01b61121bc61bff2581039ab0ab724e",
+    "data/raw/VNP14IMG/VNP14IMG.A2021214.0806.002.2024074061307.nc": "5d7d5462edacaae9133aab767e01c7d6673a56119426539c5bc62905db64865d",
+    "data/raw/VNP14IMG/VNP14IMG.A2021214.0948.002.2024074061307.nc": "64604d78156a4ae474a97ca59167c850aaf722ca9f18e5371f0d7c5373c4315a",
+    "data/raw/VNP14IMG/VNP14IMG.A2021216.1906.002.2024074062800.nc": "ec285b7d121c8f6db48d8ef10cbeb7155e2ac3e5ee590edb598122ed741e6a91",
+    "data/raw/VNP14IMG/VNP14IMG.A2021216.2042.002.2024074062800.nc": "8a4c83c174661d38d2cfad10d67cc33f4194cc2e4da36670cdc79aa1375c8f2c",
+    "data/raw/VNP14IMG/VNP14IMG.A2022187.1048.002.2024076174557.nc": "38c5b0819cd9679d6cb274fb7eb300477f14358d4d2f60204a6de6b35332e67a",
+    "data/raw/VNP14IMG/VNP14IMG.A2022189.2006.002.2024076180657.nc": "7e09d9e3fa5c580ed5362062a99e3982f36b56ff3235c1aef895ea8b136448ed",
+    "data/raw/VNP14IMG/VNP14IMG.A2022190.0812.002.2024076182426.nc": "f2ab626b8556282c08c88c1416284d9f8f5be9486b72e768073873dcc311f1fc",
+    "data/raw/VNP14IMG/VNP14IMG.A2022195.1000.002.2024076192601.nc": "a6d9a3a497804ab09c7ef04f99c494f128359e1e11171dedb7e1bb5dab059087",
+    "data/raw/VNP14IMG/VNP14IMG.A2022197.1918.002.2024076194531.nc": "49a7aaa2d9eac0003bee7d2089dcb1b1c7763d8c738abb4fc48bd0cc0c9b4ed1",
+    "data/raw/VNP14IMG/VNP14IMG.A2022198.0900.002.2024076195628.nc": "d4e8e7c828cd85a1a668cfe0e68cfdcc503f1849f245fec411861160bddef35c",
+    "data/raw/VNP14IMG/VNP14IMG.A2022203.1048.002.2024076205419.nc": "afcb49ab8c50b268d89dc7ba5e574f577cf63a84e0b0fc8f427504a35b0b7bd5",
+    "data/raw/VNP14IMG/VNP14IMG.A2022205.2006.002.2024076215122.nc": "0b24d474c2e05f68340f1eedeb7bbb5dd59217ec67673e0c6e8aed12bb5957c7",
+    "data/raw/VNP14IMG/VNP14IMG.A2023182.2130.002.2024079173045.nc": "9a0f2fb51326701bb8fc39f068b88dfe53d5cb508beba334679ddcdd43e23fc3"
+  },
+  "tile_policy": {
+    "size": 96,
+    "stride": 64,
+    "halo": 16,
+    "bbox_by_group": {
+      "bc_2021": [
+        -155,
+        30,
+        -90,
+        78
+      ],
+      "central_2021": [
+        -155,
+        30,
+        -90,
+        78
+      ],
+      "nwt_2022": [
+        -155,
+        30,
+        -90,
+        78
+      ],
+      "pilot_20230701_all_shared_sources": [
+        -145,
+        35,
+        -95,
+        75
+      ]
+    },
+    "selection": "Training-only VIIRS fire-near windows plus spatially spread detection-free controls; full native preparation and QA required"
+  },
+  "limitations": [
+    "regional-season groups are conservative cohorts, not individually verified incidents",
+    "one-degree cells measure spatial support, not independent fires",
+    "reference labels are nominal/high-confidence VIIRS activity, not ground truth"
+  ],
+  "reference_qa_audit_by_group": {
+    "central_2021": {
+      "known_queries": 1954145,
+      "positive_queries": 3058,
+      "negative_queries": 1951087,
+      "known_class_counts": {
+        "5": 1951087,
+        "8": 2947,
+        "9": 111
+      },
+      "positive_class_counts": {
+        "5": 0,
+        "8": 2947,
+        "9": 111
+      },
+      "known_qa_bit_set_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 50,
+        "4": 0,
+        "5": 0,
+        "6": 1219,
+        "22": 0
+      },
+      "positive_qa_bit_set_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 50,
+        "4": 0,
+        "5": 0,
+        "6": 691,
+        "22": 0
+      },
+      "positive_tiles": 54,
+      "negative_tiles": 93
+    },
+    "bc_2021": {
+      "known_queries": 1214428,
+      "positive_queries": 2742,
+      "negative_queries": 1211686,
+      "known_class_counts": {
+        "5": 1211686,
+        "8": 2636,
+        "9": 106
+      },
+      "positive_class_counts": {
+        "5": 0,
+        "8": 2636,
+        "9": 106
+      },
+      "known_qa_bit_set_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 82,
+        "4": 0,
+        "5": 0,
+        "6": 466,
+        "22": 0
+      },
+      "positive_qa_bit_set_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 82,
+        "4": 0,
+        "5": 0,
+        "6": 290,
+        "22": 0
+      },
+      "positive_tiles": 41,
+      "negative_tiles": 68
+    },
+    "nwt_2022": {
+      "known_queries": 1449667,
+      "positive_queries": 412,
+      "negative_queries": 1449255,
+      "known_class_counts": {
+        "5": 1449255,
+        "8": 412,
+        "9": 0
+      },
+      "positive_class_counts": {
+        "5": 0,
+        "8": 412,
+        "9": 0
+      },
+      "known_qa_bit_set_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 8,
+        "22": 0
+      },
+      "positive_qa_bit_set_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 4,
+        "22": 0
+      },
+      "positive_tiles": 24,
+      "negative_tiles": 77
+    },
+    "pilot_20230701_all_shared_sources": {
+      "known_queries": 127277,
+      "positive_queries": 7,
+      "negative_queries": 127270,
+      "known_class_counts": {
+        "5": 127270,
+        "8": 6,
+        "9": 1
+      },
+      "positive_class_counts": {
+        "5": 0,
+        "8": 6,
+        "9": 1
+      },
+      "known_qa_bit_set_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "22": 0
+      },
+      "positive_qa_bit_set_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "22": 0
+      },
+      "positive_tiles": 2,
+      "negative_tiles": 7
+    }
+  },
+  "july_2023_label_support": {
+    "positive_queries": 7,
+    "negative_queries": 127270,
+    "positive_tiles": 2,
+    "negative_tiles": 7,
+    "both_classes_present": true
+  }
+}

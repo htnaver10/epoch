@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "query-models",
+      "title": "Model comparison at eligible reference query centers",
+      "queries": [
+        {
+          "id": "matched-predictions",
+          "source": {
+            "label": "Local frozen prediction and evaluation artifacts",
+            "files": [
+              "fire-harmonization-PLSWORK/wide_diverse_v1/results/evaluation.json",
+              "fire-harmonization-PLSWORK/results/evaluation.json",
+              "fire-harmonization-PLSWORK/hybrid_v1/results/evaluation.json",
+              "fire-harmonization-research-YESSS/saturation_aware_v2/results/evaluation.json",
+              "data-visualization/wide-model-comparison/compare_models.py",
+              "fire-harmonization-research-fullres/results/substantial_round_v3/evaluation.json",
+              "fire-harmonization-research-fullres/results/teacher_student_v1/evaluation.json",
+              "fire-harmonization-research-YESSS/results/evaluation.json"
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Reference unit",
+                "definition": "585464 known VIIRS reference query centers; 95 positive labels; 84 test tiles."
+              },
+              {
+                "label": "Precision and recall",
+                "definition": "Precision = TP/(TP+FP); recall = TP/(TP+FN). Positives are VIIRS reference labels."
+              },
+              {
+                "label": "F1",
+                "definition": "2TP/(2TP+FP+FN)."
+              }
+            ],
+            "filters": [
+              "Split: reused 2024 Quebec test benchmark",
+              "Exposure: identical eligible reference support across compared methods"
+            ],
+            "caveats": [
+              "This is a reused benchmark, not an independent blind test.",
+              "Query centers and native cells are correlated reference units, not independent wildfire incidents.",
+              "Capacity, training observations and sampling objective changed together; gains cannot be attributed to size alone.",
+              "Supervised models use validation labels; V2 thresholds use unlabeled anomaly-score distributions.",
+              "Raw 0.5 and frozen-policy legacy rows are separate pre-existing operating points; no test thresholds were optimized.",
+              "V1 had an audited saturation/coverage defect; its low scores do not establish that unsupervised learning fails."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "label": "Independent counts and alignment",
+                "detail": "Matched labels, MODIS flags and reference indices; legacy predictions reordered by tile identity; recomputed confusion counts and score ranking from saved predictions.",
+                "showInReceipt": true
+              }
+            ]
+          },
+          "reportingPeriod": "2024-06-05, 2024-06-08 and 2024-06-13",
+          "columns": [
+            "model",
+            "precision",
+            "recall",
+            "F1",
+            "TP",
+            "FP",
+            "FN",
+            "AP"
+          ],
+          "rows": [
+            {
+              "model": "Wide diverse MLP (50.6M)",
+              "precision": 0.5740740740740741,
+              "recall": 0.6526315789473685,
+              "F1": 0.6108374384236454,
+              "TP": 62,
+              "FP": 46,
+              "FN": 33,
+              "AP": 0.5954747453930789
+            },
+            {
+              "model": "Original PLSWORK MLP",
+              "precision": 0.49295774647887325,
+              "recall": 0.7368421052631579,
+              "F1": 0.5907172995780591,
+              "TP": 70,
+              "FP": 72,
+              "FN": 25,
+              "AP": 0.5556229601094489
+            },
+            {
+              "model": "Neural/tree hybrid",
+              "precision": 0.4928571428571429,
+              "recall": 0.7263157894736842,
+              "F1": 0.5872340425531914,
+              "TP": 69,
+              "FP": 71,
+              "FN": 26,
+              "AP": 0.5585603839442203
+            },
+            {
+              "model": "Standard MODIS",
+              "precision": 0.44970414201183434,
+              "recall": 0.8,
+              "F1": 0.5757575757575758,
+              "TP": 76,
+              "FP": 93,
+              "FN": 19,
+              "AP": 0.3597957665015326
+            },
+            {
+              "model": "Previous supervised CNN (raw 0.5)",
+              "precision": 0.5384615384615384,
+              "recall": 0.5894736842105263,
+              "F1": 0.5628140703517588,
+              "TP": 56,
+              "FP": 48,
+              "FN": 39,
+              "AP": 0.5002445434565459
+            },
+            {
+              "model": "Saturation V2 coarse",
+              "precision": 0.3789954337899543,
+              "recall": 0.8736842105263158,
+              "F1": 0.5286624203821656,
+              "TP": 83,
+              "FP": 136,
+              "FN": 12,
+              "AP": 0.5316982291234552
+            },
+            {
+              "model": "Distilled MODIS student (raw 0.5)",
+              "precision": 0.5,
+              "recall": 0.5368421052631579,
+              "F1": 0.5177664974619289,
+              "TP": 51,
+              "FP": 51,
+              "FN": 44,
+              "AP": 0.45431352248906415
+            },
+            {
+              "model": "PLSWORK tree",
+              "precision": 0.39444444444444443,
+              "recall": 0.7473684210526316,
+              "F1": 0.5163636363636364,
+              "TP": 71,
+              "FP": 109,
+              "FN": 24,
+              "AP": 0.5586241340289471
+            },
+            {
+              "model": "Saturation V2 localized",
+              "precision": 0.3767123287671233,
+              "recall": 0.5789473684210527,
+              "F1": 0.45643153526970953,
+              "TP": 55,
+              "FP": 91,
+              "FN": 40,
+              "AP": null
+            },
+            {
+              "model": "Previous supervised CNN (frozen policy)",
+              "precision": 0.11126005361930295,
+              "recall": 0.8736842105263158,
+              "F1": 0.19738406658739596,
+              "TP": 83,
+              "FP": 663,
+              "FN": 12,
+              "AP": 0.5002445434565459
+            },
+            {
+              "model": "Distilled MODIS student (frozen policy)",
+              "precision": 0.11095505617977527,
+              "recall": 0.8315789473684211,
+              "F1": 0.19578686493184635,
+              "TP": 79,
+              "FP": 633,
+              "FN": 16,
+              "AP": 0.45431352248906415
+            },
+            {
+              "model": "Saturation V1 coarse",
+              "precision": 0.12903225806451613,
+              "recall": 0.08421052631578947,
+              "F1": 0.10191082802547771,
+              "TP": 8,
+              "FP": 54,
+              "FN": 87,
+              "AP": 0.016890024534226045
+            },
+            {
+              "model": "Saturation V1 localized",
+              "precision": 0.12,
+              "recall": 0.06315789473684211,
+              "F1": 0.08275862068965517,
+              "TP": 6,
+              "FP": 44,
+              "FN": 89,
+              "AP": null
+            }
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "precision = TP / (TP + FP)\nrecall = TP / (TP + FN)\nF1 = 2*TP / (2*TP + FP + FN)\nAP = sum(delta_recall * precision_at_grouped_score_threshold)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "native-cells",
+      "title": "Model comparison at native MODIS-cell support",
+      "queries": [
+        {
+          "id": "matched-predictions",
+          "source": {
+            "label": "Local frozen prediction and evaluation artifacts",
+            "files": [
+              "fire-harmonization-PLSWORK/wide_diverse_v1/results/evaluation.json",
+              "fire-harmonization-PLSWORK/results/evaluation.json",
+              "fire-harmonization-PLSWORK/hybrid_v1/results/evaluation.json",
+              "fire-harmonization-research-YESSS/saturation_aware_v2/results/evaluation.json",
+              "data-visualization/wide-model-comparison/compare_models.py",
+              "data-visualization/wide-model-comparison/native_cell_policies.json",
+              "fire-harmonization-PLSWORK/wide_diverse_v1/results/validation_predictions.npz"
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Reference unit",
+                "definition": "103069 observed native MODIS cells; 39 any-positive reference cells."
+              },
+              {
+                "label": "Precision and recall",
+                "definition": "Precision = TP/(TP+FP); recall = TP/(TP+FN). Positives are VIIRS reference labels."
+              },
+              {
+                "label": "F1",
+                "definition": "2TP/(2TP+FP+FN)."
+              }
+            ],
+            "filters": [
+              "Split: reused 2024 Quebec test benchmark",
+              "Exposure: identical eligible reference support across compared methods"
+            ],
+            "caveats": [
+              "This is a reused benchmark, not an independent blind test.",
+              "Query centers and native cells are correlated reference units, not independent wildfire incidents.",
+              "Capacity, training observations and sampling objective changed together; gains cannot be attributed to size alone.",
+              "Supervised models use validation labels; V2 thresholds use unlabeled anomaly-score distributions.",
+              "Raw 0.5 and frozen-policy legacy rows are separate pre-existing operating points; no test thresholds were optimized.",
+              "V1 had an audited saturation/coverage defect; its low scores do not establish that unsupervised learning fails.",
+              "Native-cell policies for the wide MLP and tree were newly derived on validation; other existing native-cell policies were preserved."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "label": "Independent counts and alignment",
+                "detail": "Matched labels, MODIS flags and reference indices; legacy predictions reordered by tile identity; recomputed confusion counts and score ranking from saved predictions.",
+                "showInReceipt": true
+              }
+            ]
+          },
+          "reportingPeriod": "2024-06-05, 2024-06-08 and 2024-06-13",
+          "columns": [
+            "model",
+            "precision",
+            "recall",
+            "F1",
+            "TP",
+            "FP",
+            "FN",
+            "AP"
+          ],
+          "rows": [
+            {
+              "model": "Standard MODIS",
+              "precision": 0.7631578947368421,
+              "recall": 0.7435897435897436,
+              "F1": 0.7532467532467533,
+              "TP": 29,
+              "FP": 9,
+              "FN": 10,
+              "AP": 0.5675734056489208
+            },
+            {
+              "model": "Wide diverse MLP (50.6M)",
+              "precision": 0.8888888888888888,
+              "recall": 0.6153846153846154,
+              "F1": 0.7272727272727273,
+              "TP": 24,
+              "FP": 3,
+              "FN": 15,
+              "AP": 0.818019232931664
+            },
+            {
+              "model": "PLSWORK tree",
+              "precision": 0.717948717948718,
+              "recall": 0.717948717948718,
+              "F1": 0.717948717948718,
+              "TP": 28,
+              "FP": 11,
+              "FN": 11,
+              "AP": 0.7336010903125476
+            },
+            {
+              "model": "Original PLSWORK MLP",
+              "precision": 0.78125,
+              "recall": 0.6410256410256411,
+              "F1": 0.704225352112676,
+              "TP": 25,
+              "FP": 7,
+              "FN": 14,
+              "AP": 0.7883855350833284
+            },
+            {
+              "model": "Neural/tree hybrid",
+              "precision": 0.78125,
+              "recall": 0.6410256410256411,
+              "F1": 0.704225352112676,
+              "TP": 25,
+              "FP": 7,
+              "FN": 14,
+              "AP": 0.7897090793348961
+            },
+            {
+              "model": "Saturation V2 coarse",
+              "precision": 0.6153846153846154,
+              "recall": 0.8205128205128205,
+              "F1": 0.7032967032967034,
+              "TP": 32,
+              "FP": 20,
+              "FN": 7,
+              "AP": 0.7391109088736879
+            }
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "precision = TP / (TP + FP)\nrecall = TP / (TP + FN)\nF1 = 2*TP / (2*TP + FP + FN)\nAP = sum(delta_recall * precision_at_grouped_score_threshold)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

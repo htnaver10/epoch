@@ -1,0 +1,9 @@
+{
+  "name": "wide_diverse_v1",
+  "architecture": {"feature_count": 96, "width": 2048, "expansion": 2, "blocks": 3, "dropout": 0.2},
+  "features": {"context_windows": [7, 21], "background_exclusion_window": 3, "minimum_background_pixels": 8, "contrast_z_clip": 20.0},
+  "training": {"seed": 20261115, "epochs": 30, "patience": 8, "steps_per_epoch": 256, "batch_size": 1024, "inference_batch_size": 2048, "learning_rate": 0.0001, "weight_decay": 0.01, "gradient_clip": 1.0, "positive_sample_fraction": 0.25, "device": "cuda", "precision": "bfloat16"},
+  "sampling_objective": "Equal contribution per conservative training cohort; exact class-stratification importance correction within each cohort. Sampling is with replacement. No fabricated labels or imagery augmentation.",
+  "selection": "Highest exact average precision on original validation queries; patience-based stopping. Freeze matched-MODIS-false-positive policy on validation before benchmark prediction.",
+  "scope": "Research VIIRS-reference detection. Original validation and 2024 benchmark were previously examined. Extra training windows are selected using training-only reference locations and independent source checks. Additional queries are not independent wildfire incidents."
+}

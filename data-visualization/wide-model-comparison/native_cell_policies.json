@@ -1,0 +1,16 @@
+{
+  "wide": {
+    "fit_split": "validation",
+    "test_used_for_fit": false,
+    "cutoff": 0.29101562500000006,
+    "false_positive_budget": 135,
+    "aggregation": "maximum score among eligible reference centers per native MODIS cell"
+  },
+  "tree": {
+    "fit_split": "validation",
+    "test_used_for_fit": false,
+    "cutoff": -0.9523739629114868,
+    "false_positive_budget": 135,
+    "aggregation": "maximum score among eligible reference centers per native MODIS cell"
+  }
+}

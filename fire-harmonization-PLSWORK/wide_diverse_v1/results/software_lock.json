@@ -1,0 +1,35 @@
+{
+  "files": {
+    "dataset.py": "a5e3cf713cb1e614bd5070941f8b35b2db0de4a256178e3870848f2b53cd6a0d",
+    "expand_data.py": "1e784ea308f19e781277d5a119f694671755e24a2a473f5228d61f3c5c3c566a",
+    "feature_extraction.py": "ae708af2a67a610f485672db29214a492560bf6eae88d828d95ee5feb663bd31",
+    "inference.py": "34b69b0538f2d52162455a356d8f6e4e9611ad7b0622b577ad5c3548e8595438",
+    "model.py": "21651d37824752685bbb1033251e5a0d05c54e75868e2dbf8013ce514d3c7e0a",
+    "run.py": "ef4b83259ae59f44f212c8d5190dfa83048903b296fb3a68cf9cc397e58d28e1",
+    "settings.py": "e256a6342f50a8b7ef2c083991ddeec079e2a427ef3993275197d5c2eab23732",
+    "test_model.py": "d04c2de1146ebb3ad2e6c505e303c80b79c476eea23ee3f17563be7ba9e89a97",
+    "test_pipeline.py": "e0a6767b981a181ba4fd7f266e4a5b6825957d3f2bea8e297d5c377ac5e9c7fc",
+    "training.py": "5cd05fd6fbf5c26e688035541a6e1bc438162d0cc3835434b2de740a79a833d7",
+    "verification.py": "77478e71698e8d66740229fbd782b1e0bc5b3fc0628c982a8541e43418fd203d",
+    "vendor/firefullres/__init__.py": "6f6913edb314f0838488ea671e6bfe40a1ea2eadcc0eb40138161fdfac255c74",
+    "vendor/firefullres/acquisition.py": "a288c0905044589eb7782e33c14f4f085f7bc52a528333c00bea48710fc578e0",
+    "vendor/firefullres/calibration.py": "6f174605e5f08380864e07240f93574331a8954e536720008781dad36db1274d",
+    "vendor/firefullres/core.py": "16d8a3c1adc5888f593e6b448b823707aa9dccd9ed6efde7d5946a24b95ac9b2",
+    "vendor/firefullres/geometry.py": "f3f57a6dc085c4a766652f356753e4dcbdb71440cc329816dec729220f9bb36c",
+    "vendor/firefullres/native.py": "e85598cc266bc0d7848d9d2fb82ea707b900432a0ba82518980b353ad131bfce",
+    "vendor/firefullres/prepare.py": "25278ace21d7a14462b652bacc14dab0f7e44f1f6cfeef95ca679f9575638f36",
+    "config.json": "6a61e837628f011f4d5850934dfefdc01a1632f51477b428f4772f944506b851",
+    "expansion_config.json": "6cdb54fa7d6a8a4b692b222a69d7ca64b798592e76f3dc0174c70420d3296703"
+  },
+  "parent_manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+  "parent_feature_receipt_sha256": "921474f86e93f032fa6b3805741b990120e31056e8305c38b98e19a5241bef0e",
+  "parent_model_sha256": "35535575bd95e385a17bc462c14e1e9ea6fdd534d673db762a3acb9ff67c7759",
+  "data_receipt_sha256": "253fa2180eb12881d4e740a908b8af13374878d0a8514aa3d3d0000cc36d83e3",
+  "expansion_receipt_sha256": "350cd8177a4e8176af0e07965661892f9973b7bf4e9c8d6c9754a49658740a42",
+  "runtime": {
+    "python": "3.12.10",
+    "torch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5070"
+  }
+}

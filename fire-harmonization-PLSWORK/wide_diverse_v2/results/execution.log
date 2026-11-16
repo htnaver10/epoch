@@ -1,0 +1,115 @@
+[2026-11-15 22:30:10] Prior-window exclusion: parent=844; v1 accepted+rejected=659
+[2026-11-15 22:30:10] Parent manifest: 844 train tiles / 3 groups; heldout groups=['quebec_20230605', 'quebec_2024']
+[2026-11-15 22:30:10] Source bundles: 24 train candidates, 24 distinct pairs admitted, 0 rejected by heldout identity checks
+[2026-11-15 22:30:10] Copying 156 native files (12.08 GiB); free space before copy=289.16 GiB
+[2026-11-15 22:30:32]   MYD021KM.A2021192.2130.061.2021193154836.hdf: 63 positive-candidate windows, 557 fire-clear windows; VIIRS detections=1199
+[2026-11-15 22:30:34]   MYD021KM.A2021192.1955.061.2021193154940.hdf: 58 positive-candidate windows, 562 fire-clear windows; VIIRS detections=368
+[2026-11-15 22:30:35]   MYD021KM.A2021203.1800.061.2021204155737.hdf: 0 positive-candidate windows, 362 fire-clear windows; VIIRS detections=272
+[2026-11-15 22:30:37]   MYD021KM.A2021208.1955.061.2021209155044.hdf: 23 positive-candidate windows, 597 fire-clear windows; VIIRS detections=110
+[2026-11-15 22:30:38]   MYD021KM.A2022195.1000.061.2022319114302.hdf: 39 positive-candidate windows, 580 fire-clear windows; VIIRS detections=148
+[2026-11-15 22:30:40]   MYD021KM.A2021195.1050.061.2021196154734.hdf: 68 positive-candidate windows, 552 fire-clear windows; VIIRS detections=3224
+[2026-11-15 22:30:41]   MYD021KM.A2021211.1050.061.2021212164202.hdf: 54 positive-candidate windows, 566 fire-clear windows; VIIRS detections=2188
+[2026-11-15 22:30:43]   MYD021KM.A2021216.1905.061.2021217160544.hdf: 0 positive-candidate windows, 576 fire-clear windows; VIIRS detections=24
+[2026-11-15 22:30:44]   MYD021KM.A2021198.0805.061.2021198193030.hdf: 87 positive-candidate windows, 409 fire-clear windows; VIIRS detections=7336
+[2026-11-15 22:30:45]   MYD021KM.A2021214.0805.061.2021214194008.hdf: 72 positive-candidate windows, 423 fire-clear windows; VIIRS detections=4998
+[2026-11-15 22:30:47]   MYD021KM.A2022187.1050.061.2022318044331.hdf: 75 positive-candidate windows, 545 fire-clear windows; VIIRS detections=673
+[2026-11-15 22:30:48]   MYD021KM.A2022203.1050.061.2022320120745.hdf: 18 positive-candidate windows, 602 fire-clear windows; VIIRS detections=93
+[2026-11-15 22:30:50]   MYD021KM.A2021200.2045.061.2021202201138.hdf: 85 positive-candidate windows, 535 fire-clear windows; VIIRS detections=1409
+[2026-11-15 22:30:51]   MYD021KM.A2021216.2040.061.2021217160654.hdf: 32 positive-candidate windows, 588 fire-clear windows; VIIRS detections=1016
+[2026-11-15 22:30:52]   MYD021KM.A2021198.0945.061.2021198193020.hdf: 160 positive-candidate windows, 460 fire-clear windows; VIIRS detections=4779
+[2026-11-15 22:30:54]   MYD021KM.A2021214.0945.061.2021214194044.hdf: 143 positive-candidate windows, 477 fire-clear windows; VIIRS detections=6481
+[2026-11-15 22:30:55]   MYD021KM.A2022205.2010.061.2022320210620.hdf: 7 positive-candidate windows, 613 fire-clear windows; VIIRS detections=7
+[2026-11-15 22:30:56]   MYD021KM.A2022198.0855.061.2022319205217.hdf: 2 positive-candidate windows, 617 fire-clear windows; VIIRS detections=2
+[2026-11-15 22:30:58]   MYD021KM.A2023182.2125.061.2023183152241.hdf: 7 positive-candidate windows, 613 fire-clear windows; VIIRS detections=27
+[2026-11-15 22:30:59]   MYD021KM.A2022197.1925.061.2022319180419.hdf: 1 positive-candidate windows, 607 fire-clear windows; VIIRS detections=13
+[2026-11-15 22:31:00]   MYD021KM.A2022190.0805.061.2022318181200.hdf: 15 positive-candidate windows, 370 fire-clear windows; VIIRS detections=62
+[2026-11-15 22:31:02]   MYD021KM.A2022189.2015.061.2022318104536.hdf: 73 positive-candidate windows, 547 fire-clear windows; VIIRS detections=1482
+[2026-11-15 22:31:03]   MYD021KM.A2021197.2010.061.2021198152538.hdf: 0 positive-candidate windows, 620 fire-clear windows; VIIRS detections=775
+[2026-11-15 22:31:04]   MYD021KM.A2021213.2010.061.2021214160335.hdf: 0 positive-candidate windows, 620 fire-clear windows; VIIRS detections=2774
+[2026-11-15 22:31:04] Selected 951 candidate native windows before full QA (471 positive-stratum, 480 fire-clear controls)
+[2026-11-15 22:31:04] Persisted 951 candidate windows before native preparation
+[2026-11-15 22:31:11] Prepared/checked 10/951 candidates; admitted 3 tiles
+[2026-11-15 22:31:12] Prepared/checked 20/951 candidates; admitted 3 tiles
+[2026-11-15 22:31:21] Prepared/checked 30/951 candidates; admitted 4 tiles
+[2026-11-15 22:31:35] Prepared/checked 40/951 candidates; admitted 9 tiles
+[2026-11-15 22:31:49] Prepared/checked 50/951 candidates; admitted 15 tiles
+[2026-11-15 22:31:54] Prepared/checked 60/951 candidates; admitted 18 tiles
+[2026-11-15 22:31:55] Prepared/checked 70/951 candidates; admitted 18 tiles
+[2026-11-15 22:32:05] Prepared/checked 80/951 candidates; admitted 18 tiles
+[2026-11-15 22:32:15] Prepared/checked 90/951 candidates; admitted 18 tiles
+[2026-11-15 22:32:19] Prepared/checked 100/951 candidates; admitted 18 tiles
+[2026-11-15 22:32:20] Prepared/checked 110/951 candidates; admitted 18 tiles
+[2026-11-15 22:32:29] Prepared/checked 120/951 candidates; admitted 24 tiles
+[2026-11-15 22:32:37] Prepared/checked 130/951 candidates; admitted 28 tiles
+[2026-11-15 22:32:47] Prepared/checked 140/951 candidates; admitted 31 tiles
+[2026-11-15 22:33:19] Prior-window exclusion: parent=844; v1 accepted+rejected=659
+[2026-11-15 22:33:19] Parent manifest: 844 train tiles / 3 groups; heldout groups=['quebec_20230605', 'quebec_2024']
+[2026-11-15 22:33:19] Source bundles: 24 train candidates, 24 distinct pairs admitted, 0 rejected by heldout identity checks
+[2026-11-15 22:33:19] Copying 156 native files (12.08 GiB); free space before copy=276.77 GiB
+[2026-11-15 22:33:36]   MYD021KM.A2021192.2130.061.2021193154836.hdf: 63 positive-candidate windows, 557 fire-clear windows; VIIRS detections=1199
+[2026-11-15 22:33:37]   MYD021KM.A2021192.1955.061.2021193154940.hdf: 58 positive-candidate windows, 562 fire-clear windows; VIIRS detections=368
+[2026-11-15 22:33:39]   MYD021KM.A2021203.1800.061.2021204155737.hdf: 0 positive-candidate windows, 362 fire-clear windows; VIIRS detections=272
+[2026-11-15 22:33:40]   MYD021KM.A2021208.1955.061.2021209155044.hdf: 23 positive-candidate windows, 597 fire-clear windows; VIIRS detections=110
+[2026-11-15 22:33:41]   MYD021KM.A2022195.1000.061.2022319114302.hdf: 39 positive-candidate windows, 580 fire-clear windows; VIIRS detections=148
+[2026-11-15 22:33:43]   MYD021KM.A2021195.1050.061.2021196154734.hdf: 68 positive-candidate windows, 552 fire-clear windows; VIIRS detections=3224
+[2026-11-15 22:33:44]   MYD021KM.A2021211.1050.061.2021212164202.hdf: 54 positive-candidate windows, 566 fire-clear windows; VIIRS detections=2188
+[2026-11-15 22:33:45]   MYD021KM.A2021216.1905.061.2021217160544.hdf: 0 positive-candidate windows, 576 fire-clear windows; VIIRS detections=24
+[2026-11-15 22:33:46]   MYD021KM.A2021198.0805.061.2021198193030.hdf: 87 positive-candidate windows, 409 fire-clear windows; VIIRS detections=7336
+[2026-11-15 22:33:48]   MYD021KM.A2021214.0805.061.2021214194008.hdf: 72 positive-candidate windows, 423 fire-clear windows; VIIRS detections=4998
+[2026-11-15 22:33:49]   MYD021KM.A2022187.1050.061.2022318044331.hdf: 75 positive-candidate windows, 545 fire-clear windows; VIIRS detections=673
+[2026-11-15 22:33:50]   MYD021KM.A2022203.1050.061.2022320120745.hdf: 18 positive-candidate windows, 602 fire-clear windows; VIIRS detections=93
+[2026-11-15 22:33:52]   MYD021KM.A2021200.2045.061.2021202201138.hdf: 85 positive-candidate windows, 535 fire-clear windows; VIIRS detections=1409
+[2026-11-15 22:33:53]   MYD021KM.A2021216.2040.061.2021217160654.hdf: 32 positive-candidate windows, 588 fire-clear windows; VIIRS detections=1016
+[2026-11-15 22:33:54]   MYD021KM.A2021198.0945.061.2021198193020.hdf: 160 positive-candidate windows, 460 fire-clear windows; VIIRS detections=4779
+[2026-11-15 22:33:56]   MYD021KM.A2021214.0945.061.2021214194044.hdf: 143 positive-candidate windows, 477 fire-clear windows; VIIRS detections=6481
+[2026-11-15 22:33:57]   MYD021KM.A2022205.2010.061.2022320210620.hdf: 7 positive-candidate windows, 613 fire-clear windows; VIIRS detections=7
+[2026-11-15 22:33:58]   MYD021KM.A2022198.0855.061.2022319205217.hdf: 2 positive-candidate windows, 617 fire-clear windows; VIIRS detections=2
+[2026-11-15 22:34:00]   MYD021KM.A2023182.2125.061.2023183152241.hdf: 7 positive-candidate windows, 613 fire-clear windows; VIIRS detections=27
+[2026-11-15 22:34:01]   MYD021KM.A2022197.1925.061.2022319180419.hdf: 1 positive-candidate windows, 607 fire-clear windows; VIIRS detections=13
+[2026-11-15 22:34:02]   MYD021KM.A2022190.0805.061.2022318181200.hdf: 15 positive-candidate windows, 370 fire-clear windows; VIIRS detections=62
+[2026-11-15 22:34:04]   MYD021KM.A2022189.2015.061.2022318104536.hdf: 73 positive-candidate windows, 547 fire-clear windows; VIIRS detections=1482
+[2026-11-15 22:34:05]   MYD021KM.A2021197.2010.061.2021198152538.hdf: 0 positive-candidate windows, 620 fire-clear windows; VIIRS detections=775
+[2026-11-15 22:34:06]   MYD021KM.A2021213.2010.061.2021214160335.hdf: 0 positive-candidate windows, 620 fire-clear windows; VIIRS detections=2774
+[2026-11-15 22:34:07] Selected 2871 candidate native windows before full QA (471 positive-stratum, 2400 fire-clear controls)
+[2026-11-15 22:34:07] Persisted 2871 candidate windows before native preparation
+[2026-11-15 22:34:09] Prepared/checked 30/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:10] Prepared/checked 40/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:11] Prepared/checked 50/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:12] Prepared/checked 60/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:12] Prepared/checked 70/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:13] Prepared/checked 80/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:14] Prepared/checked 90/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:15] Prepared/checked 100/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:17] Prepared/checked 160/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:18] Prepared/checked 170/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:18] Prepared/checked 180/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:19] Prepared/checked 190/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:21] Prepared/checked 200/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:23] Prepared/checked 210/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:26] Prepared/checked 220/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:29] Prepared/checked 230/2871 candidates; admitted 38 tiles
+[2026-11-15 22:34:41] Prepared/checked 260/2871 candidates; admitted 40 tiles
+[2026-11-15 22:34:53] Prepared/checked 270/2871 candidates; admitted 42 tiles
+[2026-11-15 22:35:04] Prepared/checked 280/2871 candidates; admitted 45 tiles
+[2026-11-15 22:35:16] Prepared/checked 290/2871 candidates; admitted 49 tiles
+[2026-11-15 22:35:29] Prepared/checked 300/2871 candidates; admitted 54 tiles
+[2026-11-15 22:35:39] Prepared/checked 310/2871 candidates; admitted 57 tiles
+[2026-11-15 22:35:50] Prepared/checked 320/2871 candidates; admitted 61 tiles
+[2026-11-15 22:35:59] Prepared/checked 330/2871 candidates; admitted 64 tiles
+[2026-11-15 22:36:04] Prepared/checked 360/2871 candidates; admitted 65 tiles
+[2026-11-15 22:36:05] Prepared/checked 370/2871 candidates; admitted 65 tiles
+[2026-11-15 22:36:06] Prepared/checked 380/2871 candidates; admitted 65 tiles
+[2026-11-15 22:36:07] Prepared/checked 390/2871 candidates; admitted 65 tiles
+[2026-11-15 22:36:08] Prepared/checked 400/2871 candidates; admitted 65 tiles
+[2026-11-15 22:36:09] Prepared/checked 410/2871 candidates; admitted 65 tiles
+[2026-11-15 22:36:09] Prepared/checked 420/2871 candidates; admitted 65 tiles
+[2026-11-15 22:36:10] Prepared/checked 430/2871 candidates; admitted 65 tiles
+[2026-11-15 22:36:13] Prepared/checked 470/2871 candidates; admitted 66 tiles
+[2026-11-15 22:36:25] Prepared/checked 480/2871 candidates; admitted 72 tiles
+[2026-11-15 22:36:34] Prepared/checked 490/2871 candidates; admitted 79 tiles
+[2026-11-15 22:36:36] Prepared/checked 500/2871 candidates; admitted 80 tiles
+[2026-11-15 22:36:37] Prepared/checked 510/2871 candidates; admitted 80 tiles
+[2026-11-15 22:36:37] Prepared/checked 520/2871 candidates; admitted 80 tiles
+[2026-11-15 22:36:38] Prepared/checked 530/2871 candidates; admitted 80 tiles
+[2026-11-15 22:36:39] Prepared/checked 540/2871 candidates; admitted 80 tiles
+[2026-11-15 22:36:40] Prepared/checked 550/2871 candidates; admitted 80 tiles

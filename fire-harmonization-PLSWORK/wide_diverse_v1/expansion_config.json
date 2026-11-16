@@ -1,0 +1,28 @@
+{
+  "name": "wide_diverse_v1_expansion",
+  "source_bundle_manifests": [
+    "fire-harmonization-research-fullres/data/manifests/substantial_round_v3_bundles.jsonl",
+    "fire-harmonization-research-fullres/data/manifests/real_pilot_all_land_qa_bundles.jsonl"
+  ],
+  "parent_manifest": "fire-harmonization-PLSWORK/data/manifests/source_v3.jsonl",
+  "split": "train",
+  "regions": {
+    "bc_2021": [-155, 30, -90, 78],
+    "central_2021": [-155, 30, -90, 78],
+    "nwt_2022": [-155, 30, -90, 78],
+    "pilot_20230701_all_shared_sources": [-145, 35, -95, 75]
+  },
+  "tile_size": 96,
+  "stride": 64,
+  "halo": 16,
+  "max_query_side": 768,
+  "max_new_tiles": 1500,
+  "positive_candidates_per_bundle": 28,
+  "control_candidates_per_bundle": 10,
+  "control_fire_clearance_degrees": 0.4,
+  "positive_cell_spacing_degrees": 0.35,
+  "copy_raw_max_gib": 35,
+  "reserve_free_gib": 40,
+  "forest_only": false,
+  "notes": "Training-only selection. Native tiles are sampled near reliable VIIRS classes 8/9 plus deterministic fire-clear controls. A tile is admitted only after complete native preparation/QA. Geographic output bbox expands acquisition coverage; parent validation and test source basenames are prohibited."
+}

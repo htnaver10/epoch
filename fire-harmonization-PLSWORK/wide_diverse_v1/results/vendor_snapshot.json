@@ -1,0 +1,12 @@
+{
+  "source": "fire-harmonization-research-fullres/src/firefullres",
+  "files": {
+    "vendor/firefullres/__init__.py": "6f6913edb314f0838488ea671e6bfe40a1ea2eadcc0eb40138161fdfac255c74",
+    "vendor/firefullres/core.py": "16d8a3c1adc5888f593e6b448b823707aa9dccd9ed6efde7d5946a24b95ac9b2",
+    "vendor/firefullres/native.py": "e85598cc266bc0d7848d9d2fb82ea707b900432a0ba82518980b353ad131bfce",
+    "vendor/firefullres/geometry.py": "f3f57a6dc085c4a766652f356753e4dcbdb71440cc329816dec729220f9bb36c",
+    "vendor/firefullres/prepare.py": "25278ace21d7a14462b652bacc14dab0f7e44f1f6cfeef95ca679f9575638f36",
+    "vendor/firefullres/calibration.py": "6f174605e5f08380864e07240f93574331a8954e536720008781dad36db1274d",
+    "vendor/firefullres/acquisition.py": "a288c0905044589eb7782e33c14f4f085f7bc52a528333c00bea48710fc578e0"
+  }
+}

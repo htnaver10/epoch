@@ -1,0 +1,9 @@
+__pycache__/
+*.partial
+.cache/
+data/raw/
+data/tiles/
+data/features/
+models/*.pt
+results/*.npz
+results/*.npy

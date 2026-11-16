@@ -1,0 +1,9 @@
+{
+  "fit_split": "validation",
+  "test_used_for_fit": false,
+  "model_sha256": "80a8b0e65bba826868ccff828cff8b1e44f1000276d852e0ef8c4f7b4c747899",
+  "raw_logit_cutoff": 0.18652343750000003,
+  "logit_offset": -1.3366102256785553,
+  "false_positive_budget": 2013.0,
+  "benchmark_previously_examined": true
+}

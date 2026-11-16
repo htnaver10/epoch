@@ -1,0 +1,10 @@
+{
+  "parameters": 50567169,
+  "epochs_completed": 18,
+  "selected_epoch": 10,
+  "best_validation_average_precision": 0.43783829824786447,
+  "inference_sha256": "80a8b0e65bba826868ccff828cff8b1e44f1000276d852e0ef8c4f7b4c747899",
+  "inference_bytes": 202285041,
+  "exact_export_reload_passed": true,
+  "early_stopping": true
+}
