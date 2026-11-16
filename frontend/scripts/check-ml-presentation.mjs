@@ -24,6 +24,9 @@ try {
   assert.match(page.url(), /split=test/);
   assert.equal(await page.getByRole("button", { name: "Benchmark 84", exact: true }).getAttribute("aria-pressed"), "true");
   checks.push("50.6M model presentation opens with benchmark-only scenes and a decoded rendered comparison");
+  await page.locator(".ml-presentation").evaluate((element) => { element.style.height = "auto"; element.style.overflow = "visible"; });
+  await page.screenshot({ path: out + "/complete-overview.png", fullPage: true });
+  await page.locator(".ml-presentation").evaluate((element) => { element.style.height = ""; element.style.overflow = ""; });
   for (const [id, name] of [["mlp", "50.6M MLP"], ["modis", "MODIS"], ["viirs", "VIIRS reference"], ["difference", "Difference"], ["compare", "Compare all"]]) {
     await page.getByRole("button", { name, exact: true }).click();
     await ready();

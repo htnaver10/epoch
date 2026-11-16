@@ -17,3 +17,6 @@ docs/CLAUDE_REVIEW_BRIEF.md
 
 # Raw multi-year downloads (reproducible with backend/download_seasons.py)
 data/seasons/
+
+# Per-scene resume receipts; the complete presentation assets and input snapshot are retained.
+/backend/data/ml_presentation/receipts/

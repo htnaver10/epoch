@@ -13,10 +13,30 @@ if not (source / "index.html").is_file():
 # Normalize that generated file so Windows publication does not create a mixed-EOL diff.
 index = source / "index.html"
 index.write_bytes(index.read_bytes().replace(b"\r", b""))
-shutil.copytree(source, destination, dirs_exist_ok=True)
 files = [p for p in source.rglob("*") if p.is_file()]
+changed = 0
 for path in files:
     copied = destination / path.relative_to(source)
-    with path.open("rb") as a, copied.open("rb") as b:
-        assert hashlib.file_digest(a, "sha256").digest() == hashlib.file_digest(b, "sha256").digest()
-print(f"Published and verified {len(files)} files in {destination}")
+    with path.open("rb") as stream:
+        expected = hashlib.file_digest(stream, "sha256").digest()
+    actual = None
+    if copied.is_file():
+        with copied.open("rb") as stream:
+            actual = hashlib.file_digest(stream, "sha256").digest()
+    if actual != expected:
+        copied.parent.mkdir(parents=True, exist_ok=True)
+        temporary = copied.with_name(copied.name + ".publish-partial")
+        shutil.copy2(path, temporary)
+        with temporary.open("rb") as stream:
+            assert hashlib.file_digest(stream, "sha256").digest() == expected
+        try:
+            temporary.replace(copied)
+        except PermissionError:
+            # Windows readers can prevent replacing a currently served file.
+            # Preserve the prior publisher's overwrite behavior in that case.
+            shutil.copy2(temporary, copied)
+            with copied.open("rb") as stream:
+                assert hashlib.file_digest(stream, "sha256").digest() == expected
+            temporary.unlink()
+        changed += 1
+print(f"Published {changed} changed files and verified {len(files)} files in {destination}")

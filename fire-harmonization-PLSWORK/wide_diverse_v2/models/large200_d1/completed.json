@@ -1,0 +1,12 @@
+{
+  "run_id": "large200_d1",
+  "dataset": "d1",
+  "parameters": 201797633,
+  "epochs_completed": 18,
+  "selected_epoch": 10,
+  "best_validation_average_precision": 0.4328767279926354,
+  "inference_sha256": "dd1539f2c7b05f632e916e4e46535738fca09b76a94aa9149f358584ca4cc77a",
+  "inference_bytes": 807207345,
+  "exact_export_reload_passed": true,
+  "early_stopping": true
+}

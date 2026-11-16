@@ -1,15 +1,18 @@
 EPOCH
 
-MLP research viewer (frontend + backend, one command from this folder):
+50.6M model presentation (one command from this folder):
 
     .\run-ml-viewer.cmd
 
 Or double-click run-ml-viewer.cmd. It opens:
     http://127.0.0.1:8000/?mode=ml
 
-Keep its server window open. Ctrl+C stops it. Select a processed scene and
-compare MLP, MODIS and VIIRS reference observations. This is cached research,
-not live monitoring. Setup and details: MLP-INTEGRATION.md.
+Keep its server window open. Ctrl+C stops it. All 1,608 processed scenes,
+22,174,168 query scores and 8,040 rendered views are already prepared.
+Use Present scenes for the tour, and Image PNG to export a view for slides.
+Setup and presenter notes: ML-PRESENTATION.md.
+This is cached research, not live monitoring. The original small-model globe
+remains at http://127.0.0.1:8000/?mode=ml&view=inspect (MLP-INTEGRATION.md).
 
 Quickest: the built site is in ready-to-run/. It has to be served, not double-clicked
 (browsers will not load it from a file:// address). From this folder:

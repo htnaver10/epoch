@@ -1,0 +1,15 @@
+{
+  "fit_split": "validation",
+  "test_used_for_fit": false,
+  "model_sha256": "dd1539f2c7b05f632e916e4e46535738fca09b76a94aa9149f358584ca4cc77a",
+  "raw_logit_cutoff": 0.39062500000000006,
+  "logit_offset": -1.5013802883566996,
+  "false_positive_budget": 2013.0,
+  "benchmark_previously_examined": true,
+  "native_cell": {
+    "fit_split": "validation",
+    "cutoff": 0.44531250000000006,
+    "false_positive_budget": 135.0,
+    "aggregation": "maximum score per observed native MODIS cell; any-positive VIIRS reference"
+  }
+}

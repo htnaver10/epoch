@@ -1,5 +1,11 @@
 # Running the PLSWORK MLP viewer
 
+The launcher now opens the completed **50.6M model presentation** by default.
+See [ML-PRESENTATION.md](ML-PRESENTATION.md) for all 1,608 prepared patches and
+their precomputed scores and rendered views. This document describes the
+preserved original **8,321-parameter contextual MLP** inspector and its API.
+Open it directly at <http://127.0.0.1:8000/?mode=ml&view=inspect>.
+
 From this folder in PowerShell:
 
 ```powershell
