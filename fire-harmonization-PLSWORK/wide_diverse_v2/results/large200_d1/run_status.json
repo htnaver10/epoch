@@ -1,0 +1,19 @@
+{
+  "stage": "training",
+  "epoch": 12,
+  "training_group_balanced_logloss_estimate": 0.0012654101017233188,
+  "validation_average_precision": 0.36309733890741314,
+  "validation_logloss": 0.0023298689814810225,
+  "learning_rate": 7.330314893841101e-05,
+  "seconds": 38.58394370001042,
+  "sampled_queries": 262144,
+  "sampled_positive_queries": 65832,
+  "cohort_draws": [
+    65568,
+    65671,
+    65442,
+    65463
+  ],
+  "peak_reserved_gib": 4.509765625,
+  "best_validation_ap": 0.4328767279926354
+}

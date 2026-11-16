@@ -1,0 +1,16 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "torch": "2.11.0+cu128",
+  "parameters": 201797633,
+  "architecture": {
+    "feature_count": 96,
+    "width": 4096,
+    "expansion": 2,
+    "blocks": 3,
+    "dropout": 0.2
+  },
+  "batch_size": 1024,
+  "median_step_seconds": 0.06464759999653324,
+  "peak_reserved_gib": 4.5078125,
+  "finite_cuda_bf16_update": true
+}

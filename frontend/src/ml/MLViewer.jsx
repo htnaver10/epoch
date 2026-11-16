@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { loadCatalogue, loadScene } from "./api.js";
 import { COLORS, LAYERS, geoJSONDownload, nearestFeature, readMLView, researchPoints, visibleFeatures, writeMLView } from "./data.js";
 import "./ml.css";
+import MLPresentation from "./MLPresentation.jsx";
 
 const Globe = lazy(() => import("../components/Globe.jsx"));
 const EMPTY = [], SECTORS = {};
@@ -11,6 +12,11 @@ const utc = (s) => s.replace("T", " ").replace(/(?:\.\d+)?Z$/, " UTC");
 const yes = (value) => value ? "Yes" : "No";
 
 export default function MLViewer({ onMode }) {
+  return new URLSearchParams(window.location.search).get("view") === "inspect"
+    ? <OriginalMLViewer onMode={onMode} /> : <MLPresentation onMode={onMode} />;
+}
+
+function OriginalMLViewer({ onMode }) {
   const [initial] = useState(() => readMLView(window.location.search));
   const [catalogueResult, setCatalogueResult] = useState(null), [sceneId, setSceneId] = useState(initial.scene);
   const [sceneResult, setSceneResult] = useState(null), [attempt, setAttempt] = useState(0);
@@ -61,6 +67,7 @@ export default function MLViewer({ onMode }) {
         <button className="on" aria-pressed="true">MLP research</button>
       </nav>
       <div className="ml-heading"><strong>MODIS → MLP</strong><span>Experimental scene comparison</span></div>
+      <a href="?mode=ml">50.6M presentation</a>
       <span className={`ml-source ${catalogue?.source === "api" ? "api" : "snapshot"}`} role="status">{catalogue?.message || "Opening catalogue…"}</span>
     </header>
     <main className="ml-layout">

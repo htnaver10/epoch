@@ -4,6 +4,6 @@ __pycache__/
 data/raw/
 data/tiles/
 data/features/
-models/*.pt
-results/*.npz
-results/*.npy
+models/**/*.pt
+results/**/*.npz
+results/**/*.npy

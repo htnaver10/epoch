@@ -1,0 +1,8 @@
+{
+  "unit_tests_passed": 13,
+  "d1_exact_normalizer_and_exposure_verified": true,
+  "d1_sampler_exactly_matches_preserved_v1_real_minibatches": 3,
+  "gpu_profile": "results/large200_d2/gpu_profile.json",
+  "source_snapshot": "results/fitted_source_snapshot",
+  "prior_experiments_modified": false
+}

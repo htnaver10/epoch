@@ -34,6 +34,13 @@ def verify_previous_features():
             if sha(root / name) != expected:
                 raise ValueError('Previous frozen feature artifact changed')
 
+def verify_training_features(regime):
+    verify_previous_features()
+    if regime == 'd2':
+        for name, expected in read('data/feature_receipt.json')['files'].items():
+            if sha(path(name)) != expected:
+                raise ValueError('Second expansion feature artifact changed')
+
 def prepare_features():
     prior = rows(PARENT / 'data/manifests/source_v3.jsonl') + rows(V1 / 'data/manifests/extra_train.jsonl')
     extra = rows(path('data/manifests/extra_train.jsonl')); check_extra_rows(extra, prior)

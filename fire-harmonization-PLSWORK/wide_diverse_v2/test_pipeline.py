@@ -49,6 +49,19 @@ class DataIsolationTests(unittest.TestCase):
             self.assertAlmostEqual(float((y[selected] * correction[selected]).mean()), expected_prevalence, delta=.002)
             self.assertAlmostEqual(float(correction[selected].mean()), 1., delta=.01)
 
+    def test_three_shard_draw_preserves_sample_feature_label_alignment(self):
+        data = TrainingData.__new__(TrainingData)
+        data.offsets = np.array([0, 4, 9, 15])
+        values = np.arange(15, dtype=np.float32) / 20
+        data.y = (np.arange(15) % 2).astype(np.float32)
+        data.shards = [{'X': values[a:b, None]} for a, b in zip(data.offsets[:-1], data.offsets[1:])]
+        data.pools = [(np.flatnonzero(data.y == 1), np.flatnonzero(data.y == 0))]
+        data.mean = np.zeros(1, np.float32); data.scale = np.ones(1, np.float32)
+        x, y, correction, groups = data.draw(np.random.default_rng(34), 1000, .25)
+        recovered = np.rint(x[:, 0] * 20).astype(int)
+        np.testing.assert_array_equal(y, data.y[recovered])
+        self.assertTrue(all(np.any((recovered >= a) & (recovered < b)) for a, b in zip(data.offsets[:-1], data.offsets[1:])))
+
 
 if __name__ == '__main__':
     unittest.main()

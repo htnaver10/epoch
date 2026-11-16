@@ -1,0 +1,48 @@
+{
+  "files": {
+    "comparison.py": "6f909558ebd222ac361617bce76dd30c7c64b65cfad6a579700dbf064615f128",
+    "dataset.py": "0679e74587acd6ec3b681fdd154856909aababc958d5087e59d21945023f1860",
+    "expand_data.py": "9b6b6b82c97ae4e8c6269e43963c2156346068a382278586d2f8450109348f21",
+    "feature_extraction.py": "ae708af2a67a610f485672db29214a492560bf6eae88d828d95ee5feb663bd31",
+    "inference.py": "7e48667a58801b957cfb87e397ffa4b3faa6294730ef3f05770ed341fbe2bcf3",
+    "model.py": "aa41db80f2c655f533c5c615a98b75625b0166852f7066e0baba5347c164c9a0",
+    "run.py": "8d499a7b120a78f8433fc8b678840dd520ef3ee6002f9f2d273078794569b258",
+    "settings.py": "b7a9b4c0c81e5cf3b036813755e4a67980aa1488ee277991900ed21dc8029810",
+    "test_model.py": "b0a4a9aced949b0de89cd427efbfffb072126fa4714eecf068ec991002e95c58",
+    "test_pipeline.py": "1aaf6b524f4a2c5781d6d746227c8bcc2ab71cb72c3b6b3edac7cc9592b01b24",
+    "training.py": "c3455be1ab625a8856a63b3997b1d4549868e1dc12bb82e399e6320d70a735e2",
+    "verification.py": "e358bea0775d1de93276f62e1429bd50f1ad9b6557689cfee7fd6c14dee9ae35",
+    "vendor/firefullres/__init__.py": "6f6913edb314f0838488ea671e6bfe40a1ea2eadcc0eb40138161fdfac255c74",
+    "vendor/firefullres/acquisition.py": "a288c0905044589eb7782e33c14f4f085f7bc52a528333c00bea48710fc578e0",
+    "vendor/firefullres/calibration.py": "6f174605e5f08380864e07240f93574331a8954e536720008781dad36db1274d",
+    "vendor/firefullres/core.py": "16d8a3c1adc5888f593e6b448b823707aa9dccd9ed6efde7d5946a24b95ac9b2",
+    "vendor/firefullres/geometry.py": "f3f57a6dc085c4a766652f356753e4dcbdb71440cc329816dec729220f9bb36c",
+    "vendor/firefullres/native.py": "e85598cc266bc0d7848d9d2fb82ea707b900432a0ba82518980b353ad131bfce",
+    "vendor/firefullres/prepare.py": "25278ace21d7a14462b652bacc14dab0f7e44f1f6cfeef95ca679f9575638f36",
+    "config.json": "6af279d30ed9d91b1afab59526f98575085532f4a3409adf9f8f10ac9fce21a0",
+    "expansion_config.json": "0c929e955745c641be44ae44b0cefb248c0c7c69d4b4ce47d89d5a74b0a83123"
+  },
+  "run_id": "large200_d1",
+  "run": {
+    "dataset": "d1",
+    "architecture": {
+      "feature_count": 96,
+      "width": 4096,
+      "expansion": 2,
+      "blocks": 3,
+      "dropout": 0.2
+    }
+  },
+  "parent_manifest_sha256": "edfc4763fae4b33d9164bdd9abbb20eaed940ac593a5b468b8892c7799e1a1bb",
+  "parent_feature_receipt_sha256": "921474f86e93f032fa6b3805741b990120e31056e8305c38b98e19a5241bef0e",
+  "parent_model_sha256": "35535575bd95e385a17bc462c14e1e9ea6fdd534d673db762a3acb9ff67c7759",
+  "v1_manifest_sha256": "130d9456e8704f9cc2589ad245102d51a0c785e40dafbbd81eb15472e492b9c0",
+  "v1_feature_receipt_sha256": "253fa2180eb12881d4e740a908b8af13374878d0a8514aa3d3d0000cc36d83e3",
+  "v1_model_sha256": "80a8b0e65bba826868ccff828cff8b1e44f1000276d852e0ef8c4f7b4c747899",
+  "runtime": {
+    "python": "3.12.10",
+    "torch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5070"
+  }
+}

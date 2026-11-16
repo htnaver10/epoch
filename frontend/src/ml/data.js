@@ -23,7 +23,7 @@ export function readMLView(search) {
   return { scene: q.get("scene") || "", layer: layerValid(q.get("layer")) ? q.get("layer") : "all", coverage: q.get("coverage") !== "0" };
 }
 export function writeMLView(scene, layer, coverage) {
-  const q = new URLSearchParams({ mode: "ml" });
+  const q = new URLSearchParams({ mode: "ml", view: "inspect" });
   if (scene) q.set("scene", scene);
   if (layer !== "all") q.set("layer", layer);
   if (!coverage) q.set("coverage", "0");

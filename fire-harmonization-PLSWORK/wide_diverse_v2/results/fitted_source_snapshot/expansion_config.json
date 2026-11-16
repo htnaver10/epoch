@@ -1,0 +1,29 @@
+{
+  "name": "wide_diverse_v2_expansion",
+  "source_bundle_manifests": [
+    "fire-harmonization-PLSWORK/wide_diverse_v1/data/manifests/expansion_bundles.jsonl"
+  ],
+  "prior_manifest": "fire-harmonization-PLSWORK/wide_diverse_v1/data/manifests/extra_train.jsonl",
+  "prior_preparation": "fire-harmonization-PLSWORK/wide_diverse_v1/results/expansion_preparation.json",
+  "parent_manifest": "fire-harmonization-PLSWORK/data/manifests/source_v3.jsonl",
+  "split": "train",
+  "regions": {
+    "bc_2021": [-170, 25, -80, 82],
+    "central_2021": [-170, 25, -80, 82],
+    "nwt_2022": [-170, 25, -80, 82],
+    "pilot_20230701_all_shared_sources": [-160, 25, -80, 82]
+  },
+  "tile_size": 96,
+  "stride": 64,
+  "halo": 16,
+  "max_query_side": 768,
+  "max_new_tiles": 3000,
+  "positive_candidates_per_bundle": 120,
+  "control_candidates_per_bundle": 100,
+  "control_fire_clearance_degrees": 0.4,
+  "positive_cell_spacing_degrees": 0.25,
+  "copy_raw_max_gib": 35,
+  "reserve_free_gib": 40,
+  "forest_only": false,
+  "notes": "Same four conservative parent training cohorts. Only new native-window identities beyond parent and v1 accepted/rejected windows are admitted. Wider geographic crop, more spatially spread VIIRS fire-near windows and detection-free controls; original query, halo, temporal, calibration and QA rules retained."
+}

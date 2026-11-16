@@ -19,7 +19,7 @@ const ready = async (p) => {
   await p.getByRole("button", { name: "Download GeoJSON", exact: true }).waitFor();
 };
 try {
-  await page.goto(`${base}/?mode=ml`);
+  await page.goto(`${base}/?mode=ml&view=inspect`);
   await ready(page);
   assert.equal(await page.getByLabel("Scene patch", { exact: true }).inputValue(), richest.id);
   await page.locator("canvas").waitFor();
@@ -65,14 +65,14 @@ try {
   checks.push("difference filter, coverage toggle, all three dates");
 
   assert.ok(empty, "benchmark must include a no-alert scene for the empty-state check");
-  await page.goto(`${base}/?mode=ml&scene=${empty.id}&layer=mlp&coverage=0`);
+  await page.goto(`${base}/?mode=ml&view=inspect&scene=${empty.id}&layer=mlp&coverage=0`);
   await ready(page);
   await page.locator(".ml-accessible summary").click();
   await page.getByText("No alerts for this layer in this cached patch.", { exact: true }).waitFor();
   assert.equal(await page.getByLabel("Scene patch", { exact: true }).inputValue(), empty.id);
   checks.push("shareable scene link and no-alert state");
 
-  await page.goto(`${base}/?mode=ml&scene=${richest.id}&layer=all`);
+  await page.goto(`${base}/?mode=ml&view=inspect&scene=${richest.id}&layer=all`);
   await ready(page);
   await page.setViewportSize({ width: 390, height: 844 });
   await page.waitForTimeout(5500);
@@ -87,11 +87,13 @@ try {
   await page.getByRole("button", { name: "MLP research", exact: true }).waitFor();
   assert.match(page.url(), /mode=scenarios/);
   await page.getByRole("button", { name: "MLP research", exact: true }).click();
+  await page.getByRole("heading", { name: "See the comparison." }).waitFor();
+  await page.goto(`${base}/?mode=ml&view=inspect`);
   await ready(page);
   checks.push("Calendar / Scenarios / MLP navigation");
 
   await page.route("**/api/ml/**", (route) => route.abort());
-  await page.goto(`${base}/?mode=ml`);
+  await page.goto(`${base}/?mode=ml&view=inspect`);
   await page.getByText("Bundled snapshot · API unavailable", { exact: true }).waitFor();
   await page.getByRole("button", { name: "Download GeoJSON" }).waitFor();
   await page.screenshot({ path: out + "/api-offline-snapshot.png" });

@@ -1,0 +1,12 @@
+{
+  "name": "wide_diverse_v2",
+  "features": {"context_windows": [7, 21], "background_exclusion_window": 3, "minimum_background_pixels": 8, "contrast_z_clip": 20.0},
+  "training": {"seed": 20261115, "epochs": 30, "patience": 8, "steps_per_epoch": 256, "batch_size": 1024, "inference_batch_size": 2048, "learning_rate": 0.0001, "weight_decay": 0.01, "gradient_clip": 1.0, "positive_sample_fraction": 0.25, "device": "cuda", "precision": "bfloat16"},
+  "runs": {
+    "large200_d1": {"dataset": "d1", "architecture": {"feature_count": 96, "width": 4096, "expansion": 2, "blocks": 3, "dropout": 0.2}},
+    "control50_d2": {"dataset": "d2", "architecture": {"feature_count": 96, "width": 2048, "expansion": 2, "blocks": 3, "dropout": 0.2}},
+    "large200_d2": {"dataset": "d2", "architecture": {"feature_count": 96, "width": 4096, "expansion": 2, "blocks": 3, "dropout": 0.2}}
+  },
+  "reference_run": "Preserved wide_diverse_v1 is the 50M/d1 baseline. New runs retain its seed, optimizer settings, minibatch size, sampler objective, features and validation-selection rule. All new networks initialize from scratch.",
+  "scope": "Second local observational expansion and single-seed 2x2 size/data comparison. d1 is original plus first expansion; d2 adds disjoint second-expansion windows. Same four conservative source cohorts; no independent incident-count claim. Validation and test are reused, not a new blind test."
+}

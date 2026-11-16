@@ -5,7 +5,7 @@ import json
 import numpy as np
 import torch
 
-from dataset import check_extra_rows, verify_previous_features
+from dataset import check_extra_rows, verify_training_features
 from inference import infer
 from settings import PARENT, V1, DEFAULT_RUN, path, rows, read, sha, write, freeze_sources, run_config, artifact
 
@@ -13,7 +13,7 @@ from settings import PARENT, V1, DEFAULT_RUN, path, rows, read, sha, write, free
 def verify(run_id=DEFAULT_RUN):
     lock = freeze_sources(run_id)
     cfg, run = run_config(run_id)
-    verify_previous_features()
+    verify_training_features(run['dataset'])
     parent = rows(PARENT / 'data/manifests/source_v3.jsonl')
     extra = rows(path('data/manifests/extra_train.jsonl')) if run['dataset'] == 'd2' else []
     check_extra_rows(extra, parent + rows(V1 / 'data/manifests/extra_train.jsonl'))
