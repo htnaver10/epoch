@@ -12,7 +12,7 @@ const page = await browser.newPage({ viewport: { width: 1440, height: 1050 }, de
 const errors = [], checks = [];
 page.on("pageerror", (error) => errors.push(error.message));
 const ready = async () => {
-  await page.getByRole("heading", { name: "See the comparison." }).waitFor();
+  await page.getByRole("heading", { name: "Scene comparison", exact: true }).waitFor();
   await page.locator(".pres-image img").evaluate((image) => image.decode());
   await page.waitForFunction(() => !document.querySelector(".pres-image [role=status]"));
 };
@@ -20,13 +20,17 @@ try {
   await page.goto(`${base}/?mode=ml&view=presentation`);
   await ready();
   await page.screenshot({ path: out + "/desktop.png", fullPage: true });
-  assert.match(await page.locator(".pres-hero-side strong").innerText(), new RegExp(catalogue.scene_count.toLocaleString()));
+  assert.equal(await page.locator(".research-evidence").count(), 0);
+  assert.ok((await page.locator(".pres-image").boundingBox()).height > 400, "Scene comparison should fill the desktop workspace");
   assert.match(page.url(), /split=test/);
   assert.equal(await page.getByRole("button", { name: "Benchmark 84", exact: true }).getAttribute("aria-pressed"), "true");
   checks.push("50.6M model presentation opens with benchmark-only scenes and a decoded rendered comparison");
-  await page.locator(".ml-presentation").evaluate((element) => { element.style.height = "auto"; element.style.overflow = "visible"; });
-  await page.screenshot({ path: out + "/complete-overview.png", fullPage: true });
-  await page.locator(".ml-presentation").evaluate((element) => { element.style.height = ""; element.style.overflow = ""; });
+  await page.getByRole("button", { name: "Method and evidence", exact: true }).click();
+  assert.equal(await page.locator(".pres-archive .row").first().locator("dd").innerText(), catalogue.scene_count.toLocaleString());
+  await page.getByRole("heading", { name: "Frozen model performance", exact: true }).waitFor();
+  await page.screenshot({ path: out + "/method-and-evidence.png", fullPage: true });
+  await page.getByRole("button", { name: "Close method and evidence", exact: true }).click();
+  checks.push("scene-first console with benchmark, archive counts and research limitations on request");
   for (const [id, name] of [["mlp", "50.6M MLP"], ["modis", "MODIS"], ["viirs", "VIIRS reference"], ["difference", "Difference"], ["compare", "Compare all"]]) {
     await page.getByRole("button", { name, exact: true }).click();
     await ready();
@@ -89,6 +93,9 @@ try {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(`${base}/?mode=ml&view=presentation`); await ready();
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), "Mobile horizontal overflow");
+  assert.ok(await page.locator(".pres-workspace").evaluate((element) => element.scrollWidth <= element.clientWidth), "Mobile workspace must fit its viewport");
+  const mobileImage = await page.locator(".pres-image").boundingBox();
+  assert.ok(mobileImage.x >= 0 && mobileImage.x + mobileImage.width <= 390, "Comparison image must stay inside the phone screen");
   await page.screenshot({ path: out + "/mobile.png", fullPage: true });
   checks.push("390px mobile layout without horizontal overflow");
   await page.setViewportSize({ width: 1440, height: 1050 });
@@ -102,6 +109,7 @@ try {
   await page.unroute("**/data/ml-presentation/catalog.json");
   await page.getByRole("button", { name: "Retry", exact: true }).click(); await ready();
   checks.push("Missing catalogue has a recoverable error state");
+  await page.getByRole("button", { name: "Method and evidence", exact: true }).click();
   await page.getByRole("link", { name: "Open the full rendered atlas ↗", exact: true }).evaluate((link) => { link.target = "_self"; });
   await page.getByRole("link", { name: "Open the full rendered atlas ↗", exact: true }).click();
   await page.getByRole("heading", { name: "EPOCH / Complete scene atlas", exact: true }).waitFor();

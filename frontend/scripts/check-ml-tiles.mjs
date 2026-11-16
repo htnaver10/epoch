@@ -35,7 +35,7 @@ try{
   assert.equal(await label.getAttribute("aria-pressed"),"true");
   await page.screenshot({path:out+"/selected-tile.png"});
   assert.match(page.url(),new RegExp(`tile=${tile.id}`));
-  checks.push("all 1,608 tile identities are bundled; finder, zoom, selected label and yellow boundary identify a real tile");
+  checks.push("all 1,608 tile identities are bundled; finder, zoom, selected label and steel-blue boundary identify a real tile");
 
   await page.getByLabel("Show tile IDs",{exact:true}).uncheck();
   assert.equal(await page.locator(".patch-labels button").count(),0);

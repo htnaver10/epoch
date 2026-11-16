@@ -92,9 +92,9 @@ try {
   checks.push("mobile layout without horizontal page overflow");
 
   await page.getByRole("link", { name: "Scene atlas", exact: true }).click();
-  await page.getByRole("heading", { name: "See the comparison.", exact: true }).waitFor();
+  await page.getByRole("heading", { name: "Scene comparison", exact: true }).waitFor();
   await page.locator(".pres-image img").evaluate((img) => img.decode());
-  await page.getByRole("link", { name: "Canada overview / 3D", exact: true }).click(); await ready();
+  await page.getByRole("link", { name: "3D globe", exact: true }).click(); await ready();
   await page.getByRole("button", { name: "Calendar", exact: true }).click();
   await page.getByRole("button", { name: "Scenarios", exact: true }).click();
   await page.getByRole("button", { name: "MLP research", exact: true }).waitFor();

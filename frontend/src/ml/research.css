@@ -1,0 +1,28 @@
+/* Research uses the console's existing tokens, type roles and chrome. */
+.research-header { min-width:0; }
+.research-header .sysline { flex:1 1 12rem; min-width:0; }
+.research-views { flex-shrink:0; }
+.research-views a { display:flex; align-items:center; padding:0 .8rem; border-left:1px solid var(--line); text-decoration:none; white-space:nowrap; font:500 var(--fs-label) var(--mono); letter-spacing:var(--track); text-transform:uppercase; color:var(--muted); }
+.research-views a b { margin-right:.55rem; color:var(--accent); font-weight:500; }
+.research-views a:hover { background:rgba(255,255,255,.04); color:var(--text); }
+.research-views a.on { background:var(--accent); color:var(--ink); font-weight:600; }
+.research-views a.on b { color:var(--ink); }
+.research-views a:focus-visible { outline-offset:-3px; }
+.research-evidence { position:absolute; z-index:32; top:0; right:0; bottom:0; width:38rem; max-width:100%; overflow:auto; border-left:1px solid var(--line-2); background:var(--panel); }
+.research-evidence>header { position:sticky; top:0; z-index:1; display:flex; align-items:center; justify-content:space-between; min-height:3rem; padding:.45rem .9rem; border-bottom:1px solid var(--line-2); background:var(--panel-2); }
+.research-evidence>header h2 { font:600 var(--fs-small) var(--mono); letter-spacing:var(--track); text-transform:uppercase; color:var(--accent); }
+.research-evidence>section { padding:.9rem; border-bottom:1px solid var(--line-2); }
+.research-evidence p { font-size:var(--fs-small); color:var(--soft); line-height:1.55; }
+.research-evidence .ml-caution { border-left:0; }
+.research-evidence .ml-caution h2 { margin-bottom:.6rem; color:var(--warn); font:600 var(--fs-small) var(--mono); text-transform:uppercase; letter-spacing:var(--track); }
+.research-evidence a { color:var(--accent); text-underline-offset:.2em; }
+@media(max-width:1100px) { .research-header .sysline { display:none; } }
+@media(max-width:700px) {
+  .research-header.bar { height:auto; min-height:3.5rem; flex-wrap:wrap; gap:0 .8rem; padding-left:.8rem; }
+  .research-header .brand { padding:.7rem 0; }
+  .research-header .seg.mode { margin-left:auto; margin-right:.8rem; }
+  .research-header .research-views { flex:1; height:2.7rem; margin-left:-.8rem; border-top:1px solid var(--line); }
+  .research-views a { justify-content:center; flex:1; }
+  .research-header .actions { height:2.7rem; border-top:1px solid var(--line); }
+  .research-evidence { width:100%; }
+}

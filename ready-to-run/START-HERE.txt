@@ -9,8 +9,8 @@ PowerShell alternative:
 Use the Local URL printed by serve (normally http://localhost:3000).
 
 Calendar:       /
-Model atlas:    /?mode=ml
-Sparse globe:   /?mode=ml&view=overview
+Model atlas:    /?mode=ml&view=presentation
+Sparse globe:   /?mode=ml
 Original MLP:   /?mode=ml&view=inspect
 Scenarios:      /?mode=scenarios
 

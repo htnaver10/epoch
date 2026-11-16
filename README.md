@@ -1,4 +1,8 @@
 # EPOCH
+Public Vercel demo: [Open the 3D fire map](https://epoch-fire-demo.vercel.app/?mode=ml)
+
+[Historical calendar](https://epoch-fire-demo.vercel.app/?year=2023) · [Scene atlas](https://epoch-fire-demo.vercel.app/?mode=ml&view=presentation) · [Response scenarios](https://epoch-fire-demo.vercel.app/?mode=scenarios)
+
 
 For the sparse 3D model overview, run `npx serve` inside `ready-to-run` and open
 <http://localhost:3000/?mode=ml> (or the port printed by serve).

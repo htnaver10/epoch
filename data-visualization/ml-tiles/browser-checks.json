@@ -4,7 +4,7 @@
   "tiles": 1608,
   "tile_id": "285881b4bc9ce08cb277",
   "checks": [
-    "all 1,608 tile identities are bundled; finder, zoom, selected label and yellow boundary identify a real tile",
+    "all 1,608 tile identities are bundled; finder, zoom, selected label and steel-blue boundary identify a real tile",
     "tile selection and independent boundary/label toggles survive shared links and reload; off hides all tile IDs",
     "larger high-contrast detection markers render without WebGL shader errors and size slider changes the display",
     "selected tile opens its matching MODIS/MLP/VIIRS scene in the atlas",

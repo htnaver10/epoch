@@ -4,6 +4,7 @@
   "scenes": 1608,
   "checks": [
     "50.6M model presentation opens with benchmark-only scenes and a decoded rendered comparison",
+    "scene-first console with benchmark, archive counts and research limitations on request",
     "All five pre-rendered layers load",
     "Next/previous/keyboard and reload preserve scene selection",
     "Every dataset split is distinct; date/search and no-results recovery work",

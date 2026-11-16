@@ -3,6 +3,7 @@ import { loadCatalogue, loadScene } from "./api.js";
 import { COLORS, LAYERS, geoJSONDownload, nearestFeature, readMLView, researchPoints, visibleFeatures, writeMLView } from "./data.js";
 import "./ml.css";
 import MLPresentation from "./MLPresentation.jsx";
+import ResearchHeader from "./ResearchHeader.jsx";
 
 const Globe = lazy(() => import("../components/Globe.jsx"));
 const MLOverview = lazy(() => import("./MLOverview.jsx"));
@@ -64,17 +65,7 @@ function OriginalMLViewer({ onMode }) {
   };
   const pickedFeature = picked?.feature;
   return <div className="ml-console">
-    <header className="ml-header">
-      <button className="ml-brand" onClick={() => onMode("analysis")}>EPOCH</button>
-      <nav className="seg mode" aria-label="Mode">
-        <button onClick={() => onMode("analysis")}>Calendar</button>
-        <button onClick={() => onMode("ops")}>Scenarios</button>
-        <button className="on" aria-pressed="true">MLP research</button>
-      </nav>
-      <div className="ml-heading"><strong>MODIS → MLP</strong><span>Experimental scene comparison</span></div>
-      <a href="?mode=ml&view=presentation">50.6M presentation</a>
-      <span className={`ml-source ${catalogue?.source === "api" ? "api" : "snapshot"}`} role="status">{catalogue?.message || "Opening catalogue…"}</span>
-    </header>
+    <ResearchHeader onMode={onMode} view="inspect" title="MODIS → MLP · Original model" status={catalogue?.message || "Opening catalogue…"} />
     <main className="ml-layout">
       <aside className="ml-sidebar" aria-label="MLP scene controls">
         <section><span className="ml-eyebrow">Processed observations</span><h1>Inspect the model</h1><p>Compare the MLP’s saved predictions with MODIS detections and VIIRS reference observations.</p></section>

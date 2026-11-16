@@ -984,7 +984,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
       const [w,s,e,n] = patch.bounds;
       pathSegments(rectangle([[s,w],[n,e]]), 1.00065, patch.id === selectedPatch ? selected : regular);
     }
-    g.patchGroup.add(lines(regular, "#a5c9e3", .33), lines(selected, "#ffe28a", 1));
+    g.patchGroup.add(lines(regular, "#a5c9e3", .33), lines(selected, "#6fd3ff", 1));
     g.invalidate();
   }, [patches, selectedPatch, patchOutlines, patchLabels]);
 

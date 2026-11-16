@@ -87,7 +87,7 @@ try {
   await page.getByRole("button", { name: "MLP research", exact: true }).waitFor();
   assert.match(page.url(), /mode=scenarios/);
   await page.getByRole("button", { name: "MLP research", exact: true }).click();
-  await page.getByRole("heading", { name: "See the comparison." }).waitFor();
+  await page.getByRole("heading", { name: "Cached observation cells", exact: true }).waitFor();
   await page.goto(`${base}/?mode=ml&view=inspect`);
   await ready(page);
   checks.push("Calendar / Scenarios / MLP navigation");
