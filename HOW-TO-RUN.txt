@@ -1,5 +1,17 @@
 EPOCH
 
+Static site — no backend required:
+
+    cd ready-to-run
+    npx serve
+
+PowerShell: use npx.cmd serve if npx.ps1 is blocked.
+Open the Local URL printed by serve (normally http://localhost:3000).
+Sparse Canada globe: http://localhost:3000/?mode=ml&view=overview
+Or choose MLP research, then Canada overview / 3D.
+The globe includes bundled Earth imagery, cached layers, filters and downloads.
+See ML-OVERVIEW.md for the meaning and limits of the sampled historical data.
+
 50.6M model presentation (one command from this folder):
 
     .\run-ml-viewer.cmd

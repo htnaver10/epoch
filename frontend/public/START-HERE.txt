@@ -1,0 +1,23 @@
+EPOCH — static site
+
+From this folder:
+    npx serve
+
+PowerShell alternative:
+    npx.cmd serve
+
+Use the Local URL printed by serve (normally http://localhost:3000).
+
+Calendar:       /
+Model atlas:    /?mode=ml
+Sparse globe:   /?mode=ml&view=overview
+Original MLP:   /?mode=ml&view=inspect
+Scenarios:      /?mode=scenarios
+
+All model views use bundled cached observations. No Python backend or GPU is
+needed for this static site. Internet access is optional for web fonts and
+additional imagery; the globe includes its own Earth background.
+
+The sparse globe shows existing sampled patches across historical dates.
+Unmarked areas are unavailable, not fire-free. Its 0.25-degree dots summarize
+cached samples rather than individual fires or improved sensor resolution.

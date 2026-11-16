@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "static_server": "npx serve",
+  "model_version": "wide-mlp-80a8b0e65bba",
+  "source_queries": 22174168,
+  "display_cells": 9460,
+  "api_requests": 0,
+  "external_network_blocked": true,
+  "checks": [
+    "real sparse 50.6M overview renders in WebGL from npx serve with no API or external network",
+    "every source layer, query-level disagreement aggregation, accessible inspection and GeoJSON export",
+    "date, dataset and region filters, empty-state honesty, shared links and reload",
+    "3D tilt and return both change the rendered geographic view",
+    "mobile layout without horizontal page overflow",
+    "static atlas, sparse overview, Calendar and Scenarios remain reachable",
+    "missing bundled overview produces a recoverable error"
+  ],
+  "runtime_errors": []
+}
