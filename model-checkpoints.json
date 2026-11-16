@@ -1,0 +1,138 @@
+{
+  "schema": "epoch_model_checkpoints_v1",
+  "storage": "git-lfs",
+  "file_count": 26,
+  "total_bytes": 188346636,
+  "files": [
+    {
+      "path": "fire-harmonization-PLSWORK/hybrid_v1/models/base_mlp.pt",
+      "size_bytes": 41105,
+      "sha256": "35535575bd95e385a17bc462c14e1e9ea6fdd534d673db762a3acb9ff67c7759"
+    },
+    {
+      "path": "fire-harmonization-PLSWORK/models/mlp/best.pt",
+      "size_bytes": 119317,
+      "sha256": "57be9ce5f5efb620cd2a54f6611c9c4350052c3e54e459b070e94a352eb9f104"
+    },
+    {
+      "path": "fire-harmonization-PLSWORK/models/mlp/inference.pt",
+      "size_bytes": 41105,
+      "sha256": "35535575bd95e385a17bc462c14e1e9ea6fdd534d673db762a3acb9ff67c7759"
+    },
+    {
+      "path": "fire-harmonization-PLSWORK/models/mlp/last.pt",
+      "size_bytes": 120021,
+      "sha256": "43fe6f92dcf5daaf682757122a6991b30ae0770c531a4c2b0649c491ee702d23"
+    },
+    {
+      "path": "fire-harmonization-PLSWORK/models/reference/supervised_modis.pt",
+      "size_bytes": 23913659,
+      "sha256": "9bf781a9239779aad4c78521dc73d25e8d0b90423ea0c5b22d0547e9dc8080bf"
+    },
+    {
+      "path": "fire-harmonization-research-fullres/models/real_training_pilot_v1/best.pt",
+      "size_bytes": 23884859,
+      "sha256": "f835737ed9d46c48bb5c1be96c5dbe82e5a3c369e92425a162b4eff44d45b8eb"
+    },
+    {
+      "path": "fire-harmonization-research-fullres/models/real_training_pilot_v1/last.pt",
+      "size_bytes": 23884859,
+      "sha256": "2df55ba0ad714b401939e698d6d9df5e9bdc316f080d55bf57a5a011978e6d78"
+    },
+    {
+      "path": "fire-harmonization-research-fullres/models/substantial_round_v3/best.pt",
+      "size_bytes": 23913659,
+      "sha256": "9bf781a9239779aad4c78521dc73d25e8d0b90423ea0c5b22d0547e9dc8080bf"
+    },
+    {
+      "path": "fire-harmonization-research-fullres/models/substantial_round_v3/last.pt",
+      "size_bytes": 23913659,
+      "sha256": "9a3034f77a1fbb14dcb22db96b1c230820cf6eaa256d41e33c0fddfe28f742ca"
+    },
+    {
+      "path": "fire-harmonization-research-fullres/models/teacher_student_v1_student/best.pt",
+      "size_bytes": 23915387,
+      "sha256": "74d093642b7c3a5573a37afc046f7fb55b4bef89a2c09ca8440d3c0e2bdb3828"
+    },
+    {
+      "path": "fire-harmonization-research-fullres/models/teacher_student_v1_student/last.pt",
+      "size_bytes": 23915387,
+      "sha256": "e8f0907ec8ba7a77ce33babfe5a4188e9f772885a5f10719e182704732bf1546"
+    },
+    {
+      "path": "fire-harmonization-research-fullres/models/teacher_student_v1_student/student_inference.pt",
+      "size_bytes": 7987457,
+      "sha256": "8d12f7e72a4b1fff364e71b9770f06a9e91a9c57bb87558b8dafb67da1d7d09d"
+    },
+    {
+      "path": "fire-harmonization-research-fullres/models/teacher_student_v1_teacher/best.pt",
+      "size_bytes": 5948315,
+      "sha256": "9fc2a2743b9c7e49f9f4f381cbe3a2d4ead60cd76ba9fddb2e375ffcb40c0893"
+    },
+    {
+      "path": "fire-harmonization-research-fullres/models/teacher_student_v1_teacher/last.pt",
+      "size_bytes": 5948315,
+      "sha256": "7f8f8879900be2846cb69c377975d30aecec49cb49b6a74ce60f7c1ccfcc740c"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/models/coarse/best.pt",
+      "size_bytes": 93909,
+      "sha256": "32834aef997330345250c4b7d93b00a3f36249b6fd28f43ed9d121849c877811"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/models/coarse/inference.pt",
+      "size_bytes": 31697,
+      "sha256": "d75685c34977bbedc3a4075dcbcf4dc39679c90a980e37a819b2fa60f66cde2f"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/models/coarse/last.pt",
+      "size_bytes": 94293,
+      "sha256": "35e935c18d9165d721d46c7ab319c757f4255dd576411d14e4501f99da4b4e51"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/models/fine/best.pt",
+      "size_bytes": 76373,
+      "sha256": "b550a48e4bc2f01b11a4b241dd09700942030b9944a6436fb66c04fb95c8e0bf"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/models/fine/inference.pt",
+      "size_bytes": 25617,
+      "sha256": "30445438ad8213c7d16abda63daf41c8589877cecbb191a88d790908e78c8e47"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/models/fine/last.pt",
+      "size_bytes": 76757,
+      "sha256": "4bf2675d50daefc96cda3d3e10cff0fccf434bc9ac009ac1a9383a51a75b3fe7"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/saturation_aware_v2/models/coarse/best.pt",
+      "size_bytes": 94741,
+      "sha256": "9d90ccaf36c3feb10470bc8609ad5b9333dc024e725d81f00af349826200f97b"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/saturation_aware_v2/models/coarse/inference.pt",
+      "size_bytes": 31697,
+      "sha256": "7b7cd4d60904db0ecae4d226133c0053ad608ffd36b766e89c17ea4ddedbf52f"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/saturation_aware_v2/models/coarse/last.pt",
+      "size_bytes": 94741,
+      "sha256": "9f21edb85eb9f47484c59de70671cf0a9fbc1633c23fa68123448d9e09679bf2"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/saturation_aware_v2/models/fine/best.pt",
+      "size_bytes": 76821,
+      "sha256": "6409df9f4833a7bcd9968b1ab9faa060e09997399fe7b2be36452ff01c8de4d9"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/saturation_aware_v2/models/fine/inference.pt",
+      "size_bytes": 25681,
+      "sha256": "37c749c5d347ba6d684337fb01a3c3cf3851b561b2085aa3140fdecc499b0aa6"
+    },
+    {
+      "path": "fire-harmonization-research-YESSS/saturation_aware_v2/models/fine/last.pt",
+      "size_bytes": 77205,
+      "sha256": "64b3124acae8fe9e8deee751293d146eaf798b80c6722b2e907ca94d05f0cd6e"
+    }
+  ]
+}

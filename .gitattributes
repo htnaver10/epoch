@@ -1,0 +1,2 @@
+# Store trained fire-harmonization checkpoints in Git LFS.
+fire-harmonization*/**/*.pt filter=lfs diff=lfs merge=lfs -text
