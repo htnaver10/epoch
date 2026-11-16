@@ -25,6 +25,18 @@ the same selection without map picking. Download overview GeoJSON exports the
 selected alert cells, filters, dates, model version, and sample-count semantics.
 The URL preserves the filters.
 
+Use **Find a tile** to search by tile ID, region or date. Selecting a result zooms
+to its sampled envelope and highlights it in yellow. The selected tile card shows
+its full ID, timestamp and sensor counts, with a link to the matching scene atlas
+entry. **Show tile IDs** and **Show tile boundaries** independently control the
+map overlays, including the selected tile. Both settings survive shared links and
+reload. Labels avoid collisions as you zoom.
+
+Detection markers have bright centers and light/dark rims for visibility against
+snow, water and forest. **Detection marker size** enlarges them up to 2x without
+changing observations or counts. Coverage dots remain small. Marker size is a
+display aid and does not represent a fire's footprint.
+
 ## Data and interpretation
 
 The frozen 50,567,169-parameter `wide-mlp-80a8b0e65bba` model's existing scene cache

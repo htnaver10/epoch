@@ -5,3 +5,11 @@ fire-harmonization*/**/*.pt filter=lfs diff=lfs merge=lfs -text
 backend/data/ml_cache/**/*.json -text whitespace=cr-at-eol
 frontend/public/data/ml/**/*.json -text whitespace=cr-at-eol
 ready-to-run/data/ml/**/*.json -text whitespace=cr-at-eol
+
+# Preserve frozen presentation hashes and static overview provenance on every OS.
+frontend/public/data/ml-presentation/** -text whitespace=cr-at-eol
+ready-to-run/data/ml-presentation/** -text whitespace=cr-at-eol
+frontend/public/data/ml-overview.json -text whitespace=cr-at-eol
+ready-to-run/data/ml-overview.json -text whitespace=cr-at-eol
+frontend/public/data/ml-tiles.json -text whitespace=cr-at-eol
+ready-to-run/data/ml-tiles.json -text whitespace=cr-at-eol
