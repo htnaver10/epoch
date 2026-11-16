@@ -286,6 +286,7 @@ const SENSOR_COLORS = [C.text, C.modis, C.viirs, C.split];
 const PLAIN = 4; // the round dot drawn on the harmonized layers
 const BURN_DAYS = 45; // days burning at which a cell reaches the hot end of the ramp
 const IMAGE_TIMEOUT_MS = 15000;
+const NO_PATCHES = [];
 
 /**
  * The stage: a tactical three.js globe. Vector coastlines and borders over a painted base
@@ -293,7 +294,7 @@ const IMAGE_TIMEOUT_MS = 15000;
  * camera that spins and zooms to whatever is focused. It owns its own per-frame HUD
  * readouts and positions the focus callout, so React never re-renders at frame rate.
  */
-export default function Globe({ bounds, sectors, region, places = [], points, researchPoints = null, researchCellDegrees = 0.0034, centerBounds = false, optical, imageryDate, sensorColours = false, allDays = true, playing, focus, trail = [], fit, inset = 0, reserve = 0, reserveBelow = 0, edgeRight = 0, edgeTop = 0, raw = false, rem = 13, imageAttempt = 0, onImage, onPick, onSector, onPlace, onTrail, callout }) {
+export default function Globe({ bounds, sectors, region, places = [], points, researchPoints = null, researchCellDegrees = 0.0034, patches = NO_PATCHES, selectedPatch = "", patchOutlines = true, patchLabels = true, onPatchPick, centerBounds = false, optical, imageryDate, sensorColours = false, allDays = true, playing, focus, trail = [], fit, inset = 0, reserve = 0, reserveBelow = 0, edgeRight = 0, edgeTop = 0, raw = false, rem = 13, imageAttempt = 0, onImage, onPick, onSector, onPlace, onTrail, callout }) {
   const mount = useRef(null);
   const readout = useRef(null);
   const creditBox = useRef(null);
@@ -301,6 +302,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
   const labelBox = useRef(null);
   const placeBox = useRef(null);
   const trailBox = useRef(null);
+  const patchLabelBox = useRef(null);
   const api = useRef(null);
   const handlers = useRef({ onPick, onSector, onImage });
   const remPx = useRef(rem);
@@ -535,9 +537,10 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
     });
 
     // --- sector outline, hotspots, focus reticle (filled in by the prop effects)
-    const sectorGroup = new THREE.Group(), reticle = new THREE.Group();
+    const sectorGroup = new THREE.Group(), reticle = new THREE.Group(), patchGroup = new THREE.Group();
     sectorGroup.renderOrder = 2;
-    scene.add(sectorGroup, reticle);
+    scene.add(sectorGroup, reticle, patchGroup);
+    patchGroup.renderOrder = 4;
     const spotMaterial = keep(new THREE.ShaderMaterial({
       uniforms: { uScale: { value: 1 }, uCell: { value: GRID * DEG }, uUnit: { value: 1 }, uOpacity: { value: 0.95 } },
       vertexShader: SPOT_VERT, fragmentShader: SPOT_FRAG, transparent: true, depthWrite: false,
@@ -832,6 +835,26 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
           node.style.transform = `translate(${Math.round(p.x)}px, ${Math.round(p.y)}px) translate(-50%, -100%)`;
         }
       }
+      const patchNodes = patchLabelBox.current;
+      if (patchNodes) {
+        const taken = [];
+        for (const node of patchNodes.children) {
+          const p = project(Number(node.dataset.lat), Number(node.dataset.lon));
+          const isSelected = node.dataset.selected === "true";
+          const corner = project(Number(node.dataset.north), Number(node.dataset.east));
+          const other = project(Number(node.dataset.south), Number(node.dataset.west));
+          const span = Math.hypot(corner.x - other.x, corner.y - other.y);
+          const w = 104, h = 25, x = p.x - w / 2, y = p.y - h;
+          const collision = taken.some((b) => x < b.x + w + 8 && x + w + 8 > b.x && y < b.y + h + 6 && y + h + 6 > b.y);
+          const show = p.facing > .2 && p.x > 55 && p.x < size.w - 55 && p.y > 70 && p.y < size.h - 95
+            && (isSelected || (span > 22 && taken.length < 18 && !collision));
+          node.style.visibility = show ? "visible" : "hidden";
+          if (show) {
+            node.style.transform = `translate(${Math.round(p.x)}px, ${Math.round(p.y)}px) translate(-50%, -100%)`;
+            taken.push({ x, y });
+          }
+        }
+      }
       const towns = placeBox.current;
       if (towns) {
         // place names only once the view is close enough for them to mean something
@@ -864,7 +887,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
     raf = requestAnimationFrame(tick);
 
     api.current = {
-      scene, camera, flyTo, frame: (b, centered = false) => frame(b, (size.w - leftEdge) / size.h, centered), anchor, sectorGroup, reticle, spots, opticalMesh, opticalMaterial, first: true,
+      scene, camera, flyTo, frame: (b, centered = false) => frame(b, (size.w - leftEdge) / size.h, centered), anchor, sectorGroup, reticle, patchGroup, spots, opticalMesh, opticalMaterial, first: true,
       // room the HUD takes on the left, the report card on the right, and (phones) a sheet below
       setShift(left, right, below, docked = 0, top = 0) {
         leftEdge = left;
@@ -901,7 +924,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
       window.removeEventListener("pointermove", onTiltMove);
       window.removeEventListener("pointerup", onTiltUp);
       el.removeEventListener("contextmenu", noMenu);
-      for (const group of [sectorGroup, reticle]) group.traverse((o) => (o.geometry?.dispose(), o.material?.dispose()));
+      for (const group of [sectorGroup, reticle, patchGroup]) group.traverse((o) => (o.geometry?.dispose(), o.material?.dispose()));
       spots.geometry.dispose();
       opticalMaterial.map?.dispose();
       for (const d of disposables) d.dispose();
@@ -928,6 +951,21 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
     g.sectorGroup.add(lines(dim, C.accent, 0.22), lines(bright, C.accent, 0.95));
     g.invalidate();
   }, [bounds, sectors]);
+
+  useEffect(() => {
+    const g = api.current;
+    if (!g) return;
+    g.patchGroup.traverse((o) => (o.geometry?.dispose(), o.material?.dispose()));
+    g.patchGroup.clear();
+    const regular = [], selected = [];
+    for (const patch of patches) {
+      if (!patchOutlines && patch.id !== selectedPatch) continue;
+      const [w,s,e,n] = patch.bounds;
+      pathSegments(rectangle([[s,w],[n,e]]), 1.00065, patch.id === selectedPatch ? selected : regular);
+    }
+    g.patchGroup.add(lines(regular, "#a5c9e3", .33), lines(selected, "#ffe28a", 1));
+    g.invalidate();
+  }, [patches, selectedPatch, patchOutlines, patchLabels]);
 
   useEffect(() => {
     const g = api.current;
@@ -1089,6 +1127,9 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
                 </button>
               ),
             )}
+          </div>
+          <div ref={patchLabelBox} className="patch-labels" aria-label="Tile labels on map">
+            {[...patches.filter((p) => p.id === selectedPatch), ...(patchLabels ? patches.filter((p) => p.id !== selectedPatch) : [])].map((p) => <button key={p.id} data-lat={(p.bounds[1] + p.bounds[3]) / 2} data-lon={(p.bounds[0] + p.bounds[2]) / 2} data-west={p.bounds[0]} data-south={p.bounds[1]} data-east={p.bounds[2]} data-north={p.bounds[3]} data-selected={p.id === selectedPatch} aria-label={`Select tile ${p.id}`} aria-pressed={p.id === selectedPatch} title={`${p.group.replaceAll("_", " ")} · ${p.date} · ${p.id}`} onClick={() => onPatchPick?.(p)}>Tile {p.id.slice(0, 8)}</button>)}
           </div>
           <div ref={placeBox} className="place-labels" data-zoom="far">
             {places.map((p) => (

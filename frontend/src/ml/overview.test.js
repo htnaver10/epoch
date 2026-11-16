@@ -33,7 +33,7 @@ test("Coarse-cell picking and downloads preserve display-grid semantics and prov
   assert.deepEqual(output.features[0].properties.dates,cell.dates);
 });
 test("Overview links preserve date, dataset, region, layer and coverage", () => {
-  const view={date:"2024-06-05",split:"test",region:"west",layer:"difference",coverage:false};
+  const view={date:"2024-06-05",split:"test",region:"west",layer:"difference",coverage:false,tile:"abc",outlines:false,labels:false};
   assert.deepEqual(overviewView(overviewURL(view)),view);
   assert.match(overviewURL(view),/view=overview/);
   assert.equal(overviewView("?layer=unknown&split=unknown").split,"all");

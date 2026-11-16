@@ -9,13 +9,13 @@ PowerShell: use npx.cmd serve if npx.ps1 is blocked.
 Open the Local URL printed by serve (normally http://localhost:3000).
 
 Calendar:      http://localhost:3000/
-Sparse globe:  http://localhost:3000/?mode=ml&view=overview
-Model atlas:   http://localhost:3000/?mode=ml
+Sparse globe:  http://localhost:3000/?mode=ml
+Model atlas:   http://localhost:3000/?mode=ml&view=presentation
 Original MLP:  http://localhost:3000/?mode=ml&view=inspect
 Scenarios:     http://localhost:3000/?mode=scenarios
 
 The sparse globe includes bundled Earth imagery, cached layers, filters and
-downloads. Or choose MLP research, then Canada overview / 3D. See ML-OVERVIEW.md
+downloads. Or choose MLP research to open Canada overview / 3D. See ML-OVERVIEW.md
 for the meaning and limits of the sampled historical data.
 
 Windows/Python alternative:
@@ -53,7 +53,8 @@ From the EPOCH folder:
     .\run-ml-viewer.cmd
 
 Or double-click run-ml-viewer.cmd. It opens http://127.0.0.1:8000/?mode=ml.
-Keep the server window open. The optional API serves the same bundled site.
+Choose Scene atlas for the presentation. Keep the server window open.
+The optional API serves the same bundled site.
 All 1,608 research patches, 22,174,168 query scores and 8,040 rendered views
 are prepared. Use Present scenes for the tour and Image PNG for slide exports.
 The research presentation includes a separately labelled, previously examined

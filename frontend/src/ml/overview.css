@@ -3,4 +3,20 @@
 .overview-console button:disabled { opacity:.45; cursor:not-allowed; }
 .overview-console .ml-inspector { max-height:calc(100% - 10rem); overflow:auto; }
 .overview-console .ml-legend { max-width:42rem; }
+.patch-labels { position:absolute; inset:0; pointer-events:none; z-index:2; overflow:hidden; }
+.patch-labels button { position:absolute; top:0; left:0; visibility:hidden; pointer-events:auto; min-width:104px; padding:5px 8px; border:1px solid #91b9d1; background:#071422ed; color:#e4f5ff; font:600 11px var(--code); white-space:nowrap; box-shadow:0 2px 8px #0009; }
+.patch-labels button[data-selected="true"] { color:#fff4cc; border:2px solid #ffe28a; background:#362a0afa; z-index:2; }
+.overview-tile-browser input { width:100%; padding:.6rem; margin-top:.25rem; background:var(--panel-2); color:var(--text); border:1px solid var(--line-2); }
+.overview-tile-list { max-height:15rem; overflow:auto; margin:.75rem 0; border:1px solid var(--line-2); }
+.overview-tile-list button { display:flex; flex-direction:column; gap:.25rem; padding:.7rem .8rem; width:100%; text-align:left; background:none; border:0; border-bottom:1px solid var(--line); font-size:.8rem; }
+.overview-tile-list button.on { background:#30270d; box-shadow:inset 3px 0 #ffe28a; }
+.overview-tile-list strong { color:#dcecf9; font:600 .85rem var(--code); }
+.overview-tile-list span,.overview-tile-list small { color:var(--muted); }
+.overview-tile-chip { display:block; color:#ffe28a; font:.7rem var(--code); letter-spacing:.12em; margin-bottom:.5rem; }
+.overview-tile-inspector { border-color:#ffe28a; }
+.overview-tile-inspector code { display:block; overflow-wrap:anywhere; color:var(--muted); font-size:.8rem; margin:.6rem 0 1rem; }
+.overview-tile-inspector a { display:block; color:#ffe28a; margin-top:1rem; font-size:.9rem; }
+.overview-nearby { position:absolute; z-index:4; right:1rem; top:27rem; width:24rem; max-width:calc(100% - 2rem); padding:.6rem; display:grid; gap:.35rem; background:#071422f2; border:1px solid var(--line-2); }
+.overview-nearby span,.overview-nearby small { font-size:.75rem; color:var(--muted); }.overview-nearby button { font:.75rem var(--code); text-align:left; padding:.4rem; background:var(--panel-2); border:1px solid var(--line); }
 @media(max-width:850px) { .overview-atlas { font-size:.75rem; }.overview-console .ml-header { gap:.6rem; } }
+@media(max-width:580px) { .overview-nearby { display:none; }.overview-tile-inspector { max-height:calc(100% - 6rem)!important; } }

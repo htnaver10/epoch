@@ -16,7 +16,7 @@ export function selectScene(scenes, preferred) {
   return scenes.find((scene) => scene.id === preferred) || scenes[0] || null;
 }
 export function viewURL(scene, split, layer) {
-  const params = new URLSearchParams({ mode: "ml", split, layer });
+  const params = new URLSearchParams({ mode: "ml", view: "presentation", split, layer });
   if (scene) params.set("scene", scene);
   return `?${params}`;
 }

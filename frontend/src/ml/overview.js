@@ -5,14 +5,17 @@ export const CANADA_BOUNDS = [[38, -141], [83, -52]];
 export function overviewView(search) {
   const q = new URLSearchParams(search);
   return { date: q.get("date") || "", split: ["all", "train", "validation", "test", "additional"].includes(q.get("split")) ? q.get("split") : "all",
-    region: q.get("region") || "", layer: OVERVIEW_LAYERS.some(([id]) => id === q.get("layer")) ? q.get("layer") : "all", coverage: q.get("coverage") !== "0" };
+    region: q.get("region") || "", layer: OVERVIEW_LAYERS.some(([id]) => id === q.get("layer")) ? q.get("layer") : "all", coverage: q.get("coverage") !== "0",
+    tile: q.get("tile") || "", outlines: q.get("outlines") !== "0", labels: q.get("labels") !== "0" };
 }
 export function overviewURL(view) {
   const q = new URLSearchParams({ mode: "ml", view: "overview" });
-  for (const key of ["date", "region"]) if (view[key]) q.set(key, view[key]);
+  for (const key of ["date", "region", "tile"]) if (view[key]) q.set(key, view[key]);
   if (view.split !== "all") q.set("split", view.split);
   if (view.layer !== "all") q.set("layer", view.layer);
   if (!view.coverage) q.set("coverage", "0");
+  if (view.outlines === false) q.set("outlines", "0");
+  if (view.labels === false) q.set("labels", "0");
   return `?${q}`;
 }
 export function aggregateCells(records, { date = "", split = "all", region = "" } = {}) {

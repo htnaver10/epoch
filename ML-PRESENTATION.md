@@ -1,7 +1,7 @@
 # Ready-to-present 50.6M model
 
 Double-click `run-ml-viewer.cmd`, or run it from PowerShell. Open
-<http://127.0.0.1:8000/?mode=ml>. The ready-to-run site contains the complete
+<http://127.0.0.1:8000/?mode=ml&view=presentation>. The ready-to-run site contains the complete
 presentation; no training, inference, external images or API calls are required
 by this mode. Optional web fonts fall back to system fonts offline.
 
@@ -11,7 +11,7 @@ For a static-only presentation:
 python -m http.server 8080 --directory ready-to-run
 ```
 
-Open <http://localhost:8080/?mode=ml>. Keep the server open during the demo.
+Open <http://localhost:8080/?mode=ml&view=presentation>. Keep the server open during the demo.
 
 ## Included data
 

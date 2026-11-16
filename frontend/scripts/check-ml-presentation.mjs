@@ -17,7 +17,7 @@ const ready = async () => {
   await page.waitForFunction(() => !document.querySelector(".pres-image [role=status]"));
 };
 try {
-  await page.goto(`${base}/?mode=ml`);
+  await page.goto(`${base}/?mode=ml&view=presentation`);
   await ready();
   await page.screenshot({ path: out + "/desktop.png", fullPage: true });
   assert.match(await page.locator(".pres-hero-side strong").innerText(), new RegExp(catalogue.scene_count.toLocaleString()));
@@ -87,14 +87,14 @@ try {
   assert.equal(await page.locator(".pres-browser").isVisible(), true);
   checks.push("Presentation layout, timed scene tour and Escape exit");
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto(`${base}/?mode=ml`); await ready();
+  await page.goto(`${base}/?mode=ml&view=presentation`); await ready();
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), "Mobile horizontal overflow");
   await page.screenshot({ path: out + "/mobile.png", fullPage: true });
   checks.push("390px mobile layout without horizontal overflow");
   await page.setViewportSize({ width: 1440, height: 1050 });
   await page.route("**/api/**", (route) => route.abort());
   await page.route(/https:\/\/(?!127\.0\.0\.1)/, (route) => route.abort());
-  await page.goto(`${base}/?mode=ml`); await ready();
+  await page.goto(`${base}/?mode=ml&view=presentation`); await ready();
   checks.push("Presentation works with API and external network requests unavailable");
   await page.route("**/data/ml-presentation/catalog.json", (route) => route.fulfill({ status: 503, body: "Unavailable" }));
   await page.reload();

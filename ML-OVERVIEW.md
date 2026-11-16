@@ -10,9 +10,9 @@ npx serve
 In PowerShell on this computer, use `npx.cmd serve` if script execution blocks
 `npx.ps1`. Use the Local URL printed by serve (normally port 3000), then open:
 
-<http://localhost:3000/?mode=ml&view=overview>
+<http://localhost:3000/?mode=ml>
 
-The app's **MLP research → Canada overview / 3D** link opens the same view. It
+The app's **MLP research** mode opens **Canada overview / 3D** by default. It
 works entirely from the built files: no Python server, model checkpoint, GPU,
 live inference, or external imagery is required. The Calendar, Scenarios,
 pre-rendered model presentation, and original MLP inspection view remain available.

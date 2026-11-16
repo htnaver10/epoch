@@ -20,7 +20,7 @@ const ready = async () => {
   await page.getByRole("button", { name: "Download overview GeoJSON", exact: true }).waitFor();
 };
 try {
-  await page.goto(`${base}/?mode=ml&view=overview`);
+  await page.goto(`${base}/?mode=ml`);
   await ready(); await page.locator("canvas").waitFor();
   await page.waitForTimeout(5500);
   assert.equal(await page.getByText("This browser could not start WebGL.", { exact: false }).count(), 0);

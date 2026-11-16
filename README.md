@@ -1,12 +1,12 @@
 # EPOCH
 
 For the sparse 3D model overview, run `npx serve` inside `ready-to-run` and open
-<http://localhost:3000/?mode=ml&view=overview> (or the port printed by serve).
+<http://localhost:3000/?mode=ml> (or the port printed by serve).
 The globe and its cached data are bundled; a Python backend is not required.
 See [ML-OVERVIEW.md](ML-OVERVIEW.md) for controls and coverage limits.
 
 The **50.6M-parameter model presentation** is available with `run-ml-viewer.cmd`,
-then <http://127.0.0.1:8000/?mode=ml>. All **1,608 processed patches**, **22,174,168
+then <http://127.0.0.1:8000/?mode=ml&view=presentation>. All **1,608 processed patches**, **22,174,168
 eligible query scores**, and **8,040 comparison/layer images** are prepared in
 advance. The viewer includes a scene tour, the frozen benchmark, training history,
 and PNG, GeoJSON, NPZ and CSV downloads. It works with the bundled static site and

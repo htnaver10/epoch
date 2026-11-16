@@ -13,9 +13,12 @@ const utc = (s) => s.replace("T", " ").replace(/(?:\.\d+)?Z$/, " UTC");
 const yes = (value) => value ? "Yes" : "No";
 
 export default function MLViewer({ onMode }) {
-  if (new URLSearchParams(window.location.search).get("view") === "overview") return <MLOverview onMode={onMode} />;
-  return new URLSearchParams(window.location.search).get("view") === "inspect"
-    ? <OriginalMLViewer onMode={onMode} /> : <MLPresentation onMode={onMode} />;
+  const query = new URLSearchParams(window.location.search);
+  const view = query.get("view");
+  if (view === "inspect") return <OriginalMLViewer onMode={onMode} />;
+  // Keep previously shared atlas scene links working alongside the explicit route.
+  if (view === "presentation" || (!view && query.has("scene"))) return <MLPresentation onMode={onMode} />;
+  return <MLOverview onMode={onMode} />;
 }
 
 function OriginalMLViewer({ onMode }) {
@@ -69,7 +72,7 @@ function OriginalMLViewer({ onMode }) {
         <button className="on" aria-pressed="true">MLP research</button>
       </nav>
       <div className="ml-heading"><strong>MODIS → MLP</strong><span>Experimental scene comparison</span></div>
-      <a href="?mode=ml">50.6M presentation</a>
+      <a href="?mode=ml&view=presentation">50.6M presentation</a>
       <span className={`ml-source ${catalogue?.source === "api" ? "api" : "snapshot"}`} role="status">{catalogue?.message || "Opening catalogue…"}</span>
     </header>
     <main className="ml-layout">
