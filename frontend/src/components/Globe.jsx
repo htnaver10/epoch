@@ -35,9 +35,9 @@ function fromVec(v) {
 const distanceFor = (km, floor = 70) => 1 + (4.5 * Math.max(km, floor)) / EARTH_KM / TAN;
 
 /** Camera position that frames a lat/lon rectangle, leaving room for the HUD. */
-function frame(bounds, aspect) {
+function frame(bounds, aspect, centered = false) {
   const [[s, w], [n, e]] = bounds;
-  const lat = (s + n) / 2 - 2, lon = (w + e) / 2;
+  const lat = (s + n) / 2 - (centered ? 0 : 2), lon = (w + e) / 2;
   const c = toVec(lat, lon), east = new THREE.Vector3(0, 1, 0).cross(c).normalize(), north = c.clone().cross(east);
   const p = new THREE.Vector3(), perp = new THREE.Vector3();
   let d = MIN_DISTANCE;
@@ -55,6 +55,7 @@ function frame(bounds, aspect) {
     fit(la, w);
     fit(la, e);
   }
+  if (centered) for (const [la, lo] of [[s,w],[s,e],[n,w],[n,e]]) fit(la, lo);
   return { lat, lon, d: Math.min(MAX_DISTANCE, d) };
 }
 
@@ -292,7 +293,7 @@ const IMAGE_TIMEOUT_MS = 15000;
  * camera that spins and zooms to whatever is focused. It owns its own per-frame HUD
  * readouts and positions the focus callout, so React never re-renders at frame rate.
  */
-export default function Globe({ bounds, sectors, region, places = [], points, optical, imageryDate, sensorColours = false, allDays = true, playing, focus, trail = [], fit, inset = 0, reserve = 0, reserveBelow = 0, edgeRight = 0, edgeTop = 0, raw = false, rem = 13, imageAttempt = 0, onImage, onPick, onSector, onPlace, onTrail, callout }) {
+export default function Globe({ bounds, sectors, region, places = [], points, researchPoints = null, centerBounds = false, optical, imageryDate, sensorColours = false, allDays = true, playing, focus, trail = [], fit, inset = 0, reserve = 0, reserveBelow = 0, edgeRight = 0, edgeTop = 0, raw = false, rem = 13, imageAttempt = 0, onImage, onPick, onSector, onPlace, onTrail, callout }) {
   const mount = useRef(null);
   const readout = useRef(null);
   const creditBox = useRef(null);
@@ -559,7 +560,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, op
     // `dirty` asks for a frame: nothing is drawn while nothing changes.
     let shift = 0, shiftGoal = 0, lift = 0, liftGoal = 0, leftEdge = 0, rightEdge = 0, topEdge = 0, dirty = true;
     controls.addEventListener("change", () => (dirty = true));
-    let framed = null; // the bounds the camera is framing, until the user moves it
+    let framed = null, centeredFrame = false; // bounds framed until the user moves the camera
     controls.addEventListener("start", () => (framed = null));
     const place = ({ lat, lon, d }) => {
       toVec(Math.max(-85, Math.min(85, lat)), lon, d, base.position);
@@ -602,7 +603,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, op
       applyShift();
       spotMaterial.uniforms.uScale.value = (h * renderer.getPixelRatio()) / (2 * TAN);
       spotMaterial.uniforms.uUnit.value = SPOT_UNIT(remPx.current, renderer.getPixelRatio());
-      if (framed && !flight) flyTo(frame(framed, (w - leftEdge) / h), 0.5);
+      if (framed && !flight) flyTo(frame(framed, (w - leftEdge) / h, centeredFrame), 0.5);
     };
     const observer = new ResizeObserver(resize);
     observer.observe(el);
@@ -863,7 +864,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, op
     raf = requestAnimationFrame(tick);
 
     api.current = {
-      scene, camera, flyTo, frame: (b) => frame(b, (size.w - leftEdge) / size.h), anchor, sectorGroup, reticle, spots, opticalMesh, opticalMaterial, first: true,
+      scene, camera, flyTo, frame: (b, centered = false) => frame(b, (size.w - leftEdge) / size.h, centered), anchor, sectorGroup, reticle, spots, opticalMesh, opticalMaterial, first: true,
       // room the HUD takes on the left, the report card on the right, and (phones) a sheet below
       setShift(left, right, below, docked = 0, top = 0) {
         leftEdge = left;
@@ -882,7 +883,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, op
       zoomBy: (k) => zoomTo(k),
       tilt: () => ((tiltGoal = tiltGoal > 0 ? 0 : 50), (dirty = true)),
       setRem: (rem) => ((spotMaterial.uniforms.uUnit.value = SPOT_UNIT(rem, renderer.getPixelRatio())), (dirty = true)),
-      setFramed: (b) => (framed = b),
+      setFramed: (b, centered = false) => { framed = b; centeredFrame = centered; },
       current: () => fromVec(base.position),
     };
     return () => {
@@ -933,11 +934,11 @@ export default function Globe({ bounds, sectors, region, places = [], points, op
     if (!g || focus) return;
     const first = g.first;
     g.first = false;
-    g.flyTo(g.frame(bounds), first ? 4.6 : undefined);
-    g.setFramed(bounds);
+    g.flyTo(g.frame(bounds, centerBounds), first ? 4.6 : undefined);
+    g.setFramed(bounds, centerBounds);
     // `focus` is read, not watched: clearing a focus is handled by `fit` changing
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [bounds, fit]);
+  }, [bounds, fit, centerBounds]);
 
   // Focus: spin and zoom to the target, ring it, and pin the callout to it.
   useEffect(() => {
@@ -981,20 +982,21 @@ export default function Globe({ bounds, sectors, region, places = [], points, op
   useEffect(() => {
     const g = api.current;
     if (!g) return;
-    const n = points.length;
+    const n = researchPoints ? researchPoints.length : points.length;
     const position = new Float32Array(n * 3), color = new Float32Array(n * 3), weight = new Float32Array(n), kind = new Float32Array(n);
     const v = new THREE.Vector3(), c = new THREE.Color();
     // days burning in view: the honest amount, the same for either sensor. The uncorrected
     // view draws raw detection counts instead, whichever sensor reported more.
     const weigh = (p) => (raw ? rawWeight(Math.max(p[2], p[3])) : allDays ? Math.sqrt(Math.min(1, p[5] / BURN_DAYS)) : 0.55);
     // marks overlap from far away: draw the busiest cells last, so the hot ones stay on top
-    const ordered = points.map((p) => [p, weigh(p)]).sort((a, b) => a[1] - b[1]);
+    const ordered = researchPoints ? researchPoints.map((p) => [p, p.weight ?? 0.65]) : points.map((p) => [p, weigh(p)]).sort((a, b) => a[1] - b[1]);
+    g.spots.material.uniforms.uCell.value = (researchPoints ? 0.0034 : GRID) * DEG;
     for (let i = 0; i < n; i++) {
       const [p, w] = ordered[i];
-      toVec(p[0], p[1], 1.0004, v);
+      toVec(researchPoints ? p.lat : p[0], researchPoints ? p.lon : p[1], 1.0004, v);
       position.set([v.x, v.y, v.z], i * 3);
-      kind[i] = sensorColours ? kindOf(p) : PLAIN;
-      c.set(sensorColours ? SENSOR_COLORS[kind[i]] : mapRamp(raw ? 0.3 + 0.7 * Math.min(1, w / 2) : 0.2 + 0.8 * w));
+      kind[i] = researchPoints ? PLAIN : sensorColours ? kindOf(p) : PLAIN;
+      c.set(researchPoints ? p.color : sensorColours ? SENSOR_COLORS[kind[i]] : mapRamp(raw ? 0.3 + 0.7 * Math.min(1, w / 2) : 0.2 + 0.8 * w));
       color.set([c.r, c.g, c.b], i * 3);
       weight[i] = w;
     }
@@ -1006,7 +1008,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, op
     g.spots.geometry.dispose();
     g.spots.geometry = geometry;
     g.invalidate();
-  }, [points, sensorColours, allDays, raw]);
+  }, [points, researchPoints, sensorColours, allDays, raw]);
 
   // Optical overlay: fetch the day's image only while it is switched on. Its state goes up
   // to the scope line, the one place that says what is on screen.

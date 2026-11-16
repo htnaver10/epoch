@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "model_version": "plswork-mlp-35535575bd95",
+  "scenes": 84,
+  "checks": [
+    "real backend catalogue, default scene and WebGL canvas",
+    "MLP layer and accessible query inspection",
+    "GeoJSON download preserves actual selected features and model version",
+    "MODIS and VIIRS reference layer counts match the source catalogue",
+    "difference filter, coverage toggle, all three dates",
+    "shareable scene link and no-alert state",
+    "390px mobile layout without horizontal page overflow",
+    "Calendar / Scenarios / MLP navigation",
+    "API outage uses explicitly labelled same-version bundled snapshot",
+    "complete cache outage shows unavailable; Retry recovers"
+  ],
+  "runtime_errors": []
+}

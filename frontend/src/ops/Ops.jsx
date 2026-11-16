@@ -321,6 +321,7 @@ export default function Ops({ onMode, initial = {} }) {
         <div className="seg mode" role="group" aria-label="Mode">
           <button onClick={() => onMode("analysis")}>Calendar</button>
           <button className="on" aria-pressed="true">Scenarios</button>
+          <button onClick={() => onMode("ml")}>MLP research</button>
         </div>
         <p className="sysline">
           <b>Response scenario · {entry ? `${entry.name} ${entry.region}` : "loading"}</b>

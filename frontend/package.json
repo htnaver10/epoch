@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "test": "node --test src/lib/*.test.js src/ops/engine/*.test.js",
+    "test": "node --test src/lib/*.test.js src/ops/engine/*.test.js src/ml/*.test.js",
+    "test:browser": "node scripts/check-ml-viewer.mjs",
     "prepare:data": "python3 scripts/prepare_data.py"
   },
   "dependencies": {
@@ -23,6 +24,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "oxlint": "^1.90.0",
+    "playwright": "1.61.1",
     "vite": "^8.3.6"
   }
 }

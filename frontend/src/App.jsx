@@ -542,6 +542,7 @@ export default function App({ onMode }) {
           <div className="seg mode" role="group" aria-label="Mode">
             <button className="on" aria-pressed="true">Calendar</button>
             <button onClick={() => onMode("ops")} title="Response scenarios: a fire near a town, the crews and aircraft that could meet it, and the plans they could follow">Scenarios</button>
+            <button onClick={() => onMode("ml")} title="Inspect cached experimental MLP predictions against MODIS and VIIRS">MLP research</button>
           </div>
         )}
         <p className="sysline">

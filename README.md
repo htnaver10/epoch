@@ -1,5 +1,12 @@
 # EPOCH
 
+The integrated PLSWORK MLP research viewer is available with
+`run-ml-viewer.cmd`, then <http://127.0.0.1:8000/?mode=ml>. It compares the frozen
+model's cached predictions with MODIS and VIIRS reference observations across
+84 processed patches. See [MLP-INTEGRATION.md](MLP-INTEGRATION.md) for setup,
+API routes, data provenance, and verification. These scene predictions are
+separate from the historical season analysis and response simulation below.
+
 Satellite fire counts over Canada have climbed since 2012. Part of that rise is real, and part of it is that NASA's newer VIIRS instrument sees fires the older MODIS instruments miss. EPOCH separates the two. It ranks every fire season against MODIS's own record, which has used the same two instruments since the early 2000s, so a sharper satellite can't make a season look worse than it was.
 
 It covers June to August, 2003 to 2026, over Canada between 50°N and 70°N, using NASA FIRMS hotspot archives (about 2.4 million detections).
