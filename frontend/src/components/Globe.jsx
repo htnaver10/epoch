@@ -980,7 +980,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
     g.patchGroup.clear();
     const regular = [], selected = [];
     for (const patch of patches) {
-      if (!patchOutlines && patch.id !== selectedPatch) continue;
+      if (!patchOutlines) continue;
       const [w,s,e,n] = patch.bounds;
       pathSegments(rectangle([[s,w],[n,e]]), 1.00065, patch.id === selectedPatch ? selected : regular);
     }
@@ -1152,7 +1152,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
             )}
           </div>
           <div ref={patchLabelBox} className="patch-labels" aria-label="Tile labels on map">
-            {[...patches.filter((p) => p.id === selectedPatch), ...(patchLabels ? patches.filter((p) => p.id !== selectedPatch) : [])].map((p) => <button key={p.id} data-lat={(p.bounds[1] + p.bounds[3]) / 2} data-lon={(p.bounds[0] + p.bounds[2]) / 2} data-west={p.bounds[0]} data-south={p.bounds[1]} data-east={p.bounds[2]} data-north={p.bounds[3]} data-selected={p.id === selectedPatch} aria-label={`Select tile ${p.id}`} aria-pressed={p.id === selectedPatch} title={`${p.group.replaceAll("_", " ")} · ${p.date} · ${p.id}`} onClick={() => onPatchPick?.(p)}>Tile {p.id.slice(0, 8)}</button>)}
+            {(patchLabels ? [...patches.filter((p) => p.id === selectedPatch), ...patches.filter((p) => p.id !== selectedPatch)] : []).map((p) => <button key={p.id} data-lat={(p.bounds[1] + p.bounds[3]) / 2} data-lon={(p.bounds[0] + p.bounds[2]) / 2} data-west={p.bounds[0]} data-south={p.bounds[1]} data-east={p.bounds[2]} data-north={p.bounds[3]} data-selected={p.id === selectedPatch} aria-label={`Select tile ${p.id}`} aria-pressed={p.id === selectedPatch} title={`${p.group.replaceAll("_", " ")} · ${p.date} · ${p.id}`} onClick={() => onPatchPick?.(p)}>Tile {p.id.slice(0, 8)}</button>)}
           </div>
           <div ref={placeBox} className="place-labels" data-zoom="far">
             {places.map((p) => (

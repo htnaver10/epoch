@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "model_version": "wide-mlp-80a8b0e65bba",
+  "tiles": 1608,
+  "tile_id": "285881b4bc9ce08cb277",
+  "checks": [
+    "all 1,608 tile identities are bundled; finder, zoom, selected label and yellow boundary identify a real tile",
+    "tile selection and boundary/label toggles survive shared links and reload; selected tile stays identifiable",
+    "larger high-contrast detection markers render without WebGL shader errors and size slider changes the display",
+    "selected tile opens its matching MODIS/MLP/VIIRS scene in the atlas",
+    "expanded region search, empty-search feedback and mobile layout work on the static site"
+  ],
+  "runtime_errors": [],
+  "shader_errors": [],
+  "api_requests": 0,
+  "external_network_blocked": true
+}
