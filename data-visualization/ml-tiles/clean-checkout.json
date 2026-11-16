@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "source": "git archive of committed files only",
+  "ready_to_run_tree": "f733f4527f2b85445749cb5a14e256f4e6e3c9e7",
+  "tracked_demo_files": 13160,
+  "demo_bytes": 618787337,
+  "cache_files_checksum_verified": 13032,
+  "scenes": 1608,
+  "tiles": 1608,
+  "source_queries": 22174168,
+  "static_server": "npx serve",
+  "backend_required": false,
+  "tile_ids_toggle": true,
+  "tile_boundaries_toggle": true,
+  "marker_size_control": true,
+  "browser_checks": "data-visualization/ml-tiles/browser-checks.json",
+  "overview_checks": "data-visualization/ml-overview/browser-checks.json"
+}
