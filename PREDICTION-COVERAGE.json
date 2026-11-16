@@ -1,0 +1,80 @@
+{
+  "sourceCommit": "a284be2701f8770af4364834c45c499b9ccfc24f",
+  "inferenceState": "stopped_at_user_request",
+  "historicalCellDaysWithScores": 648,
+  "historicalSceneDates": 10,
+  "archivedPositiveCellDays": 31906,
+  "bounds": [
+    -140,
+    50,
+    -60,
+    70
+  ],
+  "summers": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+  ],
+  "coverage": {
+    "2003": {
+      "scored": 8,
+      "archived": 4124,
+      "days": 1,
+      "archiveDays": 92
+    },
+    "2004": {
+      "scored": 234,
+      "archived": 7365,
+      "days": 2,
+      "archiveDays": 91
+    },
+    "2005": {
+      "scored": 41,
+      "archived": 2316,
+      "days": 1,
+      "archiveDays": 92
+    },
+    "2006": {
+      "scored": 110,
+      "archived": 3002,
+      "days": 1,
+      "archiveDays": 92
+    },
+    "2007": {
+      "scored": 48,
+      "archived": 2521,
+      "days": 1,
+      "archiveDays": 91
+    },
+    "2008": {
+      "scored": 85,
+      "archived": 2796,
+      "days": 1,
+      "archiveDays": 92
+    },
+    "2009": {
+      "scored": 32,
+      "archived": 2276,
+      "days": 1,
+      "archiveDays": 91
+    },
+    "2010": {
+      "scored": 66,
+      "archived": 4932,
+      "days": 1,
+      "archiveDays": 92
+    },
+    "2011": {
+      "scored": 24,
+      "archived": 2574,
+      "days": 1,
+      "archiveDays": 92
+    }
+  }
+}

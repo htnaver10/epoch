@@ -1,2 +1,7 @@
 # Store trained fire-harmonization checkpoints in Git LFS.
 fire-harmonization*/**/*.pt filter=lfs diff=lfs merge=lfs -text
+
+# Keep the bytes hashed by the MLP catalogue, including intentional CRLF endings.
+backend/data/ml_cache/**/*.json -text whitespace=cr-at-eol
+frontend/public/data/ml/**/*.json -text whitespace=cr-at-eol
+ready-to-run/data/ml/**/*.json -text whitespace=cr-at-eol

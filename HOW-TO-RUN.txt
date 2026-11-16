@@ -1,47 +1,69 @@
-EPOCH
+EPOCH | Run the UI
 
-Static site — no backend required:
+Static site - no backend required:
 
     cd ready-to-run
     npx serve
 
 PowerShell: use npx.cmd serve if npx.ps1 is blocked.
 Open the Local URL printed by serve (normally http://localhost:3000).
-Sparse Canada globe: http://localhost:3000/?mode=ml&view=overview
-Or choose MLP research, then Canada overview / 3D.
-The globe includes bundled Earth imagery, cached layers, filters and downloads.
-See ML-OVERVIEW.md for the meaning and limits of the sampled historical data.
 
-50.6M model presentation (one command from this folder):
+Calendar:      http://localhost:3000/
+Sparse globe:  http://localhost:3000/?mode=ml&view=overview
+Model atlas:   http://localhost:3000/?mode=ml
+Original MLP:  http://localhost:3000/?mode=ml&view=inspect
+Scenarios:     http://localhost:3000/?mode=scenarios
+
+The sparse globe includes bundled Earth imagery, cached layers, filters and
+downloads. Or choose MLP research, then Canada overview / 3D. See ML-OVERVIEW.md
+for the meaning and limits of the sampled historical data.
+
+Windows/Python alternative:
+
+1. Extract the ZIP, if using a downloaded archive.
+2. Double-click START-UI.cmd, or run this command from the EPOCH folder:
+
+    python -m http.server 8080 --bind 127.0.0.1 --directory ready-to-run
+
+3. Open http://127.0.0.1:8080/ and use the same query links above with port 8080.
+
+Keep the server window open while using the app. Ctrl+C stops it. Serving the
+static site requires Node for npx serve, or Python for the alternative command.
+It does not start model training or inference. Optional imagery and web fonts
+use the internet; the calendar, scenarios and prediction snapshots are bundled.
+
+Pre-VIIRS historical model results:
+
+Select a year from 2003-2011 in the calendar, then click PLSWORK under Show.
+Use Full summer to see all available processed scene dates. The historical
+layer contains real inference for 648 archived cell-days across 10 dates,
+with results in every year from 2003 through 2011. Only processed and eligible
+Aqua MODIS observations have model scores. Dates and areas without coverage
+display a message. Inference was stopped at the user's request.
+PREDICTION-COVERAGE.json records the exact coverage by year.
+
+The activity calendar and ranks use archived FIRMS observations. CSV export
+switches to scored model cells while the PLSWORK layer is selected. Switch
+back to MODIS for archived counts.
+
+50.6M model presentation and optional local API:
+
+From the EPOCH folder:
 
     .\run-ml-viewer.cmd
 
-Or double-click run-ml-viewer.cmd. It opens:
-    http://127.0.0.1:8000/?mode=ml
+Or double-click run-ml-viewer.cmd. It opens http://127.0.0.1:8000/?mode=ml.
+Keep the server window open. The optional API serves the same bundled site.
+All 1,608 research patches, 22,174,168 query scores and 8,040 rendered views
+are prepared. Use Present scenes for the tour and Image PNG for slide exports.
+The research presentation includes a separately labelled, previously examined
+June 2024 benchmark of 84 patches. This is cached research, not live monitoring.
+The original small-model globe remains at ?mode=ml&view=inspect.
+See ML-PRESENTATION.md for presenter notes and MLP-INTEGRATION.md for the API.
+The verified PLSWORK inference checkpoint is included for future runs.
 
-Keep its server window open. Ctrl+C stops it. All 1,608 processed scenes,
-22,174,168 query scores and 8,040 rendered views are already prepared.
-Use Present scenes for the tour, and Image PNG to export a view for slides.
-Setup and presenter notes: ML-PRESENTATION.md.
-This is cached research, not live monitoring. The original small-model globe
-remains at http://127.0.0.1:8000/?mode=ml&view=inspect (MLP-INTEGRATION.md).
-
-Quickest: the built site is in ready-to-run/. It has to be served, not double-clicked
-(browsers will not load it from a file:// address). From this folder:
-
-    cd ready-to-run
-    python3 -m http.server 8080        (or: npx serve -l 8080)
-
-then open http://localhost:8080/ for the burning activity calendar and
-http://localhost:8080/?mode=scenarios for the response scenarios.
-
-From source (needs Node 20 or newer):
+Development:
 
     cd frontend
-    npm install
-    npm run dev
-
-Needs an internet connection for the web font (IBM Plex; it falls back to the system font
-offline) and for the optional satellite image
-layer; everything else is bundled. Works best in a desktop Chrome, Edge or Firefox window
-about 1440 px wide or more. See README.md for what it does and where the data comes from.
+    npm.cmd ci
+    npm.cmd run dev
