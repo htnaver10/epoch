@@ -1,8 +1,8 @@
 {
-  "schema": "epoch_model_checkpoints_v1",
+  "schema": "epoch_model_checkpoints_v2",
   "storage": "git-lfs",
-  "file_count": 26,
-  "total_bytes": 188346636,
+  "file_count": 32,
+  "total_bytes": 7254779362,
   "files": [
     {
       "path": "fire-harmonization-PLSWORK/hybrid_v1/models/base_mlp.pt",
@@ -133,6 +133,76 @@
       "path": "fire-harmonization-research-YESSS/saturation_aware_v2/models/fine/last.pt",
       "size_bytes": 77205,
       "sha256": "64b3124acae8fe9e8deee751293d146eaf798b80c6722b2e907ca94d05f0cd6e"
+    },
+    {
+      "path": "fire-harmonization-PLSWORK/wide_diverse_v1/models/best.pt",
+      "size_bytes": 606851453,
+      "sha256": "9e9124efd69344c38fe6d991f5c2e2b3216576e9029b5d7db623f7b9eef55e08",
+      "storage": "git-lfs"
+    },
+    {
+      "path": "fire-harmonization-PLSWORK/wide_diverse_v1/models/inference.pt",
+      "size_bytes": 202285041,
+      "sha256": "80a8b0e65bba826868ccff828cff8b1e44f1000276d852e0ef8c4f7b4c747899",
+      "storage": "git-lfs"
+    },
+    {
+      "path": "fire-harmonization-PLSWORK/wide_diverse_v1/models/last.pt",
+      "size_bytes": 606852605,
+      "sha256": "db843f36f913e1f995da7c5343f40e2a5cb384018e14719e02c73de8249fff41",
+      "storage": "git-lfs"
+    },
+    {
+      "path": "fire-harmonization-PLSWORK/wide_diverse_v2/models/large200_d1/best.pt",
+      "size_bytes": 2421617533,
+      "sha256": "e790cf9161d51d3b62bd840b691a1d6a9e5fe409e9c68d9c4974743088d7883d",
+      "storage": "git-lfs-parts",
+      "parts": [
+        {
+          "path": "fire-harmonization-PLSWORK/wide_diverse_v2/models/large200_d1/best.pt.parts/part-001",
+          "size_bytes": 1073741824,
+          "sha256": "5b3866ec8a5bb380c7bb436c22d8c455ec906875b08f7c951470e48fb9066c07"
+        },
+        {
+          "path": "fire-harmonization-PLSWORK/wide_diverse_v2/models/large200_d1/best.pt.parts/part-002",
+          "size_bytes": 1073741824,
+          "sha256": "2deb6b7e9dacf1af38771e73dcd69d7865f6c1b01dac6b27af1efa82e744a0ea"
+        },
+        {
+          "path": "fire-harmonization-PLSWORK/wide_diverse_v2/models/large200_d1/best.pt.parts/part-003",
+          "size_bytes": 274133885,
+          "sha256": "b284b1288e0ceb5af9f42e079a9f622d82ea443b60105e82aaf3a100edbca642"
+        }
+      ]
+    },
+    {
+      "path": "fire-harmonization-PLSWORK/wide_diverse_v2/models/large200_d1/inference.pt",
+      "size_bytes": 807207345,
+      "sha256": "dd1539f2c7b05f632e916e4e46535738fca09b76a94aa9149f358584ca4cc77a",
+      "storage": "git-lfs"
+    },
+    {
+      "path": "fire-harmonization-PLSWORK/wide_diverse_v2/models/large200_d1/last.pt",
+      "size_bytes": 2421618749,
+      "sha256": "6d4d87f98c1e241182d38609eb0561a753ae6ebf3642646b57f128fec00094be",
+      "storage": "git-lfs-parts",
+      "parts": [
+        {
+          "path": "fire-harmonization-PLSWORK/wide_diverse_v2/models/large200_d1/last.pt.parts/part-001",
+          "size_bytes": 1073741824,
+          "sha256": "b693c8524a5f322395cafbdd948ff3b422b8e4afd52aaf2b9f92cfeff783ced0"
+        },
+        {
+          "path": "fire-harmonization-PLSWORK/wide_diverse_v2/models/large200_d1/last.pt.parts/part-002",
+          "size_bytes": 1073741824,
+          "sha256": "e6b9fa32bcaf000ce731aa4ff165903403858f8c8b4c30153e67d2b30b10ec1f"
+        },
+        {
+          "path": "fire-harmonization-PLSWORK/wide_diverse_v2/models/large200_d1/last.pt.parts/part-003",
+          "size_bytes": 274135101,
+          "sha256": "3b9d4aaa6d866d21f8da91df919d495877bcada6690ff059c52243bd3f87bd69"
+        }
+      ]
     }
   ]
 }
