@@ -493,3 +493,10 @@
 {"source": "MYD021KM.A2021198.0805.061.2021198193030.hdf", "r": 1664, "c": 384, "size": 96, "event_group": "central_2021", "reason": "ValueError: no_viirs_geolocation_overlap"}
 {"source": "MYD021KM.A2021198.0805.061.2021198193030.hdf", "r": 1728, "c": 64, "size": 96, "event_group": "central_2021", "reason": "ValueError: no_viirs_geolocation_overlap"}
 {"source": "MYD021KM.A2021198.0805.061.2021198193030.hdf", "r": 1600, "c": 640, "size": 96, "event_group": "central_2021", "reason": "ValueError: no_valid_reference_queries"}
+{"source": "MYD021KM.A2021198.0805.061.2021198193030.hdf", "r": 1664, "c": 320, "size": 96, "event_group": "central_2021", "reason": "ValueError: no_viirs_geolocation_overlap"}
+{"source": "MYD021KM.A2021198.0805.061.2021198193030.hdf", "r": 1728, "c": 0, "size": 96, "event_group": "central_2021", "reason": "ValueError: no_viirs_geolocation_overlap"}
+{"source": "MYD021KM.A2021198.0805.061.2021198193030.hdf", "r": 1664, "c": 256, "size": 96, "event_group": "central_2021", "reason": "ValueError: no_viirs_geolocation_overlap"}
+{"source": "MYD021KM.A2021198.0805.061.2021198193030.hdf", "r": 1600, "c": 576, "size": 96, "event_group": "central_2021", "reason": "ValueError: no_invertible_geolocation"}
+{"source": "MYD021KM.A2021198.0805.061.2021198193030.hdf", "r": 1600, "c": 512, "size": 96, "event_group": "central_2021", "reason": "ValueError: no_invertible_geolocation"}
+{"source": "MYD021KM.A2021198.0805.061.2021198193030.hdf", "r": 1664, "c": 192, "size": 96, "event_group": "central_2021", "reason": "ValueError: no_viirs_geolocation_overlap"}
+{"source": "MYD021KM.A2021198.0805.061.2021198193030.hdf", "r": 1600, "c": 448, "size": 96, "event_group": "central_2021", "reason": "ValueError: no_invertible_geolocation"}
