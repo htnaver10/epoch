@@ -224,7 +224,8 @@ const ATMOSPHERE_VERT = `
 const SPOT_VERT = `
   attribute vec3 color; attribute float weight; attribute float kind;
   uniform float uScale; uniform float uCell; uniform float uUnit;
-  varying vec3 vColor; varying float vKind;
+  uniform float uResearch; uniform float uMarkerScale;
+  varying vec3 vColor; varying float vKind; varying float vAlert;
   void main() {
     vec4 mv = modelViewMatrix * vec4(position, 1.0);
     float cell = uCell * uScale / -mv.z;
@@ -237,12 +238,20 @@ const SPOT_VERT = `
       // harmonized layers: small dots, as on NASA FIRMS, so the ground shows between them up close
       ? clamp(cell * 0.5 * max(1.0, weight), (4.5 + 4.0 * weight) * uUnit * crowd, (8.0 + 8.0 * weight) * uUnit)
       : clamp(cell * 0.95 * max(1.0, weight), (7.0 + 6.0 * weight) * uUnit * crowd, (14.0 + 12.0 * weight) * uUnit);
+    // Research alerts need a stable screen size at national zoom. Coverage
+    // remains fine-grained and subdued rather than competing with detections.
+    vAlert = uResearch * step(0.5, weight);
+    if (uResearch > 0.5) {
+      gl_PointSize = vAlert > 0.5
+        ? clamp(cell * 0.5, 12.0 * uUnit, 22.0 * uUnit) * uMarkerScale
+        : clamp(cell * 0.2, 1.7 * uUnit, 3.0 * uUnit);
+    }
     vColor = color; vKind = kind;
     gl_Position = projectionMatrix * mv;
   }`;
 const SPOT_UNIT = (rem, pixelRatio) => (rem / BASE_REM) * pixelRatio;
 const SPOT_FRAG = `
-  varying vec3 vColor; varying float vKind;
+  varying vec3 vColor; varying float vKind; varying float vAlert;
   uniform float uOpacity;
   float triangle(vec2 p, float r) {
     const float k = 1.7320508;
@@ -254,6 +263,18 @@ const SPOT_FRAG = `
   void main() {
     vec2 q = gl_PointCoord * 2.0 - 1.0;
     q.y = -q.y;
+    if (vAlert > 0.5) {
+      float r = length(q);
+      float a = 1.0 - smoothstep(0.88, 0.98, r);
+      if (a < 0.02) discard;
+      // Bright sensor-colored core, pale inner rim, dark outer rim: legible
+      // on both snow/cloud and dark ground without changing the data value.
+      vec3 c = mix(vColor, vec3(0.97), smoothstep(0.60, 0.67, r));
+      c = mix(c, vec3(0.012, 0.02, 0.035), smoothstep(0.74, 0.83, r));
+      gl_FragColor = vec4(c, a);
+      #include <colorspace_fragment>
+      return;
+    }
     float d; // signed distance to the symbol's edge
     if (vKind < 0.5) d = abs(q.x) + abs(q.y) - 0.66;
     else if (vKind < 1.5) d = triangle(q + vec2(0.0, 0.08), 0.6);
@@ -294,7 +315,7 @@ const NO_PATCHES = [];
  * camera that spins and zooms to whatever is focused. It owns its own per-frame HUD
  * readouts and positions the focus callout, so React never re-renders at frame rate.
  */
-export default function Globe({ bounds, sectors, region, places = [], points, researchPoints = null, researchCellDegrees = 0.0034, patches = NO_PATCHES, selectedPatch = "", patchOutlines = true, patchLabels = true, onPatchPick, centerBounds = false, optical, imageryDate, sensorColours = false, allDays = true, playing, focus, trail = [], fit, inset = 0, reserve = 0, reserveBelow = 0, edgeRight = 0, edgeTop = 0, raw = false, rem = 13, imageAttempt = 0, onImage, onPick, onSector, onPlace, onTrail, callout }) {
+export default function Globe({ bounds, sectors, region, places = [], points, researchPoints = null, researchCellDegrees = 0.0034, researchMarkerScale = 1, patches = NO_PATCHES, selectedPatch = "", patchOutlines = true, patchLabels = true, onPatchPick, centerBounds = false, optical, imageryDate, sensorColours = false, allDays = true, playing, focus, trail = [], fit, inset = 0, reserve = 0, reserveBelow = 0, edgeRight = 0, edgeTop = 0, raw = false, rem = 13, imageAttempt = 0, onImage, onPick, onSector, onPlace, onTrail, callout }) {
   const mount = useRef(null);
   const readout = useRef(null);
   const creditBox = useRef(null);
@@ -542,7 +563,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
     scene.add(sectorGroup, reticle, patchGroup);
     patchGroup.renderOrder = 4;
     const spotMaterial = keep(new THREE.ShaderMaterial({
-      uniforms: { uScale: { value: 1 }, uCell: { value: GRID * DEG }, uUnit: { value: 1 }, uOpacity: { value: 0.95 } },
+      uniforms: { uScale: { value: 1 }, uCell: { value: GRID * DEG }, uUnit: { value: 1 }, uOpacity: { value: 0.95 }, uResearch: { value: 0 }, uMarkerScale: { value: 1 } },
       vertexShader: SPOT_VERT, fragmentShader: SPOT_FRAG, transparent: true, depthWrite: false,
     }));
     const spots = new THREE.Points(new THREE.BufferGeometry(), spotMaterial);
@@ -1029,6 +1050,8 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
     // marks overlap from far away: draw the busiest cells last, so the hot ones stay on top
     const ordered = researchPoints ? researchPoints.map((p) => [p, p.weight ?? 0.65]) : points.map((p) => [p, weigh(p)]).sort((a, b) => a[1] - b[1]);
     g.spots.material.uniforms.uCell.value = (researchPoints ? researchCellDegrees : GRID) * DEG;
+    g.spots.material.uniforms.uResearch.value = researchPoints ? 1 : 0;
+    g.spots.material.uniforms.uMarkerScale.value = researchMarkerScale;
     for (let i = 0; i < n; i++) {
       const [p, w] = ordered[i];
       toVec(researchPoints ? p.lat : p[0], researchPoints ? p.lon : p[1], 1.0004, v);
@@ -1046,7 +1069,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
     g.spots.geometry.dispose();
     g.spots.geometry = geometry;
     g.invalidate();
-  }, [points, researchPoints, researchCellDegrees, sensorColours, allDays, raw]);
+  }, [points, researchPoints, researchCellDegrees, researchMarkerScale, sensorColours, allDays, raw]);
 
   // Optical overlay: fetch the day's image only while it is switched on. Its state goes up
   // to the scope line, the one place that says what is on screen.
