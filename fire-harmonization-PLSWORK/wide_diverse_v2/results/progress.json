@@ -1,20 +1,21 @@
 {
-  "status": "preparing",
-  "processed": 2240,
+  "status": "complete",
+  "prepared": 712,
+  "expected_cap": 3000,
   "selected_candidates": 2871,
-  "admitted": 552,
-  "excluded": 1688,
-  "excluded_reason_counts": {
-    "ValueError: query_extent_over_cap": 117,
-    "ValueError: no_viirs_geolocation_overlap": 1251,
-    "ValueError: no_valid_reference_queries": 285,
-    "ValueError: no_invertible_geolocation": 35
-  },
-  "positive_tiles": 94,
   "positive_queries": 974,
-  "groups": {
+  "positive_tiles": 94,
+  "group_counts": {
     "central_2021": 182,
     "bc_2021": 236,
-    "nwt_2022": 134
-  }
+    "nwt_2022": 238,
+    "pilot_20230701_all_shared_sources": 56
+  },
+  "excluded_reason_counts": {
+    "ValueError: query_extent_over_cap": 134,
+    "ValueError: no_viirs_geolocation_overlap": 1651,
+    "ValueError: no_valid_reference_queries": 339,
+    "ValueError: no_invertible_geolocation": 35
+  },
+  "receipt": "results/expansion_receipt.json"
 }

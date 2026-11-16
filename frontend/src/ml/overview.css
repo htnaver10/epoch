@@ -1,0 +1,6 @@
+.overview-atlas { color:var(--accent); font-size:.85rem; white-space:nowrap; }
+.overview-console .ml-source { margin-left:auto; }
+.overview-console button:disabled { opacity:.45; cursor:not-allowed; }
+.overview-console .ml-inspector { max-height:calc(100% - 10rem); overflow:auto; }
+.overview-console .ml-legend { max-width:42rem; }
+@media(max-width:850px) { .overview-atlas { font-size:.75rem; }.overview-console .ml-header { gap:.6rem; } }

@@ -5,6 +5,7 @@ import "./ml.css";
 import MLPresentation from "./MLPresentation.jsx";
 
 const Globe = lazy(() => import("../components/Globe.jsx"));
+const MLOverview = lazy(() => import("./MLOverview.jsx"));
 const EMPTY = [], SECTORS = {};
 const percent = (n) => `${(100 * n).toFixed(1)}%`;
 const integer = (n) => Number(n).toLocaleString();
@@ -12,6 +13,7 @@ const utc = (s) => s.replace("T", " ").replace(/(?:\.\d+)?Z$/, " UTC");
 const yes = (value) => value ? "Yes" : "No";
 
 export default function MLViewer({ onMode }) {
+  if (new URLSearchParams(window.location.search).get("view") === "overview") return <MLOverview onMode={onMode} />;
   return new URLSearchParams(window.location.search).get("view") === "inspect"
     ? <OriginalMLViewer onMode={onMode} /> : <MLPresentation onMode={onMode} />;
 }

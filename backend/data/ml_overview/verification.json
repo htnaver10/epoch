@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "model_version": "wide-mlp-80a8b0e65bba",
+  "source_scenes_verified": 1608,
+  "source_totals": {
+    "queries": 22174168,
+    "mlp": 12317,
+    "modis": 11166,
+    "viirs": 10678
+  },
+  "display_cells": 9460,
+  "bytes": 738017,
+  "sha256": "0c74ebd5ddc37b293d94ff5ff35edcca401978d7dd7cd5e4ecc852127dd68875",
+  "new_inference": false,
+  "new_satellite_downloads": 0
+}

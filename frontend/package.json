@@ -11,6 +11,7 @@
     "test": "node --test src/lib/*.test.js src/ops/engine/*.test.js src/ml/*.test.js",
     "test:browser": "node scripts/check-ml-viewer.mjs",
     "test:presentation": "node scripts/check-ml-presentation.mjs",
+    "test:overview": "node scripts/check-ml-overview.mjs",
     "prepare:data": "python3 scripts/prepare_data.py"
   },
   "dependencies": {
