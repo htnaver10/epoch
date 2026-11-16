@@ -21,6 +21,7 @@ import { useSeasonAnalysis, useSeasonCurves } from "./lib/useSeasonAnalysis";
 import { useRem, useViewport } from "./lib/hooks";
 import { maxScaleFor } from "./lib/layout";
 import { formatDate } from "./lib/chart";
+import { historicalCellsCsv, useHistoricalMLP } from "./lib/historicalMLP";
 
 // three.js and the coastline data are most of the bundle; load them apart from the shell.
 const Globe = lazy(() => import("./components/Globe"));
@@ -90,6 +91,7 @@ export default function App({ onMode }) {
   const [pickedDate, setDate] = useState(initial.date);
   const [metric, setMetric] = useState(initial.metric);
   const [layer, setLayer] = useState(initial.layer);
+  const [showHistoricalMLP, setShowHistoricalMLP] = useState(false);
   const [raw, setRaw] = useState(initial.view === "raw"); // the uncorrected view
   const [period, setPeriod] = useState(initial.period); // a span of the season's days, or null for all of it
   const [optical, setOptical] = useState(initial.optical);
@@ -239,6 +241,8 @@ export default function App({ onMode }) {
   const daily = useMemo(() => dailySeries(byDate, dates, metric), [byDate, dates, metric]);
   // one day if a day is picked, otherwise the period, otherwise the whole season
   const firstDay = span ? dates[span.from] : null, lastOfSpan = span ? dates[Math.min(span.to, dates.length) - 1] : null;
+  const preViirsYear = year >= 2003 && year <= 2011 && noViirs;
+  const historicalMLP = useHistoricalMLP(year, preViirsYear && showHistoricalMLP, date, firstDay, lastOfSpan, bounds, focus || null);
   const within = useCallback(
     (list) => (date !== "all" ? list.filter((r) => r[0] === date) : firstDay ? list.filter((r) => r[0] >= firstDay && r[0] <= lastOfSpan) : list),
     [date, firstDay, lastOfSpan],
@@ -504,13 +508,30 @@ export default function App({ onMode }) {
     if (analysis) download(calendarCsv(record, analysis, { area: areaName, period: span }), `calendar-${slug(areaName)}`);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [analysis, record, areaName, span]);
+  const historicalStatus = historicalMLP?.loading
+    ? { tone: "busy", text: "Loading PLSWORK estimates" }
+    : historicalMLP?.points?.length
+      ? {
+          tone: "note",
+          text: `PLSWORK · ${historicalMLP.sceneDates} processed Aqua MODIS scene date(s) (${historicalMLP.dates.slice(0, 3).map((day) => formatDate(day)).join(", ")}${historicalMLP.dates.length > 3 ? `, +${historicalMLP.dates.length - 3} dates` : ""}) · ${historicalMLP.alerts.toLocaleString()} model alerts / ${historicalMLP.queries.toLocaleString()} scored queries. Other dates/cells are unscored; calendar values remain archived MODIS.`,
+        }
+      : historicalMLP
+        ? {
+            tone: "note",
+            text: historicalMLP.error
+              ? "The PLSWORK layer could not load. Archived MODIS calendar remains available."
+              : historicalMLP.sceneDates
+                ? `PLSWORK processed ${historicalMLP.sceneDates} Aqua MODIS scene date(s) in this period, but no scored cells cover this area. Unmarked cells are unavailable; calendar values remain archived MODIS.`
+                : "No processed PLSWORK overpass in this date or period. Other archive dates may be available; calendar values remain archived MODIS.",
+          }
+        : null;
   const status = error
     ? { tone: "error", text: error }
     : loading
       ? { tone: "busy", text: `Loading ${seasonLabel || "the record"}` }
       : inside && !areaRecord
         ? { tone: "busy", text: `Loading this area's history: ${loadedYears} of ${allYears.length} seasons` }
-      : raw
+      : historicalStatus || (raw
         ? { tone: "alert", text: "Uncorrected view: raw detection counts, not comparable across sensors" }
         : layer === "uncertain" && noViirs
           ? { tone: "note", text: `VIIRS was not observing in ${year}: no disagreement to show` }
@@ -518,7 +539,7 @@ export default function App({ onMode }) {
             ? { tone: "note", text: `The VIIRS archive ends ${formatDate(viirsThrough)}: this day is MODIS only` }
             : date !== "all" && !selected.length
               ? { tone: "note", text: `No hotspots on ${formatDate(date)}` }
-              : null;
+              : null);
 
   // What shares the stage with the globe. A target and a panel together leave no room for
   // the full readout, so it folds to its title line and the index.
@@ -562,10 +583,14 @@ export default function App({ onMode }) {
           <span className="notice" role="status">{notice}</span>
           <button onClick={share} title="Copy a link to exactly this view" aria-label="Copy link"><Icon name="link" size="1.15rem" /></button>
           <button
-            disabled={!selected.length}
-            title="Download the hotspot cell-days of the area and period in scope as CSV"
+            disabled={preViirsYear && showHistoricalMLP ? !historicalMLP?.records?.length : !selected.length}
+            title={preViirsYear && showHistoricalMLP
+              ? "Download scored PLSWORK model cells for the selected date, period and area as CSV"
+              : "Download the hotspot cell-days of the area and period in scope as CSV"}
             aria-label="Export CSV"
-            onClick={() => download(cellDaysCsv(selected), fileStem)}
+            onClick={() => preViirsYear && showHistoricalMLP
+              ? download(historicalCellsCsv(historicalMLP.records), `plswork-cells-${fileStem}`)
+              : download(cellDaysCsv(selected), fileStem)}
           >
             <Icon name="download" size="1.15rem" />
           </button>
@@ -584,7 +609,9 @@ export default function App({ onMode }) {
         onPeriod={setPeriod}
         date={date}
         layer={layer}
-        onLayer={setLayer}
+        onLayer={(next) => { setShowHistoricalMLP(false); setLayer(next); }}
+        historicalMLP={preViirsYear ? showHistoricalMLP : undefined}
+        onHistoricalMLP={() => setShowHistoricalMLP((shown) => !shown)}
         raw={raw}
         onRaw={setRaw}
         optical={optical}
@@ -595,6 +622,8 @@ export default function App({ onMode }) {
         onClearTargets={clearTrail}
         scale={size}
         cells={mapPoints.length}
+        modelAlerts={historicalMLP?.alerts}
+        modelState={historicalMLP?.loading ? "loading" : historicalMLP?.error ? "error" : historicalMLP?.missing ? "missing" : historicalMLP ? "ready" : null}
         loading={loading}
       />
 
@@ -605,6 +634,8 @@ export default function App({ onMode }) {
             sectors={REGIONS}
             region={region}
             points={mapPoints}
+            researchPoints={historicalMLP?.points}
+            researchCellDegrees={historicalMLP?.cellDegrees}
             sensorColours={layer === "uncertain"}
             allDays={date === "all"}
             raw={raw}
@@ -650,7 +681,7 @@ export default function App({ onMode }) {
             busy={inside && !areaRecord ? `Loading this area's history: ${loadedYears} of ${allYears.length} seasons` : ""}
           />
         )}
-        <Legend layer={layer} noViirs={noViirs} allDays={date === "all"} raw={raw} />
+        <Legend layer={layer} noViirs={noViirs} allDays={date === "all"} raw={raw} historicalMLP={Boolean(historicalMLP?.points)} />
 
         {status ? (
           <div className={`status status-${status.tone}`} role={status.tone === "error" ? "alert" : "status"}>

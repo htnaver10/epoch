@@ -293,7 +293,7 @@ const IMAGE_TIMEOUT_MS = 15000;
  * camera that spins and zooms to whatever is focused. It owns its own per-frame HUD
  * readouts and positions the focus callout, so React never re-renders at frame rate.
  */
-export default function Globe({ bounds, sectors, region, places = [], points, researchPoints = null, centerBounds = false, optical, imageryDate, sensorColours = false, allDays = true, playing, focus, trail = [], fit, inset = 0, reserve = 0, reserveBelow = 0, edgeRight = 0, edgeTop = 0, raw = false, rem = 13, imageAttempt = 0, onImage, onPick, onSector, onPlace, onTrail, callout }) {
+export default function Globe({ bounds, sectors, region, places = [], points, researchPoints = null, researchCellDegrees = 0.0034, centerBounds = false, optical, imageryDate, sensorColours = false, allDays = true, playing, focus, trail = [], fit, inset = 0, reserve = 0, reserveBelow = 0, edgeRight = 0, edgeTop = 0, raw = false, rem = 13, imageAttempt = 0, onImage, onPick, onSector, onPlace, onTrail, callout }) {
   const mount = useRef(null);
   const readout = useRef(null);
   const creditBox = useRef(null);
@@ -990,7 +990,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
     const weigh = (p) => (raw ? rawWeight(Math.max(p[2], p[3])) : allDays ? Math.sqrt(Math.min(1, p[5] / BURN_DAYS)) : 0.55);
     // marks overlap from far away: draw the busiest cells last, so the hot ones stay on top
     const ordered = researchPoints ? researchPoints.map((p) => [p, p.weight ?? 0.65]) : points.map((p) => [p, weigh(p)]).sort((a, b) => a[1] - b[1]);
-    g.spots.material.uniforms.uCell.value = (researchPoints ? 0.0034 : GRID) * DEG;
+    g.spots.material.uniforms.uCell.value = (researchPoints ? researchCellDegrees : GRID) * DEG;
     for (let i = 0; i < n; i++) {
       const [p, w] = ordered[i];
       toVec(researchPoints ? p.lat : p[0], researchPoints ? p.lon : p[1], 1.0004, v);
@@ -1008,7 +1008,7 @@ export default function Globe({ bounds, sectors, region, places = [], points, re
     g.spots.geometry.dispose();
     g.spots.geometry = geometry;
     g.invalidate();
-  }, [points, researchPoints, sensorColours, allDays, raw]);
+  }, [points, researchPoints, researchCellDegrees, sensorColours, allDays, raw]);
 
   // Optical overlay: fetch the day's image only while it is switched on. Its state goes up
   // to the scope line, the one place that says what is on screen.

@@ -1,32 +1,41 @@
-EPOCH
+EPOCH | Run the UI
 
-MLP research viewer (frontend + backend, one command from this folder):
+1. Extract the ZIP.
+2. Double-click START-UI.cmd (Windows), or run the following command
+   from the EPOCH folder:
 
-    .\run-ml-viewer.cmd
+   python -m http.server 8080 --bind 127.0.0.1 --directory ready-to-run
 
-Or double-click run-ml-viewer.cmd. It opens:
-    http://127.0.0.1:8000/?mode=ml
+3. Open http://127.0.0.1:8080/
 
-Keep its server window open. Ctrl+C stops it. Select a processed scene and
-compare MLP, MODIS and VIIRS reference observations. This is cached research,
-not live monitoring. Setup and details: MLP-INTEGRATION.md.
+To inspect pre-VIIRS model results, select 2003–2011 and click PLSWORK
+under Show. Use Full summer to see all available processed scene dates.
 
-Quickest: the built site is in ready-to-run/. It has to be served, not double-clicked
-(browsers will not load it from a file:// address). From this folder:
+Calendar:      http://127.0.0.1:8080/?year=2004
+MLP research:  http://127.0.0.1:8080/?mode=ml
+Scenarios:     http://127.0.0.1:8080/?mode=scenarios
 
-    cd ready-to-run
-    python3 -m http.server 8080        (or: npx serve -l 8080)
+The historical layer contains real inference for 648 archived cell-days
+across 10 dates, with results in each year from 2003 through 2011.
+Only processed and eligible Aqua MODIS observations have model scores.
+No-coverage dates/areas display a message. Inference was stopped at the
+user's request. PREDICTION-COVERAGE.json has the exact coverage by year.
 
-then open http://localhost:8080/ for the burning activity calendar and
-http://localhost:8080/?mode=scenarios for the response scenarios.
+The MLP research tab also includes the separate saved June 2024 benchmark
+of 84 patches. The main activity calendar and ranks use archived FIRMS
+observations. CSV export switches to scored model cells while the
+PLSWORK layer is selected. Switch back to MODIS for archived counts.
 
-From source (needs Node 20 or newer):
+Python is required to serve the app. Optional map imagery and web fonts
+use the internet. The calendar, scenarios and prediction snapshots are
+included in the ready-to-run folder. The verified PLSWORK inference
+checkpoint is included for future runs.
 
-    cd frontend
-    npm install
-    npm run dev
+Development:
+  cd frontend
+  npm ci
+  npm run dev
 
-Needs an internet connection for the web font (IBM Plex; it falls back to the system font
-offline) and for the optional satellite image
-layer; everything else is bundled. Works best in a desktop Chrome, Edge or Firefox window
-about 1440 px wide or more. See README.md for what it does and where the data comes from.
+The source also includes backend/viewer.py and MLP-INTEGRATION.md for
+the optional local API server. The static UI works from the command
+above. No model training or inference starts when the UI is served.

@@ -1,6 +1,7 @@
 import { C, mapRamp } from "../lib/theme";
 import { integer, formatDate } from "../lib/chart";
 import { RAW_REFERENCE, RAW_CEILING } from "../lib/analysis";
+import { COLORS } from "../ml/data";
 
 const LAYERS = [
   ["all", "All", "Every cell with a hotspot"],
@@ -15,7 +16,7 @@ const LAYERS = [
  * area of interest when one is in scope; `months` are the season's months as periods.
  * `image` is { state: "off" | "loading" | "on" | "held" | "paused" | "error", date }.
  */
-export function ScopeBar({ regions, region, onRegion, target, year, months, period, periodLabel, onPeriod, date, layer, onLayer, raw, onRaw, optical, onOptical, image, onRetryImage, targets, onClearTargets, scale, cells, loading }) {
+export function ScopeBar({ regions, region, onRegion, target, year, months, period, periodLabel, onPeriod, date, layer, onLayer, historicalMLP, onHistoricalMLP, raw, onRaw, optical, onOptical, image, onRetryImage, targets, onClearTargets, scale, cells, modelAlerts, modelState, loading }) {
   const isMonth = (m) => period && period.from === m.from && period.to === m.to;
   const imageText = !optical
     ? "Off"
@@ -65,10 +66,13 @@ export function ScopeBar({ regions, region, onRegion, target, year, months, peri
       <div className="scope-group">
         <span className="scope-key">Show</span>
         {LAYERS.map(([key, text, title]) => (
-          <button key={key} aria-pressed={layer === key} className={layer === key ? "on" : undefined} title={title} onClick={() => onLayer(key)}>
+          <button key={key} aria-pressed={!historicalMLP && layer === key} className={!historicalMLP && layer === key ? "on" : undefined} title={title} onClick={() => onLayer(key)}>
             {text}
           </button>
         ))}
+        {historicalMLP !== undefined && (
+          <button aria-pressed={historicalMLP} className={historicalMLP ? "on" : undefined} onClick={onHistoricalMLP} title="Show model-generated hotspot alerts on processed pre-VIIRS Aqua MODIS scenes">PLSWORK</button>
+        )}
       </div>
       <div className={`scope-group${raw ? " scope-alert" : ""}`}>
         <span className="scope-key">View</span>
@@ -102,7 +106,9 @@ export function ScopeBar({ regions, region, onRegion, target, year, months, peri
           <span className="scope-value">{scale.toFixed(1)}×</span>
         </div>
       )}
-      <span className="scope-count">{loading ? "loading" : `${integer(cells)} cells`}</span>
+      <span className="scope-count">
+        {loading ? "loading" : modelState === "loading" ? "loading model" : modelState === "error" ? "model unavailable" : modelState === "missing" ? "no model coverage" : modelState === "ready" ? `${integer(modelAlerts)} model alerts` : `${integer(cells)} cells`}
+      </span>
     </div>
   );
 }
@@ -119,7 +125,16 @@ const Key = ({ shape, color, children }) => (
  * long a cell burned; on the Diff layer colour is the sensor instead, and in the
  * uncorrected view size and colour are raw detection counts.
  */
-export function Legend({ layer, noViirs, allDays, raw }) {
+export function Legend({ layer, noViirs, allDays, raw, historicalMLP }) {
+  if (historicalMLP) {
+    return (
+      <div className="legend-row" aria-label="Legend">
+        <Key shape="plain" color={COLORS.mlp}>0.25° cell with PLSWORK alerts</Key>
+        <Key shape="plain" color={COLORS.coverage}>Scored 0.25° cell, no alerts</Key>
+        <span>Only processed Aqua MODIS scene dates are scored; no mark means unavailable or unscored</span>
+      </div>
+    );
+  }
   const diff = layer === "uncertain" && !noViirs;
   return (
     <div className="legend-row" aria-label="Legend">
